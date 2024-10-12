@@ -1,0 +1,60 @@
+Feature: Pruebas
+
+  @gmail
+  Scenario: gmail
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Pruebas.json
+    And ir a la pestaña https://www.google.com.co
+    And Ir a yopmail
+    #And lleneme el campo EmailCompartir con el texto pruebasqa310@gmail.com
+    And lleneme el campo EmailCompartir con el texto pruebasqa310@yutep.com
+    And espereme 12 segundos
+    And Hacer Click en El elemento BtEmailCompartir
+    And lleneme el campo PassEmailCompartir con el texto 4n4l1t1c4
+    And Hacer Click en El elemento BtEmailIngCompartir
+    And espereme 10 segundos
+    And Adjunto una Captura de pantalla al informe Captura Error01
+
+  @gmail
+  Scenario: gmail2
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Pruebas.json
+    And espereme 5 segundos
+    And Ir a
+    And espereme 15 segundos
+    And Adjunto una Captura de pantalla al informe Captura Error02
+
+  @gmail2
+  Scenario: gmail3
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Pruebas.json
+    And espereme 5 segundos
+    And Hacer Click en El elemento BT1
+    And Hacer Click en El elemento BT2
+    And espereme 15 segundos
+    And Ir a 2
+    And espereme 15 segundos
+    And Adjunto una Captura de pantalla al informe Captura Error03
+
+  @gmail
+  Scenario: gmail4
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Pruebas.json
+    And espereme 5 segundos
+    #And ir a la pestaña https://www.google.com.co
+    And Ir a yopmail
+    And espereme 15 segundos
+    And Adjunto una Captura de pantalla al informe Captura Error04
+
+  @gmail2
+  Scenario: clicosalir
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Pruebas.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Contrasena con el texto o<tf@LqI4!~h
+    And Hacer Click en El elemento Ingresar
+    And espereme 5 segundos
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And Hacer Click en El elemento o RaRecibidosDia
+    And Adjunto una Captura de pantalla al informe Captura Error05

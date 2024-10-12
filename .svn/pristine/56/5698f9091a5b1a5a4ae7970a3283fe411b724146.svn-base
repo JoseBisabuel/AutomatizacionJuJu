@@ -1,0 +1,1343 @@
+{
+  "Usuario": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsId"
+  },
+  "Contrasena": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsPassword"
+  },
+  "Ingresar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/div[1]/button[1]"
+  },
+  "Opciones": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Opciones']"
+  },
+  "Contenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Contenido']"
+  },
+  "Home": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[4]/a[1]"
+  },
+  "CerrarLogin": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[7]/a[1]/i[1]"
+  },
+  "AdminUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/div[1]/dl[1]/dt[12]/a[1]"
+  },
+  "OpcUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/div[1]/dl[1]/dd[12]/ul[1]/li[1]/a[1]"
+  },
+  "CrearUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Crear Usuario')]"
+  },
+  "FrameEstructura": {
+    "GetFieldBy": "id",
+    "ValueToFind": "IFrameEstructuras"
+  },
+  "GestionContenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/div[1]/dl[1]/dt[1]/a[1]"
+  },
+  "Estructura": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Estructura')]"
+  },
+  "EstUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[5]"
+  },
+  "ColUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//pre[contains(text(),'Usuarios')]"
+  },
+  "Menu": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[2]/div[1]/div[1]/div[1]/nav[1]/button[1]/span[1]"
+  },
+  "UsUser": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsId"
+  },
+  "UsPass": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsPassword"
+  },
+  "Ustipo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsTipo"
+  },
+  "UsNombre": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsNombres"
+  },
+  "UsApellido": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsApellidos"
+  },
+  "UsTid": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsTipoIdentificacion"
+  },
+  "UsIdentificacion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsIdentificacion"
+  },
+  "UsBDE": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsEntrada_texto"
+  },
+  "UsBotonBuscarBDE": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Buscar"
+  },
+  "RegistroUsuario": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[5]/table[1]/tbody[1]/tr[1]/td[1]"
+  },
+  "UsEmail": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsEmail"
+  },
+  "UsTipoRadComunicados": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsRadicacionComunicado"
+  },
+  "UsBotonAgregar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionAgregar"
+  },
+  "CargosUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Cargos Usuarios')]"
+  },
+  "BotonAgregarCargo": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[2]/a[1]"
+  },
+  "CampoDependencia": {
+    "GetFieldBy": "id",
+    "ValueToFind": "CarDependencia"
+  },
+  "CampoCargo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "CuCargo"
+  },
+  "CampoUsuario": {
+    "GetFieldBy": "id",
+    "ValueToFind": "CuUsuario"
+  },
+  "BotonCargosUsuario": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionAgregar"
+  },
+  "RetencionDocumental": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/div[1]/dl[1]/dt[10]/a[1]"
+  },
+  "TiposDocumColeccion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Tipos Documentales Colección')]"
+  },
+  "TiposDocumentales": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/dl[1]/dd[10]/ul[1]/li[7]"
+  },
+  "BotonAgregarDColeccion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[2]/a[1]"
+  },
+  "TdTablaRetencion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TdcTablaRetencion"
+  },
+  "TdTipoRadicado": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TdcTipoRadicado"
+  },
+  "TdTipodocumental": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TdcTipoDocumental"
+  },
+  "TdColeccion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TdcColeccion"
+  },
+  "TdSDocumental": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TdcSoporte"
+  },
+  "TDAgregarTDocumental": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionAgregar"
+  },
+
+
+
+
+  "ComunicadoA": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[5]/i[1]"
+  },
+  "ComnicadoB": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": ""
+  },
+  "TDocumental": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TipoDocumentalDocumentoRadicado"
+  },
+  "DesTDocumental": {
+    "GetFieldBy": "id",
+    "ValueToFind": "NombreDocumentoRadicado"
+  },
+  "BotonAgregarComun": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonCrearDocumentoRadicado"
+  },
+  "Crear": {
+    "GetFieldBy": "id",
+    "ValueToFind": "DiNombre"
+  },
+  "SelectTipo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "DiTipo"
+  },
+  "TDocumental2": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TipoDocumental"
+  },
+  "BotonCrear": {
+    "GetFieldBy": "id",
+    "ValueToFind": "CrearFolder"
+  },
+  "Agregar_ListaUsuariosPersonas": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Agregar_ListaUsuariosPersonas"
+  },
+  "Agregar_ListaPersonas": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Agregar_ListaPersonas"
+  },
+  "BuscarUsuariosPersonas": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BuscarAgregar"
+  },
+  "AgregarUsuariosPersonas": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Resultados"
+  },
+  "CampoNombre": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsNombres"
+  },
+  "CampoApellido": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsApellidos"
+  },
+  "BotonAgregarUsuario": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionPeticionParametros_Buscar"
+  },
+  "AsociarUsuario": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'AsociarUsuario')]"
+  },
+
+
+
+  "PersNombre": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerNombre"
+  },
+  "PersGenero": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerGenero"
+  },
+  "PersTIdentificacion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerTipoIdentificacion"
+  },
+  "PersIdentificacion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerIdentificacion"
+  },
+  "PersEsOrganizacion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[5]/div[1]/div[1]"
+  },
+  "PersTel1": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerTelefono1"
+  },
+  "PersTel2": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerTelefono2"
+  },
+  "PersFax": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerFax"
+  },
+  "PersEmail": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerEmail"
+  },
+  "PersPais": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerPais"
+  },
+  "PersEstado": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerEstado"
+  },
+  "PersCiudad": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerCiudadLocalidad"
+  },
+  "PersDireccion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerDireccion"
+  },
+  "PersOrganizacion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerOrganizacion_texto"
+  },
+  "PersDependencia": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerDependencia"
+  },
+  "PersCodDependencia": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerCodigoDependencia"
+  },
+  "PersCargo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerCargo"
+  },
+  "BotonAgregarPersona": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionPeticionParametros_Buscar"
+  },
+  "BotonCrearPersona": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionPeticionParametros_Crear"
+  },
+  "AsociarPersona": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/a[1]"
+  },
+
+
+
+  "CTramite": {
+    "GetFieldBy": "id",
+    "ValueToFind": "RaGrupoTramite"
+  },
+  "CSubtramite": {
+    "GetFieldBy": "id",
+    "ValueToFind": "RaSubTramite"
+  },
+  "CTipoDocumento": {
+    "GetFieldBy": "id",
+    "ValueToFind": "RaTipoDocumental"
+  },
+  "Courier": {
+    "GetFieldBy": "id",
+    "ValueToFind": "RaCourier"
+  },
+  "Peso": {
+    "GetFieldBy": "id",
+    "ValueToFind": "RaPeso"
+  },
+  "Costo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "RaCosto"
+  },
+  "ModalidaEnvio": {
+    "GetFieldBy": "id",
+    "ValueToFind": "RaModalidadEnvio"
+  },
+  "CModoSalida": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ModoSalidaDocumento"
+  },
+  "CIdReferencia": {
+    "GetFieldBy": "id",
+    "ValueToFind": "RaIdReferencia"
+  },
+  "CNo.Folios": {
+    "GetFieldBy": "id",
+    "ValueToFind": "RaNumeroFolios"
+  },
+  "CNo.DocAnexos": {
+    "GetFieldBy": "id",
+    "ValueToFind": "RaNumDocumentos"
+  },
+  "CAsunto": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AsuntoRadicacionCorreo"
+  },
+  "GenerarRadicado": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonRadicar"
+  },
+  "BCancelarFirma": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonCancelarFirmar"
+  },
+  "BGuardar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Guardar"
+  },
+  "BVistaPrevia": {
+    "GetFieldBy": "id",
+    "ValueToFind": "VistaPrevia"
+  },
+  "BRegresar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Regresar"
+  },
+  "BTrasladar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Trasladar"
+  },
+  "BDevolver": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Devolver"
+  },
+  "BDevolverOrigen": {
+    "GetFieldBy": "id",
+    "ValueToFind": "DevolverOrigen"
+  },
+  "BAprobar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Aprobar"
+  },
+  "BRadicar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Radicar"
+  },
+  "As01": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//h5[contains(text(),'Crear Documento Radicado:')]"
+  },
+  "As02": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/label[1]"
+  },
+  "As03": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/label[1]"
+  },
+  "As04": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/button[1]/i[1]"
+  },
+  "As05": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/button[2]/i[1]"
+  },
+  "AsRadicacionComunicados": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//p[contains(text(),'Radicación Comunicados')]"
+  },
+  "As06": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Guardar"
+  },
+  "As07": {
+    "GetFieldBy": "id",
+    "ValueToFind": "VistaPrevia"
+  },
+  "As08": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Regresar"
+  },
+  "As09": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Trasladar"
+  },
+  "As010": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Devolver"
+  },
+  "As011": {
+    "GetFieldBy": "id",
+    "ValueToFind": "DevolverOrigen"
+  },
+  "As012": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Aprobar"
+  },
+  "As013": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Radicar"
+  },
+  "As014": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Usuarios')]"
+  },
+  "PesUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Usuarios')]"
+  },
+  "As014_1": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Agregar_ListaUsuariosPersonas"
+  },
+  "As014_2": {
+    "GetFieldBy": "id",
+    "ValueToFind": "eliminar"
+  },
+  "As015": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Adjuntos')]"
+  },
+  "PesAdjunto": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Adjuntos-tab"
+  },
+  "As015_1": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]"
+  },
+  "As015_2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]"
+  },
+  "As015_3": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[5]/button[1]/i[1]"
+  },
+  "As016": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Notificaciones')]"
+  },
+  "PesNotificaciones": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Notificaciones-tab"
+  },
+  "As016_1": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Agregar_ListaNotificaciones"
+  },
+  "As016_2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[2]/div[3]/button[1]/i[1]"
+  },
+  "As017": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]"
+  },
+  "As018": {
+    "GetFieldBy": "id",
+    "ValueToFind": "EliminarRadicadoAsociado"
+  },
+  "As019": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[3]/div[1]/label[1]"
+  },
+  "As020": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[3]/div[2]/label[1]"
+  },
+  "As021": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[@id='RaSitio-help-block']"
+  },
+  "As022": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[4]/div[1]/label[1]"
+  },
+  "As023": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[4]/div[2]/label[1]"
+  },
+  "As024": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[5]/div[1]/label[1]"
+  },
+  "As025": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[5]/div[2]/label[1]"
+  },
+  "As026": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[6]/div[1]/label[1]"
+  },
+  "As027": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[7]/div[1]/label[1]"
+  },
+  "As028": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[7]/div[2]/label[1]"
+  },
+  "As029": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[8]/div[1]/label[1]"
+  },
+  "As030": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[8]/div[2]/label[1]"
+  },
+  "As031": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[9]/div[1]/label[1]"
+  },
+  "As032": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//h5[contains(text(),'Buscar Asociar')]"
+  },
+  "As033": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/label[1]"
+  },
+  "As034": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[@id='UsNombres-help-block']"
+  },
+  "As035": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/label[2]"
+  },
+  "As036": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/label[3]"
+  },
+  "As037": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/label[4]"
+  },
+  "As038": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[@id='UsEmail-help-block']"
+  },
+  "As039": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/label[5]"
+  },
+  "As040": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/label[6]"
+  },
+  "As041": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/label[7]"
+  },
+  "As042": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[8]/div[1]/label[1]"
+  },
+  "As043": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionPeticionParametros_Buscar"
+  },
+  "UsuarioGrupo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UgGrupo"
+  },
+  "As044": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Registros:')]"
+  },
+  "As045": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Pág:')]"
+  },
+  "As046": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Exportar a')]"
+  },
+  "As047": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/a[1]"
+  },
+  "As048": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/a[2]"
+  },
+  "As049": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'AsociarUsr')]"
+  },
+  "As050": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'AsociarGrupo')]"
+  },
+  "As051": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//thead/tr[1]/th[3]/a[1]"
+  },
+  "As052": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//thead/tr[1]/th[4]/a[1]"
+  },
+  "As053": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Apellidos')]"
+  },
+  "As054": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Identificación')]"
+  },
+  "As055": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Email')]"
+  },
+  "As056": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//thead/tr[1]/th[8]/a[1]"
+  },
+  "As057": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Nombre Cargo')]"
+  },
+  "As058": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Dependencia')]"
+  },
+  "As059": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[7]/div[1]/label[1]"
+  },
+  "As060": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[7]/div[2]/label[1]"
+  },
+  "As061": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[8]/div[1]/label[1]"
+  },
+  "As062": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[8]/div[2]/label[1]"
+  },
+  "As063": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Personas-tab"
+  },
+  "As063_1": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]"
+  },
+  "As063_2": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]"
+  },
+  "As064": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[9]/div[1]/label[1]"
+  },
+  "As065": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[9]/div[2]/label[1]"
+  },
+  "As066": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[10]/div[1]/label[1]"
+  },
+  "As067": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[10]/div[2]/label[1]"
+  },
+  "As068": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[11]/div[1]/label[1]"
+  },
+  "PesPersonas": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Personas-tab"
+  },
+  "As069": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//h5[contains(text(),'Buscar Asociar')]"
+  },
+  "As070": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[1]/div[1]/label[1]"
+  },
+  "As071": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[2]/div[1]/label[1]"
+  },
+  "As072": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[3]/div[1]/label[1]"
+  },
+  "As073": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[4]/div[1]/label[1]"
+  },
+  "As074": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[5]/div[1]/div[1]/div[1]/label[1]"
+  },
+  "As075": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[6]/div[1]/label[1]"
+  },
+  "As076": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[7]/div[1]/label[1]"
+  },
+  "As077": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[8]/div[1]/label[1]"
+  },
+  "As078": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[9]/div[1]/label[1]"
+  },
+  "As079": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[10]/div[1]/label[1]"
+  },
+  "As080": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[11]/div[1]/label[1]"
+  },
+  "As081": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[12]/div[1]/label[1]"
+  },
+  "As082": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[13]/div[1]/label[1]"
+  },
+  "As083": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[14]/div[1]/label[1]"
+  },
+  "As084": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[15]/div[1]/label[1]"
+  },
+  "As085": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[16]/div[1]/label[1]"
+  },
+  "As086": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[17]/div[1]/label[1]"
+  },
+  "As087": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@id='AccionPeticionParametros_Buscar']"
+  },
+  "As088": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@id='AccionPeticionParametros_Crear']"
+  },
+  "As089": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/form[1]/div[2]/div[14]/div[1]/div[1]/div[1]/div[1]/button[1]/i[1]"
+  },
+  "IngresarPersonas": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Agregar_ListaPersonas"
+  },
+  "CampoNombrePersona": {
+    "GetFieldBy": "id",
+    "ValueToFind": "PerNombre"
+  },
+  "BBPersona": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionPeticionParametros_Buscar"
+  },
+  "BBCrear": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionPeticionParametros_Crear"
+  },
+  "As090": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[contains(text(),'Registros:')]"
+  },
+  "As091": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[contains(text(),'Pág:')]"
+  },
+  "As092": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[contains(text(),'Exportar a')]"
+  },
+  "As093": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a[1]/i[1]"
+  },
+  "As094": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//body/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a[2]/i[1]"
+  },
+  "As095": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//thead/tr[1]/th[1]/a[1]"
+  },
+  "As096": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Nombre')]"
+  },
+  "As097": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Tipo identificación')]"
+  },
+  "As098": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Identificación')]"
+  },
+  "As099": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Telefono 1')]"
+  },
+  "As0100": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Telefono 2')]"
+  },
+  "As0101": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Fax')]"
+  },
+  "As0102": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Email')]"
+  },
+  "As0103": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Dirección')]"
+  },
+  "As0104": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'País')]"
+  },
+  "As0105": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Estados')]"
+  },
+  "As0106": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Ciudades / Localidades')]"
+  },
+  "As0107": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Género')]"
+  },
+  "As0108": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Cargo')]"
+  },
+  "As0109": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//a[contains(text(),'Dependencia')]"
+  },
+  "AdjGesDocumental": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[14]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/button[1]/i[1]"
+  },
+  "AdjGesDocumental2": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Agregar_ListaAdjuntos"
+  },
+  "AdjArchivoLocal": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[14]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]/button[1]"
+  },
+  "AGDArchivoAsociado": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AnArchivo_texto"
+  },
+  "AGDBotonAsociar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionPeticionParametros_Buscar"
+  },
+  "AGDAsociar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/a[1]"
+  },
+  "AGDAsociar2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[1]/a[1]"
+  },
+  "AGDAsociar3": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[3]/td[1]/a[1]"
+  },
+  "AGDAsociarPesado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'AsociarArchivo')]"
+  },
+  "BuscarUsuPerAdjuntos": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BuscarAsociar"
+  },
+  "AgregarUsuPerAdjuntos": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Resultados"
+  },
+  "ArchivoAsociado": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AnArchivo_texto"
+  },
+  "BotonBuscarAsociados": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionPeticionParametros_Buscar"
+  },
+  "tresPuntos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[5]/td[3]/a[1]/img[1]"
+  },
+  "tresPuntos1": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[1]/td[3]"
+  },
+  "tresPuntos2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[2]/td[3]"
+  },
+  "RadComunicado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/ul[1]/li[17]/span[1]"
+  },
+  "Gestion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[@id='Adjuntos-tab']"
+  },
+  "BGuardar2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='Guardar']"
+  },
+  "Adjunto1": {
+    "GetFieldBy": "name",
+    "ValueToFind": "files[]"
+  },
+  "SubirPDF": {
+    "GetFieldBy": "name",
+    "ValueToFind": "files[]"
+  },
+  "Registro2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[14]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/select[1]/option[2]"
+  },
+  "AdjEliminar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "eliminar"
+  },
+  "BusBanTrasladar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BuscarBDE_Trasladar"
+  },
+  "BotonBuscarTrasladar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Buscar"
+  },
+  "SelBanTrasladar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BDE_Traslado"
+  },
+  "ObsBanTrasladar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ObservacionesTrasladar"
+  },
+  "BotonTrasladar": {
+    "GetFieldBy": "name",
+    "ValueToFind": "BotonTrasladar"
+  },
+  "TresPuntosDevolver": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[4]/td[3]"
+  },
+  "TresPuntosDevolver2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[1]/td[3]"
+  },
+  "TresPuntosDevolver3": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[1]/td[3]"
+  },
+  "TresPuntosDevolver4": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[1]/td[3]"
+  },
+  "TresPuntosAprobar5": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[4]/td[3]"
+  },
+  "TresPuntosAprobarS5": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[5]/td[3]"
+  },
+  "TresPuntosVista6": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[7]/td[3]"
+  },
+  "TresPuntosSalVista6": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[22]/td[3]"
+  },
+  "TresPuntosDevolverS1": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[5]/td[3]"
+  },
+  "TresPuntosDevolverS2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[1]/td[3]"
+  },
+  "TresPuntosDevolverS3": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[1]/td[3]"
+  },
+  "TresPuntosDevolverS4": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[1]/td[3]"
+  },
+
+
+  "AssDevolver1": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[7]/div[1]/div[1]/div[1]/h5[1]"
+  },
+  "AssDevolver2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'¿Esta seguro de Devolver el Documento?')]"
+  },
+  "AssDevolver3": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/button[1]/i[1]"
+  },
+  "AssDevolver4": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[7]/div[1]/div[1]/div[3]/div[1]/div[1]/button[2]/i[1]"
+  },
+  "BotonDevolver": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonConfirDevolver"
+  },
+  "AssDevolver5": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[10]/div[1]/div[1]/div[1]/h5[1]"
+  },
+  "AssDevolver6": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[10]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/label[1]"
+  },
+  "AssDevolver7": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[@id='ObservacionesDevolver-help-block']"
+  },
+  "AssDevolver8": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[@id='ContadorObservacionesDevolver']"
+  },
+  "AssDevolver9": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[10]/div[1]/div[1]/div[3]/div[1]/div[1]/button[1]/i[1]"
+  },
+  "AssDevolver10": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[10]/div[1]/div[1]/div[3]/div[1]/div[1]/button[2]/i[1]"
+  },
+  "ObsDevolucion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ObservacionesDevolver"
+  },
+  "BotonConfDevolcion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonDevolver"
+  },
+  "AssAprobar11": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//h5[contains(text(),'Confirmación Aprobar')]"
+  },
+  "AssAprobar12": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'¿Esta seguro de Aprobar el Documento?')]"
+  },
+  "AssAprobar13": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[6]/div[1]/div[1]/div[3]/div[1]/div[1]/button[1]/i[1]"
+  },
+  "AssAprobar14": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[6]/div[1]/div[1]/div[3]/div[1]/div[1]/button[2]/i[1]"
+  },
+  "BotonConfirAprobar": {
+    "GetFieldBy": "cssSelector",
+    "ValueToFind": "#BotonConfirAprobar"
+  },
+  "AssAprobar15": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[12]/div[1]/div[1]/div[1]/h5[1]"
+  },
+  "AssAprobar16": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[12]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/label[1]"
+  },
+  "AssAprobar17": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[@id='BuscarBDE_Aprobar-help-block']"
+  },
+  "AssAprobar18": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[12]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/label[1]"
+  },
+  "AssAprobar19": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[@id='BDE_Aprobar-help-block']"
+  },
+  "AssAprobar20": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[12]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[4]/div[1]/label[1]"
+  },
+  "AssAprobar21": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[@id='ObservacionesAprobar-help-block']"
+  },
+  "AssAprobar22": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[@id='ContadorObservacionesAprobar']"
+  },
+  "AssAprobar23": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[12]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/button[1]/i[1]"
+  },
+  "AssAprobar24": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[12]/div[1]/div[1]/div[3]/div[1]/div[1]/button[1]/i[1]"
+  },
+  "AssAprobar25": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[12]/div[1]/div[1]/div[3]/div[1]/div[1]/button[1]/i[1]"
+  },
+  "BusBDEAprobar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BuscarBDE_Aprobar"
+  },
+  "BotonBusAprobar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[12]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/button[1]"
+  },
+  "ObservacionesAprobar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ObservacionesAprobar"
+  },
+  "BotAprobar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonAprobar"
+  },
+  "AssDevolOri1": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//h5[contains(text(),'Confirmación Devolver Origen')]"
+  },
+  "AssDevolOri2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'¿Esta seguro de Devolver el Documento al origen?')]"
+  },
+  "AssDevolOri3": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[8]/div[1]/div[1]/div[3]/div[1]/div[1]/button[1]/i[1]"
+  },
+  "AssDevolOri4": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[8]/div[1]/div[1]/div[3]/div[1]/div[1]/button[2]/i[1]"
+  },
+  "BotConfDevolOrigen": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[8]/div[1]/div[1]/div[3]/div[1]/div[1]/button[1]"
+  },
+  "AssDevolOri5": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//h5[contains(text(),'Devolver el Documento al origen')]"
+  },
+  "AssDevolOri6": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[11]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/label[1]"
+  },
+  "AssDevolOri7": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[@id='ObservacionesDevolverOrigen-help-block']"
+  },
+  "AssDevolOri8": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[@id='ContadorObservacionesDevolverOrigen']"
+  },
+  "AssDevolOri9": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[11]/div[1]/div[1]/div[3]/div[1]/div[1]/button[1]/i[1]"
+  },
+  "AssDevolOri10": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[11]/div[1]/div[1]/div[3]/div[1]/div[1]/button[2]/i[1]"
+  },
+  "ObsDevolOrigen": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ObservacionesDevolverOrigen"
+  },
+  "BotDevolOrigen": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[11]/div[1]/div[1]/div[3]/div[1]/div[1]/button[1]"
+  },
+  "FlechaArriba": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[1]/a[1]"
+  },
+  "Comunicados": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[6]"
+  },
+  "usuario01": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[6]"
+  },
+  "usuario02": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[3]/td[6]"
+  },
+  "usuario03": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[4]/td[6]"
+  },
+  "usuario04": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[5]/td[6]"
+  },
+  "BDEComunicados": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[6]"
+  },
+  "Coleccion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "SetearColumnasColeccion"
+  },
+  "IrAEstPadre": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[1]/a[1]"
+  },
+  "DirGestionDocumental": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[6]"
+  },
+  "SubirPDFComunicados": {
+    "GetFieldBy": "name",
+    "ValueToFind": "files[]"
+  },
+  "EspVentana": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//h5[contains(text(),'Buscar Asociar')]"
+  },
+  "CerrarProcesamiento": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[2]/div[1]/div[1]/div[1]/button[1]"
+  },
+  "AssBotCanc": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/button[2]/i[1]"
+
+  }
+}

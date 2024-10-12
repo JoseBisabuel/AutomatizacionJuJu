@@ -1,0 +1,1539 @@
+-------------------------------------------------------------------------------
+Test set: StepDefinitions.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 779, Failures: 19, Errors: 164, Skipped: 0, Time elapsed: 19,888.153 s <<< FAILURE! - in StepDefinitions.TestRunner
+AC_AZDv6-1772: Crear comunicados con adjunto - Gestion Documental(Comunicados Internos - Adjuntos)  Time elapsed: 15.732 s  <<< ERROR!
+org.sikuli.script.FindFailed: F:\Calidad_QA\AZDigital\AZDigitalV6\src\test\resources\StorageImage/ComunicadosGuardados.png: (139x22) in R[0,0 1366x768]@S(0)
+
+AC_AZDv6-1772: Crear comunicados con adjunto - Eliminar Adjunto(Comunicados Internos - Adjuntos)  Time elapsed: 71.314 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[14]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/select[1]/option[2] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[14]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/select[1]/option[2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Radicar y borrar comunicado Aprobación(Comunicados Internos - terminar, cerrar y borrar comunicados)  Time elapsed: 30.656 s  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <button id="Regresar" name="Regresar" type="button" class="btn btn-secondary fas fa-arrow-left mr-1">...</button> is not clickable at point (358, 56). Other element would receive the click: <div class="modal fade show" id="VentanaAlerta" name="VentanaAlerta" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-modal="true" style="padding-right: 17px; display: block;">...</div>
+  (Session info: chrome=111.0.5563.65)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:65129}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1b51153c0c2517828a9ed3a471773dfa
+
+AC_AZDv6-70 : Concatenar Archivos - BDE(Concatenar)  Time elapsed: 14.978 s  <<< ERROR!
+org.sikuli.script.FindFailed: F:\Calidad_QA\AZDigital\AZDigitalV6\src\test\resources\StorageImage/EstAutomatizacion.png: (101x16) in R[0,0 1366x768]@S(0)
+
+AC_AZDv6-70 : Concatenar Archivos - Coleccion Uno a Uno(Concatenar)  Time elapsed: 18.649 s  <<< ERROR!
+org.sikuli.script.FindFailed: F:\Calidad_QA\AZDigital\AZDigitalV6\src\test\resources\StorageImage/EstAutomatizacion.png: (101x16) in R[0,0 1366x768]@S(0)
+
+AC_AZDv6-70 : Concatenar Archivos - Coleccion Todos(Concatenar)  Time elapsed: 15.091 s  <<< ERROR!
+org.sikuli.script.FindFailed: F:\Calidad_QA\AZDigital\AZDigitalV6\src\test\resources\StorageImage/EstAutomatizacion.png: (101x16) in R[0,0 1366x768]@S(0)
+
+AC_AZDv6-1 : Tablero de control - RadicadosPendientes ExpSinEncabezado PDF(Dashboard - Exportar Opciones Radicados)  Time elapsed: 18.602 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Por favor seleccione mínimo una columna a exportar.}
+  (Session info: chrome=111.0.5563.65): Por favor seleccione mínimo una columna a exportar.
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:50282}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3bc4aff5c9e4b617f7c98ca39de12ad7
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 9.977 s  <<< ERROR!
+cucumber.runner.AmbiguousStepDefinitionsException: 
+"Hacer Click en El elemento o RadicadosRespondidos" matches more than one step definition:
+  "^Hacer Click en El elemento (.*)" in StepDefinitions.iDoClickInElement(String)
+  "^Hacer Click en El elemento o (.*)" in StepDefinitions.clickInElement(String)
+
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 10.073 s  <<< ERROR!
+cucumber.runner.AmbiguousStepDefinitionsException: 
+"Hacer Click en El elemento o RadicadosRespondidos" matches more than one step definition:
+  "^Hacer Click en El elemento (.*)" in StepDefinitions.iDoClickInElement(String)
+  "^Hacer Click en El elemento o (.*)" in StepDefinitions.clickInElement(String)
+
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 10.185 s  <<< ERROR!
+cucumber.runner.AmbiguousStepDefinitionsException: 
+"Hacer Click en El elemento o RadicadosRespondidos" matches more than one step definition:
+  "^Hacer Click en El elemento (.*)" in StepDefinitions.iDoClickInElement(String)
+  "^Hacer Click en El elemento o (.*)" in StepDefinitions.clickInElement(String)
+
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 10.125 s  <<< ERROR!
+cucumber.runner.AmbiguousStepDefinitionsException: 
+"Hacer Click en El elemento o RadicadosRespondidos" matches more than one step definition:
+  "^Hacer Click en El elemento (.*)" in StepDefinitions.iDoClickInElement(String)
+  "^Hacer Click en El elemento o (.*)" in StepDefinitions.clickInElement(String)
+
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 10.103 s  <<< ERROR!
+cucumber.runner.AmbiguousStepDefinitionsException: 
+"Hacer Click en El elemento o RadicadosRespondidos" matches more than one step definition:
+  "^Hacer Click en El elemento (.*)" in StepDefinitions.iDoClickInElement(String)
+  "^Hacer Click en El elemento o (.*)" in StepDefinitions.clickInElement(String)
+
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 9.986 s  <<< ERROR!
+cucumber.runner.AmbiguousStepDefinitionsException: 
+"Hacer Click en El elemento o RadicadosRespondidos" matches more than one step definition:
+  "^Hacer Click en El elemento (.*)" in StepDefinitions.iDoClickInElement(String)
+  "^Hacer Click en El elemento o (.*)" in StepDefinitions.clickInElement(String)
+
+
+AC_AZDv6-1 : Tablero de control - RadicadosRespondidos ExpSinEncabezado PDF(Dashboard - Exportar Opciones Radicados)  Time elapsed: 17.918 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Por favor seleccione mínimo una columna a exportar.}
+  (Session info: chrome=111.0.5563.65): Por favor seleccione mínimo una columna a exportar.
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:50655}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 19d8bef6151cb6b9c363f35e35a2a45a
+
+AC_AZDv6-1 : Tablero de control - RadicadosRecibidos ExpSinEncabezado PDF(Dashboard - Exportar Opciones Radicados)  Time elapsed: 19.201 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Por favor seleccione mínimo una columna a exportar.}
+  (Session info: chrome=111.0.5563.65): Por favor seleccione mínimo una columna a exportar.
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:51043}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d36a5de059c2b7187cc9f48d74039d5
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 70.9 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 71.096 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 71.527 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 70.695 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 71.776 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 71.728 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - RaRecibidosDia ExpSinEncabezado PDF(Dashboard - Exportar Opciones Radicados)  Time elapsed: 70.774 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 70.749 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 71.391 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 71.677 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 71.382 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 70.683 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 70.796 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado PDF(Dashboard - Exportar Opciones Radicados)  Time elapsed: 71.274 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 74.575 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 75.311 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 75.119 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.139 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 75.786 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.088 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado PDF(Dashboard - Exportar Opciones Flujos)  Time elapsed: 75.885 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 74.592 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 75.426 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 74.65 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 75.485 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 75.251 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.156 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado PDF(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.029 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-592: Funcionalidad Columna Fecha de Creacion Ingreso por por Menú Hamburguesa(Columnas feature)  Time elapsed: 91.435 s  <<< FAILURE!
+java.lang.AssertionError: Elemento no presente: FechaCreacion
+
+AC_AZDv6-592: Funcionalidad Columna Fecha de Creacion Ingreso por botón Regresar(Columnas feature)  Time elapsed: 84.409 s  <<< FAILURE!
+java.lang.AssertionError: Elemento no presente: FechaCreacion
+
+AC_AZDv6-590: Configuracion Columnas Visibles Ingreso desde el botón Regresar(Columnas feature)  Time elapsed: 83.349 s  <<< FAILURE!
+java.lang.AssertionError: Elemento no presente: FechaCreacion
+
+AC_AZDv6-590: Configuracion Columnas Visibles Ingreso Por Menu Hamburgesa(Columnas feature)  Time elapsed: 34.668 s  <<< ERROR!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: element is not attached to the page document
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:56587}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c05f18ae70c99a0ee270f9abf9d26d60
+
+AC_AZDv6-1746 Cambio campo Folio por orden Ingreso por Menú Hamburguesa(Columnas feature)  Time elapsed: 49.987 s  <<< FAILURE!
+java.lang.AssertionError: este Texto esta presente en el elemento: CampoOrden1el texto actual es: 
+
+AC_AZDv6-1746 Cambio campo Folio por orden Ingreso por Botón regresar(Columnas feature)  Time elapsed: 41.489 s  <<< FAILURE!
+java.lang.AssertionError: este Texto esta presente en el elemento: CampoOrden1el texto actual es: 
+
+AC_AZDv6-40: Mover Archivo(Tres Puntos - Prueba de opciones - Archivo)  Time elapsed: 76.052 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //body[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/a[1]/img[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //body[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/a[1]/img[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-43: Compartir Archivo(Tres Puntos - Prueba de opciones - Archivo)  Time elapsed: 86.327 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/header[1]/div[2]/button[2] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/header[1]/div[2]/button[2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-47: Comentar archivo(Tres Puntos - Prueba de opciones - Archivo)  Time elapsed: 13.448 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=111.0.5563.65)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:62588}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 40e6a671a2f13bf9d23336426962a1ec
+
+AC_AZDv6-38: Responder Radicado - Regresar(Tres Puntos - Prueba de opciones - Archivo)  Time elapsed: 66.075 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //p[contains(text(),'RadicaciÃ³n Responder Radicado')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //p[contains(text(),'RadicaciÃ³n Responder Radicado')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-39: Responder Radicados con archivos con adjuntos - Archivo(Tres Puntos - Prueba de opciones - Archivo)  Time elapsed: 66.389 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //p[contains(text(),'RadicaciÃ³n Responder Radicado')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //p[contains(text(),'RadicaciÃ³n Responder Radicado')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-38: Responder Radicado - Pestaña Responder Radicado(Tres Puntos - Prueba de opciones - Archivo)  Time elapsed: 67.02 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //p[contains(text(),'RadicaciÃ³n Responder Radicado')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //p[contains(text(),'RadicaciÃ³n Responder Radicado')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-38: Responder Radicado - Guardar _ Vista Previa(Tres Puntos - Prueba de opciones - Archivo)  Time elapsed: 66.288 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //p[contains(text(),'RadicaciÃ³n Responder Radicado')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //p[contains(text(),'RadicaciÃ³n Responder Radicado')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-38: Responder Radicado - Generar Radicado Respuesta EMAIL(Tres Puntos - Prueba de opciones - Archivo)  Time elapsed: 66.471 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //p[contains(text(),'RadicaciÃ³n Responder Radicado')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //p[contains(text(),'RadicaciÃ³n Responder Radicado')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Radicar Comunicado(Tres Puntos - Prueba de opciones - Archivo)  Time elapsed: 72.183 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //p[contains(text(),'RadicaciÃ³n Comunicados')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //p[contains(text(),'RadicaciÃ³n Comunicados')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Borrado de Archivo(Tres Puntos - Borrado - Archivos)  Time elapsed: 80.723 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/thead[1]/tr[1]/th[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/thead[1]/tr[1]/th[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Crear Directorios tres puntos(Tres Puntos - Carga - Directorio)  Time elapsed: 107.696 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: DiNombre (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.id: DiNombre
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Compartir Carpeta(Tres Puntos - Prueba de opciones - Directorio)  Time elapsed: 85.084 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/header[1]/div[2]/button[2] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/header[1]/div[2]/button[2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Mover Carpeta(Tres Puntos - Prueba de opciones - Directorio)  Time elapsed: 73.583 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Cambiar estado flujo trabajo - Abortar Directorio(Tres Puntos - Prueba de opciones - Directorio)  Time elapsed: 69.744 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: Abortar (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.id: Abortar
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Borrado de Archivo(Tres Puntos - Borrado - Directorio)  Time elapsed: 75.156 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/thead[1]/tr[1]/th[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/thead[1]/tr[1]/th[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Busqueda fecha creacion desde estructura principal(Busqueda Archivos)  Time elapsed: 13.448 s  <<< FAILURE!
+java.lang.AssertionError: 
+este Texto esta presente en el elemento: TablaResultadosel texto actual es: Elemento Fecha Creación Fecha Modificación Tipo Tamaño Creador Path Texto Categoría
+AZDigital AZDigital
+
+Busqueda fecha creacion desde estructura principal(Busqueda Archivos)  Time elapsed: 13.016 s  <<< FAILURE!
+java.lang.AssertionError: este Texto esta presente en el elemento: TablaResultadosel texto actual es: Elemento Fecha Creación Fecha Modificación Tipo Tamaño Creador Path Texto Categoría
+
+Busqueda fecha creacion desde estructura principal(Busqueda Archivos)  Time elapsed: 12.639 s  <<< FAILURE!
+java.lang.AssertionError: este Texto esta presente en el elemento: TablaResultadosel texto actual es: Elemento Fecha Creación Fecha Modificación Tipo Tamaño Creador Path Texto Categoría
+
+Busqueda fecha creacion desde estructura principal(Busqueda Archivos)  Time elapsed: 12.891 s  <<< FAILURE!
+java.lang.AssertionError: este Texto esta presente en el elemento: TablaResultadosel texto actual es: Elemento Fecha Creación Fecha Modificación Tipo Tamaño Creador Path Texto Categoría
+
+Busqueda fecha creacion desde coleccion(Busqueda Archivos)  Time elapsed: 16.573 s  <<< FAILURE!
+java.lang.AssertionError: este Texto esta presente en el elemento: TablaResultadosel texto actual es: Elemento Fecha Creación Fecha Modificación Tipo Tamaño Creador Path Texto Categoría
+
+Busqueda fecha creacion desde coleccion(Busqueda Archivos)  Time elapsed: 16.493 s  <<< FAILURE!
+java.lang.AssertionError: este Texto esta presente en el elemento: TablaResultadosel texto actual es: Elemento Fecha Creación Fecha Modificación Tipo Tamaño Creador Path Texto Categoría
+
+Busqueda fecha creacion desde coleccion(Busqueda Archivos)  Time elapsed: 17.93 s  <<< FAILURE!
+java.lang.AssertionError: este Texto esta presente en el elemento: TablaResultadosel texto actual es: Elemento Fecha Creación Fecha Modificación Tipo Tamaño Creador Path Texto Categoría
+
+Busqueda fecha creacion desde coleccion(Busqueda Archivos)  Time elapsed: 16.741 s  <<< FAILURE!
+java.lang.AssertionError: este Texto esta presente en el elemento: TablaResultadosel texto actual es: Elemento Fecha Creación Fecha Modificación Tipo Tamaño Creador Path Texto Categoría
+
+Busqueda completa en carpetas(Busqueda Archivos)  Time elapsed: 116.895 s  <<< FAILURE!
+java.lang.AssertionError: Elemento no presente: ResultadoFecha
+
+Busqueda completa en carpetas(Busqueda Archivos)  Time elapsed: 118.58 s  <<< FAILURE!
+java.lang.AssertionError: Elemento no presente: ResultadoFecha
+
+Busqueda completa en carpetas(Busqueda Archivos)  Time elapsed: 120.478 s  <<< FAILURE!
+java.lang.AssertionError: Elemento no presente: ResultadoFecha
+
+Busqueda completa en carpetas(Busqueda Archivos)  Time elapsed: 120.98 s  <<< FAILURE!
+java.lang.AssertionError: Elemento no presente: ResultadoFecha
+
+AC_AZDv6-1790:Creacion tipos de directorio - Estructura - 1(Opciones Crear)  Time elapsed: 87.089 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //span[contains(text(),'Ã—')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //span[contains(text(),'Ã—')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1791 : Creacion tipos de directorio - Coleccion - 1 - Bandeja de Entrada(Opciones Crear)  Time elapsed: 87.624 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //span[contains(text(),'Ã—')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //span[contains(text(),'Ã—')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1791 : Creacion tipos de directorio - Coleccion - 1 - Carpeta Privada(Opciones Crear)  Time elapsed: 84.79 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //span[contains(text(),'Ã—')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //span[contains(text(),'Ã—')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1791 : Creacion tipos de directorio - Coleccion - 1 - Carpeta Publica(Opciones Crear)  Time elapsed: 88.12 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //span[contains(text(),'Ã—')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //span[contains(text(),'Ã—')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1791 : Creacion tipos de directorio - Coleccion - 1 - Coleccion(Opciones Crear)  Time elapsed: 88.833 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //span[contains(text(),'Ã—')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //span[contains(text(),'Ã—')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1791 : Creacion tipos de directorio - Coleccion - 1 - Hipervinculo(Opciones Crear)  Time elapsed: 87.785 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //span[contains(text(),'Ã—')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //span[contains(text(),'Ã—')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1792 : Creacion tipos de directorio - Bandeja de Entrada - 1 - Carpeta Privada(Opciones Crear)  Time elapsed: 92.726 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //span[contains(text(),'Ã—')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //span[contains(text(),'Ã—')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1792 : Creacion tipos de directorio - Bandeja de Entrada - 1 - Documento Radicado(Opciones Crear)  Time elapsed: 32.094 s  <<< FAILURE!
+java.lang.AssertionError: 
+este Texto esta presente en el elemento: TablaArchivosel texto actual es: Nombre Remitente Destinatario Tamaño Versión Categoría Estado / Actividad
+nelson_Clave_Julianita1.p12
+2 KB 2023-02-21 (v. 1)  
+
+AC_AZDv6-1793 : Creacion tipos de directorio - Carpeta - 1 - Publica-Privada(Opciones Crear)  Time elapsed: 90.414 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //span[contains(text(),'Ã—')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //span[contains(text(),'Ã—')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1793 : Creacion tipos de directorio - Carpeta - 1 - Publica-Privada(Opciones Crear)  Time elapsed: 90.264 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //span[contains(text(),'Ã—')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //span[contains(text(),'Ã—')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-67 Firmar Digitalmente(SeleccioneUnaAccionHipervinculo)  Time elapsed: 12.76 s  <<< ERROR!
+java.lang.NullPointerException
+
+AC_AZDv6-69 Firmar AZSign(SeleccioneUnaAccionHipervinculo)  Time elapsed: 13.039 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Esta opcion no esta permitida para archivos con extensión laz}
+  (Session info: chrome=111.0.5563.65): Esta opcion no esta permitida para archivos con extensión laz
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:49995}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ca70df34c4f56a3c010ab07dfcc2db1
+
+Cargar Archivos(SeleccioneUnaAccion)  Time elapsed: 9.488 s  <<< ERROR!
+java.lang.NullPointerException
+
+AC_AZDv6-58 Publicar(SeleccioneUnaAccion)  Time elapsed: 66.559 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-62 Categorizar(SeleccioneUnaAccion)  Time elapsed: 67.065 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-59 Renombrar(SeleccioneUnaAccion)  Time elapsed: 66.988 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-68 Iniciar Flujo(SeleccioneUnaAccion)  Time elapsed: 67.186 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-584 Categorias Datos Adicionales(SeleccioneUnaAccion)  Time elapsed: 67.772 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'VersiÃ³n')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //a[contains(text(),'VersiÃ³n')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-68 Cambiar Estado del Flujo(SeleccioneUnaAccion)  Time elapsed: 71.606 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr[2]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr[2]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-68 Abortar Flujo(SeleccioneUnaAccion)  Time elapsed: 66.757 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-60 Mover(SeleccioneUnaAccion)  Time elapsed: 66.752 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-61 Borrar(SeleccioneUnaAccion)  Time elapsed: 67.035 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-63 Compartir(SeleccioneUnaAccion)  Time elapsed: 67.601 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-64 Traslado(SeleccioneUnaAccion)  Time elapsed: 66.838 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-65 Copiar(SeleccioneUnaAccion)  Time elapsed: 66.776 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-67 Firmar Digitalmente p12(SeleccioneUnaAccion)  Time elapsed: 66.925 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+ValidarFirma(SeleccioneUnaAccion)  Time elapsed: 67.071 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr/td[5] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr/td[5]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-67 Firmar Digitalmente GSE(SeleccioneUnaAccion)  Time elapsed: 68.04 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+ValidarFirma(SeleccioneUnaAccion)  Time elapsed: 66.615 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr/td[5] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr/td[5]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-69 Firmar AZSign(SeleccioneUnaAccion)  Time elapsed: 66.954 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-68 Abortar Flujo(SeleccioneUnaAccionFormatoHTML)  Time elapsed: 18.801 s  <<< ERROR!
+org.openqa.selenium.NoSuchWindowException: 
+no such window
+  (Session info: chrome=111.0.5563.65)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:50968}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a1a90e18017d9614b62331dc8c35114b
+
+AC_AZDv6-67 Firmar Digitalmente p12(SeleccioneUnaAccionFormatoHTML)  Time elapsed: 12.941 s  <<< ERROR!
+java.lang.NullPointerException
+
+AC_AZDv6-67 Firmar Digitalmente GSE(SeleccioneUnaAccionFormatoHTML)  Time elapsed: 12.35 s  <<< ERROR!
+java.lang.NullPointerException
+
+AC_AZDv6-69 Firmar AZSign(SeleccioneUnaAccionFormatoHTML)  Time elapsed: 13.581 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Esta opcion no esta permitida para archivos con extensión azform}
+  (Session info: chrome=111.0.5563.65): Esta opcion no esta permitida para archivos con extensión azform
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:51213}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: af824aa2ca7a52ccfd31da732765ef50
+
+Borrar(SeleccioneUnaAccionFormatoHTML)  Time elapsed: 8.851 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Formulario1.azform).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Formulario1.azform).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:51236}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8da2c8238d313e89ea5a08e7b810d198
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+
+AC_AZDv6-68 Cambiar Estado del Flujo(SeleccioneUnaAccionContenidoHTML)  Time elapsed: 13.981 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"/html[1]/body[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/div[1]/div[2]/select[1]"}
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:51616}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 60c91ffcc9cf265617651ecca49e8681
+*** Element info: {Using=xpath, value=/html[1]/body[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/div[1]/div[2]/select[1]}
+
+AC_AZDv6-68 Abortar Flujo(SeleccioneUnaAccionContenidoHTML)  Time elapsed: 18.675 s  <<< ERROR!
+org.openqa.selenium.NoSuchWindowException: 
+no such window
+  (Session info: chrome=111.0.5563.65)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:51635}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: db8f1b9cd3b8f80579258dadfefe059c
+
+AC_AZDv6-67 Firmar Digitalmente p12(SeleccioneUnaAccionContenidoHTML)  Time elapsed: 12.715 s  <<< ERROR!
+java.lang.NullPointerException
+
+AC_AZDv6-67 Firmar Digitalmente GSE(SeleccioneUnaAccionContenidoHTML)  Time elapsed: 12.306 s  <<< ERROR!
+java.lang.NullPointerException
+
+AC_AZDv6-69 Firmar AZSign(SeleccioneUnaAccionContenidoHTML)  Time elapsed: 12.164 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Esta opcion no esta permitida para archivos con extensión azform}
+  (Session info: chrome=111.0.5563.65): Esta opcion no esta permitida para archivos con extensión azform
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:51855}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bdbb70a86d5811f4cb6d4cc89908f874
+
+Borrar(SeleccioneUnaAccionContenidoHTML)  Time elapsed: 8.927 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Formulario8.azform).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Formulario8.azform).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:51878}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 91c9022894496ef55d791f902ede51ad
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+
+AC_AZDv6-68 Cambiar Estado del Flujo(SeleccioneUnaAccionCarpetaPrivada)  Time elapsed: 13.42 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"/html[1]/body[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/div[1]/div[2]/select[1]"}
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:52260}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ded2c1fc72c626aa8bccfd3d51fec8fa
+*** Element info: {Using=xpath, value=/html[1]/body[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/div[1]/div[2]/select[1]}
+
+AC_AZDv6-68 Abortar Flujo(SeleccioneUnaAccionCarpetaPrivada)  Time elapsed: 18.251 s  <<< ERROR!
+org.openqa.selenium.NoSuchWindowException: 
+no such window
+  (Session info: chrome=111.0.5563.65)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:52280}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3ac1b71db6ff103e95b76192c78450a0
+
+AC_AZDv6-64 Traslado(SeleccioneUnaAccionCarpetaPrivada)  Time elapsed: 72.644 s  <<< FAILURE!
+java.lang.AssertionError: Elemento no presente: BandejaEntrada
+
+Borrar(SeleccioneUnaAccionCarpetaPrivada)  Time elapsed: 9.076 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Formulario8.azform).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Formulario8.azform).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:52518}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 77491f351f57867a4f9a533ce0648254
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+
+AC_AZDv6-65 Copiar(SeleccioneUnaAccionCarpetaPublica)  Time elapsed: 12.792 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Solo es posible copiar archivos}
+  (Session info: chrome=111.0.5563.65): Solo es posible copiar archivos
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:52893}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6a544ab635265b9754285572a4e23eb7
+
+Borrar(SeleccioneUnaAccionCarpetaPublica)  Time elapsed: 20.39 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (MoverAuto/Formulario1.azform).
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (NuevoNombre).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (MoverAuto/Formulario1.azform).
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (NuevoNombre).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3be7aa79418f703b8dad77e7b28e9057
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+
+AC_AZDv6-61 Borrar(SeleccioneUnaAccionBDE)  Time elapsed: 8.789 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=111.0.5563.65)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53178}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5352166ee77b343387e7906521721a2c
+
+AC_AZDv6-65 Copiar(SeleccioneUnaAccionBDE)  Time elapsed: 12.901 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Solo es posible copiar archivos}
+  (Session info: chrome=111.0.5563.65): Solo es posible copiar archivos
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53260}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a8bfde1b29365fece56c88b68d266ede
+
+Borrar(SeleccioneUnaAccionBDE)  Time elapsed: 20.617 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (MoverAuto/Formulario1.azform).
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (NuevoNombre).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (MoverAuto/Formulario1.azform).
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (NuevoNombre).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53279}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 295ea5159b0add302acc979926f9e846
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+
+AC_AZDv6-61 Borrar(SeleccioneUnaAccionColeccion)  Time elapsed: 7.671 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=111.0.5563.65)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53550}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1de1e2049a49229f7ab47fc38d0c71b8
+
+AC_AZDv6-65 Copiar(SeleccioneUnaAccionColeccion)  Time elapsed: 12.861 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Solo es posible copiar archivos}
+  (Session info: chrome=111.0.5563.65): Solo es posible copiar archivos
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53648}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 85eecaba61d013119b518e1bced37e68
+
+Borrar(SeleccioneUnaAccionColeccion)  Time elapsed: 27.237 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (MoverAuto/Formulario1.azform).
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (NuevoNombre).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (MoverAuto/Formulario1.azform).
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (NuevoNombre).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53667}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 90a7890bba739251d884b5b6354d405f
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+
+AC_AZDv6-68 Cambiar Estado del Flujo(SeleccioneUnaAccionContenidoHTML)  Time elapsed: 13.732 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"/html[1]/body[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/div[1]/div[2]/select[1]"}
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54004}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f3e9845f93354874fb3662cd1024ecf
+*** Element info: {Using=xpath, value=/html[1]/body[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/div[1]/div[2]/select[1]}
+
+AC_AZDv6-68 Abortar Flujo(SeleccioneUnaAccionContenidoHTML)  Time elapsed: 20.195 s  <<< ERROR!
+org.openqa.selenium.NoSuchWindowException: 
+no such window
+  (Session info: chrome=111.0.5563.65)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54023}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d7c981b356388061f0b691a1371c9649
+
+AC_AZDv6-61 Borrar(SeleccioneUnaAccionContenidoHTML)  Time elapsed: 9.572 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=111.0.5563.65)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54064}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5c04bd0723c2c1a4569deda18a7e275
+
+AC_AZDv6-67 Firmar Digitalmente p12(SeleccioneUnaAccionContenidoHTML)  Time elapsed: 14.127 s  <<< ERROR!
+java.lang.NullPointerException
+
+ValidarFirma(SeleccioneUnaAccionContenidoHTML)  Time elapsed: 68.726 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="verFirmaDigital"] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="verFirmaDigital"]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-67 Firmar Digitalmente GSE(SeleccioneUnaAccionContenidoHTML)  Time elapsed: 14.769 s  <<< ERROR!
+java.lang.NullPointerException
+
+AC_AZDv6-69 Firmar AZSign(SeleccioneUnaAccionContenidoHTML)  Time elapsed: 14.034 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Esta opcion no esta permitida para archivos con extensión taz}
+  (Session info: chrome=111.0.5563.65): Esta opcion no esta permitida para archivos con extensión taz
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54266}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b88a7654697120e3f1b1e06effb8f6e2
+
+Borrar(SeleccioneUnaAccionContenidoHTML)  Time elapsed: 10.576 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Tabla1).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Tabla1).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54289}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 220a2f075921c92878e4337c51268741
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+
+Cargar Archivos(MasInformacionPDF)  Time elapsed: 7.616 s  <<< ERROR!
+java.lang.NullPointerException
+
+AC_AZDv6-22 Trasladar PDF(MasInformacionPDF)  Time elapsed: 67.716 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/textarea[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/textarea[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-22 Firmar Digitalmente P12* PDF(MasInformacionPDF)  Time elapsed: 14.395 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='ListaCertificados']"}
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54481}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f56ed6aab9e9e7e869a6510710e22f9a
+*** Element info: {Using=xpath, value=//select[@id='ListaCertificados']}
+
+AC_AZDv6-22 Publicar PDF(MasInformacionPDF)  Time elapsed: 7.481 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ListaAcciones"]/ul/li[9]/a"}
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54585}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 63da418531820a1507897b7b82b0f4e9
+*** Element info: {Using=xpath, value=//*[@id="ListaAcciones"]/ul/li[9]/a}
+
+Generar Perfilacion(MasInformacionPDF)  Time elapsed: 67.603 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'PerfilaciÃ³n Granular')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //a[contains(text(),'PerfilaciÃ³n Granular')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Metadata(MasInformacionPDF)  Time elapsed: 70.075 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[2]/div[3]/div[2]/form[2]/div[2]/div[1]/div[2]/div[1]/div[1]/textarea[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[2]/div[3]/div[2]/form[2]/div[2]/div[1]/div[2]/div[1]/div[1]/textarea[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Datos asociados(MasInformacionPDF)  Time elapsed: 71.091 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/form[1]/div[2]/div[1]/textarea[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/form[1]/div[2]/div[1]/textarea[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Opciones(MasInformacionPDF)  Time elapsed: 70.329 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[@id='Opciones-tab'] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //a[@id='Opciones-tab']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Abrir Contraseña(MasInformacionPDF)  Time elapsed: 68.181 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[@id='Opciones-tab'] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //a[@id='Opciones-tab']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+ReporteCumplimiento(MasInformacionPDF)  Time elapsed: 67.847 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[@id='Opciones-tab'] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //a[@id='Opciones-tab']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+General(MasInformacionPDF)  Time elapsed: 69.332 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.name: ArOrden (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.name: ArOrden
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Borrar(MasInformacionPDF)  Time elapsed: 9.873 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Contenido5.azform).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Contenido5.azform).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54923}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 125f4e24574e7dc7d2c29fcdbb6a83ea
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+
+Cargar Archivos(MasInformacionWord)  Time elapsed: 7.655 s  <<< ERROR!
+java.lang.NullPointerException
+
+Compartir(MasInformacionWord)  Time elapsed: 86.984 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/main[1]/div[1]/div[1]/div[1]/b[1]/table[1]/tbody[1]/tr[2]/td[2]/a[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/main[1]/div[1]/div[1]/div[1]/b[1]/table[1]/tbody[1]/tr[2]/td[2]/a[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Firmar Digitalmente P12*(MasInformacionWord)  Time elapsed: 17.139 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='ListaCertificados']"}
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:55100}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76f84044bf6f3adc0d9279c19a4d3c34
+*** Element info: {Using=xpath, value=//select[@id='ListaCertificados']}
+
+Publicar(MasInformacionWord)  Time elapsed: 7.855 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ListaAcciones"]/ul/li[9]/a"}
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:55120}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bb2d7aa8e8d85055343e225d68276389
+*** Element info: {Using=xpath, value=//*[@id="ListaAcciones"]/ul/li[9]/a}
+
+Versiones - Descargar(MasInformacionWord)  Time elapsed: 68.457 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'Bajar Archivo')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //a[contains(text(),'Bajar Archivo')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Perfilacion Granular(MasInformacionWord)  Time elapsed: 69.746 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="General"]/div[4]/label[3]/a (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="General"]/div[4]/label[3]/a
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+DescargarDesdeGeneral(MasInformacionWord)  Time elapsed: 69.309 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="Descargar"] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="Descargar"]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Select-Origen-Documento-Fechas-Orden(MasInformacionWord)  Time elapsed: 67.484 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.name: ArFechaCreacion (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.name: ArFechaCreacion
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Metadata Word(MasInformacionWord)  Time elapsed: 69.876 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.name: ArReferencia (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.name: ArReferencia
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Metadata Datos Asociados Word(MasInformacionWord)  Time elapsed: 72.088 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/form[1]/div[2]/div[1]/textarea[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/form[1]/div[2]/div[1]/textarea[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Opciones Opcion Despliegue Word(MasInformacionWord)  Time elapsed: 67.211 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[@id='Opciones-tab'] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //a[@id='Opciones-tab']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Borrar(MasInformacionWord)  Time elapsed: 10.393 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Contenido5.azform).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Contenido5.azform).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:55321}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a4aff9e287f72d72c6f35141d78b4cfd
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+
+AC_AZDv6-21 Compartir Carpeta(MasInformacionCarpeta)  Time elapsed: 82.066 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/main[1]/div[1]/div[1]/div[1]/b[1]/table[1]/tbody[1]/tr[2]/td[2]/a[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/main[1]/div[1]/div[1]/div[1]/b[1]/table[1]/tbody[1]/tr[2]/td[2]/a[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Borrar y Crear0(MasInformacionCarpeta)  Time elapsed: 9.936 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Contenido5.azform).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Contenido5.azform).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:55703}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d303b80fb66b6a00b9d314341b1609c0
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+
+AC_AZDv6-21 Calcular Tamaño y Abrir Carpeta(MasInformacionCarpeta)  Time elapsed: 5.336 s  <<< ERROR!
+java.lang.NullPointerException
+
+Borrar y Crear1(MasInformacionCarpeta)  Time elapsed: 8.125 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Contenido5.azform).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Contenido5.azform).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:55788}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2e87702ef61c5bbe6028863e0fbf22a0
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+
+AC_AZDv6-21 Metadata Carpeta Indexar(MasInformacionCarpeta)  Time elapsed: 6.313 s  <<< ERROR!
+java.lang.NullPointerException
+
+AC_AZDv6-21 Metadata Indices Carpetas(MasInformacionCarpeta)  Time elapsed: 13.212 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=111.0.5563.65)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:55826}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c710b240f732fd561d2ba816a8bcb7cf
+
+Retencion Asociar Regla(MasInformacionCarpeta)  Time elapsed: 71.65 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'Asociar Regla RetenciÃ³n DisposiciÃ³n')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //a[contains(text(),'Asociar Regla RetenciÃ³n DisposiciÃ³n')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-606 Heredar Regla Padre Desde Una Carpeta(MasInformacionCarpeta)  Time elapsed: 69.348 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'Heredar Regla RetenciÃ³n DisposiciÃ³n de la colecciÃ³')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //a[contains(text(),'Heredar Regla RetenciÃ³n DisposiciÃ³n de la colecciÃ³')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-19 Localizacion Crear Unidad Conservacion(MasInformacionCarpeta)  Time elapsed: 72.021 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'Crear Unidad de ConservaciÃ³n')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //a[contains(text(),'Crear Unidad de ConservaciÃ³n')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Borrar(MasInformacionCarpeta)  Time elapsed: 10.554 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (MoverAuto/Formulario1.azform).
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (NuevoNombre).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (MoverAuto/Formulario1.azform).
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (NuevoNombre).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:56064}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4acd8d16ce93cdaf71cb936b93d078fa
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+
+Compartir Coleccion(MasInformacionColeccion)  Time elapsed: 83.945 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/main[1]/div[1]/div[1]/div[1]/b[1]/table[1]/tbody[1]/tr[2]/td[2]/a[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/main[1]/div[1]/div[1]/div[1]/b[1]/table[1]/tbody[1]/tr[2]/td[2]/a[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Borrar y Crear(MasInformacionColeccion)  Time elapsed: 21.052 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Tabla1).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Tabla1).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:56392}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0e152778d5f13e7674a1785ca54315f9
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+
+Calcular Tamaño y Abrir Coleccion(MasInformacionColeccion)  Time elapsed: 9.152 s  <<< ERROR!
+java.lang.NullPointerException
+
+Datos Asociados(MasInformacionColeccion)  Time elapsed: 82.53 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/form[1]/div[2]/div[1]/textarea[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/form[1]/div[2]/div[1]/textarea[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Borrar y Crear(MasInformacionColeccion)  Time elapsed: 10.422 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Tabla1).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Tabla1).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:56518}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aad2c86a01b605648ead7c34227129bf
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+
+Metadata Coleccion Indexar(MasInformacionColeccion)  Time elapsed: 8.536 s  <<< ERROR!
+java.lang.NullPointerException
+
+Metadata Borrar Indices Coleccion(MasInformacionColeccion)  Time elapsed: 86.736 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //*[@id="operacion"]/table/tbody/tr[1]/td[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Información Archivistica Coleccion(MasInformacionColeccion)  Time elapsed: 71.996 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'Agregar CÃ³digo ArchivÃ­stico')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //a[contains(text(),'Agregar CÃ³digo ArchivÃ­stico')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Retencion Asociar Regla(MasInformacionColeccion)  Time elapsed: 74.059 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'Asociar Regla RetenciÃ³n DisposiciÃ³n')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //a[contains(text(),'Asociar Regla RetenciÃ³n DisposiciÃ³n')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Borrar y Crear(MasInformacionColeccion)  Time elapsed: 17.412 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Tabla1).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (Tabla1).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:56812}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 732c324b3409455c36de7ee9fc900d25
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+
+Heredar Regla Padre De padre(MasInformacionColeccion)  Time elapsed: 73.451 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'Heredar Regla RetenciÃ³n DisposiciÃ³n de la colecciÃ³')] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //a[contains(text(),'Heredar Regla RetenciÃ³n DisposiciÃ³n de la colecciÃ³')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+Borrar(MasInformacionColeccion)  Time elapsed: 20.178 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (MoverAuto/Formulario1.azform).
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (NuevoNombre).}
+  (Session info: chrome=111.0.5563.65): Se encontró en la selección elementos relacionados con: 
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (MoverAuto/Formulario1.azform).
+ - Flujos de trabajo. Por favor finalizarlos o abortarlos. Ej (NuevoNombre).
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '10.10.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:56904}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 761863ab5a01a206044cb79078bcb6e2
+*** Element info: {Using=xpath, value=//button[@id='BtnActualizar']}
+

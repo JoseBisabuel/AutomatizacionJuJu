@@ -1,0 +1,49 @@
+# This file contain properties, some are defined here and others are read from the pom.xml
+
+# Browser
+#<!-- This Parameters select where run the test [Remote ,Firefox ,Chrome ,Edge] -->
+browser=Chrome
+
+# OS
+#<!-- Test Operative system [linux, mac, windows]-->
+os=windows
+
+# Log level
+#<!-- Parameter for logger level use in this order to include the right information [ALL > DEBUG > INFO > WARN > ERROR > FATAL > OFF]-->
+logLevel=INFO
+
+# ScreenShot Path
+ScreenShotPath=src/test/resources/Data/Screenshots
+
+#Ruta del Proyecto apuntando a la carpeta StorageImage
+PathStorage = F:/Calidad_QA/AZDigital/AZDigitalV6/src/test/resources/StorageImage
+
+# Resource Folder Path
+resourceFolder=src/test/java/Software/
+
+#MainAppUrlBase=http://localhost/AZDigitalv6/Login/Login.php
+#MainAppUrlBase=https://creg-qa.analitica.com.co/AZDigital/Login/Login.php
+#MainAppUrlBase=http://an-pruebasws/AZDigital/Admin/
+#### DEVELOP ####
+#MainAppUrlBase=http://an-pruebasws/AZDigital_Develop/Login/Login.php
+#MainAppUrlBase=https://test-operaciones.analitica.com.co/AZDigital_Develop/Login/Login.php
+#### RELEASE ####
+MainAppUrlBase=https://test-operaciones.analitica.com.co/AZDigital_Release/Login/Login.php
+#MainAppUrlBase=http://an-pruebasws/AZDigital_Release/Admin/
+#### MASTER ####
+#MainAppUrlBase=http://an-pruebasws/AZDigital/Login/Login.php
+
+
+#MainAppUrlBase=https://demoqa.com/browser-windows
+
+#ruta para subir un unico archivo esta ruta tiene que llevar el nombre del archivo
+FileUpload=P:/Automatización/AZ6/src/test/resources/UploadArchive/qTest.pdf
+#FileUpload=F:/CALIDAD/AZDigital/ArchivoCarga/Prueba/
+
+
+#ruta donde se encuentra los archivos para la configuracion inicial esta ruta solo a punta a la carpeta
+FilesUploads=F:/analitica/Automatizacion/AZ6 BK27012023/src/test/resources/UploadCortes
+#DeMeyerNoTocar
+FileUpload2=F:/Calidad_QA/AZDigital/ArchivoCarga/Adjunto1.pdf
+FilesUploadsBDE=F:/Calidad_QA/AZDigital/AZDigitalV6/src/test/resources/UploadArchive
+FilesUploadsComunicados=F:/Calidad_QA/AZDigital/AZDigitalV6/src/test/resources/UploadArchiveA

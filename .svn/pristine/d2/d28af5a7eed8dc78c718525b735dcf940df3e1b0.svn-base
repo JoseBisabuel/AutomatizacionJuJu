@@ -1,0 +1,95 @@
+Feature: Consultar --Opciones Radicados--
+
+  Background: Ingreso a formulario
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Radicacion/BuscarRadicados.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Clave con el texto o<tf@LqI4!~h
+    And Hacer Click en El elemento Ingreso
+
+  @ModificarRadicados
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Modificar
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Opcion del select Extendido y el select FtTipoReporte
+    And Selecion Index 1 Selector FtTipoRadicado
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SegundoRegBusRad
+    And Esperar visibilidad del boton: ModBotonRadicar
+    And Assert si elemento ModBotonRadicar visualiza
+    And Cambiar de Frame: FrameRadicado
+    And Opcion del select Expediente y el select ModModalidadRad
+    And lleneme el campo ModObservacionesRad con el texto Campo Observaciones Automatización - Campo Observaciones Automatización -
+    And lleneme el campo ModNoFoliosRad con el texto 2
+    And lleneme el campo ModAnexosFisicosRad con el texto 2
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento ModBotonRadicar
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicadosOpc01
+
+  @PestanasRadicadosRemitentes
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Pestana Remitentes
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Opcion del select Extendido y el select FtTipoReporte
+    And Selecion Index 1 Selector FtTipoRadicado
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SegundoRegBusRad
+    And Hacer Click en El elemento PesRemitentesEditRad
+    And Cambiar de Frame: FrameRemitentes
+    And espereme 2 segundos
+    And Assert si elemento PesAsRemitentes contiene el siguiente texto Remitentes
+    And Hacer Click en El elemento VerTodosRemitente
+    And Hacer Click en El elemento BtAgrRegRemitente
+
+
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento PesDestinatarioEditRad
+    And Cambiar de Frame: FrameDestinatario
+    And Assert si elemento PesAsDestinatarioEditRad contiene el siguiente texto Destinatarios
+
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento PesAnexosEditRad
+    And Cambiar de Frame: FrameAnexos
+    And Assert si elemento PesAsAnexosEditRad contiene el siguiente texto Anexos
+
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento PesNotificacionesEditRad
+    And Cambiar de Frame: FrameNotificaciones
+    And Assert si elemento PesAsNotificacionesEditRad contiene el siguiente texto Notificaciones
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicadosOpc02
+
+  @ImprimirRadicados
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Imprimir
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Opcion del select Extendido y el select FtTipoReporte
+    And lleneme el campo FtNoRadicado con el texto 32-0000000261
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Click en ImprimirRadicado ingreso a la pestaña
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicadosOpc03

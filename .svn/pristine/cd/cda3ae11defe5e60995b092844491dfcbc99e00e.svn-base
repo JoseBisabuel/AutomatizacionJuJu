@@ -1,0 +1,215 @@
+Feature: Notificaciones
+
+  Background: Ingreso a formulario notificaciones
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Radicacion/Notificaciones.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Clave con el texto o<tf@LqI4!~h
+    And Hacer Click en El elemento Ingreso
+
+  @NotificacionesConsultas
+  Scenario: AC_AZDv6-235: Busqueda de Notificaciones - General
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento Notificaciones
+    And Hacer Click en El elemento BtBuscar
+    And Hacer Click en El elemento BtRegresar
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento Notificaciones
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASNotificaciones
+    And Assert si elemento ASNotificaciones contiene el siguiente texto Notificaciones Radicados
+    And Adjunto una Captura de pantalla al informe ForNotificaciones01
+
+  Scenario: AC_AZDv6-235: Busqueda de Notificaciones - Radicado
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento Notificaciones
+    And espereme 2 segundos
+    ##-- Parte 1 --##
+    And lleneme el campo FtRadicacion con el texto 32-0000000002
+    And espereme 1 segundos
+    And Hacer Click en El elemento BtBuscarRad
+    And Hacer Click en El elemento RegRadicados
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASNotificaciones
+    And Assert si elemento ASNotificaciones contiene el siguiente texto Notificaciones Radicados
+    And Assert si elemento ASNotNoRegistros contiene el siguiente texto No hay registros disponibles
+    And Adjunto una Captura de pantalla al informe ForNotificaciones02
+      ##-- Parte 2 --##
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Opciones
+    And lleneme el campo FtRadicacion con el texto 32-0000000034
+    And espereme 1 segundos
+    And Hacer Click en El elemento BtBuscarRad
+    And Hacer Click en El elemento RegRadicados
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASNotificaciones
+    And Assert si elemento ASNotificaciones contiene el siguiente texto Notificaciones Radicados
+    And Assert si elemento ASRegistroAct contiene el siguiente texto 32-0000000034
+    And Adjunto una Captura de pantalla al informe ForNotificaciones03
+
+  Scenario: AC_AZDv6-235: Busqueda de Notificaciones - Usuario
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento Notificaciones
+    And lleneme el campo FtUsuario con el texto Usuario Cero Tres
+    And espereme 1 segundos
+    #And Hacer Click en El elemento RegUsuario
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASNotificaciones
+    And Assert si elemento ASNotificaciones contiene el siguiente texto Notificaciones Radicados
+    And Adjunto una Captura de pantalla al informe ForNotificaciones04
+
+  #*****************formulario USUARIOS******************#
+  Scenario: AC_AZDv6-235: Busqueda de Notificaciones - Formulario Usuario
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento Personas
+    And lleneme el campo FtDependencia con el texto Calidad
+    And espereme 1 segundos
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASPersonas
+    And Assert si elemento ASPersonas contiene el siguiente texto Personas
+    And Adjunto una Captura de pantalla al informe ForPersona14
+  #*****************formulario USUARIOS******************#
+
+  #*****************Export del formulario NOTIFICACIONES******************#
+
+    ##--Sin Encabezados--##
+  @ExportarPersonasSin
+  Scenario Outline: AC_AZDv6-234: Exportar en todos los formatos - ExportarSinEncabezado
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento Personas
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASPersonas
+    And Assert si elemento ASPersonas contiene el siguiente texto Personas
+    And Hacer Click en El elemento SelFormato2
+    And espereme 1 segundos
+    And Hacer Click en El elemento <Campo1>
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina2
+    And espereme 1 segundos
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe <Campo2>
+    Examples:
+      | Campo1 | Campo2 |
+      | Excel2 | PersonaExp01 |
+      | CSV2 | PersonaExp02 |
+      | TAB2 | PersonaExp03 |
+      | XML2 | PersonaExp04 |
+      | HTML2 | PersonaExp05 |
+      | WORD2 | PersonaExp06 |
+  Scenario: AC_AZDv6-234: Exportar en todos los formatos - ExportarSinEncabezado PDF
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento Personas
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASPersonas
+    And Assert si elemento ASPersonas contiene el siguiente texto Personas
+    And Hacer Click en El elemento SelFormato2
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF2
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina2
+    And espereme 1 segundos
+    And Hacer Click en El elemento SeleccionarTodas
+    And Hacer Click en El elemento ExportarSinPDF
+    And Adjunto una Captura de pantalla al informe PersonaExp07
+    And espereme 2 segundos
+    ##--Sin Encabezados--##
+    ##--Con Encabezados--##
+  @ExportarPersonasCon
+  Scenario Outline: AC_AZDv6-234: Exportar en todos los formatos - ExportarConEncabezado
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento Personas
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASPersonas
+    And Assert si elemento ASPersonas contiene el siguiente texto Personas
+    And Hacer Click en El elemento SelFormato2
+    And espereme 1 segundos
+    And Hacer Click en El elemento <Campo1>
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina2
+    And espereme 1 segundos
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto Personas-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - EXCEL - Pruebas QA - Comentarios - EXCEL -Pruebas QA - Comentarios - EXCEL -Pruebas QA - Comentarios - EXCEL -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe <Campo2>
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+    Examples:
+      | Campo1 | Campo2 |
+      | Excel2 | PersonaExp08 |
+      | CSV2 |  PersonaExp09 |
+      | TAB2 |  PersonaExp10 |
+      | XML2 |  PersonaExp11 |
+      | HTML2 |  PersonaExp12 |
+      | WORD2 |  PersonaExp13 |
+  Scenario: AC_AZDv6-234: Exportar en todos los formatos - ExportarConEncabezado PDF
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento Personas
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASPersonas
+    And Assert si elemento ASPersonas contiene el siguiente texto Personas
+    And Hacer Click en El elemento SelFormato2
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF2
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina2
+    And espereme 1 segundos
+    And Hacer Click en El elemento AgregarEncabezado2
+    And lleneme el campo TituloEncabezadoPDF con el texto Personas-Automatizacion
+    And lleneme el campo ComentarioPDF con el texto Pruebas QA - Comentarios - PDF - Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -
+    And Hacer Click en El elemento CheckAgrUsuPDF
+    And Hacer Click en El elemento CheckAgrFecPDF
+    And Selecion Index 1 Selector SelectOrientacion
+    And Selecion Index 1 Selector SelectFuente
+    And Selecion Index 1 Selector SelectTamano
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe PersonaExp14
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon2
+    And espereme 2 segundos
+    ##--Con Encabezados--##

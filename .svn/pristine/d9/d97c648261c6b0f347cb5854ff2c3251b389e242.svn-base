@@ -1,0 +1,442 @@
+Feature: SeleccioneUnaAccionPDF
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM SeleccioneAccion.json
+    And lleneme el campo Usuario con el texto UserAutomatizacion
+    And lleneme el campo Clave con el texto Automatizacion1*
+    And Hacer Click en El elemento Ingreso
+    And Hacer Click en El elemento BDE
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+
+  @Crear
+  Scenario: Crear
+    And lleneme el campo Crear con el texto SeleccioneUnaAccion
+    And Selecion Index 0 Selector Nombre
+    And Hacer Click en El elemento BtnCrear
+    And espereme 2 segundos
+
+  @CrearCarpetaMover
+  Scenario: Crear Carpeta Mover
+    And Hacer Click en El elemento Atras
+    And Hacer Click en El elemento BDE_Traslado
+    And lleneme el campo Crear con el texto MoverAuto
+    And Selecion Index 0 Selector Nombre
+    And Hacer Click en El elemento BtnCrear
+    And espereme 2 segundos
+
+  @CargarArchivos
+   Scenario: Cargar Archivos
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And espereme 2 segundos
+    And Subir Archivos PDF SubirArchivos
+    And espereme 20 segundos
+
+  @Categorizar
+  Scenario: AC_AZDv6-62 Categorizar
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And Marco la casilla de verificación que tiene SeleccioneCategorizar
+    And Marco la casilla de verificación que tiene SeleccioneCategorizar2
+    And espereme 3 segundos
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 1 segundos
+    And Hacer Click en El elemento Categorizar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 1 Selector Categoria
+    And Selecion Index 1 Selector Categoria2
+    And Hacer Click en El elemento BtnCategorizarFin
+    And Adjunto una Captura de pantalla al informe Categorizar
+
+  @Categorias_Datos_adicionales
+  Scenario: AC_AZDv6-584 Categorias Datos Adicionales
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And Hacer Click en El elemento Version
+    And espereme 2 segundos
+    And Hacer Click en El elemento EnlaceCategorias
+    And espereme 2 segundos
+    And tomar Captura de pantalla: DatosAdicionales
+
+  @IniciarFlujo
+  Scenario: AC_AZDv6-68 Iniciar Flujo
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And Marco la casilla de verificación que tiene SeleccioneIniciarFlujo
+    And espereme 2 segundos
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento InicieFlujo
+    And Hacer Click en El elemento InicieFlujo
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Texto de Seleccion Automatizacion Selector FlujoDeTrabajo
+    And espereme 2 segundos
+    And Hacer Click en El elemento IniciarFlujo
+    And espereme 5 segundos
+    And Selecion Index 1 Selector EstadoFlujo
+    And lleneme el campo BandDestFluj con el texto trasladoauto
+    And Hacer Click en El elemento Buscar
+    And Hacer Click en El elemento SelecBDEFluj
+    And lleneme el campo ObsIniFluj con el texto Vacio
+    And Hacer Click en El elemento AceptarFlujo
+    And espereme 2 segundos
+    And Hacer Click en El elemento Atras
+    And Hacer Click en El elemento Atras
+    And Hacer Click en El elemento BDE_Traslado
+    And tomar Captura de pantalla: IniciarFlujo
+
+  @CambiarEstadoFlujo
+  Scenario: AC_AZDv6-66 Cambiar Estado del Flujo
+    And Hacer Click en El elemento Atras
+    And espereme 3 segundos
+    And Hacer Click en El elemento BDE_Traslado
+    And Marco la casilla de verificación que tiene SeleccioneCambiarEstado
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento CambiarEstado
+    And espereme 2 segundos
+    And Hacer Click en El elemento CambiarEstado
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 5 segundos
+    And Selecion Index 1 Selector NuevoEstadoFlujo
+    And espereme 2 segundos
+    And lleneme el campo ObsCambioEstado con el texto Vacío
+    And espereme 2 segundos
+    And Hacer Click en El elemento Actualizar
+    And espereme 10 segundos
+    And Hacer Click en El elemento CerrarCuadro
+    And espereme 2 segundos
+    And Hacer Click en El elemento Volver
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe CambiarFlujo
+
+  @Publicar
+  Scenario: AC_AZDv6-58 Publicar
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And Marco la casilla de verificación que tiene SeleccionePublicar
+    And Hacer Click en El elemento SeleccionePublicar2
+    And espereme 2 segundos
+    And Hacer Click en El elemento Lista
+    And Desplazo el elemento Publicar
+    And espereme 2 segundos
+    And Hacer Click en El elemento Publicar
+    And lleneme el campo ObservacionPublicar con el texto Sin novedad
+    And lleneme el campo Fecha con el texto 2023-12-30
+    And Hacer Click en El elemento Actualizar
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe Publicar
+
+  @Renombrar
+  Scenario: AC_AZDv6-59 Renombrar
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And Marco la casilla de verificación que tiene SeleccioneRenombrar
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espere el elemento Renombrar
+    And espereme 3 segundos
+    And Hacer Click en El elemento Renombrar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo NuevoNombre con el texto NuevoNombre
+    And espereme 2 segundos
+    And lleneme el campo RenomObservaciones con el texto Sin observaciones
+    And Hacer Click en El elemento BotonActualizar
+    And Adjunto una Captura de pantalla al informe Renombrar
+
+  @Mover
+  Scenario: AC_AZDv6-60 Mover
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And Marco la casilla de verificación que tiene SeleccioneMover
+    And Marco la casilla de verificación que tiene SeleccioneMover2
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espere el elemento Mover
+    And espereme 3 segundos
+    And Hacer Click en El elemento Mover
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo NvaLocalizacionMover con el texto MoverAuto
+    And Hacer Click en El elemento Buscar
+    And Hacer Click en El elemento SeleccionarBDE
+    And Hacer Click en El elemento Actualizar
+    And Hacer Click en El elemento Atras
+    And espereme 2 segundos
+    And Hacer Click en El elemento Atras
+    And espereme 2 segundos
+    And Hacer Click en El elemento BDE_Traslado
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento MoverAuto
+    And tomar Captura de pantalla: Mover
+
+  @Borrar
+  Scenario: AC_AZDv6-61 Borrar
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And Marco la casilla de verificación que tiene SeleccioneBorrar
+    And Marco la casilla de verificación que tiene SeleccioneBorrar2
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espere el elemento Borrar
+    And espereme 3 segundos
+    And Hacer Click en El elemento Borrar
+    And Hacer Click en El elemento Actualizar
+    And espereme 2 segundos
+    And tomar Captura de pantalla: Borrar
+
+  @Compartir
+  Scenario: AC_AZDv6-63 Compartir
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And Marco la casilla de verificación que tiene SeleccioneCompartir
+    And Marco la casilla de verificación que tiene SeleccioneCompartir2
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento Compartir
+    And Hacer Click en El elemento Compartir
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo ObservacionCompartir con el texto Sin comentarios
+    And lleneme el campo SelecEmail con el texto notificacionesauto
+    And lleneme el campo Fecha con el texto 2023-12-30
+    And Hacer Click en El elemento Actualizar
+    And ir a la pestaña https://www.google.com
+    And Ir a yopmail
+    And lleneme el campo CorreoYop con el texto notificacionesauto
+    And Hacer Click en El elemento AbrirCorreo
+    And espereme 3 segundos
+    And tomar Captura de pantalla: CompartirCorreo
+
+  @Trasladar
+  Scenario: AC_AZDv6-64 Traslado
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And Marco la casilla de verificación que tiene SeleccioneTrasladar
+    And Marco la casilla de verificación que tiene SeleccioneTrasladar2
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento Trasladar
+    And Hacer Click en El elemento Trasladar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo NvaLocalizacion con el texto trasladoauto
+    And espereme 2 segundos
+    And Hacer Click en El elemento BuscarNvaLocal
+    And Hacer Click en El elemento SelectNvaBDE
+    And lleneme el campo ObservacionesTras con el texto Sin novedad
+    And lleneme el campo FechaTras con el texto 2023-12-12
+    And Hacer Click en El elemento Actualizar
+    And espereme 2 segundos
+    And Hacer Click en El elemento Atras
+    And espereme 2 segundos
+    And Hacer Click en El elemento Atras
+    And espereme 2 segundos
+    And Hacer Click en El elemento BDE_Traslado
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe Traslado
+    And ir a la pestaña https://www.google.com
+    And Ir a yopmail
+    And lleneme el campo CorreoYop con el texto notificacionesauto
+    And Hacer Click en El elemento AbrirCorreo
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe CorreoTraslado
+
+  @Copiar
+  Scenario: AC_AZDv6-65 Copiar
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And Marco la casilla de verificación que tiene SeleccioneCopiar
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento Copiar
+    And Hacer Click en El elemento Copiar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo DestinoCopiar con el texto MoverAuto
+    And espereme 3 segundos
+    And Click tecla CONTROL
+    And Hacer Click en El elemento SelecBDECopiar
+    And Hacer Click en El elemento Mas
+    And espereme 2 segundos
+    And lleneme el campo ObservacionesCopiar con el texto Sin nada que decir
+    And Hacer Click en El elemento Actualizar
+    And Hacer Click en El elemento Atras
+    And espereme 2 segundos
+    And Hacer Click en El elemento Atras
+    And espereme 2 segundos
+    And Hacer Click en El elemento BDE_Traslado
+    And Hacer Click en El elemento MoverAuto
+    And Adjunto una Captura de pantalla al informe Copiar03
+    And espereme 2 segundos
+
+  @FirmarDigitalmentep12
+  Scenario: AC_AZDv6-67 Firmar Digitalmente p12
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And Marco la casilla de verificación que tiene SeleccioneFirmaDigital
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento FirmaDigital
+    And espereme 2 segundos
+    And Hacer Click en El elemento FirmaDigital
+    And espereme 3 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 1 Selector Certificado
+    And lleneme el campo Contraseña con el texto Julianita1
+    And lleneme el campo RazonFirma con el texto Esto es una prueba
+    And Hacer Click en El elemento Actualizar
+    And tomar Captura de pantalla: FirmaDigital
+    And espereme 15 segundos
+    And Hacer Click en El elemento CerrarCuadro
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe FirmaDigitalp12
+  Scenario: ValidarFirma
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And Hacer Click en El elemento ValidarFirma
+    And Hacer Click en El elemento VerFirma
+    And espereme 10 segundos
+    And Adjunto una Captura de pantalla al informe Firmap12
+    And Hacer Click en El elemento CerrarFirma
+    And Hacer Click en El elemento VolverInterfaz
+    And Marco la casilla de verificación que tiene SeleccioneFirmaDigital
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Borrar
+    And Hacer Click en El elemento Actualizar
+
+  @FirmarDigitalmenteGSE
+  Scenario: AC_AZDv6-67 Firmar Digitalmente GSE
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And Marco la casilla de verificación que tiene SeleccioneFirmaDigital
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento FirmaDigital
+    And espereme 2 segundos
+    And Hacer Click en El elemento FirmaDigital
+    And espereme 3 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 2 Selector Certificado
+    And lleneme el campo Contraseña con el texto UAH3N8LTQN
+    And lleneme el campo RazonFirma con el texto Esto es una prueba
+    And Hacer Click en El elemento Actualizar
+    And tomar Captura de pantalla: FirmaDigital
+    And espereme 30 segundos
+    And Hacer Click en El elemento CerrarCuadro
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe FirmaDigitalGSE
+
+  Scenario: ValidarFirma
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And Hacer Click en El elemento ValidarFirma
+    And Hacer Click en El elemento VerFirma
+    And espereme 10 segundos
+    And Adjunto una Captura de pantalla al informe FirmapGSE
+    And Hacer Click en El elemento CerrarFirma
+    And Hacer Click en El elemento VolverInterfaz
+    And Marco la casilla de verificación que tiene SeleccioneFirmaDigital
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Borrar
+    And Hacer Click en El elemento Actualizar
+
+  @FirmaAZSign
+  Scenario: AC_AZDv6-69 Firmar AZSign
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And Marco la casilla de verificación que tiene SeleccioneFirmaAZSign
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento FirmaAZSign
+    And espereme 2 segundos
+    And Hacer Click en El elemento FirmaAZSign
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo MensajeEmail con el texto Prueba
+    And lleneme el campo Grupo1 con el texto FirmaAutomatizada
+    And Texto de Seleccion Grupo Firmante Selector RolGrupo
+    And lleneme el campo Destino con el texto notificacionesauto@yopmail.com
+    And Hacer Click en El elemento Buscar
+    And Hacer Click en El elemento SelectDestino
+    And Hacer Click en El elemento AgregarUsuario
+    #And lleneme el campo nameNuevoParticipante con el texto Orlando Caldon
+    #And lleneme el campo EmailNuevoParticipante con el texto josebisabuel2306@gmail.com
+    #And lleneme el campo celNuevoParticipante con el texto 3193034610
+    #And Hacer Click en El elemento AgregarNuevoParticipante
+    #And Hacer Click en El elemento ParticipanteExterno
+    #And lleneme el campo nameNuevoParticipante con el texto jose Caldon
+    #And lleneme el campo EmailNuevoParticipante con el texto josebisabuel2306@gmail.com
+    #And lleneme el campo celNuevoParticipante con el texto 3193034610
+    #And Hacer Click en El elemento AgregarNuevoParticipante
+    #And Hacer Click en El elemento SelectJose
+    #And Hacer Click en El elemento EliminarParticipante
+    #agregar nuevo grupo2
+    #And Hacer Click en El elemento Grupo2
+    #And lleneme el campo RazonFirma con el texto Esto es una prueba
+    #And Hacer Click en El elemento Actualizar
+    And lleneme el campo FechaVenciFirma con el texto 2023-12-25
+    And espereme 2 segundos
+    And Hacer Click en El elemento Actualizar
+    #And tomar Captura de pantalla: FirmaAZSign
+    And espereme 10 segundos
+    And ir a la pestaña https://www.google.com
+    And Ir a yopmail
+    And lleneme el campo CorreoYop con el texto notificacionesauto
+    And Hacer Click en El elemento AbrirCorreo
+    And espereme 3 segundos
+    And Cambiar de Frame: FrameYop
+    And espereme 5 segundos
+    And Desplazo el elemento AbrirEnlace
+    And espereme 2 segundos
+    And Hacer Click en El elemento AbrirEnlace
+    And Ir a AZSign
+    And espereme 2 segundos
+    #And Hacer Click en El elemento BtnTerminos
+    #And Hacer Click en El elemento AceptarTerminos
+    And ir a VtnConfirmar ventana
+    And lleneme el campo FmaNombre con el texto Automatizacion
+    And lleneme el campo FmaIdentificacion con el texto 1020304050
+    And Subir Firma SubirFirma
+    And espereme 3 segundos
+    And Hacer Click en El elemento BtnFirma
+    And espereme 10 segundos
+
+  Scenario: Ver Firma
+    And Hacer Click en El elemento CarpetaSeleccioneUnaAccion
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe FirmaAZSign3
+
+  @Borrar
+  Scenario: Borrar
+    And Marco la casilla de verificación que tiene SelectDepurar
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Borrar
+    And Hacer Click en El elemento Actualizar
+    And Hacer Click en El elemento Atras
+    And espereme 2 segundos
+    And Hacer Click en El elemento BDE_Traslado
+    And Marco la casilla de verificación que tiene SelectDepurar
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Borrar
+    And espereme 2 segundos
+    And Hacer Click en El elemento Actualizar

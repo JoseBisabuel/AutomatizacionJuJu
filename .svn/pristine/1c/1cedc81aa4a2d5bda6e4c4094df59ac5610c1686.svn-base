@@ -1,0 +1,663 @@
+Feature: Consultar --Buscar Radicados--
+
+  Background: Ingreso a formulario
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Radicacion/BuscarRadicados.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Clave con el texto o<tf@LqI4!~h
+    And Hacer Click en El elemento Ingreso
+
+  @BuscarRadicadosGeneral
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - General
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento ASAlertCeroFiltros
+    And Hacer Click en El elemento CerrarAlertCeroFiltros
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento BtRegresar
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoRadicado
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados01
+
+    ##-- REDUCIDO --##
+
+  @BuscadorFiltroaFiltroReducido
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Numero de Radicado - Reducido
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtNoRadicado con el texto RA-0000000094
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados02
+
+  Scenario Outline: AC_AZDv6-222: Busqueda de Radicados - Tipo Radicado
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And Selecion Index <Campo1> Selector FtTipoRadicado
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe <Campo2>
+    Examples:
+      | Campo1 | Campo2 |
+      | 1 | ForBuscarRadicados03 |
+      | 2 | ForBuscarRadicados04 |
+      | 3 | ForBuscarRadicados05 |
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Dependencia Radicada
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And Selecion Index 1 Selector FtDepRadicadora
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados06
+
+    Scenario Outline: AC_AZDv6-222: Busqueda de Radicados - Dependencia Origen
+      And Hacer Click en El elemento MenuHamburguesa
+      And Cambiar de Frame: Opciones
+      And espereme 2 segundos
+      And Hacer Click en El elemento Radicado
+      And Hacer Click en El elemento BuscarRadicados
+      And Selecion Index 1 Selector FtTipoReporte
+      And Selecion Index 2 Selector FtTipoRadicado
+      And Selecion Index <Campo1> Selector FtDepOrigen
+      And Hacer Click en El elemento BtBuscar
+      And Cambiar al Frame principal
+      And Cambiar de Frame: Contenido
+      And Esperar visibilidad del boton: ASBuscarRadicados
+      And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+      And Adjunto una Captura de pantalla al informe <Campo2>
+      Examples:
+        | Campo1 | Campo2 |
+        | 1 | ForBuscarRadicados07 |
+        | 2 | ForBuscarRadicados08 |
+        | 3 | ForBuscarRadicados09 |
+
+    Scenario Outline: AC_AZDv6-222: Busqueda de Radicados - Dependencia Origen
+      And Hacer Click en El elemento MenuHamburguesa
+      And Cambiar de Frame: Opciones
+      And espereme 2 segundos
+      And Hacer Click en El elemento Radicado
+      And Hacer Click en El elemento BuscarRadicados
+      And Selecion Index 1 Selector FtTipoReporte
+      And Selecion Index 2 Selector FtTipoRadicado
+      And Selecion Index <Campo1> Selector FtDepDestino
+      And Hacer Click en El elemento BtBuscar
+      And Cambiar al Frame principal
+      And Cambiar de Frame: Contenido
+      And Esperar visibilidad del boton: ASBuscarRadicados
+      And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+      And Adjunto una Captura de pantalla al informe <Campo2>
+      Examples:
+        | Campo1 | Campo2 |
+        | 1 | ForBuscarRadicados10 |
+        | 2 | ForBuscarRadicados11 |
+        | 3 | ForBuscarRadicados12 |
+
+  Scenario Outline: AC_AZDv6-222: Busqueda de Radicados - Tipo Tramite
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And Selecion Index <Campo1> Selector FtTramite
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe <Campo2>
+    Examples:
+      | Campo1 | Campo2 |
+      | 1 | ForBuscarRadicados13 |
+      | 2 | ForBuscarRadicados14 |
+      | 3 | ForBuscarRadicados15 |
+
+  Scenario Outline: AC_AZDv6-222: Busqueda de Radicados - Tipo SubTramite
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And Selecion Index <Campo1> Selector FtTramite
+    And Selecion Index <Campo2> Selector FtSubtramite
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe <Campo3>
+    Examples:
+      | Campo1 |    Campo2   | Campo3 |
+      | 2      | 1           |ForBuscarRadicados16 |
+      | 3      | 1           |ForBuscarRadicados17 |
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Sitio
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And Selecion Index 1 Selector FtSitio
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados18
+
+  Scenario Outline: AC_AZDv6-222: Busqueda de Radicados - Estado
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And Selecion Index <Campo1> Selector FtEstado
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe <Campo2>
+    Examples:
+      | Campo1 | Campo2 |
+      | 1 | ForBuscarRadicados19 |
+      | 2 | ForBuscarRadicados20 |
+      | 4 | ForBuscarRadicados21 |
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Id Referencia
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtIdReferencia con el texto Auto
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados22
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Asunto
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtAsunto con el texto Automat
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados23
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Radicado Asociado
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtRadicadoAsociado con el texto 32-
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados24
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Nombre Persona
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtNombrePersona con el texto Automatizacion
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados25
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Identificacion Persona
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtIdPersona con el texto 10101
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados26
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Email Persona
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtEmailPersona con el texto yopmail
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados27
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Id Usuario Asociado
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtIdUsuarioAsociado con el texto yopmail
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Assert si elemento MsjAsUsuarioAsociado contiene el siguiente texto No existe el usuario con Id yopmail o no tiene identificación.
+    And Hacer Click en El elemento CerrarVUsuarioAsociado
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Opciones
+    And lleneme el campo FtIdUsuarioAsociado con el texto usuario04
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados28
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Fecha Inicial/Fecha Final
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtFechaInicial con el texto 2023-03-01 17:58:58
+    And lleneme el campo FtFechaFinal con el texto 2023-03-15 17:59:17
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados29
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Usuario
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtUsuario con el texto admin
+    And Hacer Click en El elemento RegFtUsuario
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados30
+
+        ##-- EXTENDIDO --##
+
+  @BuscadorFiltroaFiltroExtendido
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Numero de Radicado
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 2 Selector FtTipoReporte
+    And lleneme el campo FtNoRadicado con el texto RA-0000000094
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados31
+
+  Scenario Outline: AC_AZDv6-222: Busqueda de Radicados - Tipo Radicado
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And Selecion Index <Campo1> Selector FtTipoRadicado
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe <Campo2>
+    Examples:
+      | Campo1 | Campo2 |
+      | 1 | ForBuscarRadicados03 |
+      | 2 | ForBuscarRadicados04 |
+      | 3 | ForBuscarRadicados05 |
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Dependencia Radicada
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And Selecion Index 1 Selector FtDepRadicadora
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados06
+
+    Scenario Outline: AC_AZDv6-222: Busqueda de Radicados - Dependencia Origen
+      And Hacer Click en El elemento MenuHamburguesa
+      And Cambiar de Frame: Opciones
+      And espereme 2 segundos
+      And Hacer Click en El elemento Radicado
+      And Hacer Click en El elemento BuscarRadicados
+      And Selecion Index 1 Selector FtTipoReporte
+      And Selecion Index 2 Selector FtTipoRadicado
+      And Selecion Index <Campo1> Selector FtDepOrigen
+      And Hacer Click en El elemento BtBuscar
+      And Cambiar al Frame principal
+      And Cambiar de Frame: Contenido
+      And Esperar visibilidad del boton: ASBuscarRadicados
+      And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+      And Adjunto una Captura de pantalla al informe <Campo2>
+      Examples:
+        | Campo1 | Campo2 |
+        | 1 | ForBuscarRadicados07 |
+        | 2 | ForBuscarRadicados08 |
+        | 3 | ForBuscarRadicados09 |
+
+    Scenario Outline: AC_AZDv6-222: Busqueda de Radicados - Dependencia Origen
+      And Hacer Click en El elemento MenuHamburguesa
+      And Cambiar de Frame: Opciones
+      And espereme 2 segundos
+      And Hacer Click en El elemento Radicado
+      And Hacer Click en El elemento BuscarRadicados
+      And Selecion Index 1 Selector FtTipoReporte
+      And Selecion Index 2 Selector FtTipoRadicado
+      And Selecion Index <Campo1> Selector FtDepDestino
+      And Hacer Click en El elemento BtBuscar
+      And Cambiar al Frame principal
+      And Cambiar de Frame: Contenido
+      And Esperar visibilidad del boton: ASBuscarRadicados
+      And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+      And Adjunto una Captura de pantalla al informe <Campo2>
+      Examples:
+        | Campo1 | Campo2 |
+        | 1 | ForBuscarRadicados10 |
+        | 2 | ForBuscarRadicados11 |
+        | 3 | ForBuscarRadicados12 |
+
+  Scenario Outline: AC_AZDv6-222: Busqueda de Radicados - Tipo Tramite
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And Selecion Index <Campo1> Selector FtTramite
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe <Campo2>
+    Examples:
+      | Campo1 | Campo2 |
+      | 1 | ForBuscarRadicados13 |
+      | 2 | ForBuscarRadicados14 |
+      | 3 | ForBuscarRadicados15 |
+
+  Scenario Outline: AC_AZDv6-222: Busqueda de Radicados - Tipo SubTramite
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And Selecion Index <Campo1> Selector FtTramite
+    And Selecion Index <Campo2> Selector FtSubtramite
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe <Campo3>
+    Examples:
+      | Campo1 |    Campo2   | Campo3 |
+      | 2      | 1           |ForBuscarRadicados16 |
+      | 3      | 1           |ForBuscarRadicados17 |
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Sitio
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And Selecion Index 1 Selector FtSitio
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados18
+
+  Scenario Outline: AC_AZDv6-222: Busqueda de Radicados - Estado
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And Selecion Index <Campo1> Selector FtEstado
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe <Campo2>
+    Examples:
+      | Campo1 | Campo2 |
+      | 1 | ForBuscarRadicados19 |
+      | 2 | ForBuscarRadicados20 |
+      | 4 | ForBuscarRadicados21 |
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Id Referencia
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtIdReferencia con el texto Auto
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados22
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Asunto
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtAsunto con el texto Automat
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados23
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Radicado Asociado
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtRadicadoAsociado con el texto 32-
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados24
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Nombre Persona
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtNombrePersona con el texto Automatizacion
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados25
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Identificacion Persona
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtIdPersona con el texto 10101
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados26
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Email Persona
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtEmailPersona con el texto yopmail
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados27
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Id Usuario Asociado
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtIdUsuarioAsociado con el texto yopmail
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Assert si elemento MsjAsUsuarioAsociado contiene el siguiente texto No existe el usuario con Id yopmail o no tiene identificación.
+    And Hacer Click en El elemento CerrarVUsuarioAsociado
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Opciones
+    And lleneme el campo FtIdUsuarioAsociado con el texto usuario04
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados28
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Fecha Inicial/Fecha Final
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtFechaInicial con el texto 2023-03-01 17:58:58
+    And lleneme el campo FtFechaFinal con el texto 2023-03-15 17:59:17
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados29
+
+  Scenario: AC_AZDv6-222: Busqueda de Radicados - Usuario
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento BuscarRadicados
+    And Selecion Index 1 Selector FtTipoReporte
+    And lleneme el campo FtUsuario con el texto admin
+    And Hacer Click en El elemento RegFtUsuario
+    And Hacer Click en El elemento BtBuscar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Esperar visibilidad del boton: ASBuscarRadicados
+    And Assert si elemento ASBuscarRadicados contiene el siguiente texto Administración de Radicados
+    And Adjunto una Captura de pantalla al informe ForBuscarRadicados30

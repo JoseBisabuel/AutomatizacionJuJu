@@ -1,0 +1,574 @@
+#Cambiar información datos asociados/MetadataCarpetaIndexar
+
+Feature: MasInformacionCarpeta
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM MasInformacion.json
+    And lleneme el campo Usuario con el texto UserAutomatizacion
+    And lleneme el campo Clave con el texto Automatizacion1*
+    And Hacer Click en El elemento Ingreso
+    And Hacer Click en El elemento BDE
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+
+  @CrearCarpetaMover
+  Scenario: Crear Carpeta Mover
+    And Hacer Click en El elemento Atras
+    And Hacer Click en El elemento BDE_Traslado
+    And lleneme el campo Crear con el texto MoverAuto
+    And Selecion Index 0 Selector Nombre
+    And Hacer Click en El elemento BtnCrear
+    And espereme 2 segundos
+
+  @CrearCarpetas
+  Scenario Outline: : Crear Carpetas
+    And lleneme el campo Crear con el texto <NombreCarpeta>
+    And espereme 2 segundos
+    And Selecion Index 0 Selector Nombre
+    And Hacer Click en El elemento BtnCrear
+    Examples:
+      | NombreCarpeta |
+      | Carpeta1  |
+      | Carpeta2 |
+      | Carpeta3 |
+      | Carpeta4 |
+      | Carpeta5 |
+      | Carpeta6 |
+      | Carpeta7 |
+
+  @PestañaGeneral-Publicar-Carpeta
+  Scenario: AC_AZDv6-21 Publicar Carpeta
+    And Hacer Click en El elemento MasInfoPublicarCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento ListaPublicar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento PublicarCarpeta
+    And espereme 2 segundos
+    And Hacer Click en El elemento PublicarCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo ObservacionPubli con el texto Sin observaciones
+    And lleneme el campo FechaPubli con el texto 2023-12-30
+    And Hacer Click en El elemento BtnPubliCarpeta
+    #And tomar Captura de pantalla: Publicar
+
+  @PestañaGeneral-IniciarFlujo-Carpeta
+  Scenario: AC_AZDv6-21 Iniciar Flujo Carpeta
+    And Hacer Click en El elemento MasInfoIniciFlujoCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento ListaIniFlujoCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento IniciarFlujo
+    And espereme 2 segundos
+    And Hacer Click en El elemento IniciarFlujo
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 1 Selector SelectFlujo
+    And espereme 2 segundos
+    And Hacer Click en El elemento BtnIniciarFlujo
+    And Desplazo el elemento VolverFlujoCarpeta
+    And Hacer Click en El elemento VolverFlujoCarpeta
+    And Adjunto una Captura de pantalla al informe InicarFlujoCarpeta
+    And espereme 2 segundos
+    And Hacer Click en El elemento DetenerFlujo
+    And Hacer Click en El elemento DetenerCarpeta
+    And ir a VentanaAlerta ventana
+    And ir a NvaVentana ventana
+    And Cambiar de Frame: Contenido
+    And lleneme el campo ObservacionDetener con el texto Vacío
+    And Hacer Click en El elemento BtnAbortar
+    And espereme 3 segundos
+
+
+  @PestañaGeneral-Mover-Carpeta
+  Scenario: AC_AZDv6-21 Mover Carpeta
+    And Hacer Click en El elemento MasInfoMoverCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento ListaMover
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Mover
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    #No se puede mover a Bandejas de entradas
+    And lleneme el campo NuevaLocalizacionCarpeta con el texto MoverAuto
+    And Hacer Click en El elemento Buscar
+    And Hacer Click en El elemento SelecBDECarpeta
+    And Hacer Click en El elemento BtnMover
+    And espereme 3 segundos
+    And Hacer Click en El elemento Atras
+    And Hacer Click en El elemento BDE_Traslado
+    And Hacer Click en El elemento MoverAuto
+    And espereme 2 segundos
+    #And tomar Captura de pantalla: Mover
+
+
+  @PestañaGeneral-Borrar-Carpeta
+  Scenario: AC_AZDv6-21 Borrar Carpeta
+    And Hacer Click en El elemento MasInfoBorrarCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento ListaBorrar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Borrar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento BtnBorrar
+    And espereme 2 segundos
+    #And tomar Captura de pantalla: Borrrar
+
+
+  @PestañaGeneral-Compartir-Carpeta
+  Scenario: AC_AZDv6-21 Compartir Carpeta
+    And Hacer Click en El elemento MasInfoCompartirCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento ListaComp
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Compartir
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo ObservacionCompartir con el texto Sin comentarios
+    And lleneme el campo SelecEmail con el texto NotificacionesAuto@yopmail.com
+    And lleneme el campo Fecha con el texto 2023-12-30
+    And Hacer Click en El elemento BtnCompartir
+    #And tomar Captura de pantalla: Compartir
+    And ir a la pestaña https://www.google.com
+    And Ir a yopmail
+    And lleneme el campo CorreoYop con el texto notificacionesauto
+    And Hacer Click en El elemento AbrirCorreo
+    And Cambiar de Frame: Frameyop
+    And espereme 3 segundos
+    And Hacer Click en El elemento AbrirCarpetaComp
+    And espereme 5 segundos
+    #And Adjunto una Captura de pantalla al informe CorreoTraslado
+
+  @PestañaGeneral-Trasladar-Carpeta
+  Scenario: AC_AZDv6-21 Trasladar Carpeta
+    And Hacer Click en El elemento MasInfoTrasladarCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento ListaTrasladar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento Trasladar
+    And espereme 2 segundos
+    And Hacer Click en El elemento Trasladar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo NvaLocaltrasCarpeta con el texto TrasladoAuto
+    And Hacer Click en El elemento Buscar
+    And Hacer Click en El elemento SelectBDETrasladoCarpeta
+    And lleneme el campo ObservacionesTrasCarpeta con el texto Sin novedad
+    And lleneme el campo FechaTrasCarpeta con el texto 2023-12-30
+    And Hacer Click en El elemento BtnTrasladarCarpeta
+    And espereme 3 segundos
+    And Hacer Click en El elemento Atras
+    And Hacer Click en El elemento BDE_Traslado
+    And espereme 2 segundos
+    #And tomar Captura de pantalla: Trasladar
+
+  @BitacoraDeAccionesCarpeta
+  Scenario: AC_AZDv6-21 Bitacora de Acciones Carpeta
+    And Hacer Click en El elemento MasInfoBitacoraCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento BitacoraCarpeta
+    And Hacer Click en El elemento Filtrar
+    And Selecion Index 1 Selector FiltroUsuario
+    And espereme 2 segundos
+    And Hacer Click en El elemento BtnFiltroBitacora
+    And Hacer Click en El elemento BtnVerTodo
+    #And tomar Captura de pantalla: Bitacora
+    And Hacer Click en El elemento BtnVolverBitacora
+
+  @PerfilaciónGranularCarpeta
+  Scenario: Perfilación Granular Carpeta
+    And Hacer Click en El elemento MasInfoBitacoraCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento PerfilacionCarpeta
+    And espereme 3 segundos
+    And Hacer Click en El elemento Agregar
+    And espereme 2 segundos
+    And Texto de Seleccion UserAutomatizacion Selector Coleccion
+    And Selecion Index 0 Selector TipoElemento
+    And lleneme el campo FechaPerfilacion con el texto 2023-12-30
+    And Hacer Click en El elemento BtnAgregarPerfilacion
+    #And Adjunto una Captura de pantalla al informe Perfilacion
+    And espereme 2 segundos
+    And Hacer Click en El elemento Filtrar
+    And Selecion Index 1 Selector FiltroColeccion
+    And Selecion Index 0 Selector FiltroElemento
+    And espereme 3 segundos
+    And Hacer Click en El elemento BtnAplicaFiltro
+    And espereme 2 segundos
+    And Hacer Click en El elemento VerTodo
+    And Marco la casilla de verificación que tiene EliminarRegistro
+    And Hacer Click en El elemento BtnEliminarRegistro
+    And espereme 2 segundos
+    #And tomar Captura de pantalla: PerfilacionGranular
+
+  @BorraryCrear0
+  Scenario: Borrar y Crear0
+    And Marco la casilla de verificación que tiene SelectDepurar
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Borrardepurar
+    And Hacer Click en El elemento Actualizar
+    And espereme 2 segundos
+    And lleneme el campo Crear con el texto NuevaCarpeta
+    And Selecion Index 0 Selector Nombre
+    And Hacer Click en El elemento BtnCrear
+    And espereme 2 segundos
+
+  @Calcular-Tamaño/Abrir-Carpeta
+  Scenario: AC_AZDv6-21 Calcular Tamaño y Abrir Carpeta
+    And Hacer Click en El elemento CarpetaTamaño
+    And espereme 2 segundos
+    And Subir varios Archivos SubirArchivos
+    And espereme 20 segundos
+    And Hacer Click en El elemento Atras
+    And Hacer Click en El elemento MasInfoTamañoCarpeta
+    And espereme 2 segundos
+    And Hacer Click en El elemento CalcularTamaño
+    And espereme 2 segundos
+    And Hacer Click en El elemento Aceptar
+    And espereme 2 segundos
+    #And tomar Captura de pantalla: Tamaño
+    And Hacer Click en El elemento AbrirCarpeta
+    #And tomar Captura de pantalla: Abrir
+
+  @MetadataCarpeta
+  Scenario: AC_AZDv6-21 Metadata Carpeta
+    And espereme 3 segundos
+    And Hacer Click en El elemento MasInfoMetadataCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Metadata
+    And espereme 2 segundos
+    And Texto de Seleccion Indice_Release: Expedientes Vinculacionarios Selector CategoriaMetaCarpeta
+    And espereme 2 segundos
+    And Hacer Click en El elemento CerrarCuadro
+    And lleneme el campo DescripcionMetaCarpeta con el texto Sin descripción
+    And lleneme el campo PalabraClaveCarpeta con el texto Prueba
+    And lleneme el campo ObservacionesMetaCarpeta con el texto Sin observaciones
+    And Hacer Click en El elemento ActualizarMeta
+    #And tomar Captura de pantalla: Metadata
+
+  @DatosAsociados
+   Scenario: Datos Asociados
+    And espereme 3 segundos
+    And Hacer Click en El elemento MasInfoMetadataCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Metadata
+    And espereme 2 segundos
+    And Hacer Click en El elemento DatosAsociadosCarpeta
+    And espereme 2 segundos
+    #And lleneme el campo NumeroFact con el texto 1020304050
+    And lleneme el campo NombreCliente con el texto Automatizacion200
+    #And lleneme el campo NombreEmpresa con el texto Automatizacion
+    And Selecion Index 2 Selector TipoIdentificacion
+    #And lleneme el campo FechaVinculacion con el texto 2023-02-28
+    And lleneme el campo Identificacion con el texto 2000
+    #And lleneme el campo ValorFactura con el texto 1000000
+    And lleneme el campo FechaVinculacionDatos con el texto 2023-12-24
+    And Hacer Click en El elemento BtnAsociarDatos
+    And Adjunto una Captura de pantalla al informe DatosAsociados
+    And espereme 2 segundos
+    And Marco la casilla de verificación que tiene SelectDatos
+    And Hacer Click en El elemento VerLibro
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe VerLibro
+
+  @BorraryCrear1
+  Scenario: Borrar y Crear1
+    And Marco la casilla de verificación que tiene SelectDepurar
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Borrardepurar
+    And Hacer Click en El elemento Actualizar
+    And espereme 2 segundos
+    And lleneme el campo Crear con el texto NuevaCarpeta
+    And Selecion Index 0 Selector Nombre
+    And Hacer Click en El elemento BtnCrear
+    And espereme 2 segundos
+
+  @MetadataCarpetaIndexar
+  Scenario: AC_AZDv6-21 Metadata Carpeta Indexar
+    And Hacer Click en El elemento CarpetaCargar
+    And Subir varios Archivos SubirArchivos
+    And espereme 15 segundos
+    And Hacer Click en El elemento Atras
+    And Hacer Click en El elemento MasInfoIndexarCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Metadata
+    And espereme 2 segundos
+    And Hacer Click en El elemento IndexarCarpeta
+    And Cambiar de Frame: Categoria
+    And Selecion Index 2 Selector ModuloIndexcarpeta
+    And espereme 5 segundos
+    And Selecion Index 1 Selector IndiceCarpeta
+    And Selecion Index 0 Selector SubIndiceCarpeta
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Indice
+    #And lleneme el campo NumeroFactura con el texto 1020
+    And lleneme el campo NombreCliente con el texto Automatizacion200
+    #And lleneme el campo NombreEmpresa con el texto automatizacion
+    And Selecion Index 2 Selector TipoIdentificacion
+    And lleneme el campo Identificacion con el texto 2000
+    And lleneme el campo FechaVinculacionDatos con el texto 2023-12-24
+    #And lleneme el campo FechaFactura con el texto 2023-12-31
+    #And lleneme el campo ValorFactura con el texto 12000
+    And Selecion Index 1 Selector Operacion
+    And lleneme el campo IdCarpeta con el texto 2000
+    And Hacer Click en El elemento AgregarIndex
+    And espereme 3 segundos
+    And Cambiar al Frame principal
+    And espereme 2 segundos
+    And Cambiar de Frame: Categoria
+    And espereme 2 segundos
+    And Hacer Click en El elemento VolverIndex
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe IndexarCarpeta
+
+  @MetadataBorrarIndicesCarpetas
+  Scenario: AC_AZDv6-21 Metadata Indices Carpetas
+    And Hacer Click en El elemento MasInfoIndexarCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Metadata
+    And espereme 2 segundos
+    And Texto de Seleccion Indice_Release: Expedientes Vinculacionarios Selector CategoriaMetaCarpeta
+    And espereme 2 segundos
+    And Hacer Click en El elemento CerrarCuadro
+    And Hacer Click en El elemento BorrarIndice
+    And espereme 2 segundos
+    And Marco la casilla de verificación que tiene SelecBorrarIndice
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Borrarindice
+    And Hacer Click en El elemento Actualizar
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe BorrarIndice
+
+  @MetadataExportarCarpetas
+  Scenario Outline: AC_AZDv6-21 Metadata Exportar Carpetas
+    And Hacer Click en El elemento MasInfoMetadataCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Metadata
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCarpeta
+    And Hacer Click en El elemento BtnExportarCarpeta
+    And Marco la casilla de verificación que tiene ExportarArchivos
+    And Selecion Index 1 Selector Modalidades
+    And Marco la casilla de verificación que tiene ExportarMetadata
+    And Marco la casilla de verificación que tiene MetadataGeneral
+    And Marco la casilla de verificación que tiene MetadataIndices
+    And Opcion del select <campo1> y el select Formato
+    And espereme 2 segundos
+    And Hacer Click en El elemento AceptarExportar
+    And espereme 2 segundos
+    Examples:
+      | campo1 |
+      | TAB    |
+      | CSV    |
+      | Pipe   |
+      | XML    |
+
+  @InformacionArchivistica
+  Scenario: Información Archivistica
+    And Hacer Click en El elemento MasInfoInformacion
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento InformacionArchivistica
+    And espereme 2 segundos
+    And Selecion Index 1 Selector FaseArchivo
+    And espereme 2 segundos
+    And lleneme el campo FechaCierreExpeditne con el texto 2023-06-01
+    And Hacer Click en El elemento CalcularFecha
+    And espereme 5 segundos
+    And lleneme el campo FechaPasoArchivoCentral con el texto 2023-06-02
+    And lleneme el campo FechaPasoDisposionFinal con el texto 2023-06-03
+    And Selecion Index 1 Selector FrecuenciaConsulta
+    And Hacer Click en El elemento BtnAceptarInfo
+
+  @RetencionAsociarRegla
+  Scenario: Retencion Asociar Regla
+    And Hacer Click en El elemento MasInfoHeredarCarpeta
+    And espereme 2 segundos
+    And Hacer Click en El elemento RetencionDocCarpeta
+    And espereme 2 segundos
+    And Hacer Click en El elemento AsociarRegla
+    And espereme 2 segundos
+    And Selecion Index 2 Selector TablaRetencion
+    And Selecion Index 1 Selector Regla
+    And Selecion Index 1 Selector ColeccionRegla
+    And lleneme el campo CodigoArchivistico con el texto 200
+    And Hacer Click en El elemento BtnRegla
+    #And Adjunto una Captura de pantalla al informe Asociar
+    And Hacer Click en El elemento OpcionAsociar
+    And Hacer Click en El elemento EliminarAsociar
+
+  @BorraryCrear2
+  Scenario: Borrar y Crear2
+
+  @MoverCrear
+  Scenario: AC_AZDv6-21 Mover Carpeta
+    And Hacer Click en El elemento MasInfoMoverCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento ListaMover
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Mover
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo NuevaLocalizacionCarpeta con el texto MoverAuto
+    And Hacer Click en El elemento Buscar
+    And Hacer Click en El elemento SelecBDECarpeta
+    And Hacer Click en El elemento BtnMover
+    And espereme 2 segundos
+    And lleneme el campo Crear con el texto NuevaCarpeta
+    And Selecion Index 0 Selector Nombre
+    And Hacer Click en El elemento BtnCrear
+    And espereme 2 segundos
+
+  @HeredarDePadre
+  Scenario: AC_AZDv6-606 Heredar Regla Padre Desde Una Carpeta
+    And Hacer Click en El elemento MasInfoHeredarCarpeta
+    And Hacer Click en El elemento RetencionDocCarpeta
+    And espereme 2 segundos
+    And Hacer Click en El elemento HeredarRegla
+    #And tomar Captura de pantalla: Heredar
+
+  @LocalizacionCrearUnidadConservacion
+  Scenario: AC_AZDv6-19 Localizacion Crear Unidad Conservacion
+    And Hacer Click en El elemento MasInfoLocalizacionCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento LocalizacionCarpeta
+    And espereme 2 segundos
+    And Hacer Click en El elemento CrearUnidadConservacionCarpeta
+    And espereme 2 segundos
+    And Selecion Index 1 Selector TipoUnidad
+    And Selecion Index 1 Selector Serie
+    And lleneme el campo FolioInicial con el texto 10
+    And Selecion Index 1 Selector CategoriaUnidad
+    And lleneme el campo FechaCierre con el texto 2023-10-20
+    And lleneme el campo Consecutivo con el texto 99
+    And lleneme el campo ObservacionesUnidad con el texto Vacío
+    And lleneme el campo PosicionUnidad con el texto 1
+    And lleneme el campo Cod.Alt.Unidad con el texto 1212
+    And Selecion Index 1 Selector LoteRotulacion
+    And Selecion Index 1 Selector DisposicionUnidad
+    And lleneme el campo No.Folios con el texto 111
+    And lleneme el campo FolioFinal con el texto 100
+    And lleneme el campo FechaInicialUnidad con el texto 2023-11-12
+    And lleneme el campo FechaFinalUnidad con el texto 2023-12-12
+    And lleneme el campo CorrelativoUnidad con el texto 1010
+    #And lleneme el campo CodigoContenedorUnidad con el texto AZ
+    And Hacer Click en El elemento ActualizarUnidad
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe CrearUnidad
+    And Marco la casilla de verificación que tiene SelecRotulo
+    And Hacer Click en El elemento SolicitarPrestamo
+#########Para la fecha, el prestamo no puede ser mayor a diez días
+    And lleneme el campo FechaDevolución con el texto 2023-03-29
+    And lleneme el campo ObservacionesPrestamo con el texto vacio
+    And Marco la casilla de verificación que tiene Replicar
+    And Hacer Click en El elemento ActualizarPrestamo
+    And espereme 12 segundos
+    #And Adjunto una Captura de pantalla al informe Prestamo
+    #And espereme 2 segundos
+    And Marco la casilla de verificación que tiene SelecRotulo
+    And Hacer Click en El elemento ImprimirMasivo
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Hacer Click en El elemento BDE
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe UnidadCOnservacion
+    And Hacer Click en El elemento MasInfoLocalizacionCarpeta
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento LocalizacionCarpeta
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe listaUnidades
+
+  @MoverUnidad
+  Scenario: Mover Unidad
+    And Hacer Click en El elemento MoverUnidad
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento ListaMover
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Mover
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo NuevaLocalizacionCarpeta con el texto Borrar
+    And Hacer Click en El elemento Buscar
+    And Hacer Click en El elemento SelecBDECarpeta
+    And Hacer Click en El elemento BtnMover
+    And espereme 1 segundos
+
+  @Borrar
+  Scenario: Borrar
+    #And Marco la casilla de verificación que tiene MoveraBorrar
+    #And Hacer Click en El elemento Lista
+    #And Cambiar al Frame principal
+    #And Cambiar de Frame: Contenido
+    #And Hacer Click en El elemento MoverBorrar
+    #And lleneme el campo NvaMoverBorrar con el texto trasladoborrar
+    #And Hacer Click en El elemento Buscar
+    #And Hacer Click en El elemento SelectBDEMover
+    #And Hacer Click en El elemento ActualizarMover
+    #And Marco la casilla de verificación que tiene SelectDepurar
+    #And Hacer Click en El elemento Lista
+    #And Cambiar al Frame principal
+    #And Cambiar de Frame: Contenido
+    #And espereme 2 segundos
+    #And Hacer Click en El elemento Borrardepurar
+    #And Hacer Click en El elemento Actualizar
+    And Hacer Click en El elemento Atras
+    And Hacer Click en El elemento BDE_Traslado
+    And Marco la casilla de verificación que tiene SelectDepurar
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Borrardepurar
+    And Hacer Click en El elemento Actualizar
+    And espereme 2 segundos
+
+

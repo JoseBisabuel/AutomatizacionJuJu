@@ -1,0 +1,51 @@
+[ {
+  "uid" : "ff7accef472acd27",
+  "name" : "Check Box",
+  "time" : {
+    "start" : 1728618156235,
+    "stop" : 1728618197241,
+    "duration" : 41006
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2cd8b307c70fd95b",
+  "name" : "Web Tables",
+  "time" : {
+    "start" : 1728618234304,
+    "stop" : 1728618267713,
+    "duration" : 33409
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b6d02cb378c430f8",
+  "name" : "Formulario Text Box",
+  "time" : {
+    "start" : 1728618116800,
+    "stop" : 1728618155950,
+    "duration" : 39150
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5d4933258eacba1c",
+  "name" : "Web Tables Edicion y Borrado",
+  "time" : {
+    "start" : 1728618267723,
+    "stop" : 1728618302267,
+    "duration" : 34544
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "407d66909dbd24e3",
+  "name" : "Radio Button",
+  "time" : {
+    "start" : 1728618197257,
+    "stop" : 1728618234287,
+    "duration" : 37030
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

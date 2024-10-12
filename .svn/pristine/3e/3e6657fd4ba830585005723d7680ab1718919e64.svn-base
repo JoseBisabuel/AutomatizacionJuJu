@@ -1,0 +1,320 @@
+
+
+
+  #####
+  ##### Menu tres puntos Carpetas
+  #####
+
+  @CrearCarpetaPruebas
+  Scenario: Creacion de Carpeta Privada Para las Pruebas de Carpeta
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And lleneme el campo Crear con el texto CarpetaPruebas
+  And Hacer Click en El elemento CrearFolder
+  And Sikuli element click CarpetaPruebas
+  And Adjunto una Captura de pantalla al informe CarpetaPruebas
+
+  @RenombrarCarpeta
+  Scenario: Renombrar Carpeta
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaPruebas
+  And lleneme el campo Crear con el texto CarpetaSelenium
+  And Hacer Click en El elemento CrearFolder
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento RenombrarTP
+  And Hacer Click en El elemento Regresar
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento RenombrarTP
+  And lleneme el campo NuevoNombre con el texto SeleniumRenombre
+  And lleneme el campo ObservacionRenombrar con el texto Prueba Selenium en el campo observacion
+  And Hacer Click en El elemento GuardarRenombrar
+  And Adjunto una Captura de pantalla al informe CarpetaPruebasRenombrada
+
+  @BitacoraCarpeta
+  Scenario: Bitacora De Acciones Carpeta
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaPruebas
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento BitacoraTP
+  And Adjunto una Captura de pantalla al informe BitacoraAccionesTP
+  And Hacer Click en El elemento RegresarBitacoraA
+  And Adjunto una Captura de pantalla al informe VisualizacionArchivo
+
+  @CategorizarCarpeta
+  Scenario: Categorizar Carpeta
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaPruebas
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento CategorizarTP
+  And Hacer Click en El elemento CategoriaRegresar
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento CategorizarTP
+  And El select CategoriaArchivo Texto de Seleccion Selector vs Gruop Factura: Facturas
+  And Hacer Click en El elemento CategoriaActualizar
+  And Adjunto una Captura de pantalla al informe CarpetaCategorizada
+
+  @PublicarCarpeta
+  Scenario: Publicar Carpeta
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaPruebas
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento PublicarTP
+  And Hacer Click en El elemento Regresar
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento PublicarTP
+  And lleneme el campo Observaciones con el texto Selenium
+  And lleneme el campo FechaVencimientoCyP con el texto 2621-10-27 16:12:00
+  And Hacer Click en El elemento Actualizar
+  And Adjunto una Captura de pantalla al informe PublicarCarpeta
+
+  @CompartirCarpeta
+  Scenario: Compartir Carpeta
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaPruebas
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento CompartirTP
+  And Hacer Click en El elemento Regresar
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento CompartirTP
+  And lleneme el campo Observaciones con el texto Selenium
+  And lleneme el campo EmailsCompartir con el texto daniel.alzate@analitica.com.co
+    #recuerde colocar una fecha y hora o solo la fecha siguiendo el siguiente formato año-mes-dia hora:minutos:segundos
+  And lleneme el campo FechaVencimientoCyP con el texto 2620-10-27 16:12:00
+  And Desplazo el elemento Actualizar
+  And Adjunto una Captura de pantalla al informe CarpetaCompartida
+
+  @ComentarCarpeta
+  Scenario: Comentar Carpeta
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaPruebas
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento ComentarTP
+  Then se accept la alerta
+  And Adjunto una Captura de pantalla al informe VisualiacionCarpeta2
+
+  @MoverCarpeta
+  Scenario: Mover Carpeta
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaPruebas
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento MoverTP
+  And Hacer Click en El elemento Regresar
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento MoverTP
+  And lleneme el campo DirectorioDestinoCarpeta con el texto mover
+  And Hacer Click en El elemento BuscarDirectorio
+  And Hacer Click en El elemento SeleccionarDirectorio
+  And Hacer Click en El elemento Actualizar
+  And Adjunto una Captura de pantalla al informe CarpetaNOexiste
+  And Hacer Click en El elemento RegresarFlechaG
+  And Sikuli element click CarpetaMover
+  And Adjunto una Captura de pantalla al informe CarpetaMovidoExiste
+
+  @IniciarFlujoArchivo
+  Scenario: Iniciar Flujo Carpeta
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaMover
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento IniciarFlujoTP
+  And Hacer Click en El elemento RegresarIniciarFlujo
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento IniciarFlujoTP
+  And El select SelectorIniciarFlujoCarpeta Texto de Seleccion Selector vs Gruop SinBandeja
+  And Hacer Click en El elemento ActualizarIniciarFlujoMasiva
+  And Adjunto una Captura de pantalla al informe IniciarFlujoCarpeta
+
+  @CambiarEstadoFlujoCarpeta
+  Scenario: Cambiar Estado Flujo Carpeta
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaMover
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento CambiarEstadoFlujoTP
+  And Hacer Click en El elemento RegresarCambiarFlujo
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento CambiarEstadoFlujoTP
+  And El select EstadoCambiarFlujo Texto de Seleccion Selector vs Gruop 1
+  And lleneme el campo CarpetaDestino con el texto BandejaPruebas
+  And Hacer Click en El elemento BuscarDirectorio
+  And Hacer Click en El elemento DestinoCambiarFlujo
+  And lleneme el campo ObservacionesFlujos con el texto Sélëniùn
+  And Hacer Click en El elemento ActualizarFlujo
+  And Adjunto una Captura de pantalla al informe IniciarFlujoCarpeta
+
+  @TransladarCarpeta
+  Scenario: Transladar Carpeta
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaPruebas
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento TransladarTP
+  And Hacer Click en El elemento Regresar
+  And Hacer Click en El elemento tresPuntos
+  And Hacer Click en El elemento TransladarTP
+  And lleneme el campo DirectorioDestinoCarpeta con el texto BandejaPruebas
+  And Hacer Click en El elemento BuscarDirectorio
+  And Hacer Click en El elemento SeleccionarBuscadorTransladar
+  And lleneme el campo ObservacionesTransladarCarpeta con el texto Sálènïum
+  And lleneme el campo FechaTramiteTransladarCarpeta con el texto 2656-10-25 08:33:00
+  And Hacer Click en El elemento Actualizar
+  And Adjunto una Captura de pantalla al informe CarpetaTransladado
+
+  ###
+  ### Seleccione una Accion Carpeta
+  ###
+  @RenombrarSCarpeta
+  Scenario: Renombrar Carpeta Seleccione una accion
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaPruebas
+  And Hacer Click en El elemento CheckSeleccione
+  And Hacer Click en El elemento SeleccioneAccion
+  And Hacer Click en El elemento SARenombrar
+  And lleneme los campos RenombrarMasivamenteCarpeta con el texto Selenium Masivamente
+  And lleneme los campos ObservaionesRMasivamente con el texto Selenium Masivamente
+  And Hacer Click en El elemento GuardarRenombrar
+  And Adjunto una Captura de pantalla al informe RenombrarMasivamenteSC
+
+  @PublicarCarpetaMasiva
+  Scenario: Publicar Carpeta Seleccione una accion
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaPruebas
+  And Hacer Click en El elemento CheckSeleccione
+  And Hacer Click en El elemento SeleccioneAccion
+  And Desplazo el elemento PublicarMasiva
+  And espereme 5 segundos
+  And Hacer Click en El elemento PublicarMasiva
+  And lleneme los campos Observaciones con el texto Selenium Masivamente
+  And lleneme los campos FechaVencimientoCyP con el texto 2656-10-25 08:33:00
+  And Hacer Click en El elemento Actualizar
+  And Adjunto una Captura de pantalla al informe ActualizarPMasiva
+
+  @CompartirSCarpeta
+  Scenario: Compartir Carpeta Seleccione una accion
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaPruebas
+  And Hacer Click en El elemento CheckSeleccione
+  And Hacer Click en El elemento SeleccioneAccion
+  And Desplazo el elemento CompartirMasiva
+  And espereme 5 segundos
+  And Hacer Click en El elemento CompartirMasiva
+  And lleneme los campos Observaciones con el texto Selenium Masivamente
+  And lleneme los campos EmailsCompartir con el texto dalzate.analitica@gmail.com
+  And lleneme los campos FechaVencimientoCyP con el texto 2656-10-25 08:33:00
+  And Hacer Click en El elemento Actualizar
+  And Adjunto una Captura de pantalla al informe CompartirMasivamenteSC
+
+  @CategorizarSCarpeta
+  Scenario: Categorizar Carpeta Seleccione una accion
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaPruebas
+  And Hacer Click en El elemento CheckSeleccione
+  And Hacer Click en El elemento SeleccioneAccion
+  And Desplazo el elemento CategorizarMasiva
+  And Hacer Click en El elemento CategorizarMasiva
+  And El select CategorizarCarpetas para los Textos de Seleccion Selector vs Gruop Factura: Facturas
+  And Hacer Click en El elemento CategoriaActualizar
+  And Adjunto una Captura de pantalla al informe CategorizarMasivamenteSC
+
+  @CopiarSCarpeta
+  Scenario: Copiar Carpeta Seleccione una accion
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaPruebas
+  And Hacer Click en El elemento CheckSeleccione
+  And Hacer Click en El elemento SeleccioneAccion
+  And Desplazo el elemento CopiarMasiva
+  And Hacer Click en El elemento CopiarMasiva
+  Then se accept la alerta
+  And Adjunto una Captura de pantalla al informe CategorizarMasivamenteSC
+
+  @MoverSCarpeta
+  Scenario: Mover Carpeta Seleccione una accion
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaPruebas
+  And Hacer Click en El elemento CheckSeleccione
+  And Hacer Click en El elemento SeleccioneAccion
+  And Desplazo el elemento MoverMasiva
+  And Hacer Click en El elemento MoverMasiva
+  And lleneme el campo DirectorioDestinoCarpeta con el texto mover
+  And Hacer Click en El elemento BuscarDirectorio
+  And Hacer Click en El elemento SeleccionadoMMasiva
+  And Hacer Click en El elemento Actualizar
+  And Adjunto una Captura de pantalla al informe MoverMasivamenteSC
+
+  @IniciarFlujoCarpeta
+  Scenario: Iniciar Flujo Carpeta masivamente
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaMover
+  And Hacer Click en El elemento CheckSeleccione
+  And Hacer Click en El elemento SeleccioneAccion
+  And Desplazo el elemento IniciarFlujoMasivo
+  And Hacer Click en El elemento IniciarFlujoMasivo
+  And El select SelectorIniciarFlujoCarpeta para los Textos de Seleccion Selector vs Gruop SinBandeja
+  And Hacer Click en El elemento ActualizarIniciarFlujoMasiva
+  And Adjunto una Captura de pantalla al informe IniciarFlujoCarpeta
+
+  @CambiarEstadoFlujoCarpeta
+  Scenario: Cambiar Estado Flujo Carpeta Masivamente
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaPruebas
+  And Cambiar de Frame: Contenido
+  And Sikuli element click CarpetaMover
+  And Hacer Click en El elemento CheckSeleccione
+  And Hacer Click en El elemento SeleccioneAccion
+  And Desplazo el elemento CambiarFlujoMasivo
+  And Hacer Click en El elemento CambiarFlujoMasivo
+  And El select SelectCambiarFlujo Texto de Seleccion Selector vs Gruop 1
+  And lleneme el campo DestinoFlujo con el texto BandejaPruebas
+  And Hacer Click en El elemento DestinoCambiarFlujo
+  And lleneme el campo ObservacionesCFlujo con el texto Sélëniùn
+  And Hacer Click en El elemento Actualizar
+  And Adjunto una Captura de pantalla al informe CambioFlujoCarpeta
+
+  @TransladarSCarpeta
+  Scenario: Transladar Carpeta Seleccione una accion
+  And Hacer Click en El elemento BandejasEntradas
+  And Sikuli element click BandejaSelenium
+  And Cambiar de Frame: Contenido
+  And Hacer Click en El elemento CheckSeleccione
+  And Hacer Click en El elemento SeleccioneAccion
+  And Desplazo el elemento TrasladarMasiva
+  And Hacer Click en El elemento TrasladarMasiva
+  And lleneme el campo DirectorioDestinoCarpeta con el texto BandejaPruebas
+  And Hacer Click en El elemento BuscarDirectorio
+  And Hacer Click en El elemento SeleccionarTMasiva
+  And lleneme el campo ObservacionesTransladarCarpeta con el texto Selenium Pruebas
+  And lleneme el campo FechaTramiteTransladarCarpeta con el texto 2621-09-10 09:53:00
+  And Hacer Click en El elemento Actualizar
+  And Adjunto una Captura de pantalla al informe TransladarMasivamenteSC

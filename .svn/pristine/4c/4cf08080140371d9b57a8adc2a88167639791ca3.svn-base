@@ -1,0 +1,141 @@
+Feature: Comunicados Internos - Generacion
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto Comunicados
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+
+      ##--Comunicados Guardados--##
+    @CrearDirectorioComunicados
+    Scenario: Crear directorio - Comunicado guardado
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      And espereme 2 segundos
+      And lleneme el campo Crear con el texto ComunicadosGuardados
+      And Texto de Seleccion Carpeta Privada Selector SelectTipo
+      And Hacer Click en El elemento BotonCrear
+
+    @CrearComunicado1
+    Scenario Outline: Crear directorio - Comunicado guardado1
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      #And Sikuli element click ComunicadosGuardados
+      And Hacer Click en El elemento BDE_ComnSal
+      And lleneme el campo Crear con el texto <Campo1>
+      And Texto de Seleccion Documento Radicado Selector SelectTipo
+      And Texto de Seleccion Comunicado Interno Selector TDocumental2
+      And Hacer Click en El elemento BotonCrear
+      And Hacer Click en El elemento Agregar_ListaUsuariosPersonas
+          #--Validación ventana Usuarios--#
+      And ir a <Campo2> ventana
+      And Cambiar de Frame: BuscarUsuariosPersonas
+      And lleneme el campo CampoNombre con el texto Usuario
+      And lleneme el campo CampoApellido con el texto Cero Uno
+      And Hacer Click en El elemento BotonAgregarUsuario
+      And espereme 2 segundos
+      And Cambiar al Frame principal
+      And Cambiar de Frame: AgregarUsuariosPersonas
+      And Hacer Click en El elemento AsociarUsuario
+      And espereme 3 segundos
+          #--Validación ventana Usuarios--#
+      And ir a <Campo3> ventana
+      And Cambiar al Frame principal
+      And Cambiar de Frame: Contenido
+      And Selecion Index 1 Selector CTramite
+      And Selecion Index 1 Selector CSubtramite
+      And Texto de Seleccion <Campo4> Selector CModoSalida
+      And lleneme el campo CIdReferencia con el texto Auto01
+      And lleneme el campo CIdReferencia con el texto Auto01
+      And lleneme el campo CNo.Folios con el texto 1
+      And lleneme el campo CNo.DocAnexos con el texto 1
+      And lleneme el campo CAsunto con el texto Opción Guardar - Opción Guardar - Opción Guardar - Opción Guardar - Opción Guardar -
+      And Hacer Click en El elemento BGuardar
+      Examples:
+        | Campo1 | Campo2 | Campo3 | Campo4 |
+        | Guardado01 | UsuariosGuardado1 | Principal01 | 1 a 1 |
+        | Guardado02 | UsuariosGuardado2 | Principal02 | 1 a 1 |
+        | Guardado03 | UsuariosGuardado3 | Principal03 | 1 a N |
+      ##--Comunicados Gusrdados--##
+
+  @IngresoComunicado
+  Scenario: AC_AZDv6-1770: Creacion Comunicado Interno - Icono Hoja
+    And Hacer Click en El elemento ComunicadoA
+    And espereme 3 segundos
+    And Selecion Index 1 Selector TDocumental
+    And lleneme el campo DesTDocumental con el texto Comunicado de prueba - pruebas QA - Automatización
+    And Hacer Click en El elemento BotonAgregarComun
+    And Adjunto una Captura de pantalla al informe Comn01
+    And espereme 1 segundos
+
+  @IngresoComunicado2
+  Scenario: AC_AZDv6-1770: Creacion Comunicado Interno - Opcion Crear
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And lleneme el campo Crear con el texto ComunicadoInterno01
+    And Texto de Seleccion Documento Radicado Selector SelectTipo
+    And Texto de Seleccion Comunicado Interno Selector TDocumental2
+    And Hacer Click en El elemento BotonCrear
+    And Adjunto una Captura de pantalla al informe Comn02
+    And espereme 1 segundos
+    
+  @IngresoComunicado3
+  Scenario Outline: AC_AZDv6-1770: Creacion Comunicado Interno - Comunicados 1 a N y 1 a 1
+    And Hacer Click en El elemento ComunicadoA
+    And espereme 3 segundos
+    And Selecion Index 1 Selector TDocumental
+    And lleneme el campo DesTDocumental con el texto <Campo1>
+    And Hacer Click en El elemento BotonAgregarComun
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Agregar_ListaUsuariosPersonas
+        #--Validación ventana Usuarios--#
+    And ir a <Campo2> ventana
+    And Cambiar de Frame: BuscarUsuariosPersonas
+    And lleneme el campo CampoNombre con el texto Usuario
+    And lleneme el campo CampoApellido con el texto Cero Uno
+    And Hacer Click en El elemento BotonAgregarUsuario
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: AgregarUsuariosPersonas
+    And Hacer Click en El elemento AsociarUsuario
+    And espereme 3 segundos
+        #--Validación ventana Usuarios--#
+    And ir a <Campo3> ventana
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 1 Selector CTramite
+    And Selecion Index 1 Selector CSubtramite
+    #And Selecion Index 1 Selector CTipoDocumento
+    And Texto de Seleccion <Campo4> Selector CModoSalida
+    And lleneme el campo CIdReferencia con el texto Auto01
+    And lleneme el campo CIdReferencia con el texto Auto01
+    And lleneme el campo CNo.Folios con el texto 1
+    And lleneme el campo CNo.DocAnexos con el texto 1
+    And lleneme el campo CAsunto con el texto Automatizacion - Comunicado 1 a N - Automatizacion - Comunicado 1 a N -
+    And Hacer Click en El elemento BGuardar
+    And espereme 3 segundos
+    And Hacer Click en El elemento BRadicar
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe <Campo5>
+    And Hacer Click en El elemento GenerarRadicado
+    And Esperar visibilidad del boton: AsModoFirma
+    And Adjunto una Captura de pantalla al informe <Campo6>
+    And Hacer Click en El elemento BCancelarFirma
+    And espereme 1 segundos
+    And se accept la alerta
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe <Campo7>
+    #And Sikuli element click CerrarProcesamiento
+    And Hacer Click en El elemento CerrarProcesamiento
+    And Hacer Click en El elemento BRegresar
+    And Adjunto una Captura de pantalla al informe <Campo8>
+    Examples:
+      | Campo1 | Campo2 | Campo3 | Campo4 | Campo5 | Campo6 | Campo7 | Campo8 |
+      | Automatizacion1aN | Usuarios1aN | Principal1aN | 1 a N | Comn03 | Comn04 | Comn05 | Comn06 |
+      | Automatizacion1a1 | Usuarios1a1 | Principal1a1 | 1 a 1 | Comn07 | Comn08 | Comn09 | Comn10 |
+  #
+  # Creacion Comunicado Interno
+
+
+

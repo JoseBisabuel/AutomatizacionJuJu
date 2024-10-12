@@ -1,0 +1,136 @@
+Feature: Tres Puntos
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM TresPuntos.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Contrasena con el texto o<tf@LqI4!~h
+    And Hacer Click en El elemento Ingresar
+
+    ##--Creacion de Usuario--##
+  @CreaColeccion
+  Scenario: Creacion Coleccion TresPuntos
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: FrameEstructura
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstUsuarios
+    And Hacer Click en El elemento ColUsuarios
+    And lleneme el campo Crear con el texto tresPuntos
+    And Texto de Seleccion Colección Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 2 segundos
+
+  @CreacionBDETresPuntos
+  Scenario: Creacion BDE TresPuntos
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: FrameEstructura
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstUsuarios
+    And Hacer Click en El elemento ColUsuarios
+    And espereme 2 segundos
+    And Sikuli element click usuarioTPuntos
+    And lleneme el campo Crear con el texto tresPuntos
+    And Texto de Seleccion Bandeja de Entrada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 2 segundos
+    And lleneme el campo Crear con el texto BDE_tresptsRec
+    And Texto de Seleccion Bandeja de Entrada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 2 segundos
+
+  @CreacionUsuarioTresPuntos
+  Scenario: Creacion Usuarios TresPuntos
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento AdminUsuarios
+    And Hacer Click en El elemento OpcUsuarios
+    And Hacer Click en El elemento CrearUsuarios
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo UsUser con el texto trespuntos
+    And lleneme el campo UsPass con el texto 1234567890
+    And Texto de Seleccion Administrador AZ Digital Selector Ustipo
+    And lleneme el campo UsNombre con el texto Usuario
+    And lleneme el campo UsApellido con el texto Tres Puntos
+    And Selecion Index 3 Selector UsTid
+    And lleneme el campo UsIdentificacion con el texto 909090
+    And lleneme el campo UsBDE con el texto tresPuntos
+    And espereme 5 segundos
+    And Hacer Click en El elemento UsBotonBuscarBDE
+      #And Selecion Index 1 Selector UsBDE
+    And Hacer Click en El elemento RegistroUsuario
+    And lleneme el campo UsEmail con el texto pruebasqa312@gmail.com
+    And Opcion del select Crear, Aprobar y Radicar Comunicados y el select UsTipoRadComunicados
+    And Hacer Click en El elemento UsBotonAgregar
+    And espereme 2 segundos
+
+  @ParametrizacionCargos
+  Scenario: Cargo Usuario Tres Puntos
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento AdminUsuarios
+    And Hacer Click en El elemento CargosUsuarios
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento BotonAgregarCargo
+    And Selecion Index 1 Selector CampoDependencia
+    And Selecion Index 1 Selector CampoCargo
+    And Texto de Seleccion Usuario Tres Puntos Selector CampoUsuario
+    And Hacer Click en El elemento BotonCargosUsuario
+
+  @ParametrizacionTiposRadicados
+  Scenario: Tipos Radicados - Coleccion - Interno - TresPuntos
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento RetencionDocumental
+    And Hacer Click en El elemento TiposDocumColeccion
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento BotonAgregarDColeccion
+    And Selecion Index 1 Selector TdTablaRetencion
+    And Selecion Index 1 Selector TdTipoRadicado
+    And Texto de Seleccion Comunicado Interno:002:Comunicado Interno:.docx Selector TdTipodocumental
+    And Texto de Seleccion tresPuntos Selector TdColeccion
+    And Selecion Index 1 Selector TdSDocumental
+    And Hacer Click en El elemento TDAgregarTDocumental
+
+  @ParametrizacionTiposRadicadosSal0
+  Scenario: Tipos Radicados - Coleccion - Salida - TresPuntos
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento RetencionDocumental
+    And Hacer Click en El elemento TiposDocumColeccion
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento BotonAgregarDColeccion
+    And Selecion Index 1 Selector TdTablaRetencion
+    And Selecion Index 2 Selector TdTipoRadicado
+    And Texto de Seleccion Acta:001:Acta:.docx Selector TdTipodocumental
+    And Texto de Seleccion tresPuntos Selector TdColeccion
+    And Selecion Index 1 Selector TdSDocumental
+    And Hacer Click en El elemento TDAgregarTDocumental
+
+  @AsociarColeccionesTresPuntos
+  Scenario: Asociar Colecciones TresPuntos
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento AdminUsuarios
+    And Hacer Click en El elemento AsociarColecciones
+    And espereme 2 segundos
+    And Texto de Seleccion Administrador AZDigital Selector UsuarioOrigen
+    And Texto de Seleccion Usuario Tres Puntos Selector UsuarioDestino
+    And Hacer Click en El elemento EjecutarAsociar
+    And se accept la alerta
+  ##--Creacion de Usuario--##

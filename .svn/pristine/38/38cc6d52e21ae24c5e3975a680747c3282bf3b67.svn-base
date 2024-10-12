@@ -1,0 +1,524 @@
+Feature: Tres Puntos
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM TresPuntos.json
+    And lleneme el campo Usuario con el texto trespuntos
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+
+  @RenombrarArchivo
+  Scenario: AC_AZDv6-9: Renombrar Archivo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos1
+    And Hacer Click en El elemento RenombrarTP
+    And Hacer Click en El elemento RegresarRenombrar
+    And Hacer Click en El elemento tresPuntos1
+    And Hacer Click en El elemento RenombrarTP
+    And lleneme el campo NuevoNombre con el texto RenombradoAutomatizacion
+    And lleneme el campo ObservacionRenombrar con el texto Prueba Selenium en el campo observacion
+    And Hacer Click en El elemento GuardarRenombrar
+    And Adjunto una Captura de pantalla al informe NuevoNombre
+
+  @BitacoraArchivo
+  Scenario: AC_AZDv6-51:Bitacora de Acciones Archivo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos1
+    And Hacer Click en El elemento BitacoraTP
+    And espereme 5 segundos
+    And Adjunto una Captura de pantalla al informe BitacoraAccionesTP
+    And Hacer Click en El elemento RegresarBitacoraA
+    And Adjunto una Captura de pantalla al informe VisualizacionArchivo
+
+  ## Exportar sin encabezado##
+        ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+      Scenario Outline: AC_AZDv6-51:Bitacora de Acciones Archivo - Exportar (Varios - sin encabezados)
+        And Hacer Click en El elemento Home
+        And Cambiar de Frame: Contenido
+        And Hacer Click en El elemento tresPuntos1
+        And Hacer Click en El elemento BitacoraTP
+        And espereme 5 segundos
+        And Hacer Click en El elemento SelFormato2
+        And espereme 1 segundos
+        And Hacer Click en El elemento <campo1>
+        And Hacer Click en El elemento EstaPagina2
+        And espereme 1 segundos
+        And Hacer Click en El elemento ExportarSin
+        And espereme 2 segundos
+
+        Examples:
+          | campo1 |
+          | Excel |
+          | CSV |
+          | TAB |
+          | XML |
+          | HTML |
+          | WORD |
+        ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+        ## PDF ##
+      Scenario: AC_AZDv6-51:Bitacora de Acciones Archivo - Exportar (PDF sin encabezado)
+        And Hacer Click en El elemento Home
+        And Cambiar de Frame: Contenido
+        And Hacer Click en El elemento tresPuntos1
+        And Hacer Click en El elemento BitacoraTP
+        And espereme 5 segundos
+        And Hacer Click en El elemento SelFormato2
+        And espereme 1 segundos
+        And Hacer Click en El elemento PDF
+        And Hacer Click en El elemento EstaPagina2
+        And espereme 1 segundos
+        And Hacer Click en El elemento SeleccionarTodas
+        And espereme 1 segundos
+        And Hacer Click en El elemento ExportarSinPDF
+        And espereme 5 segundos
+        ## PDF ##
+  ## Exportar sin encabezado##
+
+  ## Exportar con encabezado##
+        ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+      Scenario Outline: AC_AZDv6-51:Bitacora de Acciones Archivo - Exportar (Varios - con encabezados)
+        And Hacer Click en El elemento Home
+        And Cambiar de Frame: Contenido
+        And Hacer Click en El elemento tresPuntos1
+        And Hacer Click en El elemento BitacoraTP
+        And espereme 5 segundos
+        And Hacer Click en El elemento SelFormato2
+        And espereme 1 segundos
+        And Hacer Click en El elemento <campo1>
+        And Hacer Click en El elemento EstaPagina2
+        And espereme 1 segundos
+        #And espere el elemento AgregarEncabezado
+        And Hacer Click en El elemento AgregarEncabezado
+        And espereme 1 segundos
+        And lleneme el campo TituloEncabezado con el texto Exportar con encabezado Bitacora de Acciones
+        And lleneme el campo Comentario con el texto Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios -
+        And Hacer Click en El elemento CheckAgrUsu
+        And Hacer Click en El elemento CheckAgrFec
+        And espereme 1 segundos
+        And Hacer Click en El elemento ExportarCon
+        And espereme 2 segundos
+
+        Examples:
+          | campo1 |
+          | Excel |
+          | CSV |
+          | TAB |
+          | XML |
+          | HTML |
+          | WORD |
+        ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+        ## PDF ##
+      Scenario: AC_AZDv6-51:Bitacora de Acciones Archivo - Exportar (PDF con encabezado)
+        And Hacer Click en El elemento Home
+        And Cambiar de Frame: Contenido
+        And Hacer Click en El elemento tresPuntos1
+        And Hacer Click en El elemento BitacoraTP
+        And espereme 5 segundos
+        And Hacer Click en El elemento SelFormato2
+        And espereme 1 segundos
+        And Hacer Click en El elemento PDF
+        And Hacer Click en El elemento EstaPagina2
+        And espereme 1 segundos
+        And Hacer Click en El elemento AgregarEncabezado2
+        And espereme 1 segundos
+        And lleneme el campo TituloEncabezadoPDF con el texto Exportar con encabezado desde Bitacora de Acciones
+        And lleneme el campo ComentarioPDF con el texto Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios -
+        And Hacer Click en El elemento CheckAgrUsuPDF
+        And Hacer Click en El elemento CheckAgrFecPDF
+        And Selecion Index 1 Selector SelectOrientacion
+        And Selecion Index 1 Selector SelectFuente
+        And Selecion Index 1 Selector SelectTamano
+        And Hacer Click en El elemento SeleccionarTodas
+        And espereme 2 segundos
+        And Hacer Click en El elemento ExportarCon2
+        And espereme 5 segundos
+        ## PDF ##
+  ## Exportar con encabezado##
+
+    ##Error reportado AZ_125##
+  @MoverBuscadorArchivo
+  Scenario: Mover Archivo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos2
+    And Hacer Click en El elemento MoverTP
+    And Hacer Click en El elemento RegresarMover
+    And Adjunto una Captura de pantalla al informe ArchivoMovidoExiste1
+    And espereme 3 segundos
+    And Hacer Click en El elemento tresPuntos2
+    And Hacer Click en El elemento MoverTP
+    And espereme 2 segundos
+    And lleneme el campo DirectorioDestino con el texto Directorio4
+    And espereme 1 segundos
+    And Hacer Click en El elemento BuscarDirectorio
+    And Hacer Click en El elemento SeleccionarDirectorio
+    And Hacer Click en El elemento ActualizarMover
+    And tomar Captura de pantalla: ArchivoNOexiste
+    And Hacer Click en El elemento RegresarFlechaG
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe ArchivoMovidoExiste2
+
+  @MoverBuscadorArchivoOjo
+  Scenario: Mover Archivo Por el ojo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos2
+    And Hacer Click en El elemento MoverTP
+    And lleneme el campo DirectorioDestino con el texto Directorio4
+    And Hacer Click en El elemento BuscarDirectorio
+    And Hacer Click en El elemento SeleccionarDirectorio
+    And Hacer Click en El elemento OjoMover
+    When ir a VentanaExaminarMover ventana
+    And Cambiar de Frame: BuscadorFrame
+    And Adjunto una Captura de pantalla al informe BuscadorMoverVista
+    #And Hacer Click en El elemento SeleccionarDOjo
+    And Sikuli element click BuscarBDE
+    When ir a PrincipalExaminarMover ventana
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe ArchivoNOestaEnLaCP
+    ##Error reportado AZ_125##
+
+  @BorrarArchivo
+  Scenario: BorrarrArchivo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos2
+    And Hacer Click en El elemento BorrarTP
+    And Hacer Click en El elemento BtRegresarBorrar
+    And espereme 2 segundos
+    And Hacer Click en El elemento tresPuntos2
+    And Hacer Click en El elemento BorrarTP
+    And Hacer Click en El elemento BtActualizarBorrar
+    And espereme 2 segundos
+
+  @CategorizarArchivo
+  Scenario: CategorizarArchivo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos2
+    And Hacer Click en El elemento CategorizarTP
+    And Hacer Click en El elemento CategoriaRegresar
+    And espereme 2 segundos
+    And Hacer Click en El elemento tresPuntos2
+    And Hacer Click en El elemento CategorizarTP
+    And Selecion Index 2 Selector CategoriaArchivo
+    And Hacer Click en El elemento CategoriaActualizar
+    And Adjunto una Captura de pantalla al informe ArchivoCategorizado
+
+  Scenario: CategorizarArchivo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento tresPuntos2
+    And Hacer Click en El elemento CategorizarTP
+    And Opcion del select - y el select CategoriaArchivo
+    And Hacer Click en El elemento CategoriaActualizar
+
+  @CompartirArchivo
+  Scenario: Compartir Archivo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos6
+    And Hacer Click en El elemento CompartirTP
+    And Hacer Click en El elemento BtRegresarCompartir
+    And Hacer Click en El elemento tresPuntos5
+    And Hacer Click en El elemento CompartirTP
+    And lleneme el campo Observaciones con el texto Compartir Archivo - Automatizacioon - Compartir Archivo - Automatizacioon - Compartir Archivo - Automatizacioon -
+    And lleneme el campo EmailsCompartir con el texto pruebasqa310@yopmail.com
+      #recuerde colocar una fecha y hora o solo la fecha siguiendo el siguiente formato año-mes-dia hora:minutos:segundos
+    And lleneme el campo FechaVencimientoCyP con el texto 2620-10-27 16:12:00
+    And Hacer Click en El elemento ActualizarCompartir
+    And Adjunto una Captura de pantalla al informe ArchivoCompartido
+      ##
+      ##--VALIDACION MAIL--##
+      ##
+    And espereme 5 segundos
+    And ir a la pestaña https://www.google.com.co
+    And Ir a 3
+    And espereme 3 segundos
+    And lleneme el campo Mailyop con el texto pruebasqa310
+    And Hacer Click en El elemento Ingresayop
+    And Adjunto una Captura de pantalla al informe ArchivoCompartidoMAIL
+    And espereme 2 segundos
+    And Cambiar de Frame: Frameyop
+    And Hacer Click en El elemento Eliminaryop
+    And espereme 2 segundos
+
+  @CopiarArchivo
+  Scenario: Copiar Archivo - Asociar _ Desasociar
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos6
+    And Hacer Click en El elemento CopiarTP
+    And Hacer Click en El elemento RegresarCopiar
+    And Hacer Click en El elemento tresPuntos6
+    And Hacer Click en El elemento CopiarTP
+    And lleneme el campo CopiarDestino con el texto BDE_tresptsRec
+    And espereme 2 segundos
+    And Click tecla CONTROL
+    And Hacer Click en El elemento selbdeusuario
+    And espereme 2 segundos
+    And Hacer Click en El elemento Adicionar
+    And Hacer Click en El elemento SelecDesasociar
+    And Hacer Click en El elemento Desasociar
+    And Hacer Click en El elemento RegresarCopiar
+    And espereme 2 segundos
+
+  Scenario: Copiar Archivo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos6
+    And Hacer Click en El elemento CopiarTP
+    And lleneme el campo CopiarDestino con el texto BDE_tresptsRec
+    And espereme 2 segundos
+    And Click tecla CONTROL
+    And Hacer Click en El elemento selbdeusuario
+    And espereme 2 segundos
+    And Hacer Click en El elemento Adicionar
+    And espereme 2 segundos
+    And lleneme el campo Observaciones con el texto Observaciones - Automatizacion - Observaciones - Automatizacion - Observaciones - Automatizacion -
+    And Hacer Click en El elemento ActualizarCopiar
+    And Adjunto una Captura de pantalla al informe CopiaDeDocumento
+      ##
+      ##--VALIDACION MAIL--##
+      ##
+    And espereme 5 segundos
+    And ir a la pestaña https://www.google.com.co
+    And Ir a 3
+    And espereme 3 segundos
+    And lleneme el campo Mailyop con el texto pruebasqa312
+    And Hacer Click en El elemento Ingresayop
+    And Adjunto una Captura de pantalla al informe ArchivoCompartidoMAIL
+    And espereme 2 segundos
+    And Cambiar de Frame: Frameyop
+    And Hacer Click en El elemento Eliminaryop
+    And espereme 2 segundos
+
+  @TransladarArchivo
+  Scenario: Transladar Archivo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos4
+    And Hacer Click en El elemento TransladarTP
+    And Hacer Click en El elemento RegresarTrasladar
+    And Hacer Click en El elemento tresPuntos4
+    And Hacer Click en El elemento TransladarTP
+    And lleneme el campo DirectorioDestino con el texto BDE_tresptsRec
+    And Hacer Click en El elemento BuscarDirectorio
+    And Hacer Click en El elemento SeleccionarBuscadorTransladar
+    And lleneme el campo ObservacionesTransladar con el texto Pruebas Automatizacion - Tres Puntos - Opcion Trasladar - Pruebas Automatizacion - Tres Puntos - Opcion Trasladar -
+    And lleneme el campo FechaTramiteTransladar con el texto 2656-10-25 08:33:00
+    And Hacer Click en El elemento ActualizarTrasladar
+    And Adjunto una Captura de pantalla al informe ArchivoTransladado
+      ##
+      ##--VALIDACION MAIL--##
+      ##
+    And espereme 2 segundos
+    And ir a la pestaña https://www.google.com.co
+    And Ir a 3
+    And espereme 3 segundos
+    And lleneme el campo Mailyop con el texto pruebasqa312
+    And Hacer Click en El elemento Ingresayop
+    And Adjunto una Captura de pantalla al informe ArchivoCompartidoMAIL
+    And espereme 2 segundos
+    And Cambiar de Frame: Frameyop
+    And Hacer Click en El elemento Eliminaryop
+    And espereme 2 segundos
+
+  @IniciarFlujoArchivo
+  Scenario: Iniciar Flujo Archivo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento IngDir3
+    And Hacer Click en El elemento tresPtosDir3
+    And Hacer Click en El elemento IniciarFlujoTP
+    And Hacer Click en El elemento RegresarIniciarFlujo
+    And Hacer Click en El elemento tresPtosDir3
+    And Hacer Click en El elemento IniciarFlujoTP
+    And Opcion del select PruebasQA y el select SelectorIniciarFlujo
+    #And El select SelectorIniciarFlujo Texto de Seleccion Selector vs Gruop SinBandeja
+    And Hacer Click en El elemento ActualizarFlujo
+    And Adjunto una Captura de pantalla al informe IniciarFlujoArchivo
+          ##
+      ##--VALIDACION MAIL--##
+      ##
+    And espereme 5 segundos
+    And ir a la pestaña https://www.google.com.co
+    And Ir a 3
+    And espereme 3 segundos
+    And lleneme el campo Mailyop con el texto pruebasqa312
+    And Hacer Click en El elemento Ingresayop
+    And Adjunto una Captura de pantalla al informe IniciarFlujoMAIL
+    And espereme 2 segundos
+    And Cambiar de Frame: Frameyop
+    And Hacer Click en El elemento Eliminaryop
+    And espereme 2 segundos
+
+  @CambiarEstadoFlujoArchivo
+  Scenario: Cambiar Estado Flujo Archivo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento IngDir3
+    And Hacer Click en El elemento tresPtosDir3
+    And Hacer Click en El elemento CambiarEstadoFlujoTP
+    And Hacer Click en El elemento RegresarCambiarFlujo
+    And Hacer Click en El elemento tresPtosDir3
+    And Hacer Click en El elemento CambiarEstadoFlujoTP
+    And Selecion Index 1 Selector EstadoCambiarFlujo
+    And lleneme el campo CarpetaDestino con el texto BDE_tresptsRec
+    And Hacer Click en El elemento BuscarDirectorio
+    And Hacer Click en El elemento DestinoCambiarFlujo
+    And lleneme el campo ObservacionesFlujos con el texto Sélëniùn - Automatizacion - Observaciones FLujo
+    And Hacer Click en El elemento ActualizarCamEstFlujo
+    And Adjunto una Captura de pantalla al informe IniciarFlujoArchivo
+    And espereme 2 segundos
+      ##
+      ##--VALIDACION MAIL--##
+      ##
+    And ir a la pestaña https://www.google.com.co
+    And Ir a 3
+    And espereme 3 segundos
+    And lleneme el campo Mailyop con el texto pruebasqa312
+    And Hacer Click en El elemento Ingresayop
+    And Adjunto una Captura de pantalla al informe CambiarEstadoFlujoMAIL
+    And espereme 2 segundos
+    And Cambiar de Frame: Frameyop
+    And Hacer Click en El elemento Eliminaryop
+    And espereme 2 segundos
+
+  Scenario: Cambiar estado flujo trabajo - Abortar
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    #And Hacer Click en El elemento IngDir3
+    And Hacer Click en El elemento FlechaArriba
+    And Sikuli element click BDE_TresPtoRec
+    And Hacer Click en El elemento tresPuntos1
+    And Hacer Click en El elemento CambiarEstadoFlujoTP
+    And Hacer Click en El elemento AbortarFlujo
+    And Assert si elemento AssAbortar contiene el siguiente texto Observaciones por las que Aborta el Flujo
+    And lleneme el campo ObservacionAbortarFlujo con el texto Abortar - Automatizacion
+    And Hacer Click en El elemento BotonAbortarFlujo
+
+  @FirmarArchivo
+  Scenario: Firmar Archivo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos8
+    And Hacer Click en El elemento FirmarTP
+    And Hacer Click en El elemento RegresarFirmaD
+    And Hacer Click en El elemento tresPuntos8
+    And Hacer Click en El elemento FirmarTP
+    And El select FirmaP12 Texto de Seleccion Selector vs Gruop P12 *
+    And lleneme el campo FirmaP12Clave con el texto Julianita1
+    And lleneme el campo FirmaP12Razon con el texto Automatizacion - Firma Digital - Automatizacion - Firma Digital - Automatizacion - Firma Digital -
+    And Hacer Click en El elemento ActualizarFirmaD
+    And Adjunto una Captura de pantalla al informe FirmaDeDocumento
+
+  @PublicarArchivo
+  Scenario: Publicar Archivo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos9
+    And Hacer Click en El elemento PublicarTP
+    And Hacer Click en El elemento RegresarPublicar
+    And Hacer Click en El elemento tresPuntos9
+    And Hacer Click en El elemento PublicarTP
+    And lleneme el campo Observaciones con el texto Publicar Archivo Automatizacion - Publicar Archivo Automatizacion - Publicar Archivo Automatizacion -
+    And lleneme el campo FechaVencimientoCyP con el texto 2621-10-27 16:12:00
+    And Hacer Click en El elemento ActualizarPublicar
+    And Adjunto una Captura de pantalla al informe PublicarArchivo
+
+  @ComentarArchivo
+  Scenario: Comentar Archivo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos10
+    And Hacer Click en El elemento ComentarTP
+    #And Assert si elemento ComentarAs contiene el siguiente texto Sellos y Comentarios
+    And Assert si elemento ComentarAs es igual a Sellos y Comentarios
+    And espereme 1 segundos
+    And Hacer Click en El elemento AddComentario
+    And Adjunto una Captura de pantalla al informe Comentarios01
+    And espereme 2 segundos
+    And Hacer Click en El elemento CancelarComentario
+    And Hacer Click en El elemento AddComentario
+    And lleneme el campo ObservacionesComentario con el texto Comentar Archivo Automatizacion - Comentar Archivo Automatizacion - Comentar Archivo Automatizacion -
+    And Hacer Click en El elemento SelectSello
+    And Hacer Click en El elemento SelloAprobado
+    And Hacer Click en El elemento ComentarImprimir
+    And ir a ComentarImprimirIng ventana maximizada
+    And Adjunto una Captura de pantalla al informe Comentarios02
+    And espereme 2 segundos
+
+  @ResponderRadicarArchivo
+  Scenario: Responder Radicado Archivo - Regresar
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos12
+    And Hacer Click en El elemento RadicarTP
+    And Assert si elemento RadicarAs es igual a Radicación Responder Radicado
+    And espereme 1 segundos
+    And Hacer Click en El elemento BtRegresar
+    And Adjunto una Captura de pantalla al informe ResRadicado01
+
+    ##
+    ##Pestaña Adjuntos
+    ##
+  Scenario: Responder Radicado Archivo - Pestaña Adjunto
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos12
+    And Hacer Click en El elemento RadicarTP
+    And Assert si elemento RadicarAs es igual a Radicación Responder Radicado
+    And espereme 1 segundos
+      ##--Adjuntar Gestion Documental 1--##
+    And Hacer Click en El elemento PsAdjuntos
+    And espereme 2 segundos
+    And Hacer Click en El elemento BtAgregarAdj
+    And espereme 2 segundos
+    And ir a AdjGDoc ventana maximizada
+    And Cambiar de Frame: BuscarUsuPerAdjuntos
+    And lleneme el campo ArchivoAsociado con el texto Gestion Docu
+    And Hacer Click en El elemento BotonBuscarAsociados
+    And Cambiar al Frame principal
+    And Cambiar de Frame: AgregarUsuPerAdjuntos
+    And Hacer Click en El elemento AGDAsociar
+    And espereme 2 segundos
+    And ir a PrincipalGDoc ventana maximizada
+    And espereme 3 segundos
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento BtGuardar
+      ##--Adjuntar Gestion Documental 1--##
+    And Adjunto una Captura de pantalla al informe ResRadicado02
+
+    ##
+    ##--Pestaña Radicado Responder
+    ##
+
+  Scenario: Responder Radicado Archivo - Pestaña Responder Radicado
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos12
+    And Hacer Click en El elemento RadicarTP
+    And Assert si elemento RadicarAs es igual a Radicación Responder Radicado
+    And espereme 1 segundos
+      ##--Adjuntar Gestion Documental 1--##
+    And Hacer Click en El elemento PsPDFRadResponder
+    And Adjunto una Captura de pantalla al informe ResRadicado03
+    And espereme 3 segundos
+
+
+  Scenario: Responder Radicado Archivo - Guadar _ Vista Previa
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento tresPuntos12
+    And Hacer Click en El elemento RadicarTP
+    And Assert si elemento RadicarAs es igual a Radicación Responder Radicado
+    And espereme 1 segundos
+    And Hacer Click en El elemento BtGuardar
+    And Adjunto una Captura de pantalla al informe ResRadicado02
+    And Hacer Click en El elemento BtVistaPrevia
+    And Adjunto una Captura de pantalla al informe ResRadicado03
+

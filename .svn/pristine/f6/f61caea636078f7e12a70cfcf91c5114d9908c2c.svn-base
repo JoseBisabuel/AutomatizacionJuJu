@@ -1,0 +1,348 @@
+Feature: Lotes Mensajeria
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM mensajeria.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Contrasena con el texto 1234
+    And Hacer Click en El elemento Ingresar
+
+  @MensajeriaExportAssert1
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - AssertEncabezadoSimple
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento Excel
+    And Hacer Click en El elemento EstaPagina
+    And espereme 3 segundos
+    Then Assert si elemento Ass001 es igual a Encabezado del archivo
+    Then Assert si elemento Ass002 visualiza
+    And Hacer Click en El elemento AgregarEncabezado
+    And espereme 3 segundos
+    Then Assert si elemento Ass005 es igual a Titulo
+    Then Assert si elemento Ass006 visualiza
+    Then Assert si elemento Ass007 es igual a Comentarios
+    Then Assert si elemento Ass008 es igual a Agregar Usuario
+    Then Assert si elemento Ass009 es igual a Agregar Fecha
+    Then Assert si elemento Ass003 visualiza
+    Then Assert si elemento Ass004 visualiza
+
+  @MensajeriaExportAssert2
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - AssertEncabezadoPDF
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento PDF
+    And Hacer Click en El elemento EstaPagina
+    And espereme 3 segundos
+    Then Assert si elemento Ass001a es igual a Configure el archivo de exportación PDF
+    And Hacer Click en El elemento AgregarEncabezado2
+    Then Assert si elemento Ass010 es igual a Orientacion
+    Then Assert si elemento Ass011 es igual a Vertical
+    Then Assert si elemento Ass012 es igual a Fuente
+    Then Assert si elemento Ass013 es igual a Arial
+    Then Assert si elemento Ass014 es igual a Tamaño
+    Then Assert si elemento Ass015 es igual a 8
+    Then Assert si elemento Ass016 es igual a Selecciona las columnas a exportar en el archivo
+    Then Assert si elemento Ass017 es igual a Seleccionar todas
+    Then Assert si elemento Ass018 es igual a Desmarcar todas
+    Then Assert si elemento Ass019 es igual a Id
+    Then Assert si elemento Ass020 es igual a Planilla Interna
+    Then Assert si elemento Ass021 es igual a Tipo Lote
+    Then Assert si elemento Ass022 es igual a Couriers
+    Then Assert si elemento Ass023 es igual a Fecha y Hora Despacho
+    Then Assert si elemento Ass024 es igual a Dependencia_Origen
+    Then Assert si elemento Ass025 es igual a Remisión
+    Then Assert si elemento Ass026 es igual a Guias
+    Then Assert si elemento Ass027 es igual a Estado Lote
+    Then Assert si elemento Ass028 es igual a Responsable Courier
+    Then Assert si elemento Ass029 es igual a Fecha y Hora Llegada
+    Then Assert si elemento Ass030 es igual a Dependencia_Destino
+    Then Assert si elemento Ass031 es igual a RemisionExcel
+    Then Assert si elemento Ass032 es igual a Código
+    Then Assert si elemento Ass033 es igual a Zona
+    Then Assert si elemento Ass034 es igual a No de Guía Tula
+    Then Assert si elemento Ass035 es igual a Descripción Recorrido
+    Then Assert si elemento Ass036 es igual a Destino Lote
+    Then Assert si elemento Ass037 es igual a Recepción
+    Then Assert si elemento Ass038 es igual a Sitios Radicación
+    Then Assert si elemento Ass039 es igual a Zonas
+    Then Assert si elemento Ass040 es igual a Precinto Tula
+    Then Assert si elemento Ass041 es igual a Usuario
+    And espereme 5 segundos
+
+  @MensajeriaExportExcel1
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - EXCEL - Sin encabezados
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento Excel
+    And Hacer Click en El elemento EstaPagina
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarSin
+    And espereme 5 segundos
+
+  @MensajeriaExportExcel2
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - EXCEL - Con encabezados
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento Excel
+    And Hacer Click en El elemento EstaPagina
+    And espereme 3 segundos
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - EXCEL - Pruebas QA - Comentarios - EXCEL -Pruebas QA - Comentarios - EXCEL -Pruebas QA - Comentarios - EXCEL -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 5 segundos
+
+  @MensajeriaExportCSV1
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - CSV - Sin encabezados
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento CSV
+    And Hacer Click en El elemento EstaPagina
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarSin
+    And espereme 5 segundos
+
+  @MensajeriaExportCSV2
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - CSV - Con encabezados
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento CSV
+    And Hacer Click en El elemento EstaPagina
+    And espereme 3 segundos
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - CSV - Pruebas QA - Comentarios - CSV -Pruebas QA - Comentarios - CSV -Pruebas QA - Comentarios - CSV -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 5 segundos
+
+  @MensajeriaExportTAB1
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - TAB - Sin encabezados
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento TAB
+    And Hacer Click en El elemento EstaPagina
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarSin
+    And espereme 5 segundos
+
+  @MensajeriaExportTAB2
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - TAB - Con encabezados
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento TAB
+    And Hacer Click en El elemento EstaPagina
+    And espereme 3 segundos
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - TAB - Pruebas QA - Comentarios - TAB -Pruebas QA - Comentarios - TAB -Pruebas QA - Comentarios - TAB -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 5 segundos
+
+  @MensajeriaExportXML1
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - XML - Sin encabezados
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento XML
+    And Hacer Click en El elemento EstaPagina
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarSin
+    And espereme 5 segundos
+
+  @MensajeriaExportXML2
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - XML - Con encabezados
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento XML
+    And Hacer Click en El elemento EstaPagina
+    And espereme 3 segundos
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - XML - Pruebas QA - Comentarios - XML -Pruebas QA - Comentarios - XML -Pruebas QA - Comentarios - XML -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 5 segundos
+
+  @MensajeriaExportHTML1
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - HTML - Sin encabezados
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento HTML
+    And Hacer Click en El elemento EstaPagina
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarSin
+    And espereme 5 segundos
+
+  @MensajeriaExportHTML2
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - HTML - Con encabezados
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento HTML
+    And Hacer Click en El elemento EstaPagina
+    And espereme 3 segundos
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - HTML - Pruebas QA - Comentarios - HTML -Pruebas QA - Comentarios - HTML -Pruebas QA - Comentarios - HTML -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 5 segundos
+
+  @MensajeriaExportWORD1
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - WORD - Sin encabezados
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento WORD
+    And Hacer Click en El elemento EstaPagina
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarSin
+    And espereme 5 segundos
+
+  @MensajeriaExportWORD2
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - WORD - Con encabezados
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento WORD
+    And Hacer Click en El elemento EstaPagina
+    And espereme 3 segundos
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - WORD - Pruebas QA - Comentarios - WORD -Pruebas QA - Comentarios - WORD -Pruebas QA - Comentarios - WORD -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 5 segundos
+
+  @MensajeriaExportPDF1
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - PDF - Sin encabezados
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento PDF
+    And Hacer Click en El elemento EstaPagina
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarSin2
+    And se accept la alerta
+    And espereme 5 segundos
+
+  @MensajeriaExportPDF2
+  Scenario: AC_AZDv6-150: Exportar en todos los formatos - PDF - Con encabezados
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento PDF
+    And Hacer Click en El elemento EstaPagina
+    And espereme 3 segundos
+    And Hacer Click en El elemento AgregarEncabezado2
+    And lleneme el campo ComentarioPDF con el texto Pruebas QA - Comentarios - PDF - Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -
+    And Hacer Click en El elemento CheckAgrUsuPDF
+    And Hacer Click en El elemento CheckAgrFecPDF
+    And espereme 2 segundos
+    And Texto de Seleccion Horizontal Selector SelectOrientacion
+    And Texto de Seleccion Times New Roman Selector SelectFuente
+    And Texto de Seleccion 10 Selector SelectTamano
+    And Hacer Click en El elemento SeleccionarTodas
+    And Hacer Click en El elemento ExportarCon2
+    And espereme 5 segundos

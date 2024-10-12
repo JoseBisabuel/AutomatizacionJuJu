@@ -1,0 +1,71 @@
+Feature: Login AZDigital
+  Inicio de Sesion
+
+  @LoginNormal
+  Scenario Outline: AC_AZDv6-588 : Ingreso a AZDigital - Login Normal
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And lleneme el campo Usuario con el texto <Campo1>
+    And lleneme el campo Contrasena con el texto <Campo2>
+    And Hacer Click en El elemento Ingresar
+    And Adjunto una Captura de pantalla al informe <Campo3>
+    Examples:
+      |Campo1|Campo2|Campo3|
+      |meyer.ayala|o<tf@LqI4!~h|Log01|
+      |"#$%"#$%)  |!#")$!)"#   |Log02|
+      |           |            |Log03|
+      |-__-       |_--_        |Log04|
+      |PP         |1q2w3e4r5T* |Log05|
+      |' OR '1'='1' --|        |Log06|
+      |' OR '1'='1' /*|        |Log07|
+      |' OR '1'='1' #|        |Log08 |
+
+  @LoginNormal2
+  Scenario Outline: AC_AZDv6-588 : Ingreso a AZDigital - Login Normal 2 Fuerza bruta
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And lleneme el campo Usuario con el texto <Campo1>
+    And lleneme el campo Contrasena con el texto <Campo2>
+    And Hacer Click en El elemento Ingresar
+    And Adjunto una Captura de pantalla al informe <Campo3>
+    Examples:
+      |Campo1|Campo2|Campo3|
+      |login1|o<tf@LqI4!~h|Log09|
+      |login1|1234567890  |Log10|
+      |login1|9876543210  |Log11|
+      |login1|' OR '1'='1' --|Log12|
+      |login1|"123456"|Log13|
+      |login1|1q2w3e4r5T*|Log14|
+
+  @LoginSinCampos
+  Scenario: AC_AZDv6-1768 : Ingreso a AZDigital - Campos sin vacios
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And Hacer Click en El elemento Ingresar
+    Then Assert si elemento LoginIncorrecto contiene el siguiente texto Login Incorrecto
+    And Adjunto una Captura de pantalla al informe Log09
+
+  @LoginCancelar
+  Scenario: AC_AZDv6-588 : Ingreso a AZDigital Borrar Campos
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And lleneme el campo Usuario con el texto Login02
+    And lleneme el campo Contrasena con el texto 1q2w3e4r5T*
+    And Hacer Click en El elemento Cancelar
+    And Guarde el texto Usuario del esenario
+    And Guarde el texto Contrasena del esenario
+    Then Check si elemento Usuario no contiene el siguiente texto admin
+    Then Check si elemento Contrasena no contiene el siguiente texto admin
+    And Adjunto una Captura de pantalla al informe BorrarCampos
+
+  @LoginNormalConCuentaTipoGestorDeFlujosDeTrabajo
+  Scenario: AC_AZDv6-605 : Ingreso como usuario Gestor De Flujos De Trabajo
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    #Then Cargar la informacion del DOM azmain.json
+    And lleneme el campo Usuario con el texto Login3
+    And lleneme el campo Contrasena con el texto 1q2w3e4r5T*
+    And Hacer Click en El elemento Ingresar
+    And Adjunto una Captura de pantalla al informe MenuAZDigital
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe EntradaExitosa

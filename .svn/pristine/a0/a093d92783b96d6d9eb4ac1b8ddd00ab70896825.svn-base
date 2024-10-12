@@ -1,0 +1,160 @@
+Feature: Login AZDigital
+  Recuperacion y Cambio de contraseña
+
+  @OlvidoCSinCampos
+  Scenario: AC_AZDv6-587: Recuperar clave desde AZDigital Olvido Contrasena Sin Campos
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And Hacer Click en El elemento OlvidoContrasena
+    When ir a RecuperacionClave2 ventana
+    And Cambiar de Frame: FrameRecu
+    And Hacer Click en El elemento RecuBuscar
+    And Adjunto una Captura de pantalla al informe Llenar todos los campos
+
+  @OlvidoCUsuarioNoExistente
+  Scenario: AC_AZDv6-587: Recuperar clave desde AZDigital olvido contrasena usuario NO existente
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And Hacer Click en El elemento OlvidoContrasena
+    When ir a RecuperacionClave3 ventana
+    And Cambiar de Frame: FrameRecu
+    And lleneme el campo RecuId con el texto Login1
+    And lleneme el campo RecuNombre con el texto Login
+    And lleneme el campo RecuApellido con el texto Cero Uno
+    And lleneme el campo RecuEmail con el texto pruebasqa312@yopmail.com
+    And Hacer Click en El elemento RecuBuscar
+    And Adjunto una Captura de pantalla al informe  UsuarioNoExiste01
+      ##
+      ##--VALIDACION MAIL--##
+      ##
+    And ir a la pestaña https://www.google.com.co
+    And Ir a yopmail
+    And espereme 3 segundos
+    And lleneme el campo Mailyop con el texto pruebasqa312
+    And Hacer Click en El elemento Ingresayop
+    And Adjunto una Captura de pantalla al informe UsuarioNoExiste02
+    And espereme 2 segundos
+    And Cambiar de Frame: Frameyop
+    And Hacer Click en El elemento Eliminaryop
+    And espereme 2 segundos
+
+  @RecuperacionClave
+  Scenario: AC_AZDv6-586: Recuperacion Clave
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And Hacer Click en El elemento OlvidoContrasena
+    And Adjunto una Captura de pantalla al informe Llenartodosloscampos01
+    When ir a RecuperacionClave4 ventana maximizada
+    And Cambiar de Frame: FrameRecu
+    And Hacer Click en El elemento RecuBuscar
+    And Adjunto una Captura de pantalla al informe Llenartodosloscampos02
+
+  @OlvidoContrasena
+  Scenario: AC_AZDv6-587: Recuperar clave desde AZDigital
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And Hacer Click en El elemento OlvidoContrasena
+    When ir a RecuperacionClave5 ventana maximizada
+    And Cambiar de Frame: FrameRecu
+    And lleneme el campo RecuId con el texto Login1
+    And lleneme el campo RecuNombre con el texto Login
+    And lleneme el campo RecuApellido con el texto Cero Uno
+    And lleneme el campo RecuEmail con el texto pruebasqa312@yopmail.com
+    And Hacer Click en El elemento RecuBuscar
+    And Adjunto una Captura de pantalla al informe  RecuperacionExitosa01
+    Then Assert si elemento RecuperacionExitosa contiene el siguiente texto pruebasqa312@yopmail.com
+      ##
+      ##--VALIDACION MAIL--##
+      ##
+    And ir a la pestaña https://www.google.com.co
+    And Ir a yopmail
+    And espereme 3 segundos
+    And lleneme el campo Mailyop con el texto pruebasqa312
+    And Hacer Click en El elemento Ingresayop
+    And Adjunto una Captura de pantalla al informe RecuperacionExitosa02
+    And espereme 2 segundos
+    And Cambiar de Frame: Frameyop
+    And Hacer Click en El elemento Eliminaryop
+    And espereme 2 segundos
+
+  @RecuperacionClaveCaracteresEspeciales
+  Scenario: AC_AZDv6-1767: Recuperar Clave desde AZDigital con Caracteres Especiales
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And Hacer Click en El elemento OlvidoContrasena
+    When ir a RecuperacionClave6 ventana
+    And Cambiar de Frame: FrameRecu
+    And lleneme el campo RecuId con el texto ¡?=)(/&%$#"!´´$
+    And lleneme el campo RecuNombre con el texto ¡?=)(/&%$#"!''$
+    And lleneme el campo RecuApellido con el texto ¡?=)(/&%$#"!''$
+    And lleneme el campo RecuEmail con el texto Hola@gmail.com
+    And Hacer Click en El elemento RecuBuscar
+    And Cambiar de Frame: FrameContenido
+    Then Assert si elemento TextoNoExiste contiene el siguiente texto No existe un Usuario
+    And Adjunto una Captura de pantalla al informe  Usuario No Existe
+
+  @OlvidoCSinCampos
+  Scenario: AC_AZDv6-587: Recuperar clave desde AZDigital - Olvido Contrasena Sin Campos
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And Hacer Click en El elemento OlvidoContrasena
+    When ir a RecuperacionClave7 ventana maximizada
+    And Cambiar de Frame: FrameRecu
+    And Hacer Click en El elemento RecuBuscar
+    And Adjunto una Captura de pantalla al informe Llenartodosloscampos
+
+  @ForzarCambiodeContrasena
+  Scenario: AC_AZDv6-589: Forzar Cambio de Contraseña
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And lleneme el campo Usuario con el texto Login4
+    And lleneme el campo Contrasena con el texto 1q2w3e4r5T*
+    And Hacer Click en El elemento Ingresar
+    And espereme 2 segundos
+    And Assert si elemento ASCambioPass es igual a Cambio de contraseña
+    And Adjunto una Captura de pantalla al informe CambioPass01
+      ##--Parte 1 --##
+    And lleneme el campo ClaveAnterior con el texto 1q2w3e4r5T*
+    And lleneme el campo ClaveNueva con el texto 1q2w3e4r5T*
+    And lleneme el campo ClaveNuevaConf con el texto 1q2w3e4r5T*
+    And Hacer Click en El elemento BotonCambiar
+    And espereme 2 segundos
+    And Assert si elemento ASVentana1 contiene el siguiente texto El password nuevo debe ser
+    And Adjunto una Captura de pantalla al informe CambioPass02
+    And Hacer Click en El elemento CerrarVentana
+      ##--Parte 2 --##
+    And lleneme el campo ClaveAnterior con el texto 1q2w3e4r5T*
+    And lleneme el campo ClaveNueva con el texto 1
+    And lleneme el campo ClaveNuevaConf con el texto 1
+    And Hacer Click en El elemento BotonCambiar
+    And espereme 2 segundos
+    And Assert si elemento ASVentana1 contiene el siguiente texto -El password debe tener 10 o más caracteres.
+    And Adjunto una Captura de pantalla al informe CambioPass03
+    And Hacer Click en El elemento CerrarVentana
+      ##--Parte 3 --##
+    And lleneme el campo ClaveAnterior con el texto 1
+    And lleneme el campo ClaveNueva con el texto 1Q2w3e4r5t&
+    And lleneme el campo ClaveNuevaConf con el texto 1Q2w3e4r5t&
+    And Hacer Click en El elemento BotonCambiar
+    And espereme 2 segundos
+    And Assert si elemento ASVentana1 contiene el siguiente texto -Clave Actual Incorrecta.
+    And Adjunto una Captura de pantalla al informe CambioPass04
+    And Hacer Click en El elemento CerrarVentana
+      ##--Parte 4 --##
+    And lleneme el campo ClaveAnterior con el texto 1q2w3e4r5T*
+    And lleneme el campo ClaveNueva con el texto 1Q2w3e4r5t&
+    And lleneme el campo ClaveNuevaConf con el texto 1
+    And Hacer Click en El elemento BotonCambiar
+    And espereme 2 segundos
+    And Assert si elemento ASVentana1 contiene el siguiente texto -Confirmación de password errada.
+    And Adjunto una Captura de pantalla al informe CambioPass05
+    And Hacer Click en El elemento CerrarVentana
+      ##--Parte 5 --##
+    And lleneme el campo ClaveAnterior con el texto 1q2w3e4r5T*
+    And lleneme el campo ClaveNueva con el texto 1
+    And lleneme el campo ClaveNuevaConf con el texto 1Q2w3e4r5t&
+    And Hacer Click en El elemento BotonCambiar
+    And espereme 2 segundos
+    And Assert si elemento ASVentana1 contiene el siguiente texto -El password debe tener 10 o más caracteres.
+    And Adjunto una Captura de pantalla al informe CambioPass06
+    And Hacer Click en El elemento CerrarVentana

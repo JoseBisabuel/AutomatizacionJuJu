@@ -1,0 +1,78 @@
+{
+  "Usuario": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsId"
+  },
+  "Contrasena": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsPassword"
+  },
+  "Ingresar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/div[1]/button[1]"
+  },
+  "Casita": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/div[2]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[4]/a[1]/i[1]"
+  },
+  "Ayuda": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/div[2]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[6]/i[1]"
+  },
+  "CerrarSesion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/div[2]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[7]/a[1]/i[1]"
+  },
+  "CreacionComunicado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/div[2]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[5]/i[1]"
+  },
+  "ComunicadoTP": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TipoDocumentalDocumentoRadicado"
+  },
+  "ComunicadoNTP": {
+    "GetFieldBy": "id",
+    "ValueToFind": "NombreDocumentoRadicado"
+  },
+  "CrearComunicado": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonCrearDocumentoRadicado"
+  },
+  "FrameDash": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Contenido']"
+  },
+  "FondoBienvenidoUsuario": {
+    "GetFieldBy": "className",
+    "ValueToFind": "FondoBienvenidoTipoUsuario"
+  },
+  "Mes": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/div[7]/div[1]/div[1]/label[2]"
+  },
+  "Trimestre": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/div[7]/div[1]/div[1]/label[3]"
+  },
+  "Historico": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/div[7]/div[1]/div[1]/label[4]"
+  },
+  "RadicadosPendientes": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/div[7]/div[2]/label[1]/div[1]"
+  },
+  "RadicadosRespondidos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/div[7]/div[2]/label[2]/div[1]"
+  },
+  "RadicadosRecividos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/div[7]/div[2]/label[3]/div[1]"
+  },
+  "RaRecividosDia": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/div[7]/div[2]/label[4]/div[1]"
+  }
+}

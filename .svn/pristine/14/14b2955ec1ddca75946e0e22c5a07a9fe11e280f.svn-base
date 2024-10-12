@@ -1,0 +1,113 @@
+Feature: Prerequisitos Columnas feature
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Columnas.json
+    And lleneme el campo Usuario con el texto jhojan.cortes
+    And lleneme el campo Contrasena con el texto 1Q2w3e4r5t*
+    And Hacer Click en El elemento Ingresar
+
+
+      #Creamos una colecccion para las columnas
+  @CreacionColeccion
+  Scenario: Creacion de una coleccion
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraUsuarios
+    And Hacer Click en El elemento ColeccionUsuarios
+    And lleneme el campo NombreACrear con el texto Columnas
+    And Texto de Seleccion Colección Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+
+    And Hacer Click en El elemento ColeccionColumnas
+    And lleneme el campo NombreACrear con el texto Archivos
+    And Texto de Seleccion Colección Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+            #Creamos una colecccion
+  @SubirArchivos
+  Scenario: Cargamos archivos a la coleccion
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento MisColecciones
+    And Cambiar de Frame: Colecciones
+    And espere el elemento SeleccionColeccion
+
+    And Hacer Click en El elemento SeleccionColeccion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento ColeccionArchivos
+            #Se debe ajustar la ruta en el archivo test properties apuntando a la carpeta UploadCortes/Columnas
+    And Subir varios Archivos SubirArchivo
+    And espere el elemento MasInformacion3
+
+      #Creamos un usuario con su respectiva coleccion y bandeja para esta y futuras pruebas
+  @CreacionUsuarioPruebas
+  Scenario: Creacion de usuario
+      #Creamos la coleccion y bandeja de entrada
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+
+    And espere el elemento SeleccionEstructura
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraUsuarios
+    And Hacer Click en El elemento ColeccionUsuarios
+    And lleneme el campo NombreACrear con el texto Automata1
+    And Texto de Seleccion Colección Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And Hacer Click en El elemento ColeccionAutomata
+    And lleneme el campo NombreACrear con el texto BDE_Automata1
+    And Texto de Seleccion Bandeja de Entrada Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+      #Creamos el usuario
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento BtnMenuPrincipal
+    And Hacer Click en El elemento BtnAdminUsuarios
+    And Hacer Click en El elemento BtnUsuarios
+    And Hacer Click en El elemento BtnCrearUsuarios
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo CamId con el texto Automata1
+    And lleneme el campo CamContraseña con el texto 1Q2w3e4r5t*
+    And Texto de Seleccion Administrador AZ Digital Selector SelectTipoUsuario
+    And lleneme el campo CamNombre con el texto Automata1
+    And lleneme el campo CamApellido con el texto exe
+    And Texto de Seleccion Cedula de Identidad Selector SelectTipoIdentificacion
+    And lleneme el campo CamIdentificacion con el texto 404
+
+    And lleneme el campo CamNombreBandeja con el texto BDE_Automata1
+    And Hacer Click en El elemento BtnBusquedaBandeja
+    And Hacer Click en El elemento SelectPrimeraBandeja
+
+    And Texto de Seleccion Crear, Aprobar y Radicar Comunicados Selector SelectRadicacionComunicados
+    And Hacer Click en El elemento BtnAgregarUsuario
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento BtnRegresarUsuarios
+     #Asignamos colecciones al usuario
+    And espere el elemento BtnCopiarColecciones
+    And Hacer Click en El elemento BtnCopiarColecciones
+    And Texto de Seleccion Jhojan Steven Cortes Mendez Selector SelectUsuarioOrigen
+    And Texto de Seleccion Automata1 exe Selector SelectUsuarioDestino
+    And Hacer Click en El elemento BtnEjecutarCopiaColecciones
+    And espereme 5 segundos

@@ -1,0 +1,109 @@
+Feature: Tres Puntos - Carga - Directorio
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM TresPuntos.json
+    And lleneme el campo Usuario con el texto trespuntos
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+
+  ##--Crear Directorios--##
+  @CrearDirectorios
+  Scenario: Crear Directorios tres puntos
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And lleneme el campo Crear con el texto Directorio1
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto Directorio2
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto Directorio3
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto Directorio4
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto Directorio5
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto Directorio6
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto Directorio7
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto Directorio8
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto Directorio9
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto Directorio10
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto Directorio11
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto Directorio12
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto Directorio13
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto Directorio14
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto Directorio15
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And Hacer Click en El elemento FlechaArriba
+    And Sikuli element click BDE_TresPtoRec
+    And espereme 2 segundos
+    And lleneme el campo Crear con el texto Directorio16
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+  ##--Crear Directorios--##
+
+  ##--Cargar de Archivos CARPETA--##
+  @CargarDirectorios
+  Scenario: Cargar al directorio tres puntos
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Carpeta
+    And espereme 2 segundos
+    And Subir Archivos BDE SubirPDF
+    And espereme 15 segundos
+  ##--Cargar de Archivos CARPETA--##
+
+  ##--Cargar de Archivos Directorio 3--##
+  @CargarDirectorios2
+  Scenario: Cargar al directorio3
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento IngDir3
+    And lleneme el campo Crear con el texto Directorio17
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And Hacer Click en El elemento IngDir1
+    And Subir adjunto simple Comunicado SubirPDF
+    And espereme 5 segundos
+  ##--Cargar de Archivos Directorio 3--##

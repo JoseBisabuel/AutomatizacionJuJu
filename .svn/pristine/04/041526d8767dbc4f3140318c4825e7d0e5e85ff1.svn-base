@@ -1,0 +1,182 @@
+Feature: Lotes Mensajeria
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM mensajeria.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Contrasena con el texto 1234
+    And Hacer Click en El elemento Ingresar
+
+  @MensajeriaBuscar1
+  Scenario: AC_AZDv6-155: Buscar Lote De Mensajeria - Sinfiltros
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 5 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar1
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 3 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar1_5
+
+  @MensajeriaBuscar2
+  Scenario: AC_AZDv6-155: Buscar Lote De Mensajeria - Buscadores2
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And lleneme el campo BuscarCodigo con el texto 9LD000040022
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar2
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    Then Assert si elemento AssCodigo es igual a 9LD000040022
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar2_5
+
+  @MensajeriaBuscar3
+  Scenario: AC_AZDv6-155: Buscar Lote De Mensajeria - Buscadores3
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Texto de Seleccion Mensajeria Selector BuscarTipo
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar3
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    Then Assert si elemento AssTipo es igual a Mensajeria
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar3_5
+
+  @MensajeriaBuscar4
+  Scenario: AC_AZDv6-155: Buscar Lote De Mensajeria - Buscadores4
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Texto de Seleccion Cerrado Selector BuscarEstado
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar4
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    Then Assert si elemento AssEstado es igual a Cerrado
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar4_5
+
+  @MensajeriaBuscar5
+  Scenario: AC_AZDv6-155: Buscar Lote De Mensajeria - Buscadores5
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Texto de Seleccion PQRSD Selector BuscarSRadicacion
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar5
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    Then Assert si elemento AssSRadicado es igual a PQRSD
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar5_5
+
+  @MensajeriaBuscar6
+  Scenario: AC_AZDv6-155: Buscar Lote De Mensajeria - Buscadores6
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Texto de Seleccion Norte Norte Selector BuscarZona
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar6
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    Then Assert si elemento AssZona es igual a Norte Norte
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar6_5
+
+  @MensajeriaBuscar7
+  Scenario: AC_AZDv6-155: Buscar Lote De Mensajeria - Buscadores7
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Texto de Seleccion Deprisa Selector BuscarCourier
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar7
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    Then Assert si elemento AssCourier es igual a Deprisa
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar7_5
+
+  @MensajeriaBuscar8
+  Scenario: AC_AZDv6-155: Buscar Lote De Mensajeria - Buscadores8
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Texto de Seleccion yenny carreño Selector BuscarRCourier
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar8
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    Then Assert si elemento AssRCourier es igual a yenny carreño
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar8_5
+
+  @MensajeriaBuscar9
+  Scenario: AC_AZDv6-155: Buscar Lote De Mensajeria - Buscadores9
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And lleneme el campo GuiaTula con el texto 4
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar9
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    Then Assert si elemento AssGuiaTula es igual a 4
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar9_5
+
+  @MensajeriaBuscar10
+  Scenario: AC_AZDv6-155: Buscar Lote De Mensajeria - Buscadores10
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And lleneme el campo PrecintoTula con el texto 50.000
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar10
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    Then Assert si elemento AssPrecintoTula es igual a 50.000
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar10_5
+
+  @MensajeriaBuscar11
+  Scenario: AC_AZDv6-155: Buscar Lote De Mensajeria - Buscadores11
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And lleneme el campo FechaInicial con el texto 2020-06-26 15:05:00
+    And lleneme el campo FechaFinal con el texto 2020-07-26 15:05:00
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar11
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Buscar11_5

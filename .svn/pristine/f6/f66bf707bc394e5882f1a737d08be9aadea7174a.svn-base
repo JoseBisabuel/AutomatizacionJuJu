@@ -1,0 +1,238 @@
+Feature: SeleccioneUnaAccionColeccion
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM SeleccioneAccion.json
+    And lleneme el campo Usuario con el texto UserAutomatizacion
+    And lleneme el campo Clave con el texto Automatizacion1*
+    And Hacer Click en El elemento Ingreso
+    And Hacer Click en El elemento BDE
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Atras
+
+  @CrearCarpetaMover
+  Scenario: Crear Carpeta Mover
+    And Hacer Click en El elemento BDE_Traslado
+    And lleneme el campo Crear con el texto MoverAuto
+    And Selecion Index 0 Selector Nombre
+    And Hacer Click en El elemento BtnCrear
+    And espereme 2 segundos
+
+  @CrearBDE
+  Scenario Outline: Crear BDE
+    And Hacer Click en El elemento ColecAutomatizacion
+    And lleneme el campo Crear con el texto <NombreColeccion>
+    And espereme 2 segundos
+    And Selecion Index 3 Selector Nombre
+    And Hacer Click en El elemento BtnCrear
+    Examples:
+      | NombreColeccion |
+      | Coleccion  |
+      | Coleccion1 |
+      | Coleccion2 |
+      | Coleccion3 |
+      | Coleccion4 |
+      | Coleccion5 |
+
+  @Publicar
+  Scenario: AC_AZDv6-58 Publicar
+    And Hacer Click en El elemento ColecAutomatizacion
+    And Marco la casilla de verificación que tiene SeleccionePublicar
+    And Marco la casilla de verificación que tiene SeleccionePublicar2
+    And espereme 2 segundos
+    And Hacer Click en El elemento Lista
+    And Desplazo el elemento Publicar
+    And espereme 2 segundos
+    And Hacer Click en El elemento Publicar
+    And lleneme el campo ObservacionPublicar con el texto Sin novedad
+    And lleneme el campo Fecha con el texto 2023-12-30
+    And Hacer Click en El elemento Actualizar
+    And espereme 2 segundos
+    And Assert si elemento BandejaEntrada visualiza
+    And Adjunto una Captura de pantalla al informe Publicar
+
+  @Categorizar
+  Scenario: AC_AZDv6-62 Categorizar
+    And Hacer Click en El elemento ColecAutomatizacion
+    And Marco la casilla de verificación que tiene SeleccioneCategorizar
+    And Marco la casilla de verificación que tiene SeleccioneCategorizar2
+    And espereme 3 segundos
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 1 segundos
+    And Hacer Click en El elemento Categorizar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Texto de Seleccion SAS: Facturas Selector Categoria
+    And Texto de Seleccion SAS: Facturas Selector Categoria2
+    And Hacer Click en El elemento BtnCategorizarFin
+    And espereme 2 segundos
+    And Assert si elemento BandejaEntrada visualiza
+    And Adjunto una Captura de pantalla al informe Categorizar
+
+  @Categorias_Datos_adicionales
+  Scenario: AC_AZDv6-584 Categorias Datos Adicionales
+    And espereme 2 segundos
+    And Hacer Click en El elemento ColecAutomatizacion
+    And Hacer Click en El elemento EnlaceCategorias
+    And espereme 2 segundos
+    And lleneme el campo NumeroFactura con el texto Automatizacion600
+    And lleneme el campo NombreEmpresa con el texto Analitica
+    And lleneme el campo ValorFactura con el texto 9999
+    And Hacer Click en El elemento BotonCategorizar
+    And espereme 2 segundos
+    And tomar Captura de pantalla: DatosAdicionales
+    And Marco la casilla de verificación que tiene SelectDatos
+    And Hacer Click en El elemento VerLibro
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe Verlibro
+    And espereme 3 segundos
+  #Scenario: Eliminar Datos Adicionales
+    #And Hacer Click en El elemento ColecAutomatizacion
+    #And Hacer Click en El elemento EnlaceCategorias
+    #And Hacer Click en El elemento EliminarAsociar
+    #And espereme 2 segundos
+    #And Cambiar al Frame principal
+    #And Cambiar al Frame principal
+    #And Cambiar de Frame: Contenido
+    #And espereme 2 segundos
+    #And Hacer Click en El elemento ConfirmarEliminar
+
+  @Renombrar
+  Scenario: AC_AZDv6-59 Renombrar
+    And Hacer Click en El elemento ColecAutomatizacion
+    And Marco la casilla de verificación que tiene SeleccioneRenombrar
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espere el elemento Renombrar
+    And espereme 3 segundos
+    And Hacer Click en El elemento Renombrar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo NuevoNombre con el texto NuevoNombre
+    And espereme 2 segundos
+    And lleneme el campo RenomObservaciones con el texto Sin observaciones
+    And Hacer Click en El elemento BotonActualizar
+    And espereme 2 segundos
+    And Assert si elemento BandejaEntrada visualiza
+    And Adjunto una Captura de pantalla al informe Renombrar
+
+  @Mover
+  Scenario: AC_AZDv6-60 Mover
+    And Hacer Click en El elemento ColecAutomatizacion
+    And Marco la casilla de verificación que tiene SeleccioneMover
+    And Marco la casilla de verificación que tiene SeleccioneMover2
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espere el elemento Mover
+    And espereme 3 segundos
+    And Hacer Click en El elemento Mover
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo NvaLocalizacionMover con el texto MoverAuto
+    And Hacer Click en El elemento Buscar
+    And Hacer Click en El elemento SeleccionarBDE
+    And Hacer Click en El elemento Actualizar
+    And Hacer Click en El elemento Atras
+    And espereme 2 segundos
+    And Hacer Click en El elemento BDE_Traslado
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento MoverAuto
+    And espereme 2 segundos
+    And Assert si elemento BandejaEntrada visualiza
+    And tomar Captura de pantalla: Mover
+
+  @Borrar
+  Scenario: AC_AZDv6-61 Borrar
+    And Hacer Click en El elemento ColecAutomatizacion
+    And Marco la casilla de verificación que tiene SeleccioneBorrar
+    #And Marco la casilla de verificación que tiene SeleccioneBorrar2
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espere el elemento Borrar
+    And espereme 3 segundos
+    And Hacer Click en El elemento Borrar
+    And Hacer Click en El elemento Actualizar
+    And espereme 2 segundos
+    And Assert si elemento BandejaEntrada visualiza
+    And tomar Captura de pantalla: Borrar
+
+  @Compartir
+  Scenario: AC_AZDv6-63 Compartir
+    And Hacer Click en El elemento ColecAutomatizacion
+    And Marco la casilla de verificación que tiene SeleccioneCompartir
+    And Marco la casilla de verificación que tiene SeleccioneCompartir2
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento Compartir
+    And Hacer Click en El elemento Compartir
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo ObservacionCompartir con el texto Sin comentarios
+    And lleneme el campo SelecEmail con el texto notificacionesauto
+    And lleneme el campo Fecha con el texto 2023-12-30
+    And Hacer Click en El elemento Actualizar
+    And ir a la pestaña https://www.google.com
+    And Ir a yopmail
+    And lleneme el campo CorreoYop con el texto notificacionesauto
+    And Hacer Click en El elemento AbrirCorreo
+    And espereme 3 segundos
+    And tomar Captura de pantalla: CompartirCorreo
+
+  @Trasladar
+  Scenario: AC_AZDv6-64 Traslado
+    And Hacer Click en El elemento ColecAutomatizacion
+    And Marco la casilla de verificación que tiene SeleccioneTrasladar
+    And Marco la casilla de verificación que tiene SeleccioneTrasladar2
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento Trasladar
+    And espereme 2 segundos
+    And Hacer Click en El elemento Trasladar
+    And espereme 2 segundos
+    And tomar Captura de pantalla: Trasladar1
+
+  @Copiar
+  Scenario: AC_AZDv6-65 Copiar
+    And Hacer Click en El elemento ColecAutomatizacion
+    And Marco la casilla de verificación que tiene SeleccioneCopiar
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento Copiar
+    And espereme 2 segundos
+    And Hacer Click en El elemento Copiar
+    And espereme 3 segundos
+    And se accept la alerta
+    And Adjunto una Captura de pantalla al informe Copiar01
+
+  @Borrar
+  Scenario: Borrar
+    And Hacer Click en El elemento ColecAutomatizacion
+    And Marco la casilla de verificación que tiene SelectDepurar
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Borrar
+    And Hacer Click en El elemento Actualizar
+    And Hacer Click en El elemento Atras
+    And espereme 2 segundos
+    And Hacer Click en El elemento BDE_Traslado
+    And Marco la casilla de verificación que tiene SelectDepurar
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 3 segundos
+    And Hacer Click en El elemento Borrar
+    And Hacer Click en El elemento Actualizar
+    And espereme 2 segundos
+

@@ -1,0 +1,46 @@
+{
+  "Usuario": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsId"
+  },
+  "Contrasena": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsPassword"
+  },
+  "Ingresar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/div[1]/button[1]"
+  },
+  "Opciones": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Opciones']"
+  },
+  "Contenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Contenido']"
+  },
+  "BT1": {
+    "GetFieldBy": "id",
+    "ValueToFind": "tabButton"
+  },
+  "BT2": {
+    "GetFieldBy": "id",
+    "ValueToFind": "windowButton"
+  },
+  "EmailCompartir": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='identifierId']"
+  },
+  "BtEmailCompartir": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[normalize-space()='Siguiente']"
+  },
+  "PassEmailCompartir": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@name='Passwd']"
+  },
+  "BtEmailIngCompartir": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/c-wiz[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]/div[3]"
+  }
+}

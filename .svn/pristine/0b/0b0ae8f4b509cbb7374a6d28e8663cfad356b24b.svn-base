@@ -1,0 +1,135 @@
+Feature: Dashboard
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Dashboard.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Contrasena con el texto o<tf@LqI4!~h
+    And Hacer Click en El elemento Ingresar
+
+  @TableroControl
+  Scenario: AC_AZDv6-1: Tablero Control - Encabezado
+    And Hacer Click en El elemento BandejasEntradas
+    And Adjunto una Captura de pantalla al informe Dashboard01
+    And Hacer Click en El elemento BandejasEntradas
+    And Hacer Click en El elemento BDE
+    And Adjunto una Captura de pantalla al informe Dashboard02
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento TableroControl
+    And Cambiar al Frame principal
+    And Hacer Click en El elemento Menu
+    And Hacer Click en El elemento Comunicados
+    And Adjunto una Captura de pantalla al informe Dashboard03
+    And Hacer Click en El elemento CancelarComunicado
+    And espereme 2 segundos
+    And Sikuli element click Salir
+    And Adjunto una Captura de pantalla al informe Dashboard05
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Contrasena con el texto o<tf@LqI4!~h
+    And Hacer Click en El elemento Ingresar
+    And espereme 5 segundos
+    And Sikuli element click Ayuda
+    And espereme 3 segundos
+    And ir a AyudaMAX ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard04
+    And ir a Principal ventana maximizada
+    And espereme 2 segundos
+
+  @DashBoarHistorico
+  Scenario: AC_AZDv6-1 : Tablero de control - Historico
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento UltimaSemana
+    And espereme 6 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard05
+    And Hacer Click en El elemento Mes
+    And espereme 6 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard06
+    And Hacer Click en El elemento Trimestre
+    And espereme 6 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard07
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard08
+
+  @DashBoarRadicacion
+  Scenario: AC_AZDv6-1 : Tablero de control - Radicados
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RadicadosPendientes
+    And ir a VentanaPendiente ventana
+    And Adjunto una Captura de pantalla al informe Dashboard09
+
+  @DashBoarRadicacion1
+  Scenario: AC_AZDv6-1 : Tablero de control - Radicados
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RadicadosRespondidos
+    When ir a VentanaRespondidos ventana
+    And Adjunto una Captura de pantalla al informe Dashboard10
+
+  @DashBoarRadicacion2
+  Scenario: AC_AZDv6-1 : Tablero de control - Radicados
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RadicadosRecibidos
+    When ir a VentanaRecibido ventana
+    And Adjunto una Captura de pantalla al informe Dashboard11
+
+  @DashBoarRadicacion3
+  Scenario: AC_AZDv6-1 : Tablero de control - Radicados
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RaRecibidosDia
+    When ir a VentanaReDia ventana
+    And Adjunto una Captura de pantalla al informe Dashboard12
+
+  @DashBoarFlujos
+  Scenario: AC_AZDv6-1 : Tablero de control - Flujos
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento ActPendientes
+    When ir a VentanaActPendientes ventana
+    And Adjunto una Captura de pantalla al informe Dashboard13
+
+  @DashBoarFlujos1
+  Scenario: AC_AZDv6-1 : Tablero de control - Flujos
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento ActVencidas
+    When ir a VentanaActVencidas ventana
+    And Adjunto una Captura de pantalla al informe Dashboard14
+
+  @DashBoarFlujos2
+  Scenario: AC_AZDv6-1 : Tablero de control - Flujos
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento ActTerminadas
+    When ir a VentanaActTerminadas ventana
+    And Adjunto una Captura de pantalla al informe Dashboard15
+
+  @DashBoarFlujos3
+  Scenario: AC_AZDv6-1 : Tablero de control - Flujos
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento ActTotales
+    When ir a VentanaActTotales ventana
+    And Adjunto una Captura de pantalla al informe Dashboard16
+
+  @DashBoarEstructura
+  Scenario: AC_AZDv6-1787: Estructura general
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Cambiar al Frame principal
+    And Hacer Click en El elemento Menu
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard17

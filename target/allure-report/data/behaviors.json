@@ -1,0 +1,89 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Modulo Elementos",
+    "children" : [ {
+      "name" : "Formulario Text Box",
+      "children" : [ {
+        "name" : "Formulario Text Box",
+        "uid" : "b6d02cb378c430f8",
+        "parentUid" : "5f8e00ea82ae8b55e7751705787aa5c7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1728618116800,
+          "stop" : 1728618155950,
+          "duration" : 39150
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5f8e00ea82ae8b55e7751705787aa5c7"
+    }, {
+      "name" : "Check Box",
+      "children" : [ {
+        "name" : "Check Box",
+        "uid" : "ff7accef472acd27",
+        "parentUid" : "c46113f9f6249f20a307be32ead32fc1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1728618156235,
+          "stop" : 1728618197241,
+          "duration" : 41006
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c46113f9f6249f20a307be32ead32fc1"
+    }, {
+      "name" : "Radio Button",
+      "children" : [ {
+        "name" : "Radio Button",
+        "uid" : "407d66909dbd24e3",
+        "parentUid" : "a4a3b61b5d795d26b2c662352af5cb76",
+        "status" : "passed",
+        "time" : {
+          "start" : 1728618197257,
+          "stop" : 1728618234287,
+          "duration" : 37030
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a4a3b61b5d795d26b2c662352af5cb76"
+    }, {
+      "name" : "Web Tables",
+      "children" : [ {
+        "name" : "Web Tables",
+        "uid" : "2cd8b307c70fd95b",
+        "parentUid" : "39d9cb2222ee30c85235cd6a645721cb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1728618234304,
+          "stop" : 1728618267713,
+          "duration" : 33409
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "39d9cb2222ee30c85235cd6a645721cb"
+    }, {
+      "name" : "Web Tables Edicion y Borrado",
+      "children" : [ {
+        "name" : "Web Tables Edicion y Borrado",
+        "uid" : "5d4933258eacba1c",
+        "parentUid" : "f8b02ee9c5c756e7e555dff5ea192188",
+        "status" : "passed",
+        "time" : {
+          "start" : 1728618267723,
+          "stop" : 1728618302267,
+          "duration" : 34544
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f8b02ee9c5c756e7e555dff5ea192188"
+    } ],
+    "uid" : "56f5782b5d7935800e3c0cd0fbf5313f"
+  } ]
+}

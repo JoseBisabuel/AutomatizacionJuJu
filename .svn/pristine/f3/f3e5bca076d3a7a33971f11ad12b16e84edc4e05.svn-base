@@ -1,0 +1,128 @@
+Feature: Lotes Mensajeria
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM mensajeria.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Contrasena con el texto 1234
+    And Hacer Click en El elemento Ingresar
+
+    @MensajeriaAssert1
+    Scenario: AC_AZDv6-151 : Crear Lote de Mensajeria - Frame Opciones
+      And Hacer Click en El elemento Menu
+      And Cambiar de Frame: Opciones
+      And Hacer Click en El elemento Mensajeria
+      And Hacer Click en El elemento LoteMensajeria
+      Then Assert si elemento LogoAZ visualiza
+      Then Assert si elemento As1 es igual a Lotes de Mensajería
+      Then Assert si elemento As2 es igual a Código
+      Then Assert si elemento As3 es igual a Tipo
+      Then Assert si elemento As4 es igual a Estado
+      Then Assert si elemento As5 es igual a Sitio Radicación
+      Then Assert si elemento As6 es igual a Zona
+      Then Assert si elemento As7 es igual a Courier
+      Then Assert si elemento As8 es igual a Responsable Courier
+      Then Assert si elemento As9 es igual a No de Guía Tula
+      Then Assert si elemento As10 es igual a Precinto Tula
+      Then Assert si elemento As11 es igual a Fecha Inicial
+      Then Assert si elemento As12 es igual a Fecha Final
+      Then Assert si elemento As13 es igual a No. de Radicado
+      Then Assert si elemento As14 es igual a Destino Lote
+      Then Assert si elemento As15 es igual a Buscar
+      Then Assert si elemento As16 es igual a Agregar Registro
+      Then Assert si elemento As17 es igual a Regresar
+
+    @MensajeriaAssert2
+    Scenario: AC_AZDv6-151 : Crear Lote de Mensajeria - Frame Contenido
+      And Hacer Click en El elemento Menu
+      And Cambiar de Frame: Opciones
+      And Hacer Click en El elemento Mensajeria
+      And Hacer Click en El elemento LoteMensajeria
+      And Hacer Click en El elemento BuscarMensajeria
+      And espereme 5 segundos
+      And Cambiar al Frame principal
+      And Cambiar de Frame: Contenido
+      Then Assert si elemento As18 es igual a Lotes de Mensajería
+      Then Assert si elemento As19Ar es igual a Registros:
+      Then Assert si elemento As20Ar es igual a Pág:
+      Then Assert si elemento As21Ar es igual a Exportar a
+      Then Assert si elemento As22Ar visualiza
+      Then Assert si elemento As24Ar visualiza
+      Then Assert si elemento As26Ar visualiza
+      Then Assert si elemento As23Ab es igual a Registros:
+      Then Assert si elemento As25Ab es igual a Pág:
+      Then Assert si elemento As27Ab es igual a Exportar a
+      Then Assert si elemento As28Ab visualiza
+      Then Assert si elemento As29Ab visualiza
+      Then Assert si elemento As30Ab visualiza
+
+
+  @MensajeriaAssert3
+  Scenario: AC_AZDv6-151 : Crear Lote de Mensajeria - Frame Contenido - Tabla
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 5 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    Then Assert si elemento As31 es igual a Id
+    Then Assert si elemento As32 es igual a Remisión
+    Then Assert si elemento As33 es igual a RemisionExcel
+    Then Assert si elemento As34 es igual a Recepción
+    Then Assert si elemento As35 es igual a Planilla Interna
+    Then Assert si elemento As36 es igual a Guias
+    Then Assert si elemento As37 es igual a Mapa
+    Then Assert si elemento As38 es igual a Código
+    Then Assert si elemento As39 es igual a Sitios Radicación
+    Then Assert si elemento As40 es igual a Tipo Lote
+    Then Assert si elemento As41 es igual a Estado Lote
+    Then Assert si elemento As42 es igual a Zona
+    Then Assert si elemento As43 es igual a Zonas
+    Then Assert si elemento As44 es igual a Couriers
+    Then Assert si elemento As45 es igual a Responsable Courier
+    Then Assert si elemento As46 es igual a No de Guía Tula
+    Then Assert si elemento As47 es igual a Precinto Tula
+    Then Assert si elemento As48 es igual a Fecha y Hora Despacho
+    Then Assert si elemento As49 es igual a Fecha y Hora Llegada
+    Then Assert si elemento As50 es igual a Descripción Recorrido
+    Then Assert si elemento As51 es igual a Usuario
+    Then Assert si elemento As52 es igual a Dependencia_Origen
+    Then Assert si elemento As53 es igual a Dependencia_Destino
+    Then Assert si elemento As54 es igual a Destino Lote
+
+  @MensajeriaAssertRegistro
+  Scenario: AC_AZDv6-151 : Crear Lote de Mensajeria - AssertForm Registrar
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento AgregarMensajeria
+    And espereme 5 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    Then Assert si elemento As55 es igual a Lotes de Mensajería
+    Then Assert si elemento As55i visualiza
+    Then Assert si elemento As56 es igual a Lotes de Mensajería
+    Then Assert si elemento As57 es igual a Tipo*
+    Then Assert si elemento As58 es igual a Código*
+    Then Assert si elemento As59 es igual a Estado*
+    Then Assert si elemento As60 es igual a Sitio Radicación*
+    Then Assert si elemento As61 es igual a Zona*
+    Then Assert si elemento As62 es igual a Courier*
+    Then Assert si elemento As63 es igual a Responsable Courier
+    Then Assert si elemento As64 es igual a No de Guía Tula
+    Then Assert si elemento As65 es igual a Precinto Tula
+    Then Assert si elemento As66 es igual a Fecha y Hora Despacho*
+    Then Assert si elemento As67 es igual a Fecha y Hora Llegada
+    Then Assert si elemento As68 es igual a Descripción Recorrido
+    Then Assert si elemento As69 es igual a Creador
+    Then Assert si elemento As70 es igual a Destino Lote
+    Then Assert si elemento As71 es igual a Dependencia Origen
+    Then Assert si elemento As72 es igual a Dependencia Destino
+    Then Assert si elemento As73 es igual a Cancelar
+    Then Assert si elemento As74 es igual a Agregar
+
+    #And Adjunto una Captura de pantalla al informe Registro
+

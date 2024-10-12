@@ -1,0 +1,62 @@
+Feature: Configuracion Inicial Para las Pruebas
+
+  Background: Ingreso en AZDigital
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM ConfiguracionInicial.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Contrasena con el texto o<tf@LqI4!~h
+    And Hacer Click en El elemento Ingresar
+
+  @CreacionEstructuraAutomatizacion
+  Scenario: Creacion Estructura Automatizacion
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click Estructura1
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento IrAEstPadre
+    And lleneme el campo NombreDirectorios con el texto Automatizacion
+    And Texto de Seleccion Estructural Selector TipoCreacion
+    And Hacer Click en El elemento Crear
+
+  @CreacionEstInternasAutomatizacion
+  Scenario: Creacion Estructura Usuarios y Varios
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And espereme 2 segundos
+    And Hacer Click en El elemento PrimeraEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento FlechaArriba
+    And Sikuli element click Automatizacion
+    And lleneme el campo NombreDirectorios con el texto Usuarios
+    And Texto de Seleccion Estructural Selector TipoCreacion
+    And Hacer Click en El elemento Crear
+    And lleneme el campo NombreDirectorios con el texto Varios
+    And Texto de Seleccion Estructural Selector TipoCreacion
+    And Hacer Click en El elemento Crear
+
+  @CreacionColeccionesAutomatizacion
+  Scenario: Creacion Coleccion Usuarios
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And espereme 2 segundos
+    And Hacer Click en El elemento PrimeraEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento FlechaArriba
+    And Sikuli element click Automatizacion
+    And Hacer Click en El elemento EstUsuarios
+    And lleneme el campo NombreDirectorios con el texto Usuarios
+    And Texto de Seleccion Colección Selector TipoCreacion
+    And Hacer Click en El elemento Crear
+

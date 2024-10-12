@@ -1,0 +1,62 @@
+{
+  "Usuario": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsId"
+  },
+  "Contrasena": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsPassword"
+  },
+  "Ingresar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/div[1]/button[1]"
+  },
+  "Cancelar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/div[1]/button[2]"
+  },
+  "OlvidoContrasena": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[4]/div[1]/p[1]/a[1]/b[1]"
+  },
+  "LoginIncorrecto": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Login Incorrecto')]"
+  },
+  "RecuId":{
+  "GetFieldBy": "XPath",
+  "ValueToFind": "//input[@id='D_UsId']"
+  },
+  "RecuNombre":{
+  "GetFieldBy": "XPath",
+  "ValueToFind": "//input[@id='D_UsNombres']"
+  },
+  "RecuApellido":{
+  "GetFieldBy": "XPath",
+  "ValueToFind": "//input[@id='D_UsApellidos']"
+  },
+  "RecuEmail":{
+  "GetFieldBy": "XPath",
+  "ValueToFind": "//input[@id='D_UsEmail']"
+  },
+  "RecuBuscar":{
+  "GetFieldBy": "XPath",
+  "ValueToFind": "//button[@id='Accion']"
+  },
+  "RecuperacionExitosa":{
+  "GetFieldBy": "XPath",
+  "ValueToFind": "//span[contains(text(),'daniel.alzate@analitica.com.co')]"
+  },
+  "FrameRecu":{
+    "GetFieldBy": "name",
+    "ValueToFind": "Contenido"
+  },
+  "TextoNoExiste":{
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//footer[contains(text(),'No existe un Usuario con ese Email en el sistema, ')]"
+  },
+  "FrameContenido":{
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//frameset[1]/frame[1]"
+  }
+}

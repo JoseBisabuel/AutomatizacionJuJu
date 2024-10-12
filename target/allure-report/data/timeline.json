@@ -1,0 +1,73 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "LAPTOP-93Q69KE3",
+    "children" : [ {
+      "name" : "11012@LAPTOP-93Q69KE3.main(1)",
+      "children" : [ {
+        "name" : "Check Box",
+        "uid" : "ff7accef472acd27",
+        "parentUid" : "9a813a0fc20f83d58cc3a1d2ca18d9fe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1728618156235,
+          "stop" : 1728618197241,
+          "duration" : 41006
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Web Tables",
+        "uid" : "2cd8b307c70fd95b",
+        "parentUid" : "9a813a0fc20f83d58cc3a1d2ca18d9fe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1728618234304,
+          "stop" : 1728618267713,
+          "duration" : 33409
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Formulario Text Box",
+        "uid" : "b6d02cb378c430f8",
+        "parentUid" : "9a813a0fc20f83d58cc3a1d2ca18d9fe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1728618116800,
+          "stop" : 1728618155950,
+          "duration" : 39150
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Web Tables Edicion y Borrado",
+        "uid" : "5d4933258eacba1c",
+        "parentUid" : "9a813a0fc20f83d58cc3a1d2ca18d9fe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1728618267723,
+          "stop" : 1728618302267,
+          "duration" : 34544
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Radio Button",
+        "uid" : "407d66909dbd24e3",
+        "parentUid" : "9a813a0fc20f83d58cc3a1d2ca18d9fe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1728618197257,
+          "stop" : 1728618234287,
+          "duration" : 37030
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9a813a0fc20f83d58cc3a1d2ca18d9fe"
+    } ],
+    "uid" : "a6efb8fd16983210580ff142651dc81e"
+  } ]
+}

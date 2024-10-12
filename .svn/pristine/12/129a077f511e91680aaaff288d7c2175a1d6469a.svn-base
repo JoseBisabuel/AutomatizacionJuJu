@@ -1,0 +1,854 @@
+-------------------------------------------------------------------------------
+Test set: StepDefinitions.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 123, Failures: 6, Errors: 92, Skipped: 0, Time elapsed: 6,301.171 s <<< FAILURE! - in StepDefinitions.TestRunner
+AC_AZDv6-1: Tablero de control - RadicadosPendientes ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 15.47 s  <<< FAILURE!
+java.lang.AssertionError: este Texto esta presente en el elemento: Ventanael texto actual es: Radicados Pendientes
+
+AC_AZDv6-1: Tablero de control - RadicadosPendientes ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 15.118 s  <<< FAILURE!
+java.lang.AssertionError: este Texto esta presente en el elemento: Ventanael texto actual es: Radicados Pendientes
+
+AC_AZDv6-1: Tablero de control - RadicadosPendientes ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 16.711 s  <<< FAILURE!
+java.lang.AssertionError: este Texto esta presente en el elemento: Ventanael texto actual es: Radicados Pendientes
+
+AC_AZDv6-1: Tablero de control - RadicadosPendientes ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 14.847 s  <<< FAILURE!
+java.lang.AssertionError: este Texto esta presente en el elemento: Ventanael texto actual es: Radicados Pendientes
+
+AC_AZDv6-1: Tablero de control - RadicadosPendientes ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 15.398 s  <<< FAILURE!
+java.lang.AssertionError: este Texto esta presente en el elemento: Ventanael texto actual es: Radicados Pendientes
+
+AC_AZDv6-1: Tablero de control - RadicadosPendientes ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 16.642 s  <<< FAILURE!
+java.lang.AssertionError: este Texto esta presente en el elemento: Ventanael texto actual es: Radicados Pendientes
+
+AC_AZDv6-1: Tablero de control - RadicadosPendientes ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 21.262 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53643}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6b0561197564ba275871732929992f20
+
+AC_AZDv6-1: Tablero de control - RadicadosPendientes ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 21.595 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53669}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8bfe1ca76fbb8839646be2584aba0dd3
+
+AC_AZDv6-1: Tablero de control - RadicadosPendientes ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 21.751 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53694}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1801f2df7311c25bb699cfc85dc05b3c
+
+AC_AZDv6-1: Tablero de control - RadicadosPendientes ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 21.415 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53720}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 45c95636d7babf4ab8028efb05f39091
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 12.234 s  <<< ERROR!
+cucumber.runner.AmbiguousStepDefinitionsException: 
+"Hacer Click en El elemento o RadicadosRespondidos" matches more than one step definition:
+  "^Hacer Click en El elemento (.*)" in StepDefinitions.iDoClickInElement(String)
+  "^Hacer Click en El elemento o (.*)" in StepDefinitions.clickInElement(String)
+
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 12.106 s  <<< ERROR!
+cucumber.runner.AmbiguousStepDefinitionsException: 
+"Hacer Click en El elemento o RadicadosRespondidos" matches more than one step definition:
+  "^Hacer Click en El elemento (.*)" in StepDefinitions.iDoClickInElement(String)
+  "^Hacer Click en El elemento o (.*)" in StepDefinitions.clickInElement(String)
+
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 12.351 s  <<< ERROR!
+cucumber.runner.AmbiguousStepDefinitionsException: 
+"Hacer Click en El elemento o RadicadosRespondidos" matches more than one step definition:
+  "^Hacer Click en El elemento (.*)" in StepDefinitions.iDoClickInElement(String)
+  "^Hacer Click en El elemento o (.*)" in StepDefinitions.clickInElement(String)
+
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 13.063 s  <<< ERROR!
+cucumber.runner.AmbiguousStepDefinitionsException: 
+"Hacer Click en El elemento o RadicadosRespondidos" matches more than one step definition:
+  "^Hacer Click en El elemento (.*)" in StepDefinitions.iDoClickInElement(String)
+  "^Hacer Click en El elemento o (.*)" in StepDefinitions.clickInElement(String)
+
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 13.045 s  <<< ERROR!
+cucumber.runner.AmbiguousStepDefinitionsException: 
+"Hacer Click en El elemento o RadicadosRespondidos" matches more than one step definition:
+  "^Hacer Click en El elemento (.*)" in StepDefinitions.iDoClickInElement(String)
+  "^Hacer Click en El elemento o (.*)" in StepDefinitions.clickInElement(String)
+
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 11.927 s  <<< ERROR!
+cucumber.runner.AmbiguousStepDefinitionsException: 
+"Hacer Click en El elemento o RadicadosRespondidos" matches more than one step definition:
+  "^Hacer Click en El elemento (.*)" in StepDefinitions.iDoClickInElement(String)
+  "^Hacer Click en El elemento o (.*)" in StepDefinitions.clickInElement(String)
+
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 16.024 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53962}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c8414c43f614aa5f40cc4ebd0f8ebc8a
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 15.901 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53986}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 51d748362de97384a8998f5e22b4fc27
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 15.952 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54010}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0bec4e77577d64443a8fcf54a7ca09e6
+
+AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 15.59 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54034}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 28be98245b7f249512c5fa1cb42f8595
+
+AC_AZDv6-1: Tablero de control - RadicadosRecibidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 15.64 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54135}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 462f23e385e3630fb23c360c89d053d3
+
+AC_AZDv6-1: Tablero de control - RadicadosRecibidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 15.774 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54159}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 30cf34c81f47461a465f052e1ce923af
+
+AC_AZDv6-1: Tablero de control - RadicadosRecibidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 15.799 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54183}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: db456badacc94f060de562647b5df885
+
+AC_AZDv6-1: Tablero de control - RadicadosRecibidos ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 16.109 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54207}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8569cbd3174deb4502c11fc48ae1a871
+
+AC_AZDv6-1: Tablero de control - RadicadosRecibidos ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 16.164 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54309}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fcd8fdd5548e68b3f260ae2d2188df3e
+
+AC_AZDv6-1: Tablero de control - RadicadosRecibidos ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 16.249 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54333}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c18fc3f6b368efc8b1555e07dd6c56b
+
+AC_AZDv6-1: Tablero de control - RadicadosRecibidos ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 15.755 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54359}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 83822158655bc56c086f8336d2aec09c
+
+AC_AZDv6-1: Tablero de control - RadicadosRecibidos ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 15.877 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=110.0.5481.97)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.97, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MEYER~1.AYA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 298d3e16df0260bcfc735896ac060491
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 72.554 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 72.595 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 72.483 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 72.538 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 72.434 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpSinEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 72.603 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - RaRecibidosDia ExpSinEncabezado PDF(Dashboard - Exportar Opciones Radicados)  Time elapsed: 73.54 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 72.461 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 72.566 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 72.283 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 72.38 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 72.623 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado(Dashboard - Exportar Opciones Radicados)  Time elapsed: 74.271 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado PDF(Dashboard - Exportar Opciones Radicados)  Time elapsed: 72.963 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActPendientes ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.212 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActPendientes ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.869 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActPendientes ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.961 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActPendientes ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.169 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActPendientes ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.983 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActPendientes ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.88 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActPendientes ExportarSinEncabezado PDF(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.153 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActPendientes ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.002 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActPendientes ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.007 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActPendientes ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.793 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActPendientes ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.87 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActPendientes ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.126 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActPendientes ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.786 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActPendientes ExportarConEncabezado PDF(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.981 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActVencidas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.831 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActVencidas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.966 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActVencidas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.92 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActVencidas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.154 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActVencidas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.893 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActVencidas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.016 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActVencidas ExportarSinEncabezado PDF(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.751 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActVencidas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.089 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActVencidas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.944 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActVencidas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.912 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActVencidas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.97 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActVencidas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.803 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActVencidas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.05 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActVencidas ExportarConEncabezado PDF(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.697 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.337 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.445 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.39 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.609 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.446 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.495 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado PDF(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.239 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.431 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.849 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.395 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.605 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.317 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.595 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado PDF(Dashboard - Exportar Opciones Flujos)  Time elapsed: 78.403 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.979 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.833 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.944 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.016 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.216 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.735 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado PDF(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.949 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.993 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.984 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.835 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 81.778 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.919 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado(Dashboard - Exportar Opciones Flujos)  Time elapsed: 77.048 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+
+AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado PDF(Dashboard - Exportar Opciones Flujos)  Time elapsed: 76.932 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1] (tried for 60 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/h4[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'PC-MAYALA', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: unknown
+

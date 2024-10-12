@@ -1,0 +1,97 @@
+Feature: Login AZDigital Prerrequisitos
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Contrasena con el texto o<tf@LqI4!~h
+    And Hacer Click en El elemento Ingresar
+
+    ##--Creacion de colecciones y BDE--#
+  @CreacionColeccion
+  Scenario: Creacion Coleccion
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: FrameEstructura
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstUsuarios
+    And Hacer Click en El elemento ColUsuarios
+    And lleneme el campo Crear con el texto Login01
+    And Texto de Seleccion Colección Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And lleneme el campo Crear con el texto Login02
+    And Texto de Seleccion Colección Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And lleneme el campo Crear con el texto Login03
+    And Texto de Seleccion Colección Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 10 segundos
+
+  @CreacionBDE
+  Scenario: Creacion BDE
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: FrameEstructura
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstUsuarios
+    And Hacer Click en El elemento ColUsuarios
+    And espereme 2 segundos
+    And Desplazo el elemento BDEAbajo
+    And Sikuli element click login01
+    And lleneme el campo Crear con el texto login01
+    And Texto de Seleccion Bandeja de Entrada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And Hacer Click en El elemento FlechaArriba
+    And espereme 2 segundos
+    And Desplazo el elemento BDEAbajo
+    And Sikuli element click login02
+    And lleneme el campo Crear con el texto login02
+    And Texto de Seleccion Bandeja de Entrada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And Hacer Click en El elemento FlechaArriba
+    And espereme 2 segundos
+    And Desplazo el elemento BDEAbajo
+    And Sikuli element click login03
+    And lleneme el campo Crear con el texto login03
+    And Texto de Seleccion Bandeja de Entrada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+
+  @CreacionUsuariosLogin
+  Scenario Outline: Creacion Usuarios Login
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento AdminUsuarios
+    And Hacer Click en El elemento OpcUsuarios
+    And Hacer Click en El elemento CrearUsuarios
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo UsUser con el texto <Campo1>
+    And lleneme el campo UsPass con el texto <Campo2>
+    And Texto de Seleccion <Campo3> Selector Ustipo
+    And lleneme el campo UsNombre con el texto <Campo4>
+    And lleneme el campo UsApellido con el texto <Campo5>
+    And Selecion Index 3 Selector UsTid
+    And lleneme el campo UsIdentificacion con el texto <Campo6>
+    And lleneme el campo UsBDE con el texto <Campo7>
+    And espereme 5 segundos
+    And Hacer Click en El elemento UsBotonBuscarBDE
+    And Hacer Click en El elemento RegistroUsuario
+    And lleneme el campo UsEmail con el texto <Campo8>
+    And Opcion del select Crear, Aprobar y Radicar Comunicados y el select UsTipoRadComunicados
+    And Hacer Click en El elemento UsBotonAgregar
+    Examples:
+      |Campo1|Campo2    |Campo3                     |Campo4 |Campo5   |Campo6|Campo7|Campo8                  |
+      |Login1|1q2w3e4r5T*| Administrador AZ Digital  |Login  |Cero Uno |110110|Login01|pruebasqa312@yopmail.com|
+      |Login2|1q2w3e4r5T*| Administrador AZ Digital  |Login  |Cero Dos |120120|Login02|pruebasqa312@yopmail.com|
+      |Login3|1q2w3e4r5T*|Gestor de flujos de trabajo|Login  |Cero Tres|130130|Login03|pruebasqa312@yopmail.com|
+      |Login4|1q2w3e4r5T*|Usuario Interno AZ Digital |Login  |Cero Cuatro|140140|Login04|pruebasqa312@yopmail.com|

@@ -1,0 +1,1186 @@
+Feature: Dashboard
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Dashboard.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Contrasena con el texto o<tf@LqI4!~h
+    And Hacer Click en El elemento Ingresar
+
+  ##--ActPendientes--##
+    ##--Sin Encabezados--##
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActPendientes ExportarSinEncabezado EXCEL
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActPendientes
+    And ir a VentanaExport1f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard183
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento Excel
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard184
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard185
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActPendientes ExportarSinEncabezado CSV
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActPendientes
+    And ir a VentanaExport2f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard186
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento CSV
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard187
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard188
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActPendientes ExportarSinEncabezado TAB
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActPendientes
+    And ir a VentanaExport3f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard189
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento TAB
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard190
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard191
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActPendientes ExportarSinEncabezado XML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActPendientes
+    And ir a VentanaExport4f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard192
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento XML
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard193
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard194
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActPendientes ExportarSinEncabezado HTML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActPendientes
+    And ir a VentanaExport5f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard195
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento HTML
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard196
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard197
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActPendientes ExportarSinEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActPendientes
+    And ir a VentanaExport6f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard198
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard199
+    And Hacer Click en El elemento ExportarSinPDF
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard200
+    And espereme 1 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActPendientes ExportarSinEncabezado WORD
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActPendientes
+    And ir a VentanaExport7f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard201
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 2 segundos
+    And Hacer Click en El elemento WORD
+    And espereme 2 segundos
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard202
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard203
+    ##--Sin Encabezados--##
+    ##--Con Encabezados--##
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActPendientes ExportarConEncabezado EXCEL
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActPendientes
+    And ir a VentanaExport8f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard204
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento Excel
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard205
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActPendientes-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - EXCEL - Pruebas QA - Comentarios - EXCEL -Pruebas QA - Comentarios - EXCEL -Pruebas QA - Comentarios - EXCEL -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard206
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActPendientes ExportarConEncabezado CSV
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActPendientes
+    And ir a VentanaExport9f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard207
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento CSV
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard208
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActPendientes-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - CSV - Pruebas QA - Comentarios - CSV -Pruebas QA - Comentarios - CSV -Pruebas QA - Comentarios - CSV -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard209
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActPendientes ExportarConEncabezado TAB
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActPendientes
+    And ir a VentanaExport10f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard210
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento TAB
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard211
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActPendientes-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - TAB - Pruebas QA - Comentarios - TAB -Pruebas QA - Comentarios - TAB -Pruebas QA - Comentarios - TAB -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard212
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActPendientes ExportarConEncabezado XML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActPendientes
+    And ir a VentanaExport11f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard213
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento XML
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard214
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActPendientes-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - XML - Pruebas QA - Comentarios - XML -Pruebas QA - Comentarios - XML -Pruebas QA - Comentarios - XML -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard215
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActPendientes ExportarConEncabezado HTML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActPendientes
+    And ir a VentanaExport12f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard216
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento HTML
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard217
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActPendientes-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - HTML - Pruebas QA - Comentarios - HTML -Pruebas QA - Comentarios - HTML -Pruebas QA - Comentarios - HTML -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard218
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActPendientes ExportarConEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActPendientes
+    And ir a VentanaExport13f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard219
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard220
+    And Hacer Click en El elemento AgregarEncabezado2
+    And lleneme el campo TituloEncabezadoPDF con el texto ActPendientes-Automatizacion
+    And lleneme el campo ComentarioPDF con el texto Pruebas QA - Comentarios - PDF - Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -
+    And Hacer Click en El elemento CheckAgrUsuPDF
+    And Hacer Click en El elemento CheckAgrFecPDF
+    And Selecion Index 1 Selector SelectOrientacion
+    And Selecion Index 1 Selector SelectFuente
+    And Selecion Index 1 Selector SelectTamano
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard221
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon2
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActPendientes ExportarConEncabezado WORD
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActPendientes
+    And ir a VentanaExport14f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard222
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 2 segundos
+    And Hacer Click en El elemento WORD
+    And espereme 2 segundos
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard223
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActPendientes-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - WORD - Pruebas QA - Comentarios - WORD -Pruebas QA - Comentarios - WORD -Pruebas QA - Comentarios - WORD -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard224
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+    ##--Con Encabezados--##
+  ##--ActPendientes--##
+
+  ##########################OTRA COSA##################################
+
+    ##--ActVencidas--##
+    ##--Sin Encabezados--##
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActVencidas ExportarSinEncabezado EXCEL2
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActVencidas
+    And ir a VentanaExport15f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard225
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento Excel
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard226
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard227
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActVencidas ExportarSinEncabezado CSV
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActVencidas
+    And ir a VentanaExport16f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard228
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento CSV
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard229
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard230
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActVencidas ExportarSinEncabezado TAB
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActVencidas
+    And ir a VentanaExport17f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard231
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento TAB
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard232
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard233
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActVencidas ExportarSinEncabezado XML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActVencidas
+    And ir a VentanaExport18f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard234
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento XML
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard235
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard236
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActVencidas ExportarSinEncabezado HTML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActVencidas
+    And ir a VentanaExport19f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard237
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento HTML
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard238
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard239
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActVencidas ExportarSinEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActVencidas
+    And ir a VentanaExport20f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard240
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard241
+    And Hacer Click en El elemento ExportarSinPDF
+    And Adjunto una Captura de pantalla al informe Dashboard242
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActVencidas ExportarSinEncabezado WORD
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActVencidas
+    And ir a VentanaExport21f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard243
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 2 segundos
+    And Hacer Click en El elemento WORD
+    And espereme 2 segundos
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard244
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard245
+    ##--Sin Encabezados--##
+    ##--Con Encabezados--##
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActVencidas ExportarConEncabezado EXCEL
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActVencidas
+    And ir a VentanaExport22f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard246
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento Excel
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard247
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActVencidas-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - EXCEL - Pruebas QA - Comentarios - EXCEL -Pruebas QA - Comentarios - EXCEL -Pruebas QA - Comentarios - EXCEL -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard248
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActVencidas ExportarConEncabezado CSV
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActVencidas
+    And ir a VentanaExport23f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard249
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento CSV
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard250
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActVencidas-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - CSV - Pruebas QA - Comentarios - CSV -Pruebas QA - Comentarios - CSV -Pruebas QA - Comentarios - CSV -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard251
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActVencidas ExportarConEncabezado TAB
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActVencidas
+    And ir a VentanaExport24f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard252
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento TAB
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard253
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActVencidas-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - TAB - Pruebas QA - Comentarios - TAB -Pruebas QA - Comentarios - TAB -Pruebas QA - Comentarios - TAB -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard254
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActVencidas ExportarConEncabezado XML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActVencidas
+    And ir a VentanaExport25f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard255
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento XML
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard256
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActVencidas-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - XML - Pruebas QA - Comentarios - XML -Pruebas QA - Comentarios - XML -Pruebas QA - Comentarios - XML -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard257
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActVencidas ExportarConEncabezado HTML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActVencidas
+    And ir a VentanaExport26f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard258
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento HTML
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard259
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActVencidas-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - HTML - Pruebas QA - Comentarios - HTML -Pruebas QA - Comentarios - HTML -Pruebas QA - Comentarios - HTML -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard260
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActVencidas ExportarConEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActVencidas
+    And ir a VentanaExport27f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard261
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard262
+    And Hacer Click en El elemento AgregarEncabezado2
+    And lleneme el campo TituloEncabezadoPDF con el texto ActVencidas-Automatizacion
+    And lleneme el campo ComentarioPDF con el texto Pruebas QA - Comentarios - PDF - Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -
+    And Hacer Click en El elemento CheckAgrUsuPDF
+    And Hacer Click en El elemento CheckAgrFecPDF
+    And Selecion Index 1 Selector SelectOrientacion
+    And Selecion Index 1 Selector SelectFuente
+    And Selecion Index 1 Selector SelectTamano
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard263
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon2
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActVencidas ExportarConEncabezado WORD
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActVencidas
+    And ir a VentanaExport28f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard264
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 2 segundos
+    And Hacer Click en El elemento WORD
+    And espereme 2 segundos
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard265
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActVencidas-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - WORD - Pruebas QA - Comentarios - WORD -Pruebas QA - Comentarios - WORD -Pruebas QA - Comentarios - WORD -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard266
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+    ##--Con Encabezados--##
+  ##--ActVencidas--##
+
+  ##########################OTRA COSA##################################
+
+##--ActTerminadas--##
+    ##--Sin Encabezados--##
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado EXCEL
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTerminadas
+    And ir a VentanaExport29f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard267
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento Excel
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard268
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard269
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado CSV
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTerminadas
+    And ir a VentanaExport30f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard270
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento CSV
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard271
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard272
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado TAB
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTerminadas
+    And ir a VentanaExport31f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard273
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento TAB
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard274
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard275
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado XML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTerminadas
+    And ir a VentanaExport32f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard276
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento XML
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard277
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard278
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado HTML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTerminadas
+    And ir a VentanaExport33f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard279
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento HTML
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard280
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard281
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTerminadas
+    And ir a VentanaExport34f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard282
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard283
+    And Hacer Click en El elemento ExportarSinPDF
+    And Adjunto una Captura de pantalla al informe Dashboard284
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarSinEncabezado WORD
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTerminadas
+    And ir a VentanaExport35f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard285
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 2 segundos
+    And Hacer Click en El elemento WORD
+    And espereme 2 segundos
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard286
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard287
+    ##--Sin Encabezados--##
+    ##--Con Encabezados--##
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado EXCEL
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTerminadas
+    And ir a VentanaExport36f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard288
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento Excel
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard289
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActTerminadas-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - EXCEL - Pruebas QA - Comentarios - EXCEL -Pruebas QA - Comentarios - EXCEL -Pruebas QA - Comentarios - EXCEL -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard290
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado CSV
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTerminadas
+    And ir a VentanaExport37f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard291
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento CSV
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard292
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActTerminadas-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - CSV - Pruebas QA - Comentarios - CSV -Pruebas QA - Comentarios - CSV -Pruebas QA - Comentarios - CSV -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard293
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado TAB
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTerminadas
+    And ir a VentanaExport38f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard294
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento TAB
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard295
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActTerminadas-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - TAB - Pruebas QA - Comentarios - TAB -Pruebas QA - Comentarios - TAB -Pruebas QA - Comentarios - TAB -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard296
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado XML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTerminadas
+    And ir a VentanaExport39f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard297
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento XML
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard298
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActTerminadas-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - XML - Pruebas QA - Comentarios - XML -Pruebas QA - Comentarios - XML -Pruebas QA - Comentarios - XML -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard299
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado HTML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTerminadas
+    And ir a VentanaExport40f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard300
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento HTML
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard301
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActTerminadas-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - HTML - Pruebas QA - Comentarios - HTML -Pruebas QA - Comentarios - HTML -Pruebas QA - Comentarios - HTML -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard302
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTerminadas
+    And ir a VentanaExport41f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard303
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard304
+    And Hacer Click en El elemento AgregarEncabezado2
+    And lleneme el campo TituloEncabezadoPDF con el texto ActTerminadas-Automatizacion
+    And lleneme el campo ComentarioPDF con el texto Pruebas QA - Comentarios - PDF - Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -
+    And Hacer Click en El elemento CheckAgrUsuPDF
+    And Hacer Click en El elemento CheckAgrFecPDF
+    And Selecion Index 1 Selector SelectOrientacion
+    And Selecion Index 1 Selector SelectFuente
+    And Selecion Index 1 Selector SelectTamano
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard305
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon2
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTerminadas ExportarConEncabezado WORD
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTerminadas
+    And ir a VentanaExport42f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard306
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 2 segundos
+    And Hacer Click en El elemento WORD
+    And espereme 2 segundos
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard307
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActTerminadas-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - WORD - Pruebas QA - Comentarios - WORD -Pruebas QA - Comentarios - WORD -Pruebas QA - Comentarios - WORD -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard308
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+    ##--Con Encabezados--##
+  ##--ActTerminadas--##
+
+  ##########################OTRA COSA##################################
+
+  ##--ActTotales--##
+    ##--Sin Encabezados--##
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado EXCEL
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport43f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard309
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento Excel
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard310
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard311
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado CSV
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport44f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard312
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento CSV
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard313
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard314
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado TAB
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport45f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard315
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento TAB
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard316
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard317
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado XML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport46f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard318
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento XML
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard319
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard320
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado HTML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport47f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard321
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento HTML
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard322
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard323
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport48f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard324
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento SeleccionarTodas
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard325
+    And Hacer Click en El elemento ExportarSinPDF
+    And Adjunto una Captura de pantalla al informe Dashboard326
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado WORD
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport49f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard327
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 2 segundos
+    And Hacer Click en El elemento WORD
+    And espereme 2 segundos
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard328
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard329
+    ##--Sin Encabezados--##
+    ##--Con Encabezados--##
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado EXCEL
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport50f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard330
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento Excel
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard331
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActTotales-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - EXCEL - Pruebas QA - Comentarios - EXCEL -Pruebas QA - Comentarios - EXCEL -Pruebas QA - Comentarios - EXCEL -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard332
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado CSV
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport51f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard333
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento CSV
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard334
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActTotales-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - CSV - Pruebas QA - Comentarios - CSV -Pruebas QA - Comentarios - CSV -Pruebas QA - Comentarios - CSV -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard335
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado TAB
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport52f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard336
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento TAB
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard337
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActTotales-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - TAB - Pruebas QA - Comentarios - TAB -Pruebas QA - Comentarios - TAB -Pruebas QA - Comentarios - TAB -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard338
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado XML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport53f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard339
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento XML
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard340
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActTotales-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - XML - Pruebas QA - Comentarios - XML -Pruebas QA - Comentarios - XML -Pruebas QA - Comentarios - XML -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard341
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado HTML
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport54f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard342
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento HTML
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard343
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActTotales-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - HTML - Pruebas QA - Comentarios - HTML -Pruebas QA - Comentarios - HTML -Pruebas QA - Comentarios - HTML -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard344
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport55f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard345
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard346
+    And Hacer Click en El elemento AgregarEncabezado2
+    And lleneme el campo TituloEncabezadoPDF con el texto ActTotales-Automatizacion
+    And lleneme el campo ComentarioPDF con el texto Pruebas QA - Comentarios - PDF - Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -
+    And Hacer Click en El elemento CheckAgrUsuPDF
+    And Hacer Click en El elemento CheckAgrFecPDF
+    And Selecion Index 1 Selector SelectOrientacion
+    And Selecion Index 1 Selector SelectFuente
+    And Selecion Index 1 Selector SelectTamano
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard347
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon2
+    And espereme 2 segundos
+
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado WORD
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport56f ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard348
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 2 segundos
+    And Hacer Click en El elemento WORD
+    And espereme 2 segundos
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard349
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActTotales-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - WORD - Pruebas QA - Comentarios - WORD -Pruebas QA - Comentarios - WORD -Pruebas QA - Comentarios - WORD -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard350
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+    ##--Con Encabezados--##
+  ##--ActTotales--##

@@ -1,0 +1,333 @@
+package StepDefinitions;
+
+import Funtions.CreateDriver;
+import Funtions.SeleniumFunctions;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import org.apache.log4j.Logger;
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import java.io.InputStream;
+import java.util.Properties;
+
+import javax.swing.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
+public class StepDefinitions {
+
+    SeleniumFunctions functions = new SeleniumFunctions();
+
+    WebDriver driver;
+
+    public static boolean actual = Boolean.parseBoolean(null);
+
+    /**** Atributo Login ******/
+    Logger log = Logger.getLogger(StepDefinitions.class);
+
+    public StepDefinitions(){
+        driver = Hooks.driver;
+    }
+
+    @Given("^Sitio AZDigital")
+    public void iAmInAppMainSite() throws IOException {
+        String url = functions.readProperties("MainAppUrlBase");
+        log.info("Navegacion a: " + url);
+        driver.get(url);
+        functions.page_has_loaded();
+    }
+
+    @Then("^Cargar la informacion del DOM (.*)$")
+    public void cargarLaInformacionDelDOMAzloginJson(String json) throws Exception {
+        SeleniumFunctions.FileName = json;
+        SeleniumFunctions.readJson();
+        log.info("Inicialize archivo: " + json);
+    }
+
+    @And("^lleneme el campo (.*) con el texto (.*)")
+    public void iSet(String element, String text) throws Exception{
+        By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
+        functions.waitForElementPresent(element);
+        driver.findElement(SeleniumElement).clear();
+        driver.findElement(SeleniumElement).sendKeys(text);
+        log.info("se coloco: "+ text + "del elemento:" + element);
+    }
+
+    @And("^lleneme los campos (.*) con el texto (.*)")
+    public void iSetMassive(String element, String text) throws Exception{
+        By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
+        List<WebElement> archivos = driver.findElements(SeleniumElement);
+        for (int i = 0 ;i < archivos.size();i++) {
+            System.out.println("numero de elementos " + archivos.get(i).getAttribute("id"));
+            String nombre_id = archivos.get(i).getAttribute("id");
+            driver.findElement(By.id(nombre_id)).clear();
+            driver.findElement(By.id(nombre_id)).sendKeys(text + i);
+        }
+        log.info("se coloco: "+ text + "del elemento:" + element);
+    }
+
+    @And("^busqueme (.*) en el select (.*)")
+    public void iSetTextInDropdown(String option, String element)throws Exception {
+        Select opt = (Select) functions.selectOption(element);
+        opt.selectByVisibleText(option);
+    }
+
+    @And("^Desplazo el elemento (.*)")
+    public void scrollToElement(String element)throws Exception{
+        functions.scrolltoElement(element);
+    }
+
+    @And("^Hacer Click en El elemento (.*)")
+    public void iDoClickInElement(String element) throws Exception{
+        By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
+        functions.waitForElementPresent(element);
+        driver.findElement(SeleniumElement).click();
+        log.info("hizo click en : " + element);
+    }
+
+    @And("^Hacer Click en El elemento o (.*)")
+    public void clickInElement(String element) throws Exception{
+        By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
+        boolean clic = true;
+        if (!clic)
+        {
+            driver.close();
+            log.info("No hizo click en : " + element);
+
+        }else {
+            functions.waitForElementPresent(element);
+            driver.findElement(SeleniumElement).click();
+            log.info("hizo click en : " + element);
+        }
+    }
+
+    @And("^Sikuli element click (.*)")
+    public void iDoClickInElementSikuli(String element) throws Exception{
+        functions.iDoClickSikuli(element);
+    }
+
+    @And("^tomar Captura de pantalla: (.*)")
+    public void iTakeScreenshot(String TestCaptura) throws IOException{
+        functions.ScreenSchot(TestCaptura);
+    }
+
+    @And("^Adjunto una Captura de pantalla al informe (.*)")
+    public void attachAScreenShotToReport(String TestCaptura){
+        functions.attachScreenShot(TestCaptura);
+    }
+
+    @And("^Guarde el texto (.*?) del esenario$")
+    public void iSaveTextOfElementAsSenarioContext(String element) throws Exception{
+        By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
+        String ScenarioElementText = driver.findElement(SeleniumElement).getText();
+        functions.SaveInScenario(element+".text",ScenarioElementText);
+    }
+    /** Cambio de frame interno **/
+    @And("^Cambiar de Frame: (.*)")
+    public void iSwitchToFrame(String frame)throws Exception{
+        functions.switchToFrame(frame);
+    }
+
+    /** Cambio de frame al principal **/
+    @And("^Cambiar al Frame principal")
+    public void iSwitchToParentFrame()throws Exception{
+        functions.switchToParentFrame();
+    }
+
+    //**OPCIONES DE SELECT**//
+    /*------------------------------*/
+
+    /** Buscador de Select por el texto OptGruop**/
+    @And("^El select (.*) Texto de Seleccion Selector vs Gruop (.*)")
+    public void IsetTextSelectInGruop(String select ,String element)throws Exception {
+        Select opt = (Select) functions.selectVsGroup(select);
+        opt.selectByVisibleText(element);
+    }
+
+    /** Buscador de Select por el texto OptGruop primera opccion**/
+    @And("^El select (.*) seleciona la primera opccion")
+    public void IsetFirstOption(String select)throws Exception {
+        Select opt = (Select) functions.selectVsGroup(select);
+        opt.getFirstSelectedOption();
+    }
+
+    /** Buscador de Select NORMAL**/
+    @And("^Opcion del select (.*) y el select (.*)")
+    public void iSelectOption(String text, String element) throws Exception{
+        Select opt = (Select) functions.iSelectToFind(element);
+        opt.selectByVisibleText(text);
+        log.info("Selecciona la opcion: " + text + "en el selector: " + element);
+    }
+
+    /** Buscador de Select por el texto**/
+    @And("^Texto de Seleccion (.*) Selector (.*)")
+    public void iSetTextColombiaInDropdownCountry(String option, String element)throws Exception {
+        Select opt = (Select) functions.selectOption(element);
+        opt.selectByVisibleText(option);
+    }
+
+    /** Buscador de Select pero por Index**/
+    @And("^Selecion Index (.*) Selector (.*)")
+    public void iSetIndexInDropdownPais(int option,String element)throws Exception {
+        Select opt = (Select) functions.selectOption(element);
+        opt.selectByIndex(option);
+    }
+
+    @And("^El select (.*) para los Textos de Seleccion Selector vs Gruop (.*)")
+    public void iSetTextSelectInGruopMassive(String select, String element) throws Exception{
+        functions.addAttributeSelect();
+        functions.selectvsGroupMasive(select, element);
+    }
+    //**OPCIONES DE SELECT**//
+
+    //*Tiempo de espera*//
+    /** colocar tiempo de espera **/
+    @And("^espereme (.*) segundos")
+    public void iWaitSeconds(int seconds)throws InterruptedException{
+        int secs = seconds*1000;
+        Thread.sleep(secs);
+    }
+
+    /** Espera el elemento**/
+    @And("^espere el elemento (.*)")
+    public void iWaitForElement(String element)throws Exception {
+        functions.waitForElementPresent(element);
+
+    }
+
+    @And("^Mostrar las columnas (.*) seleccionar (.*) elemento y click en aceptar (.*)")
+    public void selectColumns(String columnas, String seleccion, String aceptar) throws Exception {
+        By SeleniumElement = SeleniumFunctions.getCompleteElement(columnas);
+        functions.waitForElementPresent(columnas);
+        driver.findElement(SeleniumElement).click();
+
+        By SeleccionElement = SeleniumFunctions.getCompleteElement(seleccion);
+        functions.waitForElementPresent(seleccion);
+        driver.findElement(SeleccionElement).click();
+
+        By AceptarElement = SeleniumFunctions.getCompleteElement(aceptar);
+        functions.waitForElementPresent(aceptar);
+        driver.findElement(AceptarElement).click();
+    }
+
+    //Tiempo de espera
+    @Then("^se (accept|dismiss) la alerta")
+    public void AcceptAlert(String want){
+        functions.AcceptAlert(want);
+    }
+
+    @Then("^Assert si elemento (.*) contiene el siguiente texto (.*)")
+    public void assertIfContainsText(String element, String text)throws Exception {
+        functions.checkPartialTextElementPresent(element, text);
+    }
+
+    @Then("^Assert si elemento (.*) es igual a (.*)")
+    public void assertIfIsEqualTo(String element, String text)throws Exception {
+        functions.checkTextElementEqualTo(element, text);
+    }
+
+    @Then("^Assert si elemento (.*) visualiza$")
+    public void checkIfELementIsPresent(String element)throws Exception {
+        boolean isDisplayed = functions.isElementDisplayed(element);
+        Assert.assertTrue("Elemento no presente: " + element, isDisplayed);
+    }
+
+    @Then("^Check si elemento (.*) no contiene el siguiente texto (.*)")
+    public void CheckifIsNOTContainsText(String element, String text)throws Exception{
+        functions.checkPartialTextElementNotPresent(element, text);
+    }
+    //**Subir Archivos**//
+
+    @Then("^Subir Archivo (.*)")
+    public void fileUpload(String element)throws Exception{
+        functions.fileUpload(element);
+    }
+
+    @Then("^Subir adjunto simple Comunicado (.*)")
+    public void fileUploaSimple(String element)throws Exception{
+        functions.fileUploadSimple(element);
+    }
+
+    @And("^Subir varios Archivos (.*)")
+    public void uploadOtherArchive(String element)throws Exception {
+        functions.filesUploader(element);
+    }
+
+    @And("^Subir Plantillas (.*)")
+    public void uploadComunicados(String element)throws Exception {
+        functions.FilesUploadsComunicados(element);
+    }
+
+    @And("^Subir Archivos BDE (.*)")
+    public void uploadBDE(String element)throws Exception {
+        functions.FilesUploadsBDE(element);
+    }
+    //**Subir Archivos**//
+
+    //**Cambio de ventana**//
+    @When("^ir a (.*) ventana")
+    public void switchNewNameWindow(String WindowsName){
+        functions.WindowsHandle(WindowsName);
+    }
+
+    @When("^ir a (.*) ventana maximizada")
+    public void switchNewNameWindowMax(String WindowsName){
+        functions.WindowsHandleMax(WindowsName);
+    }
+    @When("^Ventana (.*) Cerrada")
+    public void switchNewNameWindowClose(String WindowsName){
+        functions.WindowsHandleClose(WindowsName);
+    }
+
+    //**Cambio de ventana**//
+
+    //**Cambio de pestaña**//
+
+    @When("^ir a la pestaña (.*)")
+    public void switchNewTAB(String PaginaWeb){
+        functions.openNewTab(PaginaWeb);
+    }
+
+    //**Cambio de pestaña**//
+    //
+
+    @And("^Ir a 3")
+    public void Pestana3() throws Exception{
+        functions.NewHandleTab();
+    }
+
+    //
+    //
+
+    @And("^Ir a")
+    public void Pestana() throws Exception{
+        functions.NewTabTab();
+    }
+
+    //
+    //
+
+    @And("^Ir a 2")
+    public void Pestana2() throws Exception{
+        functions.NewTabTabTab();
+    }
+
+    //
+
+    //
+
+    @And("^Click tecla CONTROL")
+    public void OnClickControl() throws Exception{
+        functions.OnClick();
+    }
+
+    //
+
+}

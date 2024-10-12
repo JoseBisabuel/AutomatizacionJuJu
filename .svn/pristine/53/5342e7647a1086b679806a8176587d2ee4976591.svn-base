@@ -1,0 +1,71 @@
+Feature: AZMain
+  Visualizacion de AZDigital al ingresar
+
+  Background:
+    Given Sitio AZDigital
+    When ir a Principal ventana
+    Then Cargar la informacion del DOM azmain.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Contrasena con el texto 1234
+    And Hacer Click en El elemento Ingresar
+
+  @BandejadeEntradaCasa
+  Scenario: Ir a la BD del usuario
+    And Hacer Click en El elemento Casita
+    And Adjunto una Captura de pantalla al informe BDCasitaAZDigital
+
+  @BandejadeEntradaAyuda
+  Scenario: Ir a la pagina ayuda
+    And Hacer Click en El elemento Ayuda
+    When ir a VentanaAyuda ventana
+    And Adjunto una Captura de pantalla al informe VenAyuda
+
+  @BandejadeEntradaCerrar
+  Scenario: Cerrar Sesion
+    And Hacer Click en El elemento CerrarSesion
+    And Adjunto una Captura de pantalla al informe CSesion
+
+  @BandejadeEntradaComunicado
+  Scenario: Crear Comunicado por BDE
+    And Hacer Click en El elemento CreacionComunicado
+    And busqueme word en el select ComunicadoTP
+    And lleneme el campo ComunicadoNTP con el texto Selenium
+    And Hacer Click en El elemento CrearComunicado
+    And Adjunto una Captura de pantalla al informe VisualizacionCo
+
+  @DashBoarDias
+  Scenario: AC_AZDv6-1 : Tablero de control Cambio a Mes, Trimestre y Historico
+    And Cambiar de Frame: FrameDash
+    And Hacer Click en El elemento Mes
+    And espereme 30 segundos
+    And Adjunto una Captura de pantalla al informe Mes
+    And Hacer Click en El elemento Trimestre
+    And espereme 30 segundos
+    And Adjunto una Captura de pantalla al informe Trimestre
+    And Hacer Click en El elemento Historico
+    And espereme 30 segundos
+    And Adjunto una Captura de pantalla al informe Historico
+
+  @DashBoarRadicacion
+  Scenario: AC_AZDv6-1 : Tablero de control Visualiacion de Radicados
+    And Cambiar de Frame: FrameDash
+    And Hacer Click en El elemento Historico
+    And espereme 30 segundos
+    And Hacer Click en El elemento RadicadosPendientes
+    When ir a VentanaPendiente ventana
+    And Adjunto una Captura de pantalla al informe RadicadosP
+    When ir a Principal ventana
+    And Cambiar de Frame: FrameDash
+    And Hacer Click en El elemento RadicadosRespondidos
+    When ir a VentanaRespondidos ventana
+    And Adjunto una Captura de pantalla al informe RadicadosR
+    When ir a Principal ventana
+    And Cambiar de Frame: FrameDash
+    And Hacer Click en El elemento RadicadosRecividos
+    When ir a VentanaRecivido ventana
+    And Adjunto una Captura de pantalla al informe RaRecividos
+    When ir a Principal ventana
+    And Cambiar de Frame: FrameDash
+    And Hacer Click en El elemento RaRecividosDia
+    When ir a VentanaReDia ventana
+    And Adjunto una Captura de pantalla al informe RaRecividoDia

@@ -1,0 +1,22 @@
+Feature: Estructura - Coleccion - Bandeja de Entrada
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM EstColBDE.json
+    And lleneme el campo Usuario con el texto Comunicados
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+
+  @BorradoFinal
+  Scenario: Borrado de estructura para iniciar nuevamente
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TresPuntosEstructura
+    And Hacer Click en El elemento BorrarEst
+    And Hacer Click en El elemento AceptarBorrado

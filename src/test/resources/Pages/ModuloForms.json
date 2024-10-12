@@ -1,0 +1,196 @@
+{
+  "PantallaInicio": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//header/a[1]/img[1]"
+  },
+  "ModuloForms": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='app']/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/*[1]"
+  },
+  "PracticeForm": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Practice Form')]"
+  },
+  "FirstName": {
+    "GetFieldBy": "id",
+    "ValueToFind": "firstName"
+  },
+  "LastName": {
+    "GetFieldBy": "id",
+    "ValueToFind": "lastName"
+  },
+  "Email": {
+    "GetFieldBy": "id",
+    "ValueToFind": "userEmail"
+  },
+  "Male": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//label[contains(text(),'Male')]"
+  },
+  "Female": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//label[contains(text(),'Female')]"
+  },
+  "Other": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//label[contains(text(),'Other')]"
+  },
+  "MobileNumber": {
+    "GetFieldBy": "id",
+    "ValueToFind": "userNumber"
+  },
+  "DateOfBirth": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='dateOfBirthInput']"
+  },
+  "Select01/10/2024": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='app']/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[5]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[3]"
+  },
+  "Select02/10/2024": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='app']/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[5]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[4]"
+  },
+  "Select05/10/2024": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='app']/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[5]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[7]"
+  },
+  "Select30/09/2024": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='app']/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[5]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]"
+  },
+
+  "Subjects": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[6]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]"
+  },
+  "Maths0000000000": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Maths')]"
+  },
+  "Hobbies(Sport)": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//label[contains(text(),'Sports')]"
+  },
+  "Hobbies(Reading)": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//label[contains(text(),'Reading')]"
+  },
+  "Hobbies(Music)": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//label[contains(text(),'Music')]"
+  },
+  "Pictures": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='uploadPicture']"
+  },
+  "CurrentAddress": {
+    "GetFieldBy": "id",
+    "ValueToFind": "currentAddress"
+  },
+  "State": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='app']/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[10]/div[2]/div[1]/div[1]/div[1]"
+  },
+  "Haryana": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Haryana')]"
+  },
+  "NRC": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'NCR')]"
+  },
+  "UltraPradesh": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Uttar Pradesh')]"
+  },
+  "Rajasthan": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Rajasthan')]"
+  },
+  "City": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Select City')]"
+  },
+  "Karnal": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Karnal')]"
+  },
+  "Delhi": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Delhi')]"
+  },
+  "Gurgaon": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Gurgaon')]"
+  },
+  "Noida": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Noida')]"
+  },
+  "Agra": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Agra')]"
+  },
+  "Lucknow": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Lucknow')]"
+  },
+  "Merrut": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Merrut')]"
+  },
+  "Panipat": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Panipat')]"
+  },
+  "Jaipur": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Jaipur')]"
+  },
+  "Submit": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='submit']"
+  },
+  "StudentName": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[2]"
+  },
+  "SudentEmail": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[2]"
+  },
+  "Gender": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[3]/td[2]"
+  },
+  "Mobile": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[4]/td[2]"
+  },
+  "DateBirth": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[5]/td[2]"
+  },
+  "SubjetsValid": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[6]/td[2]"
+  },
+  "HobbiesValid": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[7]/td[2]"
+  },
+  "PictureValid": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[8]/td[2]"
+  },
+  "AddressValid": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[9]/td[2]"
+  },
+  "StateAndCity": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[10]/td[2]"
+  }
+
+}

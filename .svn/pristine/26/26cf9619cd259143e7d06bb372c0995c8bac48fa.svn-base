@@ -1,0 +1,143 @@
+Feature: Prerequisitos Crear Tipos Directorio feature
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Crear.json
+    And lleneme el campo Usuario con el texto jhojan.cortes
+    And lleneme el campo Contrasena con el texto 1Q2w3e4r5t*
+    And Hacer Click en El elemento Ingresar
+
+  @CreacionEstructura
+  Scenario:Estructura base para la prueba
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+   # And Hacer Click en El elemento DirectorioAnterior
+   # And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And lleneme el campo NombreACrear con el texto CrearTiposDirectorios
+    And Texto de Seleccion Estructural Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And lleneme el campo NombreACrear con el texto ColeccionBDECarpeta
+    And Texto de Seleccion Estructural Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And lleneme el campo NombreACrear con el texto ColeccionTD
+    And Texto de Seleccion Colección Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+
+    And lleneme el campo NombreACrear con el texto BDE_CrearTiposDirectorio
+    And Texto de Seleccion Bandeja de Entrada Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+
+    And lleneme el campo NombreACrear con el texto Carpeta_CrearTiposDirectorios_Publica
+    And Texto de Seleccion Carpeta Pública Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+
+    And lleneme el campo NombreACrear con el texto Carpeta_CrearTiposDirectorios_Privada
+    And Texto de Seleccion Carpeta Privada Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+
+      #Creamos un usuario con su respectiva coleccion y bandeja para esta y futuras pruebas
+  @CreacionUsuarioPruebas
+  Scenario: Creacion de usuario
+      #Creamos la coleccion y bandeja de entrada
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Usuarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Usuarios
+    And lleneme el campo NombreACrear con el texto Automata2
+    And Texto de Seleccion Colección Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Automata2
+    And lleneme el campo NombreACrear con el texto BDE_Automata2
+    And Texto de Seleccion Bandeja de Entrada Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+      #Creamos el usuario
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento BtnMenuPrincipal
+    And Hacer Click en El elemento BtnAdminUsuarios
+    And Hacer Click en El elemento BtnUsuarios
+    And Hacer Click en El elemento BtnCrearUsuarios
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo CamId con el texto Automata2
+    And lleneme el campo CamContraseña con el texto 1Q2w3e4r5t*
+    And Texto de Seleccion Administrador AZ Digital Selector SelectTipoUsuario
+    And lleneme el campo CamNombre con el texto Automata2
+    And lleneme el campo CamApellido con el texto exe
+    And Texto de Seleccion Cedula de Identidad Selector SelectTipoIdentificacion
+    And lleneme el campo CamIdentificacion con el texto 100002
+
+    And lleneme el campo CamNombreBandeja con el texto BDE_Automata2
+    And Hacer Click en El elemento BtnBusquedaBandeja
+    And Hacer Click en El elemento SelectPrimeraBandeja
+
+    And lleneme el campo CamCorreo con el texto jhojan.cortes@analitica.com.co
+
+    And Texto de Seleccion Crear, Aprobar y Radicar Comunicados Selector SelectRadicacionComunicados
+    And Hacer Click en El elemento BtnAgregarUsuario
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento BtnRegresarUsuarios
+     #Asignamos colecciones al usuario
+    And espere el elemento BtnCopiarColecciones
+    And Hacer Click en El elemento BtnCopiarColecciones
+    And Texto de Seleccion Jhojan Steven Cortes Mendez Selector SelectUsuarioOrigen
+    And Texto de Seleccion Automata2 exe Selector SelectUsuarioDestino
+    And Hacer Click en El elemento BtnEjecutarCopiaColecciones
+    And espereme 5 segundos
+
+  @ParametrizacionTiposRadicados
+  Scenario: Tipos Radicados - Coleccion - Interno
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento RetencionDocumental
+    And Hacer Click en El elemento TiposDocumColeccion
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento BotonAgregarDColeccion
+    And Selecion Index 1 Selector TdTablaRetencion
+    And Selecion Index 1 Selector TdTipoRadicado
+    And Texto de Seleccion Comunicado Interno:002:Comunicado Interno:.docx Selector TdTipodocumental
+    And Texto de Seleccion ColeccionTD Selector TdColeccion
+    And Selecion Index 1 Selector TdSDocumental
+    And Hacer Click en El elemento TDAgregarTDocumental
+
+  @ParametrizacionTiposRadicadosSal0
+  Scenario: Tipos Radicados - Coleccion - Salida
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento RetencionDocumental
+    And Hacer Click en El elemento TiposDocumColeccion
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento BotonAgregarDColeccion
+    And Selecion Index 1 Selector TdTablaRetencion
+    And Selecion Index 2 Selector TdTipoRadicado
+    And Texto de Seleccion Acta:001:Acta:.docx Selector TdTipodocumental
+    And Texto de Seleccion ColeccionTD Selector TdColeccion
+    And Selecion Index 1 Selector TdSDocumental
+    And Hacer Click en El elemento TDAgregarTDocumental

@@ -1,0 +1,56 @@
+Feature: RecuperacionClave
+  Validación de los casos pruebas dentro de la suit de Recuperacion Clave
+
+  @RecuperacionClave
+  Scenario: AC_AZDv6-586 : Recuperacion Clave
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And Hacer Click en El elemento OlvidoContrasena
+    And Adjunto una Captura de pantalla al informe Llenar todos los campos
+    When ir a RecuperacionClave2 ventana
+    And Cambiar de Frame: FrameRecu
+    And Hacer Click en El elemento RecuBuscar
+    #And Adjunto una Captura de pantalla al informe Llenar todos los campos
+
+  @OlvidoContrasena
+  Scenario: AC_AZDv6-587 : Recuperar clave desde AZDigital
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And Hacer Click en El elemento OlvidoContrasena
+    When ir a RecuperacionClave3 ventana
+    And Cambiar de Frame: FrameRecu
+    And lleneme el campo RecuId con el texto dalzate
+    And lleneme el campo RecuNombre con el texto daniel
+    And lleneme el campo RecuApellido con el texto alzate
+    And lleneme el campo RecuEmail con el texto daniel.alzate@analitica.com.co
+    And Hacer Click en El elemento RecuBuscar
+    And Adjunto una Captura de pantalla al informe  Recuperacion Exitosa
+    Then Assert si elemento RecuperacionExitosa contiene el siguiente texto daniel.alzate@analitica.com.co
+
+  @RecuperacionClaveCaracteresEspeciales
+  Scenario: AC_AZDv6-1767 : Recuperar Clave desde AZDigital con Caracteres Especiales
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And Hacer Click en El elemento OlvidoContrasena
+    When ir a RecuperacionClave4 ventana
+    And Cambiar de Frame: FrameRecu
+    And lleneme el campo RecuId con el texto ¡?=)(/&%$#"!´´$
+    And lleneme el campo RecuNombre con el texto ¡?=)(/&%$#"!''$
+    And lleneme el campo RecuApellido con el texto ¡?=)(/&%$#"!''$
+    And lleneme el campo RecuEmail con el texto Hola@gmail.com
+    And Hacer Click en El elemento RecuBuscar
+    And Cambiar de Frame: FrameContenido
+    Then Assert si elemento TextoNoExiste contiene el siguiente texto No existe un Usuario
+    And Adjunto una Captura de pantalla al informe  Usuario No Existe
+
+
+  @OlvidoCSinCampos
+  Scenario: AC_AZDv6-587 : Recuperar clave desde AZDigital - Olvido Contrasena Sin Campos
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And Hacer Click en El elemento OlvidoContrasena
+    When ir a RecuperacionClave5 ventana
+    And Cambiar de Frame: FrameRecu
+    And Hacer Click en El elemento RecuBuscar
+    And Adjunto una Captura de pantalla al informe Llenar todos los campos
+

@@ -1,0 +1,40 @@
+package StepDefinitions;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import org.junit.AfterClass;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        //features = "classpath:Features/Radicacion/BBuscarRadicados/",
+        //features = "classpath:Features",
+        //features = "classpath:Features/GestionDeContenido/",
+        //features = "classpath:Features/GestionDeContenido/AComunicados/",
+        //features = "classpath:Features/GestionDeContenido/BConcatenar",
+        //features = "classpath:Features/GestionDeContenido/CDashboard",
+        //features = "classpath:Features/GestionDeContenido/DBD_Coleccion_Estructura",
+        //features = "classpath:Features/GestionDeContenido/EColumnas",
+        //features = "classpath:Features/GestionDeContenido/FTresPuntos",
+        //features = "classpath:Features/GestionDeContenido/GBusquedaArchivos2",
+        features = "classpath:Features/GestionDeContenido/HCrear",
+        glue = "classpath:StepDefinitions"
+        //tags = {"@ImprimirRadicados"}
+)
+public class TestRunner {
+    @AfterClass
+    public static void teardown(){
+        try {
+            //LOGGER.log(Level.INFO, "Generating report...");
+            System.out.println("Genera reporte");
+            String[] cmd = {"cmd.exe", "/c", "mvn allure:serve"};
+            Runtime.getRuntime().exec(cmd);
+            //LOGGER.log(Level.INFO, "Report successfully generated!");
+            System.out.println("Reporte Generado Exitosamente");
+        }catch (Exception ex){
+            //LOGGER.log(Level.WARNING, "The report could not be generated.");
+            System.out.println("Reporte NO Generado");
+            ex.printStackTrace();
+        }
+    }
+}

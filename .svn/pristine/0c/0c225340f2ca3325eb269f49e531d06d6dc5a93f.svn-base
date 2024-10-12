@@ -1,0 +1,212 @@
+Feature: Comunicados Salida - Adjuntos
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto Comunicadossa
+    And lleneme el campo Contrasena con el texto 1Q2w3e4r5t*
+    And Hacer Click en El elemento Ingresar
+
+  # Creacion Comunicado Salida (Adjuntos)
+  #
+      ##--Adjuntar Gestion Documental Completo--##
+  @ComunicadoSalidaAdj1
+  Scenario: AC_AZDv6-1781: Crear comunicados con adjunto - Completo
+    And Hacer Click en El elemento ComunicadoA
+    And espereme 3 segundos
+    #And Texto de Seleccion comunicado interno Selector TDocumental
+    And Selecion Index 2 Selector TDocumental
+    And lleneme el campo DesTDocumental con el texto AutomatizaciónSalida_Adjunto1
+    And Hacer Click en El elemento BotonAgregarComun
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Agregar_ListaPersonas
+        #--Validación ventana Personas--#
+    And ir a UsuariosAdjunto1 ventana
+    And Cambiar de Frame: BuscarUsuariosPersonas
+    And lleneme el campo PersNombre con el texto Automatizacion Persona Cero Uno
+    And Hacer Click en El elemento BotonAgregarPersona
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: AgregarUsuariosPersonas
+    And Adjunto una Captura de pantalla al informe ComnSal12
+    And Hacer Click en El elemento AsociarPersona
+    And espereme 3 segundos
+        #--Validación ventana Personas--#
+    And ir a PrincipalAdjunto1 ventana
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 1 Selector CTramite
+    And Selecion Index 1 Selector CSubtramite
+    #And Selecion Index 1 Selector CTipoDocumento
+    And Selecion Index 1 Selector Courier
+    And Selecion Index 2 Selector ModalidaEnvio
+    And lleneme el campo Peso con el texto 123
+    And lleneme el campo Costo con el texto 50000
+    And Texto de Seleccion 1 a N Selector CModoSalida
+    And lleneme el campo CIdReferencia con el texto Auto01
+    And lleneme el campo CNo.Folios con el texto 1
+    And lleneme el campo CNo.DocAnexos con el texto 1
+    And lleneme el campo CAsunto con el texto AutomatizacionSalida Adjunto1 - AutomatizacionSalida Adjunto1 - AutomatizacionSalida Adjunto1 -
+    And Hacer Click en El elemento BGuardar
+    And espereme 2 segundos
+    And Hacer Click en El elemento PesAdjunto
+    And espereme 2 segundos
+    And Hacer Click en El elemento AdjGesDocumental2
+    And ir a GesDocAdjunto1 ventana maximizada
+    And Cambiar de Frame: BuscarUsuPerAdjuntos
+    And lleneme el campo ArchivoAsociado con el texto Adjunto1
+    And Hacer Click en El elemento BotonBuscarAsociados
+    And Cambiar al Frame principal
+    And Cambiar de Frame: AgregarUsuPerAdjuntos
+    And Hacer Click en El elemento AGDAsociar
+    And ir a PrincipalGesDocAdjunto1 ventana maximizada
+    And espereme 2 segundos
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento BGuardar
+    And espereme 2 segundos
+    And Hacer Click en El elemento BRadicar
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe ComnSal13
+    And Hacer Click en El elemento GenerarRadicado
+    And Esperar visibilidad del boton: AsModoFirma
+    And Adjunto una Captura de pantalla al informe ComnSal14
+    And Hacer Click en El elemento BCancelarFirma
+    And espereme 1 segundos
+    And se accept la alerta
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe ComnSal15
+    And Hacer Click en El elemento CerrarProcesamiento
+    And Hacer Click en El elemento BRegresar
+    And Adjunto una Captura de pantalla al informe ComnSal16
+      ##--Adjuntar Gestion Documental Completo--##
+
+      ##--Adjuntar Gestion Documental--##
+  @ComunicadoSalidaAdj2
+  Scenario: AC_AZDv6-1781: Crear comunicados con adjunto - Gestion Documental
+  And Hacer Click en El elemento Home
+  And Cambiar de Frame: Contenido
+  And Sikuli element click ComunicadosGuardados
+  And Hacer Click en El elemento tresPuntos2
+  And Hacer Click en El elemento RadComunicado
+      ##--Adjuntar Gestion Documental 1--##
+  And Hacer Click en El elemento PesAdjunto
+  And espereme 2 segundos
+  And Hacer Click en El elemento AdjGesDocumental2
+  And espereme 2 segundos
+  And ir a GestionDocumental2Sal ventana maximizada
+  And Cambiar de Frame: BuscarUsuPerAdjuntos
+  And lleneme el campo ArchivoAsociado con el texto Gestion Docu
+  And Hacer Click en El elemento BotonBuscarAsociados
+  And Cambiar al Frame principal
+  And Cambiar de Frame: AgregarUsuPerAdjuntos
+  And Hacer Click en El elemento AGDAsociar
+  And espereme 2 segundos
+  And ir a PrincipalGestionDocumental2Sal ventana maximizada
+  And espereme 3 segundos
+  And Cambiar de Frame: Contenido
+  And Hacer Click en El elemento BGuardar
+  And Adjunto una Captura de pantalla al informe ComnSal17
+      ##--Adjuntar Gestion Documental 1--##
+        ##--Adjuntar Gestion Documental 2--##
+  And espereme 2 segundos
+  And Hacer Click en El elemento AdjGesDocumental2
+  And espereme 2 segundos
+  And ir a GestionDocumentalmaxim2Sal ventana maximizada
+  And Cambiar de Frame: BuscarUsuPerAdjuntos
+  And lleneme el campo ArchivoAsociado con el texto Gestion Docu
+  And Hacer Click en El elemento BotonBuscarAsociados
+  And Cambiar al Frame principal
+  And Cambiar de Frame: AgregarUsuPerAdjuntos
+  And Hacer Click en El elemento AGDAsociar2
+  And espereme 2 segundos
+  And ir a PrincipalGesDocmaxim2Sal ventana maximizada
+  And espereme 3 segundos
+  And Cambiar de Frame: Contenido
+  And Hacer Click en El elemento BGuardar
+  And Adjunto una Captura de pantalla al informe ComnSal18
+      ##--Adjuntar Gestion Documental 2--##
+          ##--Adjuntar Gestion Documental 3--##
+  And espereme 2 segundos
+  And Hacer Click en El elemento AdjGesDocumental2
+  And espereme 2 segundos
+  And ir a GestionDocumentalmaxim3Sal ventana maximizada
+  And Cambiar de Frame: BuscarUsuPerAdjuntos
+  And lleneme el campo ArchivoAsociado con el texto Gestion Docu
+  And Hacer Click en El elemento BotonBuscarAsociados
+  And Cambiar al Frame principal
+  And Cambiar de Frame: AgregarUsuPerAdjuntos
+  And Hacer Click en El elemento AGDAsociar3
+  And espereme 2 segundos
+  And ir a PrincipalGesDocmaxim3Sal ventana maximizada
+  And espereme 3 segundos
+  And Cambiar de Frame: Contenido
+  And Hacer Click en El elemento BGuardar
+  And Adjunto una Captura de pantalla al informe ComnSal19
+      ##--Adjuntar Gestion Documental 3--##
+      ##--Adjuntar Gestion Documental--##
+
+      ##--Adjuntar Archivo Local--##
+  @ComunicadoSalidaAdj3
+  Scenario: AC_AZDv6-1781: Crear comunicados con adjunto - Archivo Local
+  And Hacer Click en El elemento Home
+  And Cambiar de Frame: Contenido
+  And Sikuli element click ComunicadosGuardados
+  And Hacer Click en El elemento tresPuntos2
+  And Hacer Click en El elemento RadComunicado
+      ##--Adjuntar Archivo Local--##
+  And Hacer Click en El elemento PesAdjunto
+  And espereme 2 segundos
+  And Hacer Click en El elemento AdjArchivoLocal
+    #And espereme 2 segundos
+  And Adjunto una Captura de pantalla al informe ComnSal20
+  And ir a ArchivoLocalSalida ventana
+  And espereme 3 segundos
+  And Adjunto una Captura de pantalla al informe ComnSal21
+  Then Subir adjunto simple Comunicado Adjunto1
+  And ir a PrincipalLocalSalida ventana
+  And espereme 2 segundos
+      ##--Adjuntar Archivo Local--##
+
+      ##--Adjuntar Eliminar Adjunto--##
+  @ComunicadoSalidaAdj4
+  Scenario: AC_AZDv6-1781: Crear comunicados con adjunto - Eliminar Adjunto
+  And Hacer Click en El elemento Home
+  And Cambiar de Frame: Contenido
+  And Sikuli element click ComunicadosGuardados
+  And Hacer Click en El elemento tresPuntos2
+  And Hacer Click en El elemento RadComunicado
+      ##--Adjuntar Eliminar Adjunto--##
+  And Hacer Click en El elemento PesAdjunto
+  And espereme 2 segundos
+  And Hacer Click en El elemento Registro2
+  And espereme 2 segundos
+  And Sikuli element click AdjEliminar
+  And Adjunto una Captura de pantalla al informe ComnSal22
+  And espereme 2 segundos
+  And Hacer Click en El elemento BGuardar
+      ##--Adjuntar Eliminar Adjunto--##
+
+      ##--Capacidad Adjunto--##
+  @ComunicadoSalidaAdj5
+  Scenario: AC_AZDv6-1780: Capacidad Adjunto
+  And Hacer Click en El elemento Home
+  And Cambiar de Frame: Contenido
+  And Sikuli element click ComunicadosGuardados
+  And Hacer Click en El elemento tresPuntos2
+  And Hacer Click en El elemento RadComunicado
+      ##--Adjuntar Gestion Documental 1--##
+  And Hacer Click en El elemento PesAdjunto
+  And espereme 2 segundos
+  And Hacer Click en El elemento AdjGesDocumental2
+  And espereme 2 segundos
+  And ir a GestionDocumentalCapacidad ventana maximizada
+  And Cambiar de Frame: BuscarUsuPerAdjuntos
+  And lleneme el campo ArchivoAsociado con el texto Documento para firmar (GRANDE)
+  And Hacer Click en El elemento BotonBuscarAsociados
+  And Cambiar al Frame principal
+  And Cambiar de Frame: AgregarUsuPerAdjuntos
+  And Adjunto una Captura de pantalla al informe ComnSal22
+  And Hacer Click en El elemento AGDAsociarPesado
+      ##--Capacidad Adjunto--##
+  #
+  # Creacion Comunicado Interno (Adjuntos)

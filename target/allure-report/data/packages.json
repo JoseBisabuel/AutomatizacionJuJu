@@ -1,0 +1,69 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "src.test.resources.Features.ModuloELemento_feature.Modulo Elementos",
+    "children" : [ {
+      "name" : "Formulario Text Box",
+      "uid" : "b6d02cb378c430f8",
+      "parentUid" : "f2a41c448b2c3582390163f9a6b5939d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1728618116800,
+        "stop" : 1728618155950,
+        "duration" : 39150
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Check Box",
+      "uid" : "ff7accef472acd27",
+      "parentUid" : "f2a41c448b2c3582390163f9a6b5939d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1728618156235,
+        "stop" : 1728618197241,
+        "duration" : 41006
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Radio Button",
+      "uid" : "407d66909dbd24e3",
+      "parentUid" : "f2a41c448b2c3582390163f9a6b5939d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1728618197257,
+        "stop" : 1728618234287,
+        "duration" : 37030
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Web Tables",
+      "uid" : "2cd8b307c70fd95b",
+      "parentUid" : "f2a41c448b2c3582390163f9a6b5939d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1728618234304,
+        "stop" : 1728618267713,
+        "duration" : 33409
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Web Tables Edicion y Borrado",
+      "uid" : "5d4933258eacba1c",
+      "parentUid" : "f2a41c448b2c3582390163f9a6b5939d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1728618267723,
+        "stop" : 1728618302267,
+        "duration" : 34544
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "src.test.resources.Features.ModuloELemento_feature.Modulo Elementos"
+  } ]
+}

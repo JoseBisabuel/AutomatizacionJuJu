@@ -1,0 +1,21 @@
+package StepDefinitions;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        //features = "classpath:Features",
+        //features = "classpath:Features/GestionDeContenido/",
+        //features = "classpath:Features/GestionDeContenido/AComunicados/",
+        //features = "classpath:Features/GestionDeContenido/AComunicados/CComunicadosSalida",
+        //features = "classpath:Features/GestionDeContenido/AComunicados",
+        features = "classpath:Features/GestionDeContenido/CDashboard",
+        //features = "classpath:Features/GestionDeContenido/BConcatenar",
+        //features = "classpath:Features/GestionDeContenido/DBD_Coleccion_Estructura",
+        glue = "classpath:StepDefinitions"
+        //tags = {"@gmail"}
+)
+public class TestRunner {
+}

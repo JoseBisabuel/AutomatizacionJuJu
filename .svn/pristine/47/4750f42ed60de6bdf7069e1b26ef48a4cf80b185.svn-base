@@ -1,0 +1,126 @@
+{
+  "Usuario": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsId"
+  },
+  "Contrasena": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsPassword"
+  },
+  "Ingresar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/div[1]/button[1]"
+  },
+  "Opciones": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Opciones"
+  },
+  "Contenido": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Contenido"
+  },
+  "EstructuraIframe": {
+    "GetFieldBy": "id",
+    "ValueToFind": "IFrameEstructuras"
+  },
+  "GestionDeContenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/dl[1]/dt[1]/a[1]"
+  },
+  "Estructura": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/dl[1]/dd[1]/ul[1]/li[1]/a[1]"
+  },
+  "EstructuraPadre": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/ul[1]/li[1]/div[1]"
+  },
+  "NombreDirectorios": {
+    "GetFieldBy": "id",
+    "ValueToFind": "DiNombre"
+  },
+  "Crear": {
+    "GetFieldBy": "id",
+    "ValueToFind": "CrearFolder"
+  },
+  "TipoCreacion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "DiTipo"
+  },
+  "SubirPDF": {
+    "GetFieldBy": "name",
+    "ValueToFind": "files[]"
+  },
+  "FlechaVerde": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/a[1]/img[1]"
+  },
+  "Categorizacion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/dl[1]/dt[2]/a[1]"
+  },
+  "TablasReferencia": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/dl[1]/dd[2]/ul[1]/li[3]/a[1]"
+  },
+  "ModuloIndexacion": {
+    "GetFieldBy": "name",
+    "ValueToFind": "CaModulo"
+  },
+  "IndiceIndexacion": {
+    "GetFieldBy": "name",
+    "ValueToFind": "CaTabla"
+  },
+  "CategoriaFrame": {
+    "GetFieldBy": "name",
+    "ValueToFind": "Categorias"
+  },
+  "ContenidoCategoria": {
+    "GetFieldBy": "name",
+    "ValueToFind": "Contenido"
+  },
+  "AgregarReguistro": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/div[2]/a[1]"
+  },
+  "idGenerico": {
+    "GetFieldBy": "id",
+    "ValueToFind": "id"
+  },
+  "DescripcionGenerico": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TidDescripcion"
+  },
+  "AgregarGenerico": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionAgregar"
+  },
+  "IrAEstPadre": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[1]/a[1]"
+  },
+  "EstUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[5]"
+  },
+  "EstVarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[6]"
+  },
+  "ColConcatenarArchivos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[6]"
+  },
+  "Estructura1": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//li[@id='22']"
+  },
+  "PrimeraEstructura": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='jstree']/ul[1]/li[1]/a[1]"
+  },
+  "FlechaArriba": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[1]/a[1]"
+  }
+}

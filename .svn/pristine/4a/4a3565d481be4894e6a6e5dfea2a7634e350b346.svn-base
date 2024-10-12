@@ -1,0 +1,157 @@
+Feature: Tres Puntos - Carga - Archivos
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM TresPuntos.json
+    And lleneme el campo Usuario con el texto trespuntos
+    And lleneme el campo Contrasena con el texto 1q2w3e4r5T*
+    And Hacer Click en El elemento Ingresar
+
+  ##--Crear Directorios--##
+  @CrearDirectorios
+  Scenario: Crear Directorios tres puntos
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And lleneme el campo Crear con el texto Directorio1
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto ComunicadoRadicado
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And lleneme el campo Crear con el texto Directorio3
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+    And Hacer Click en El elemento FlechaArriba
+    And Sikuli element click BDE_TresPtoRec
+    And espereme 2 segundos
+    And lleneme el campo Crear con el texto Directorio4
+    And Texto de Seleccion Carpeta Privada Selector SelectTipo
+    And Hacer Click en El elemento BotonCrear
+    And espereme 1 segundos
+  ##--Crear Directorios--##
+
+  ##--Cargar de Archivos CARPETA--##
+  @CargarDirectorios
+  Scenario: Cargar al directorio tres puntos
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Carpeta
+    And espereme 2 segundos
+    And Subir Archivos BDE SubirPDF
+    And espereme 15 segundos
+  ##--Cargar de Archivos CARPETA--##
+
+  ##--Cargar de Archivos BDE--##
+  @CargarDirectorios
+  Scenario: Cargar a la BDE tres puntos
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Subir Archivos BDE SubirPDF
+    And espereme 15 segundos
+  ##--Cargar de Archivos BDE--##
+
+  ##--Cargar de Archivos Directorio 3--##
+  @CargarDirectorios2
+  Scenario: Cargar al directorio3
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento IngDir3
+    And Subir adjunto simple Comunicado SubirPDF
+    And espereme 5 segundos
+  ##--Cargar de Archivos Directorio 3--##
+
+  ##--Comunicado guardado--##
+  @CrearComunicadoTresPuntosA
+  Scenario: Crear directorio - Comunicado TresPuntos - Guardado
+    And Hacer Click en El elemento ComunicadoA
+    And espereme 3 segundos
+    And Selecion Index 1 Selector TDocumental
+    And lleneme el campo DesTDocumental con el texto Automatización1a1
+    And Hacer Click en El elemento BotonAgregarComun
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Agregar_ListaUsuariosPersonas
+          #--Validación ventana Usuarios--#
+    And ir a UsuariosTresPuntos1 ventana
+    And Cambiar de Frame: BuscarUsuariosPersonas
+    And lleneme el campo CampoNombre con el texto Usuario
+    And lleneme el campo CampoApellido con el texto Cero Uno
+    And Hacer Click en El elemento BotonAgregarUsuario
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: AgregarUsuariosPersonas
+    And Hacer Click en El elemento AsociarUsuario
+    And espereme 3 segundos
+          #--Validación ventana Usuarios--#
+    And ir a PrincipalTresPuntos1 ventana
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 1 Selector CTramite
+    And Selecion Index 1 Selector CSubtramite
+    And Texto de Seleccion 1 a 1 Selector CModoSalida
+    And lleneme el campo CIdReferencia con el texto Auto01
+    And lleneme el campo CIdReferencia con el texto Auto01
+    And lleneme el campo CNo.Folios con el texto 1
+    And lleneme el campo CNo.DocAnexos con el texto 1
+    And lleneme el campo CAsunto con el texto Opción TresPuntos - Opción TresPuntos - Opción TresPuntos - Opción TresPuntos -
+    And Hacer Click en El elemento BGuardar
+  ##--Comunicado guardado--##
+
+  ##--Comunicado radicado--##
+  @CrearComunicadoTresPuntosB
+  Scenario Outline: Crear directorio - Comunicado TresPuntos
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento IngDir2
+    And lleneme el campo Crear con el texto <Campo1>
+    And Texto de Seleccion Documento Radicado Selector SelectTipo
+    And Texto de Seleccion Comunicado Interno Selector TDocumental2
+    And espereme 2 segundos
+    And Hacer Click en El elemento BotonCrear
+    #And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Agregar_ListaUsuariosPersonas
+          #--Validación ventana Usuarios--#
+    And ir a <Campo2> ventana
+    And Cambiar de Frame: BuscarUsuariosPersonas
+    And lleneme el campo CampoNombre con el texto Usuario
+    And lleneme el campo CampoApellido con el texto Cero Uno
+    And Hacer Click en El elemento BotonAgregarUsuario
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: AgregarUsuariosPersonas
+    And Hacer Click en El elemento AsociarUsuario
+    And espereme 3 segundos
+          #--Validación ventana Usuarios--#
+    And ir a <Campo3> ventana
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 1 Selector CTramite
+    And Selecion Index 1 Selector CSubtramite
+    And Texto de Seleccion <Campo4> Selector CModoSalida
+    And lleneme el campo CIdReferencia con el texto Auto01
+    And lleneme el campo CIdReferencia con el texto Auto01
+    And lleneme el campo CNo.Folios con el texto 1
+    And lleneme el campo CNo.DocAnexos con el texto 1
+    And lleneme el campo CAsunto con el texto Opción TresPuntos - Opción TresPuntos - Opción TresPuntos - Opción TresPuntos -
+    And Hacer Click en El elemento BGuardar
+    And espereme 3 segundos
+    And Hacer Click en El elemento BRadicar
+    And espereme 2 segundos
+    And Hacer Click en El elemento GenerarRadicado
+    And Esperar visibilidad del boton: AsModoFirma
+    And Hacer Click en El elemento BCancelarFirma
+    And espereme 1 segundos
+    And se accept la alerta
+    And espereme 2 segundos
+    And Hacer Click en El elemento CerrarProcesamiento
+    Examples:
+      | Campo1 | Campo2 | Campo3 | Campo4 |
+      | Automatizacion1a1 | UsuariosTresPuntos2 | PrincipalTresPuntos2 | 1 a 1 |
+      | Automatizacion1aN | UsuariosTresPuntos3 | PrincipalTresPuntos3 | 1 a N |
+  ##--Comunicado radicado--##

@@ -1,0 +1,326 @@
+{
+  "Usuario": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsId"
+  },
+  "Contrasena": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsPassword"
+  },
+  "Ingresar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/div[1]/button[1]"
+  },
+  "BtnHamburguesa": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BtnHamburguerMenu"
+  },
+  "BtnMenuPrincipal": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/dl[@id='menu']/dt[5]"
+  },
+  "BtnAdminUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/div[1]/dl[1]/dt[12]"
+  },
+  "BtnUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/div[1]/dl[1]/dd[12]/ul[1]/li[1]/a[1]"
+  },
+  "BtnCopiarColecciones": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/dl[1]/dd[12]/ul[1]/li[8]/a[1]"
+  },
+  "BtnCrearUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/form[1]/div[7]/div[1]/a[1]"
+  },
+  "BtnRegresarUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/form[1]/div[7]/div[1]/a[2]"
+  },
+  "BtnEjecutarCopiaColecciones": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionEjecutar"
+  },
+  "SelectUsuarioOrigen": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UcUsuarioOrigen"
+  },
+  "SelectUsuarioDestino": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UcUsuarioDestino"
+  },
+  "Opciones": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Opciones"
+  },
+  "GestionDeContenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/div[1]/dl[1]/dt[1]"
+  },
+  "MisColecciones": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/dl[1]/dd[1]/ul[1]/li[2]/a[1]"
+  },
+  "SeleccionColeccion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Usuarios/Columnas')]"
+  },
+  "BtnColumnas": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//img[@id='SetearColumnasColeccion']"
+  },
+  "CheckFechaCreacion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='Ids_FC']"
+  },
+  "Contenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Contenido']"
+  },
+  "Colecciones": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='IFrameEstructuras']"
+  },
+  "BtnAceptarColumnas": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='VentanaColumnas']/div[1]/div[1]/div[3]/div[1]/div[1]/button[2]"
+  },
+  "FechaCreacion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Fecha de Creación')]"
+  },
+  "BtnBandeja": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//tbody/tr[1]/td[4]"
+  },
+  "DirectorioAnterior": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[1]/a[1]/img[1]"
+  },
+  "CheckDestinatario": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='Ids_DT']"
+  },
+  "Destinatario": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Destinatario')]"
+  },
+  "CheckFechaDocumento": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='Ids_IE']"
+  },
+  "FechaDocumento": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Fecha Documento')]"
+  },
+  "CheckInicioTramite": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='Ids_IT']"
+  },
+  "InicioTramite": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Fecha Inicio Trámite')]"
+  },
+  "CheckObservaciones": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": " //input[@id='Ids_OB']"
+  },
+  "Observaciones": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Observaciones')]"
+  },
+  "CheckOrden": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='Ids_OR']"
+  },
+  "Orden": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Orden')]"
+  },
+  "CheckRadicado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='Ids_RA']"
+  },
+  "Radicado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Radicado')]"
+  },
+  "IngresoEstructuraAutom": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//pre[contains(text(),'Automatizacion')]"
+  },
+  "Estructuras": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/div[1]/dl[1]/dd[1]/ul[1]/li[1]"
+  },
+  "SeleccionEstructura": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='jstree']/ul[1]/li[1]/a[1]"
+  },
+  "iEstructuras": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='IFrameEstructuras']"
+  },
+  "EstructuraUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[6]"
+  },
+  "ColeccionUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[6]"
+  },
+  "NombreACrear": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='DiNombre']"
+  },
+  "BtnCrear": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='CrearFolder']"
+  },
+  "SelectorTipoACrear": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//select[@id='DiTipo']"
+  },
+  "ColeccionColumnas": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//pre[contains(text(),'Columnas')]"
+  },
+  "ColeccionAutomata": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//pre[contains(text(),'Automata1')]"
+  },
+  "CheckRemitente": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='Ids_RE']"
+  },
+  "Remitente": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Remitente')]"
+  },
+  "CheckVencimientoTramite": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='Ids_VT']"
+  },
+  "VencimientoTramite": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Vencimiento Trámite')]"
+  },
+  "SubirArchivo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//input[@name='files[]'])[1]"
+  },
+  "MasInformacion1": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[2]/a[1]"
+  },
+  "CampoFolioPorOrden": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='ArOrden']"
+  },
+  "ActualizarMasInformacion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='Actualizar']"
+  },
+  "RegresarMasInformacion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='Regresar']"
+  },
+  "MasInforColeccionArchivos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[2]"
+  },
+  "SelectCriterioOrden": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//select[@id='CoCriterioOrdenamiento']"
+  },
+  "ColeccionArchivos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//pre[contains(text(),'Archivos')]"
+  },
+  "CampoOrden1": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[9]"
+  },
+  "CampoOrden2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[9]"
+  },
+  "CampoOrden3": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[3]/td[9]"
+  },
+  "CambioCampoOrden": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//thead/tr[1]/th[9]/a[1]"
+  },
+  "MasInformacion3": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[3]/td[2]/a[1]"
+  },
+  "CampoFechaCreacion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='ArFechaCreacion']"
+  },
+  "EstructuraAutomatizacion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//pre[contains(text(),'Automatizacion')]"
+  },
+  "MasInformacion2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[2]/a[1]"
+  },
+  "CamId": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsId"
+  },
+  "CamContraseña": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsPassword"
+  },
+  "SelectTipoUsuario": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsTipo"
+  },
+  "CamNombre": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsNombres"
+  },
+  "CamApellido": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsApellidos"
+  },
+  "SelectTipoIdentificacion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsTipoIdentificacion"
+  },
+  "CamIdentificacion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsIdentificacion"
+  },
+  "CamNombreBandeja": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsEntrada_texto"
+  },
+  "SelectPrimeraBandeja": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[5]/table[1]/tbody[1]/tr[1]"
+  },
+  "SelectRadicacionComunicados": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsRadicacionComunicado"
+  },
+  "BtnBusquedaBandeja": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Buscar"
+  },
+  "BtnAgregarUsuario": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionAgregar"
+  },
+  "BtnRegresar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//tbody/tr[2]/td[1]/a[1]/img[1]"
+  }
+}

@@ -1,0 +1,129 @@
+Feature: NuevoRadicado
+
+  Background: Registro en AZDigitalV6
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Radicacion/Pesonas.json
+    And lleneme el campo Usuario con el texto admin
+    And lleneme el campo Clave con el texto admin
+    And Hacer Click en El elemento Ingreso
+
+  @NuevoRadicadoEntradaCreacion
+  Scenario: Personas - Filtros
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento Personas
+
+    And Cambiar de Frame: Contenido
+
+
+  #*******************Opcion Exportar Formulario PERSONAS********************#
+
+    ##--Sin Encabezados--##
+  @DashBoarFlujosExportar
+  Scenario Outline: AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a <Campo1> ventana maximizada
+    And Assert si elemento Ventana contiene el siguiente texto Actividades Total Ejecutadas
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento <Campo2>
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe <Campo3>
+    Examples:
+      | Campo1 | Campo2 | Campo3 |
+      | VentanaExport43f | Excel | DashboardExF43 |
+      | VentanaExport44f | CSV |  DashboardExF44  |
+      | VentanaExport45f | TAB |  DashboardExF45  |
+      | VentanaExport46f | XML |  DashboardExF46  |
+      | VentanaExport47f | HTML |  DashboardExF47 |
+      | VentanaExport48f | WORD |  DashboardExF48 |
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarSinEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport49f ventana maximizada
+    And Assert si elemento Ventana contiene el siguiente texto Actividades Total Ejecutadas
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento SeleccionarTodas
+    And espereme 1 segundos
+    And Hacer Click en El elemento ExportarSinPDF
+    And Adjunto una Captura de pantalla al informe DashboardExF49
+    And espereme 2 segundos
+    ##--Sin Encabezados--##
+    ##--Con Encabezados--##
+  @DashBoarFlujosExportar
+  Scenario Outline: AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a <Campo1> ventana maximizada
+    And Assert si elemento Ventana contiene el siguiente texto Actividades Total Ejecutadas
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento <Campo2>
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto ActTotales-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - EXCEL - Pruebas QA - Comentarios - EXCEL -Pruebas QA - Comentarios - EXCEL -Pruebas QA - Comentarios - EXCEL -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe <Campo3>
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+    Examples:
+      | Campo1 | Campo2 | Campo3 |
+      | VentanaExport50f | Excel | DashboardExF50 |
+      | VentanaExport51f | CSV |  DashboardExF51  |
+      | VentanaExport52f | TAB |  DashboardExF52  |
+      | VentanaExport53f | XML |  DashboardExF53  |
+      | VentanaExport54f | HTML |  DashboardExF54 |
+      | VentanaExport55f | WORD |  DashboardExF55 |
+  @DashBoarFlujosExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - ActTotales ExportarConEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento ActTotales
+    And ir a VentanaExport56f ventana maximizada
+    And Assert si elemento Ventana contiene el siguiente texto Actividades Total Ejecutadas
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento AgregarEncabezado2
+    And lleneme el campo TituloEncabezadoPDF con el texto ActTotales-Automatizacion
+    And lleneme el campo ComentarioPDF con el texto Pruebas QA - Comentarios - PDF - Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -
+    And Hacer Click en El elemento CheckAgrUsuPDF
+    And Hacer Click en El elemento CheckAgrFecPDF
+    And Selecion Index 1 Selector SelectOrientacion
+    And Selecion Index 1 Selector SelectFuente
+    And Selecion Index 1 Selector SelectTamano
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe DashboardExF56
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon2
+    And espereme 2 segundos
+    ##--Con Encabezados--##
+

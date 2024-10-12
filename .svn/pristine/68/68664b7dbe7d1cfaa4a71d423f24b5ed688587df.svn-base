@@ -1,0 +1,186 @@
+Feature: Estructura - Coleccion - Bandeja de Entrada
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM EstColBDE.json
+    And lleneme el campo Usuario con el texto Comunicados
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+
+  @CreacionEstructura
+  Scenario: AC_AZDv6-80: Estructura
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click Estructura1
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento IrAEstPadre
+    And Sikuli element click Automatizacion
+    And lleneme el campo NombreDirectorios con el texto ZC_AZDv6-80: Estructura
+    And Texto de Seleccion Estructural Selector TipoCreacion
+    And Hacer Click en El elemento Crear
+    And Adjunto una Captura de pantalla al informe ECB01
+
+  @CrearColeccionUna
+  Scenario: AC_AZDv6-75: Crear Coleccion - Una Coleccion
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click Estructura1
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento IrAEstPadre
+    And Sikuli element click Automatizacion
+    And Hacer Click en El elemento EstructuraNueva
+    And lleneme el campo NombreDirectorios con el texto ColeccionEstructura
+    And Texto de Seleccion Colección Selector TipoCreacion
+    And Hacer Click en El elemento Crear
+    And Adjunto una Captura de pantalla al informe ECB02
+
+  @CrearColeccionVarias
+  Scenario: AC_AZDv6-75: Crear Coleccion - Varias Colecciones
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click Estructura1
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento IrAEstPadre
+    And Sikuli element click Automatizacion
+    And Hacer Click en El elemento EstructuraNueva
+    And lleneme el campo NombreDirectorios con el texto ColeccionEstructura02
+    And Texto de Seleccion Colección Selector TipoCreacion
+    And Hacer Click en El elemento Crear
+    And Adjunto una Captura de pantalla al informe ECB03
+    And lleneme el campo NombreDirectorios con el texto ColeccionEstructura03
+    And Texto de Seleccion Colección Selector TipoCreacion
+    And Hacer Click en El elemento Crear
+    And Adjunto una Captura de pantalla al informe ECB04
+    And lleneme el campo NombreDirectorios con el texto ColeccionEstructura04
+    And Texto de Seleccion Colección Selector TipoCreacion
+    And Hacer Click en El elemento Crear
+    And Adjunto una Captura de pantalla al informe ECB05
+
+  @BuscarColeccion
+  Scenario: AC_AZDv6-77: Busqueda coleccion
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Hacer Click en El elemento RegistroEstructura
+    And Hacer Click en El elemento RegistroColeccion
+    And espereme 5 segundos
+    And Adjunto una Captura de pantalla al informe ECB06
+
+  @CrearBandejaEntrada
+  Scenario: AC_AZDv6-14: Crear bandejas de Entrada
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click Estructura1
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento IrAEstPadre
+    And Sikuli element click Automatizacion
+    And Hacer Click en El elemento EstructuraNueva
+    And Hacer Click en El elemento ColeccionNueva
+    And lleneme el campo NombreDirectorios con el texto BDEEstructura
+    And Texto de Seleccion Bandeja de Entrada Selector TipoCreacion
+    And Hacer Click en El elemento Crear
+    And Adjunto una Captura de pantalla al informe ECB07
+
+  @IngresarEstructura
+  Scenario: AC_AZDv6-619: Ingresar a estructura
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click Estructura1
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento IrAEstPadre
+    And Sikuli element click Automatizacion
+    And Hacer Click en El elemento EstructuraNueva
+    And Assert si elemento NombreEstructura es igual a ZC_AZDv6-80: Estructura
+    And Adjunto una Captura de pantalla al informe ECB08
+
+  @CargarDatosBDE
+  Scenario: AC_AZDv6-13: Cargar Archivos.
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click Estructura1
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento IrAEstPadre
+    And Sikuli element click Automatizacion
+    And Hacer Click en El elemento EstructuraNueva
+    And Hacer Click en El elemento ColeccionNueva
+    And Hacer Click en El elemento BDENueva
+    And Subir Archivos BDE SubirPDF
+    And espereme 15 segundos
+    And Adjunto una Captura de pantalla al informe ECB09
+
+  @IngresarBDEOpc1
+  Scenario: AC_AZDv6-12: Lista Bandejas de entrada
+    And Hacer Click en El elemento Bandejas
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe ECB10
+    And Sikuli element click BDEEstructura
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe ECB11
+    And espereme 2 segundos
+
+  @IngresarBDEOpc2
+  Scenario: AC_AZDv6-1797: Seleccion de Bandeja de Entrada
+    And Hacer Click en El elemento Home
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe ECB12
+
+  @IniciarFLujosBDE
+  Scenario: AC_AZDv6-16: No Iniciar Flujos en bandejas de entrada
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click Estructura1
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento IrAEstPadre
+    And Sikuli element click Automatizacion
+    And Hacer Click en El elemento EstructuraNueva
+    And Hacer Click en El elemento ColeccionNueva
+    And Hacer Click en El elemento TresPuntosBDE
+    And Adjunto una Captura de pantalla al informe ECB13
+    #And Hacer Click en El elemento IniciaFlujo
+
+  @VisualizarContenidoBDE
+  Scenario: AC_AZDv6-17: Visualizacion de Contenido De la BDE
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click Estructura1
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento IrAEstPadre
+    And Sikuli element click Automatizacion
+    And Hacer Click en El elemento EstructuraNueva
+    And Hacer Click en El elemento ColeccionNueva
+    And Hacer Click en El elemento BDENueva
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe ECB14

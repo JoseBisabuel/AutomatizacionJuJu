@@ -1,0 +1,138 @@
+{
+  "Usuario": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsId"
+  },
+  "Contrasena": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsPassword"
+  },
+  "Ingresar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/div[1]/button[1]"
+  },
+  "Opciones": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Opciones']"
+  },
+  "Contenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Contenido']"
+  },
+  "EstructuraIframe": {
+    "GetFieldBy": "id",
+    "ValueToFind": "IFrameEstructuras"
+  },
+  "GestionContenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/dl[1]/dt[1]/a[1]"
+  },
+  "Estructura": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/dl[1]/dd[1]/ul[1]/li[1]/a[1]"
+  },
+  "EstructuraPadre": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/ul[1]/li[1]/div[1]"
+  },
+  "NombreDirectorios": {
+    "GetFieldBy": "id",
+    "ValueToFind": "DiNombre"
+  },
+  "EstVarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[6]"
+  },
+  "ConcatenarArchivos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[6]"
+  },
+  "ColConcatenarArchivos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[6]"
+  },
+  "BDEConcArchivos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[6]/a[1]"
+  },
+  "BDE": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[4]/a[1]"
+  },
+  "ConcatenarBDE": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/a[2]"
+  },
+  "Check1": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[1]/td[1]/input[1]"
+  },
+  "Check2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[4]/td[1]/input[1]"
+  },
+  "Check3": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[7]/td[1]/input[1]"
+  },
+  "CheckTodos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//thead/tr[1]/th[1]/a[1]/input[1]"
+  },
+  "Check4": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[9]/td[1]/input[1]"
+  },
+  "Check5": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[11]/td[1]/input[1]"
+  },
+  "Check6": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[12]/td[1]/input[1]"
+  },
+  "Check7": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[13]/td[1]/input[1]"
+  },
+  "Check8": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[14]/td[1]/input[1]"
+  },
+  "Adjuntos": {
+    "GetFieldBy": "id",
+    "ValueToFind": "sidebarToggle"
+  },
+  "Adjuntos2": {
+    "GetFieldBy": "id",
+    "ValueToFind": "viewAttachments"
+  },
+  "Adjuntos1": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/button[3]"
+  },
+  "RegresarPDF": {
+    "GetFieldBy": "id",
+    "ValueToFind": "regresar"
+  },
+  "SelectTipo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "DiTipo"
+  },
+  "Crear": {
+    "GetFieldBy": "id",
+    "ValueToFind": "CrearFolder"
+  },
+  "NombreDirectorios": {
+    "GetFieldBy": "id",
+    "ValueToFind": "DiNombre"
+  },
+  "SubirPDF": {
+    "GetFieldBy": "name",
+    "ValueToFind": "files[]"
+  },
+  "IrAEstPadre": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[1]/a[1]"
+  }
+}

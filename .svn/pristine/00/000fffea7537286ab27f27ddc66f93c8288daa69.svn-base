@@ -1,0 +1,375 @@
+{
+  "Usuario": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsId"
+  },
+  "Contrasena": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsPassword"
+  },
+  "Ingresar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/div[1]/button[1]"
+  },
+  "BandejasEntradas": {
+    "GetFieldBy": "id",
+    "ValueToFind": "DivBandejasEntra"
+  },
+  "BandejasPrueb": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/div[3]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[3]/span[1]/div[1]/ul[1]/li[14]"
+  },
+  "Crear": {
+    "GetFieldBy": "id",
+    "ValueToFind": "DiNombre"
+  },
+  "CrearFolder": {
+    "GetFieldBy": "id",
+    "ValueToFind": "CrearFolder"
+  },
+  "Contenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Contenido']"
+  },
+  "CarpetaSelenium": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[1]/td[6]"
+  },
+  "SubirPDF": {
+    "GetFieldBy": "name",
+    "ValueToFind": "files[]"
+  },
+  "Home": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[4]/a[1]"
+  },
+  "tresPuntos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/a[1]/img[1]"
+  },
+  "RenombrarTP": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/ul[1]/li[2]"
+  },
+  "NuevoNombre": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/div[1]/div[2]/input[2]"
+  },
+  "ObservacionRenombrar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/div[1]/div[4]/textarea[1]"
+  },
+  "Regresar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BtnRegresar"
+  },
+  "GuardarRenombrar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Renombrar_Fin"
+  },
+  "BitacoraTP": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/ul[1]/li[1]"
+  },
+  "RegresarBitacoraA": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/div[2]/a[1]"
+  },
+  "MoverTP": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/ul[1]/li[3]"
+  },
+  "DirectorioDestino": {
+    "GetFieldBy": "id",
+    "ValueToFind": "idDirectorioDestino_Archivo_texto"
+  },
+  "DirectorioDestinoCarpeta": {
+    "GetFieldBy": "id",
+    "ValueToFind": "idDirectorioDestino_D_texto"
+  },
+  "BuscarDirectorio": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Buscar"
+  },
+  "SeleccionarDirectorio": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]"
+  },
+  "Actualizar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BtnActualizar"
+  },
+  "RegresarFlechaG": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/a[1]/img[1]"
+  },
+  "CarpetaMover": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[2]/td[6]/a[1]/pre[1]"
+  },
+  "OjoMover": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Examinar"
+  },
+  "BuscadorFrame": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='IFrameEstructuras']"
+  },
+  "SeleccionarDOjo": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/ul[1]/li[1]/a[1]"
+  },
+  "CategorizarTP": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/ul[1]/li[5]"
+  },
+  "CategoriaArchivo": {
+    "GetFieldBy": "cssSelector",
+    "ValueToFind": "div.container-fluid div.row.justify-content-md-center:nth-child(2) div.table-esponsive table.table.table-sm.table-bordered.table-hover:nth-child(2) table.table.table-sm.table-bordered.table-hover tbody:nth-child(2) tr:nth-child(1) td:nth-child(3) > select.custom-select.custom-select-sm.FormaInput:nth-child(2)"
+  },
+  "CategoriaActualizar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Categorizar_Fin"
+  },
+  "CategoriaRegresar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Regresar"
+  },
+  "CompartirTP": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/ul[1]/li[6]"
+  },
+  "Observaciones": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Observacion"
+  },
+  "EmailsCompartir": {
+    "GetFieldBy": "id",
+    "ValueToFind": "CmpEMails"
+  },
+  "FechaVencimientoCyP": {
+    "GetFieldBy": "id",
+    "ValueToFind": "CmpFechaHoraVencimiento"
+  },
+  "CopiarTP": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/ul[1]/li[8]"
+  },
+  "CopiarDestino": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BandejaEntradaDestino_texto"
+  },
+  "AutoCopiarDestino": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]"
+  },
+  "Adicionar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "adicionar"
+  },
+  "Desasociar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "eliminar"
+  },
+  "SelecDesasociar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[4]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/select[1]/option[1]"
+  },
+  "FirmarTP": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/ul[1]/li[11]"
+  },
+  "FirmaP12": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ListaCertificados"
+  },
+  "FirmaP12Clave": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Clave"
+  },
+  "FirmaP12Razon": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Razon"
+  },
+  "PublicarTP": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/ul[1]/li[14]"
+  },
+  "IniciarFlujoTP": {
+  "GetFieldBy": "XPath",
+  "ValueToFind": "//body[1]/ul[1]/li[9]"
+  },
+  "RegresarIniciarFlujo": {
+  "GetFieldBy": "id",
+  "ValueToFind": "RegresarIniciarFlujoTrabajo"
+  },
+  "SelectorIniciarFlujo": {
+  "GetFieldBy": "name",
+  "ValueToFind": "A_FlujoTrabajo[]"
+  },
+  "SelectorIniciarFlujoCarpeta": {
+    "GetFieldBy": "name",
+    "ValueToFind": "D_FlujoTrabajo[]"
+  },
+  "CambiarEstadoFlujoTP": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/ul[1]/li[10]"
+  },
+  "RegresarCambiarFlujo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Regresar"
+  },
+  "EstadoCambiarFlujo": {
+  "GetFieldBy": "id",
+  "ValueToFind": "IftEstado"
+  },
+  "CarpetaDestino": {
+    "GetFieldBy": "id",
+    "ValueToFind": "IdDirectorioDestinoFlujo_texto"
+  },
+  "ObservacionesFlujos": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ObservacionesFlujo"
+  },
+  "ActualizarFlujo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Actualizar"
+  },
+  "TransladarTP": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/ul[1]/li[7]"
+  },
+  "SeleccionarBuscadorTransladar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/table[1]/tbody[1]/tr[1]/td[1]"
+  },
+  "ObservacionesTransladar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Observaciones_Archivo"
+  },
+  "ObservacionesTransladarCarpeta": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Observaciones_D"
+  },
+  "FechaTramiteTransladar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "FechaHoraEsperadaTramite_Archivo"
+  },
+  "FechaTramiteTransladarCarpeta": {
+    "GetFieldBy": "id",
+    "ValueToFind": "FechaHoraEsperadaTramite_D"
+  },
+  "CheckSeleccione": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/table[1]/thead[1]/tr[1]/th[1]/a[1]/input[1]"
+  },
+  "SeleccioneAccion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/a[1]"
+  },
+  "SARenombrar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/ul[1]/li[2]/a[1]"
+  },
+  "RenombrarMasivamente": {
+    "GetFieldBy": "name",
+    "ValueToFind": "A_Nombres[]"
+  },
+  "RenombrarMasivamenteCarpeta": {
+    "GetFieldBy": "name",
+    "ValueToFind": "D_Nombres[]"
+  },
+  "ObservaionesRMasivamente": {
+    "GetFieldBy": "name",
+    "ValueToFind": "Observaciones[]"
+  },
+  "PublicarMasiva": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/ul[1]/li[14]/a[1]"
+  },
+  "CompartirMasiva": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/ul[1]/li[6]/a[1]"
+  },
+  "CopiarMasiva": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/ul[1]/li[8]/a[1]"
+  },
+  "SeleccionDestino": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]"
+  },
+  "MoverMasiva": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/ul[1]/li[3]/a[1]"
+  },
+  "SeleccionadoMMasiva": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]"
+  },
+  "TrasladarMasiva": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/ul[1]/li[7]/a[1]"
+  },
+  "SeleccionarTMasiva": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/table[1]/tbody[1]/tr[1]/td[1]"
+  },
+  "CategorizarMasiva": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/ul[1]/li[5]/a[1]"
+  },
+  "SelectCaterogias": {
+    "GetFieldBy": "name",
+    "ValueToFind": "A_Categoria[]"
+  },
+  "IniciarFlujoMasivo": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/ul[1]/li[9]/a[1]"
+  },
+  "SelectIniciarFlujo": {
+    "GetFieldBy": "name",
+    "ValueToFind": "A_FlujoTrabajo[]"
+  },
+  "ActualizarIniciarFlujoMasiva": {
+    "GetFieldBy": "name",
+    "ValueToFind": "IniciarFlujoTrabajo_Fin"
+  },
+  "FirmaDigitalMasivo": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/ul[1]/li[11]/a[1]/small[1]"
+  },
+  "CambiarFlujoMasivo": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/ul[1]/li[10]/a[1]"
+  },
+  "SelectCambiarFlujo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "NuevoEstado_2_1"
+  },
+  "DestinoFlujo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "DirectorioDestino_2_1_texto"
+  },
+  "DestinoCambiarFlujo": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/table[1]/tbody[1]/tr[1]/td[1]"
+  },
+  "ObservacionesCFlujo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ObservacionesEstado_2_1"
+  },
+  "BorrarSMasivo": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/ul[1]/li[4]/a[1]/small[1]"
+  },
+  "ComentarTP": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/ul[1]/li[15]"
+  },
+  "CategorizarCarpetas": {
+    "GetFieldBy": "name",
+    "ValueToFind": "D_Categoria[]"
+  }
+
+}

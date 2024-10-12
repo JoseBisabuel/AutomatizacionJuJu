@@ -1,0 +1,469 @@
+Feature: Dashboard
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Dashboard.json
+    #And lleneme el campo Usuario con el texto meyer.ayala
+    #And lleneme el campo Contrasena con el texto o<tf@LqI4!~h
+    And lleneme el campo Usuario con el texto Comunicados
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+
+  ##--RadicadosPendientes--##
+    ##--Sin Encabezados--##
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+  @DashBoarRadicacionExportar
+  Scenario Outline: AC_AZDv6-1: Tablero de control - RadicadosPendientes ExpSinEncabezado
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RadicadosPendientes
+    And ir a <Campo1> ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard17
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento <Campo2>
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard18
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard19
+
+    Examples:
+      | Campo1 | Campo2 |
+      | VentanaExport1 | Excel |
+      | VentanaExport2 | CSV |
+      | VentanaExport3 | TAB |
+      | VentanaExport4 | XML |
+      | VentanaExport5 | HTML |
+      | VentanaExport6 | WORD |
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+      ## PDF ##
+
+  Scenario: AC_AZDv6-1 : Tablero de control - RadicadosPendientes ExpSinEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RadicadosPendientes
+    And ir a VentanaExport7 ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard29
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard30
+    And Hacer Click en El elemento ExportarSinPDF
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard31
+      ## PDF ##
+    ##--Sin Encabezados--##
+    ##--Con Encabezados--##
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+
+  @DashBoarRadicacionExportar
+  Scenario Outline: AC_AZDv6-1: Tablero de control - RadicadosPendientes ExpConEncabezado
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento RadicadosPendientes
+    And ir a <Campo1> ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard35
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento <Campo2>
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard36
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto RadicadosPendientes-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - RadPendientes - Pruebas QA - Comentarios - RadPendientes - Pruebas QA - Comentarios - RadPendientes -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard37
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+    Examples:
+      | Campo1 | Campo2 |
+      | VentanaExport8 | Excel |
+      | VentanaExport9 | CSV |
+      | VentanaExport10 | TAB |
+      | VentanaExport11 | XML |
+      | VentanaExport12 | HTML |
+      | VentanaExport13 | WORD |
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+      ## PDF ##
+
+  Scenario: AC_AZDv6-1 : Tablero de control - RadicadosPendientes ExpConEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 10 segundos
+    And Hacer Click en El elemento RadicadosPendientes
+    And ir a VentanaExport14 ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard50
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard51
+    And Hacer Click en El elemento AgregarEncabezado2
+    And lleneme el campo TituloEncabezadoPDF con el texto RadicadosPendientes-Automatizacion
+    And lleneme el campo ComentarioPDF con el texto Pruebas QA - Comentarios - PDF - Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -
+    And Hacer Click en El elemento CheckAgrUsuPDF
+    And Hacer Click en El elemento CheckAgrFecPDF
+    And Selecion Index 1 Selector SelectOrientacion
+    And Selecion Index 1 Selector SelectFuente
+    And Selecion Index 1 Selector SelectTamano
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard52
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon2
+    And espereme 2 segundos
+      ## PDF ##
+    ##--Con Encabezados--##
+  ##--RadicadosPendientes--##
+
+  ##########################OTRA COSA##################################
+
+    ##--RadicadosRespondidos--##
+    ##--Sin Encabezados--##
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+  @DashBoarRadicacionExportar
+  Scenario Outline: AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpSinEncabezado
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento o RadicadosRespondidos
+    And ir a <Campo1> ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard56
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento <Campo2>
+    And Hacer Click en El elemento EstaPagina
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard57
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard58
+    Examples:
+      | Campo1 | Campo2 |
+      | VentanaExport15 | Excel |
+      | VentanaExport16 | CSV |
+      | VentanaExport17 | TAB |
+      | VentanaExport18 | XML |
+      | VentanaExport19 | HTML |
+      | VentanaExport20 | WORD |
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+      ## PDF ##
+  Scenario: AC_AZDv6-1 : Tablero de control - RadicadosRespondidos ExpSinEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RadicadosRespondidos
+    And ir a VentanaExport21 ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard71
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard72
+    And Hacer Click en El elemento ExportarSinPDF
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard73
+    And espereme 2 segundos
+      ## PDF ##
+    ##--Sin Encabezados--##
+
+    ##--Con Encabezados--##
+  @DashBoarRadicacionExportar
+  Scenario Outline: AC_AZDv6-1: Tablero de control - RadicadosRespondidos ExpConEncabezado
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RadicadosRespondidos
+    And ir a <Campo1> ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard77
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento <Campo2>
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard78
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto RadicadosRespondidos-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - RadicadosRespondidos - Pruebas QA - Comentarios - RadicadosRespondidos - Pruebas QA - Comentarios - RadicadosRespondidos -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard79
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+    Examples:
+      | Campo1 | Campo2 |
+      | VentanaExport22 | Excel |
+      | VentanaExport23 | CSV |
+      | VentanaExport24 | TAB |
+      | VentanaExport25 | XML |
+      | VentanaExport26 | HTML |
+      | VentanaExport27 | WORD |
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+      ## PDF ##
+  @DashBoarRadicacionExportar
+  Scenario: AC_AZDv6-1 : Tablero de control - RadicadosRespondidos ExportarConEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RadicadosRespondidos
+    And ir a VentanaExport28 ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard92
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard93
+    And Hacer Click en El elemento AgregarEncabezado2
+    And lleneme el campo TituloEncabezadoPDF con el texto RadicadosRespondidos-Automatizacion
+    And lleneme el campo ComentarioPDF con el texto Pruebas QA - Comentarios - RadicadosRespondidos - Pruebas QA - Comentarios - RadicadosRespondidos - Pruebas QA - Comentarios - RadicadosRespondidos -
+    And Hacer Click en El elemento CheckAgrUsuPDF
+    And Hacer Click en El elemento CheckAgrFecPDF
+    And Selecion Index 1 Selector SelectOrientacion
+    And Selecion Index 1 Selector SelectFuente
+    And Selecion Index 1 Selector SelectTamano
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard94
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon2
+    And espereme 2 segundos
+      ## PDF ##
+    ##--Con Encabezados--##
+  ##--RadicadosRespondidos--##
+
+  ##########################OTRA COSA##################################
+
+##--RadicadosRecibidos--##
+    ##--Sin Encabezados--##
+        ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+  @DashBoarRadicacionExportar
+  Scenario Outline: AC_AZDv6-1: Tablero de control - RadicadosRecibidos ExpSinEncabezado
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RadicadosRecibidos
+    And ir a <Campo1> ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard98
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento <Campo2>
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard99
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard100
+    Examples:
+      | Campo1 | Campo2 |
+      | VentanaExport29 | Excel |
+      | VentanaExport30 | CSV |
+      | VentanaExport31 | TAB |
+      | VentanaExport32 | XML |
+      | VentanaExport33 | HTML |
+      | VentanaExport34 | WORD |
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+      ## PDF ##
+  Scenario: AC_AZDv6-1 : Tablero de control - RadicadosRecibidos ExpSinEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RadicadosRecibidos
+    And ir a VentanaExport35 ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard113
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard114
+    And Hacer Click en El elemento ExportarSinPDF
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard115
+    And espereme 2 segundos
+      ## PDF ##
+    ##--Sin Encabezados--##
+    ##--Con Encabezados--##
+  @DashBoarRadicacionExportar
+  Scenario Outline: AC_AZDv6-1: Tablero de control - RadicadosRecibidos ExpConEncabezado
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RadicadosRecibidos
+    And ir a <Campo1> ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard119
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento <Campo2>
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard120
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto RadicadosRecibidos-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - RadicadosRecibidos - Pruebas QA - Comentarios - RadicadosRecibidos - Pruebas QA - Comentarios - RadicadosRecibidos -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard121
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+    Examples:
+      | Campo1 | Campo2 |
+      | VentanaExport36 | Excel |
+      | VentanaExport37 | CSV |
+      | VentanaExport38 | TAB |
+      | VentanaExport39 | XML |
+      | VentanaExport40 | HTML |
+      | VentanaExport41 | WORD |
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+      ## PDF ##
+  Scenario: AC_AZDv6-1 : Tablero de control - RadicadosRecibidos ExportarConEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RadicadosRecibidos
+    And ir a VentanaExport42 ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard134
+    And Hacer Click en El elemento SeleccionFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard135
+    And Hacer Click en El elemento AgregarEncabezado2
+    And lleneme el campo TituloEncabezadoPDF con el texto RadicadosRecibidos-Automatizacion
+    And lleneme el campo ComentarioPDF con el texto Pruebas QA - Comentarios - PDF - Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -
+    And Hacer Click en El elemento CheckAgrUsuPDF
+    And Hacer Click en El elemento CheckAgrFecPDF
+    And Selecion Index 1 Selector SelectOrientacion
+    And Selecion Index 1 Selector SelectFuente
+    And Selecion Index 1 Selector SelectTamano
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard136
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon2
+    And espereme 2 segundos
+      ## PDF ##
+    ##--Con Encabezados--##
+  ##--RadicadosRecibidos--##
+
+  ##########################OTRA COSA##################################
+
+  ##--RaRecibidosDia--##
+    ##--Sin Encabezados--##
+  @DashBoarRadicacionExportar
+  Scenario Outline: AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpSinEncabezado
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RaRecibidosDia
+    And ir a <Campo1> ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard140
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento <Campo2>
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard141
+    And Hacer Click en El elemento ExportarSin
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe Dashboard142
+    Examples:
+      | Campo1 | Campo2 |
+      | VentanaExport43 | Excel |
+      | VentanaExport44 | CSV |
+      | VentanaExport45 | TAB |
+      | VentanaExport46 | XML |
+      | VentanaExport47 | HTML |
+      | VentanaExport48 | WORD |
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+      ## PDF ##
+  Scenario: AC_AZDv6-1 : Tablero de control - RaRecibidosDia ExpSinEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RaRecibidosDia
+    And ir a VentanaExport49 ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard156
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento PDF
+    And Hacer Click en El elemento EstaPagina
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard157
+    And Hacer Click en El elemento ExportarSinPDF
+    And Adjunto una Captura de pantalla al informe Dashboard158
+    And espereme 2 segundos
+      ## PDF ##
+
+    ##--Sin Encabezados--##
+    ##--Con Encabezados--##
+
+  @DashBoarRadicacionExportar
+  Scenario Outline: AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RaRecibidosDia
+    And ir a <Campo1> ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard162
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento <Campo2>
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard163
+    And Hacer Click en El elemento AgregarEncabezado
+    And lleneme el campo TituloEncabezado con el texto RaRecibidosDia-Automatizacion
+    And lleneme el campo Comentario con el texto Pruebas QA - Comentarios - RaRecibidosDia - Pruebas QA - Comentarios - RaRecibidosDia - Pruebas QA - Comentarios - RaRecibidosDia -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And Adjunto una Captura de pantalla al informe Dashboard164
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+    Examples:
+      | Campo1 | Campo2 |
+      | VentanaExport50 | Excel |
+      | VentanaExport51 | CSV |
+      | VentanaExport52 | TAB |
+      | VentanaExport53 | XML |
+      | VentanaExport54 | HTML |
+      | VentanaExport55 | WORD |
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+      ## PDF ##
+
+  Scenario: AC_AZDv6-1: Tablero de control - RaRecibidosDia ExpConEncabezado PDF
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Historico
+    And espereme 6 segundos
+    And Hacer Click en El elemento RaRecibidosDia
+    And ir a VentanaExport56 ventana maximizada
+    And Adjunto una Captura de pantalla al informe Dashboard177
+    And Hacer Click en El elemento SeleccionFormato
+    And Hacer Click en El elemento PDF
+    And Hacer Click en El elemento EstaPagina
+    And Adjunto una Captura de pantalla al informe Dashboard178
+    And Hacer Click en El elemento AgregarEncabezado2
+    And lleneme el campo TituloEncabezadoPDF con el texto RaRecibidosDia-Automatizacion
+    And lleneme el campo ComentarioPDF con el texto Pruebas QA - Comentarios - PDF - Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -Pruebas QA - Comentarios - PDF -
+    And Hacer Click en El elemento CheckAgrUsuPDF
+    And Hacer Click en El elemento CheckAgrFecPDF
+    And Selecion Index 1 Selector SelectOrientacion
+    And Selecion Index 1 Selector SelectFuente
+    And Selecion Index 1 Selector SelectTamano
+    And Hacer Click en El elemento SeleccionarTodas
+    And Adjunto una Captura de pantalla al informe Dashboard179
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon2
+    And espereme 2 segundos
+
+    ##--Con Encabezados--##
+  ##--RaRecibidosDia--##

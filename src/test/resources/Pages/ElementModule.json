@@ -1,0 +1,381 @@
+
+{
+  "PantallaInicio": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//header/a[1]/img[1]"
+  },
+  "ModuloElementos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='app']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/*[1]"
+  },
+  "SubmoduloTextBox": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Text Box')]"
+  },
+  "FullName": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='userName']"
+  },
+  "Email": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='userEmail']"
+  },
+  "CurrentAddress": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//textarea[@id='currentAddress']"
+  },
+  "PermanentAddress": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//textarea[@id='permanentAddress']"
+  },
+  "Submit": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='submit']"
+  },
+  "FullNameGuardado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//p[@id='name']"
+  },
+  "EmailGuardado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//p[@id='email']"
+  },
+  "CurrentAddressGuardado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//p[@id='currentAddress']"
+  },
+  "PermanentAddressGuardado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//p[@id='permanentAddress']"
+  },
+
+
+
+
+
+  "SubmoduloCheckBox": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Check Box')]"
+  },
+  "DesplegarLista": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/button[1]"
+  },
+  "Notes": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='app']/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/ol[1]/li[1]/ol[1]/li[1]/ol[1]/li[1]/span[1]/label[1]/span[1]/*[1]"
+  },
+  "WorkSpace": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='app']/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/ol[1]/li[1]/ol[1]/li[2]/ol[1]/li[1]/span[1]/label[1]/span[1]/*[1]"
+  },
+  "Office": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='app']/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/ol[1]/li[1]/ol[1]/li[2]/ol[1]/li[2]/span[1]/label[1]/span[1]/*[1]"
+  },
+  "WordFile.doc": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='app']/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/ol[1]/li[1]/ol[1]/li[3]/ol[1]/li[1]/span[1]/label[1]/span[1]/*[1]"
+  },
+  "SelectNotes": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'notes')]"
+  },
+  "SelecWorkSpaces": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'workspace')]"
+  },
+  "SelecWorkSpaces(React)": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'react')]"
+  },
+  "SelecWorkSpaces(Angular)": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'angular')]"
+  },
+  "SelecWorkSpaces(Veu)": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'veu')]"
+  },
+  "SelecOffice": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'office')]"
+  },
+  "Office(Public)": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'public')]"
+  },
+  "Office(Private)": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'private')]"
+  },
+  "Office(Classified)": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'classified')]"
+  },
+  "Office(General)": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'general')]"
+  },
+  "SelecWordFile.doc": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'wordFile')]"
+  },
+
+
+
+  "SubmoduloRadioButton": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Radio Button')]"
+  },
+  "Yes": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//label[contains(text(),'Yes')]"
+  },
+  "Impressive": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//label[contains(text(),'Impressive')]"
+  },
+  "SelecYes": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Yes')]"
+  },
+  "SelecImpressive": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Impressive')]"
+  },
+
+
+
+
+
+  "WebTables": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Web Tables')]"
+  },
+  "Add": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='addNewRecordButton']"
+  },
+  "FirstName": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='firstName']"
+  },
+  "LastName": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='lastName']"
+  },
+  "EmailRegistration": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='userEmail']"
+  },
+  "Age": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='age']"
+  },
+  "Salary": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='salary']"
+  },
+  "Department": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='department']"
+  },
+  "SubmitRegistration": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='submit']"
+  },
+
+
+
+  "FirstNameGuardado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Jose')]"
+  },
+  "LastNameGuardado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Bisabuel')]"
+  },
+  "AgeGuardado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'33')]"
+  },
+  "EmailRegistroGuardado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'jose_bisabuel@hotmail.com')]"
+  },
+  "SalaryGuardado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'4480000')]"
+  },
+  "DepartmenGuardado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'Calidad')]"
+  },
+
+
+
+
+
+
+  "EditarRegistro": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='app']/div[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[4]/div[1]/div[7]/div[1]/span[1]/*[1]"
+  },
+  "FirstNameGuardadoEdit": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'NombreEditado')]"
+  },
+  "LastNameGuardadoEdit": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'ApellidoEditado')]"
+  },
+  "EmailRegistroGuardadoEdit": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'CorreoEditado@hotmail.com')]"
+  },
+  "AgeGuardadoEdit": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'999')]"
+  },
+  "SalaryGuardadoEdit": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'99999')]"
+  },
+  "DepartmenGuardadoEdit": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'DepartmentEditado')]"
+  },
+  "EliminarRegistro": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='app']/div[1]/div[1]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/div[4]/div[1]/div[7]/div[1]/span[2]/*[1]"
+  },
+
+
+
+
+  "Buttons": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Buttons')]"
+  },
+  "DoubleClickMe": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='doubleClickBtn']"
+  },
+  "DoubleClickMeValid": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//p[@id='doubleClickMessage']"
+  },
+  "RightClickMe": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='rightClickBtn']"
+  },
+  "RightClickMeValid": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//p[@id='rightClickMessage']"
+  },
+  "ClickMe": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[3]/button[1]"
+  },
+  "ClickMeValid": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//p[@id='dynamicClickMessage']"
+  },
+
+
+
+
+  "Links": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[6]/span[1]"
+  },
+  "LinkHome": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[@id='simpleLink']"
+  },
+  "LinkHomeaacsW": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[@id='dynamicLink']"
+  },
+
+
+
+
+  "Created": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[@id='created']"
+  },
+  "CreatedValid": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//b[contains(text(),'201')]"
+  },
+  "NoContent": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[@id='no-content']"
+  },
+  "NoContentValid": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//b[contains(text(),'204')]"
+  },
+  "Moved": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[@id='moved']"
+  },
+  "MovedValid": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//b[contains(text(),'301')]"
+  },
+  "BadRequest": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[@id='bad-request']"
+  },
+  "BadRequestValid": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//b[contains(text(),'400')]"
+  },
+  "Unauthorized": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[@id='unauthorized']"
+  },
+  "UnauthorizedValid": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//b[contains(text(),'401')]"
+  },
+  "Forbidden": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[@id='forbidden']"
+  },
+  "ForbiddenValid": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//b[contains(text(),'403')]"
+  },
+  "NotFound": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[@id='invalid-url']"
+  },
+  "NotFoundValid": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//b[contains(text(),'404')]"
+  },
+
+
+
+
+  "UploadAndDownload": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Upload and Download')]"
+  },
+  "CargarDoc": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='uploadFile']"
+  },
+  "DocumentoCargado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//p[@id='uploadedFilePath']"
+  },
+  "Download": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[@id='downloadButton']"
+  }
+}

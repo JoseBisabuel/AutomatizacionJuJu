@@ -1,0 +1,534 @@
+Feature: Busqueda Archivos
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM BusquedaArchivos.json
+    And lleneme el campo Usuario con el texto Automata1
+    And lleneme el campo Contrasena con el texto 1Q2w3e4r5t*
+    And Hacer Click en El elemento Ingresar
+
+  @BusquedaExtensionRaizPrincipal
+  Scenario Outline: Busqueda extension desde estructura principal
+    #Busqueda por formato
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento BusquedaExtension
+    And espereme 2 segundos
+    And lleneme el campo BusquedaExtensionCampo con el texto <Extension>
+    And lleneme el campo CuadroBusquedaPorNombre con el texto Test
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+      #Validamos que la tabla de resultados contenga los elementos
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo1>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo2>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo3>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo4>
+
+    Examples:
+      |Extension| campo1        |campo2  |campo3       |campo4         |
+      | pdf    | PrivadaTest12 |BdeTest4|PublicaTest20|ColeccionTest28|
+      | docx   | PrivadaTest9  |BdeTest1|PublicaTest17|ColeccionTest25|
+      | png    | PrivadaTest13 |BdeTest5|PublicaTest21|ColeccionTest29|
+      | jpg    | PrivadaTest11 |BdeTest3|PublicaTest19|ColeccionTest27|
+      | html   | PrivadaTest10 |BdeTest2|PublicaTest18|ColeccionTest26|
+      | txt    | PrivadaTest15 |BdeTest7|PublicaTest23|ColeccionTest31|
+      | xlsx   | PrivadaTest16 |BdeTest8|PublicaTest24|ColeccionTest32|
+      | pptx   | PrivadaTest14 |BdeTest6|PublicaTest22|ColeccionTest30|
+
+  @BusquedaNombreRaizPrincipal
+  Scenario Outline: Busqueda nombre desde estructura principal
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento DirectorioAnterior
+    And lleneme el campo CuadroBusquedaPorNombre con el texto <Nombre>
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+      #Validamos que la tabla de resultados contenga los elementos
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo1>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo2>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo3>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo4>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo5>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo6>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo7>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo8>
+
+    Examples:
+      |Nombre    |campo1       |campo2       |campo3       |campo4       |campo5       |campo6       |campo7       |campo8       |
+      |PrivadaT  |PrivadaTest9 |PrivadaTest10|PrivadaTest11|PrivadaTest12|PrivadaTest13|PrivadaTest14|PrivadaTest15|PrivadaTest16|
+      |PublicaT  |PublicaTest17|PublicaTest18|PublicaTest19|PublicaTest20|PublicaTest21|PublicaTest22|PublicaTest23|PublicaTest24|
+      |BDETest   |BdeTest1     |BdeTest2     |BdeTest3     |BdeTest4     |BdeTest5     |BdeTest6     |BdeTest7     |BdeTest8     |
+      |ColeccionT|ColeccionTest25|ColeccionTest26|ColeccionTest27|ColeccionTest28|ColeccionTest29|ColeccionTest30|ColeccionTest31|ColeccionTest32|
+
+  @BusquedaFechaCreacionRaizPrincipal
+  Scenario Outline: Busqueda fecha creacion desde estructura principal
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento FechaCreacionInicial
+    And espereme 2 segundos
+    And lleneme el campo FechaCreacionInicial con el texto <FechaInicial>
+    And lleneme el campo FechaCreacionFinal con el texto <FechaFinal>
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+      #Validamos que la tabla de resultados contenga los elementos
+    Then Assert si elemento TablaResultados contiene el siguiente texto <Elemento>
+
+    Examples:
+      |FechaInicial      |FechaFinal        |Elemento|
+      |2010-01-01 00:0:00|2011-01-01 00:0:00|BdeTest1|
+      |2011-01-01 00:0:00|2012-01-01 00:0:00|PrivadaTest10|
+      |2012-01-01 00:0:00|2013-01-01 00:0:00|PublicaTest17|
+      |2013-01-01 00:0:00|2014-01-01 00:0:00|ColeccionTest25|
+
+    #Busqueda por Referencia,Descripción,Palabras Clave,Observaciones
+  @BusquedaOtrosRaizPrincipal
+  Scenario Outline: Busqueda otros desde estructura principal
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento <Busqueda>
+    And espereme 2 segundos
+    And lleneme el campo <Busqueda> con el texto <ElementoABuscar>
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+      #Validamos que la tabla de resultados contenga los elementos
+    And espere el elemento TablaResultados
+    And espereme 2 segundos
+    Then Assert si elemento TablaResultados contiene el siguiente texto BdeTest1
+    Then Assert si elemento TablaResultados contiene el siguiente texto PrivadaTest10
+    Then Assert si elemento TablaResultados contiene el siguiente texto PublicaTest17
+    Then Assert si elemento TablaResultados contiene el siguiente texto ColeccionTest25
+
+    Examples:
+      |Busqueda             |ElementoABuscar         |
+      |BusquedaPalabrasClave|Automata QA27 QWERTY EXE|
+      |BusquedaObservacion  |ObservacionQA           |
+      |BusquedaDescripcion  |Ejemplo de una descripción:D|
+      |BusquedaReferencia   |ReferenciaAutoQA|
+
+      #Busqueda por Categoria  y modulo
+  @BusquedaCatModRaizPrincipal
+  Scenario: Busqueda de categoria y modulo desde estructura principal
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento BusquedaCategoria
+    And espereme 2 segundos
+    And Selecion Index 1 Selector BusquedaCategoria
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+    #Validamos que la tabla de resultados contenga los elementos
+    And espere el elemento TablaResultados
+    And espereme 2 segundos
+    Then Assert si elemento DivResultados contiene el siguiente texto Resultados búsqueda de archivos y folders
+    And Hacer Click en El elemento BtnRegresarResultados
+    And Cambiar al Frame principal
+
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento BusquedaModulo
+    And espereme 2 segundos
+    And Selecion Index 1 Selector BusquedaModulo
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+    #Validamos que la tabla de resultados contenga los elementos
+    And espere el elemento TablaResultados
+    And espereme 2 segundos
+    Then Assert si elemento DivResultados contiene el siguiente texto Resultados búsqueda de archivos y folders
+
+    #Proceso de busqueda desde coleccion
+  @BusquedaExtensionColeccion
+  Scenario Outline: Busqueda extension desde coleccion
+    #Busqueda por formato
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Hacer Click en El elemento EstructuraBusquedaArchivos
+    And Hacer Click en El elemento ColeccionBusquedaArchivos
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento BusquedaExtension
+    And espereme 2 segundos
+    And lleneme el campo BusquedaExtensionCampo con el texto <Extension>
+    And lleneme el campo CuadroBusquedaPorNombre con el texto Test
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+      #Validamos que la tabla de resultados contenga los elementos
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo1>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo2>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo3>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo4>
+
+    Examples:
+      |Extension| campo1        |campo2  |campo3       |campo4         |
+      | pdf    | PrivadaTest12 |BdeTest4|PublicaTest20|ColeccionTest28|
+      | docx   | PrivadaTest9  |BdeTest1|PublicaTest17|ColeccionTest25|
+      | png    | PrivadaTest13 |BdeTest5|PublicaTest21|ColeccionTest29|
+      | jpg    | PrivadaTest11 |BdeTest3|PublicaTest19|ColeccionTest27|
+      | html   | PrivadaTest10 |BdeTest2|PublicaTest18|ColeccionTest26|
+      | txt    | PrivadaTest15 |BdeTest7|PublicaTest23|ColeccionTest31|
+      | xlsx   | PrivadaTest16 |BdeTest8|PublicaTest24|ColeccionTest32|
+      | pptx   | PrivadaTest14 |BdeTest6|PublicaTest22|ColeccionTest30|
+
+  @BusquedaNombreColeccion
+  Scenario Outline: Busqueda nombre desde Coleccion
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Hacer Click en El elemento EstructuraBusquedaArchivos
+    And Hacer Click en El elemento ColeccionBusquedaArchivos
+    And lleneme el campo CuadroBusquedaPorNombre con el texto <Nombre>
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+      #Validamos que la tabla de resultados contenga los elementos
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo1>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo2>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo3>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo4>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo5>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo6>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo7>
+    Then Assert si elemento TablaResultados contiene el siguiente texto <campo8>
+
+    Examples:
+      |Nombre    |campo1       |campo2       |campo3       |campo4       |campo5       |campo6       |campo7       |campo8       |
+      |PrivadaT  |PrivadaTest9 |PrivadaTest10|PrivadaTest11|PrivadaTest12|PrivadaTest13|PrivadaTest14|PrivadaTest15|PrivadaTest16|
+      |PublicaT  |PublicaTest17|PublicaTest18|PublicaTest19|PublicaTest20|PublicaTest21|PublicaTest22|PublicaTest23|PublicaTest24|
+      |BDETest   |BdeTest1     |BdeTest2     |BdeTest3     |BdeTest4     |BdeTest5     |BdeTest6     |BdeTest7     |BdeTest8     |
+      |ColeccionT|ColeccionTest25|ColeccionTest26|ColeccionTest27|ColeccionTest28|ColeccionTest29|ColeccionTest30|ColeccionTest31|ColeccionTest32|
+
+  @BusquedaFechaCreacionColeccion
+  Scenario Outline: Busqueda fecha creacion desde coleccion
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Hacer Click en El elemento EstructuraBusquedaArchivos
+    And Hacer Click en El elemento ColeccionBusquedaArchivos
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento FechaCreacionInicial
+    And espereme 2 segundos
+    And lleneme el campo FechaCreacionInicial con el texto <FechaInicial>
+    And lleneme el campo FechaCreacionFinal con el texto <FechaFinal>
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+      #Validamos que la tabla de resultados contenga los elementos
+    Then Assert si elemento TablaResultados contiene el siguiente texto <Elemento>
+
+    Examples:
+      |FechaInicial      |FechaFinal        |Elemento|
+      |2010-01-01 00:0:00|2011-01-01 00:0:00|BdeTest1|
+      |2011-01-01 00:0:00|2012-01-01 00:0:00|PrivadaTest10|
+      |2012-01-01 00:0:00|2013-01-01 00:0:00|PublicaTest17|
+      |2013-01-01 00:0:00|2014-01-01 00:0:00|ColeccionTest25|
+
+    #Busqueda por Referencia,Descripción,Palabras Clave,Observaciones
+  @BusquedaOtrosColeccion
+  Scenario Outline: Busqueda otros desde coleccion
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Hacer Click en El elemento EstructuraBusquedaArchivos
+    And Hacer Click en El elemento ColeccionBusquedaArchivos
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento <Busqueda>
+    And espereme 2 segundos
+    And lleneme el campo <Busqueda> con el texto <ElementoABuscar>
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+      #Validamos que la tabla de resultados contenga los elementos
+    And espere el elemento TablaResultados
+    And espereme 2 segundos
+    Then Assert si elemento TablaResultados contiene el siguiente texto BdeTest1
+    Then Assert si elemento TablaResultados contiene el siguiente texto PrivadaTest10
+    Then Assert si elemento TablaResultados contiene el siguiente texto PublicaTest17
+    Then Assert si elemento TablaResultados contiene el siguiente texto ColeccionTest25
+
+    Examples:
+      |Busqueda             |ElementoABuscar         |
+      |BusquedaPalabrasClave|Automata QA27 QWERTY EXE|
+      |BusquedaObservacion  |ObservacionQA           |
+      |BusquedaDescripcion  |Ejemplo de una descripción:D|
+      |BusquedaReferencia   |ReferenciaAutoQA|
+
+#Busqueda por Categoria  y modulo
+  @BusquedaCatModColeccion
+  Scenario: Busqueda de categoria y modulo desde Coleccion
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Hacer Click en El elemento EstructuraBusquedaArchivos
+    And Hacer Click en El elemento ColeccionBusquedaArchivos
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento BusquedaCategoria
+    And espereme 2 segundos
+    And Selecion Index 1 Selector BusquedaCategoria
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+    #Validamos que la tabla de resultados contenga los elementos
+    And espere el elemento TablaResultados
+    And espereme 2 segundos
+    Then Assert si elemento DivResultados contiene el siguiente texto Resultados búsqueda de archivos y folders
+    And Hacer Click en El elemento BtnRegresarResultados
+    And Cambiar al Frame principal
+    #Busqueda Modulo
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento BusquedaModulo
+    And espereme 2 segundos
+    And Selecion Index 1 Selector BusquedaModulo
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+    #Validamos que la tabla de resultados contenga los elementos
+    And espere el elemento TablaResultados
+    And espereme 2 segundos
+    Then Assert si elemento DivResultados contiene el siguiente texto Resultados búsqueda de archivos y folders
+
+    #Busqueda por Referencia,Descripción,Palabras Clave,Observaciones en los directorios (capetas, coleccion, bandeja)
+  @BusquedaCompletaEnDirectorios
+  Scenario Outline: Busqueda completa en carpetas
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Hacer Click en El elemento EstructuraBusquedaArchivos
+    And Hacer Click en El elemento ColeccionBusquedaArchivos
+    And Hacer Click en El elemento <Directorio>
+
+    #Busqueda por nombre
+    And lleneme el campo CuadroBusquedaPorNombre con el texto <Nombre>
+    And Hacer Click en El elemento BtnBusqueda
+    And espere el elemento Resultados
+    And Cambiar de Frame: Resultados
+    And espereme 2 segundos
+      #Validamos que la tabla de resultados contenga los elementos
+    Then Assert si elemento TablaResultados contiene el siguiente texto <ResultadoNombre>
+    And Hacer Click en El elemento BtnRegresarResultados
+    And Cambiar al Frame principal
+
+      #Busqueda Extension
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento BusquedaExtension
+    And espereme 2 segundos
+    And lleneme el campo BusquedaExtensionCampo con el texto <Exten>
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+    Then Assert si elemento TablaResultados contiene el siguiente texto <ResultadoExt>
+    And Hacer Click en El elemento BtnRegresarResultados
+    And Cambiar al Frame principal
+
+       #Busqueda Palabraclave
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento BusquedaPalabrasClave
+    And espereme 2 segundos
+    And lleneme el campo BusquedaPalabrasClave con el texto Automata QA27 QWERTY EXE
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+    Then Assert si elemento TablaResultados contiene el siguiente texto <ResultadosOtros>
+    And Hacer Click en El elemento BtnRegresarResultados
+    And Cambiar al Frame principal
+
+      #Busqueda Observacion
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento BusquedaObservacion
+    And espereme 2 segundos
+    And lleneme el campo BusquedaObservacion con el texto ObservacionQA
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+    Then Assert si elemento TablaResultados contiene el siguiente texto <ResultadosOtros>
+    And Hacer Click en El elemento BtnRegresarResultados
+    And Cambiar al Frame principal
+
+      #Busqueda Descripcion
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento BusquedaDescripcion
+    And espereme 2 segundos
+    And lleneme el campo BusquedaDescripcion con el texto Ejemplo de una descripción:D
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+    Then Assert si elemento TablaResultados contiene el siguiente texto <ResultadosOtros>
+    And Hacer Click en El elemento BtnRegresarResultados
+    And Cambiar al Frame principal
+
+      #Busqueda Referencia
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento BusquedaReferencia
+    And espereme 2 segundos
+    And lleneme el campo BusquedaReferencia con el texto ReferenciaAutoQA
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+    Then Assert si elemento TablaResultados contiene el siguiente texto <ResultadosOtros>
+    And Hacer Click en El elemento BtnRegresarResultados
+    And Cambiar al Frame principal
+
+     #Busqueda Modulo
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento BusquedaModulo
+    And espereme 2 segundos
+    And Selecion Index 1 Selector BusquedaModulo
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+    #Validamos que la tabla de resultados contenga los elementos
+    And espere el elemento TablaResultados
+    And espereme 2 segundos
+    Then Assert si elemento DivResultados contiene el siguiente texto Resultados búsqueda de archivos y folders
+    And Hacer Click en El elemento BtnRegresarResultados
+    And Cambiar al Frame principal
+
+      #Busqueda Categoria
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento BusquedaCategoria
+    And espereme 2 segundos
+    And Selecion Index 1 Selector BusquedaCategoria
+
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+    #Validamos que la tabla de resultados contenga los elementos
+    And espere el elemento TablaResultados
+    And espereme 2 segundos
+    Then Assert si elemento DivResultados contiene el siguiente texto Resultados búsqueda de archivos y folders
+    And Hacer Click en El elemento BtnRegresarResultados
+    And Cambiar al Frame principal
+
+    #Busqueda Fecha Creacion
+    And Hacer Click en El elemento BtnBusquedaAvanzada
+    And espere el elemento FechaCreacionInicial
+    And espereme 2 segundos
+    And lleneme el campo FechaCreacionInicial con el texto <FInicial>
+    And lleneme el campo FechaCreacionFinal con el texto <FFinal>
+    And Hacer Click en El elemento BtnBusqueda
+    And Cambiar de Frame: Resultados
+    And espere el elemento ResultadoFecha
+    And espereme 2 segundos
+      #Validamos que la tabla de resultados contenga los elementos
+    #Then Assert si elemento TablaResultados contiene el siguiente texto <ResultadoFecha>
+    And Assert si elemento ResultadoFecha visualiza
+    Examples:
+      |Directorio      |Nombre|ResultadoNombre|FInicial  |FFinal    |ResultadoFecha2 |Exten|ResultadoExt   |ResultadosOtros|
+      |BandejaDeEntrada|5     |BdeTest5       |2010-01-01|2011-01-01|BdeTest1       |xlsx |BdeTest8       |BdeTest1       |
+      |CarpetaPrivada  |14    |PrivadaTest14  |2011-01-01|2012-01-01|PrivadaTest10  |Pdf  |PrivadaTest12  |PrivadaTest10  |
+      |CarpetaPublica  |21    |PublicaTest21  |2012-01-01|2013-01-01|PublicaTest17  |docx |PublicaTest17  |PublicaTest17  |
+      |Coleccion       |29    |ColeccionTest29|2013-01-01|2014-01-01|ColeccionTest25|jpg  |ColeccionTest27|ColeccionTest25|
+

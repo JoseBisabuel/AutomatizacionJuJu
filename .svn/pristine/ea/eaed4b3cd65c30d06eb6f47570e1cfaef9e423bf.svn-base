@@ -1,0 +1,110 @@
+{
+  "Usuario": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsId"
+  },
+  "Contrasena": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsPassword"
+  },
+  "Ingresar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/div[1]/button[1]"
+  },
+  "Cancelar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/div[1]/button[2]"
+  },
+  "OlvidoContrasena": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[4]/div[1]/p[1]/a[1]/b[1]"
+  },
+  "LoginIncorrecto": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Login Incorrecto')]"
+  },
+  "RecuId":{
+  "GetFieldBy": "XPath",
+  "ValueToFind": "//input[@id='D_UsId']"
+  },
+  "RecuNombre":{
+  "GetFieldBy": "XPath",
+  "ValueToFind": "//input[@id='D_UsNombres']"
+  },
+  "RecuApellido":{
+  "GetFieldBy": "XPath",
+  "ValueToFind": "//input[@id='D_UsApellidos']"
+  },
+  "RecuEmail":{
+  "GetFieldBy": "XPath",
+  "ValueToFind": "//input[@id='D_UsEmail']"
+  },
+  "RecuBuscar":{
+  "GetFieldBy": "XPath",
+  "ValueToFind": "//button[@id='Accion']"
+  },
+  "RecuperacionExitosa":{
+  "GetFieldBy": "XPath",
+  "ValueToFind": "//span[contains(text(),'pruebasqa312@yopmail.com')]"
+  },
+  "FrameRecu":{
+    "GetFieldBy": "name",
+    "ValueToFind": "Contenido"
+  },
+  "FondoBienvenidoUsuario": {
+    "GetFieldBy": "cssSelector",
+    "ValueToFind": "body.Cuerpo:nth-child(2) div.container-fluid.ContenedorPrincipal div.row.EncabezadoPrincipal.pos-f-t.pb-2:nth-child(2) div.col-lg-9.col-md-8.col-sm-8:nth-child(3) div.contanier:nth-child(2) div.align-items-center.none.Home div.row.m-left-5px div.col-lg-6.col-md-6.col-sm-12:nth-child(1) div.row div.col-12.FondoBienvenidoUsuario.align-items-center.text-left:nth-child(1) > p.FondoBienvenidoTipoUsuario"
+  },
+  "TextoNoExiste":{
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//footer[contains(text(),'No existe un Usuario con ese Email en el sistema, ')]"
+  },
+  "FrameContenido":{
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//frameset[1]/frame[1]"
+  },
+  "Mailyop": {
+    "GetFieldBy": "id",
+    "ValueToFind": "login"
+  },
+  "Ingresayop": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@title='Revisa el correo @yopmail.com']"
+  },
+  "Frameyop": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ifmail"
+  },
+  "Eliminaryop": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/header[1]/div[2]/button[2]"
+  },
+  "ClaveAnterior": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Password_Viejo"
+  },
+  "ClaveNueva": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Password_Nuevo1"
+  },
+  "ClaveNuevaConf": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Password_Nuevo2"
+  },
+  "BotonCambiar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionCambiar"
+  },
+  "ASCambioPass": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//h5[contains(text(),'Cambio de contraseña')]"
+  },
+  "CerrarVentana": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/button[1]/span[1]"
+  },
+  "ASVentana1": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TextoAlerta-danger"
+  }
+}

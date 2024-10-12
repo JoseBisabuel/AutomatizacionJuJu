@@ -1,0 +1,756 @@
+Feature: Opciones Crear
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Crear.json
+    And lleneme el campo Usuario con el texto Automata2
+    And lleneme el campo Contrasena con el texto 1Q2w3e4r5t*
+    And Hacer Click en El elemento Ingresar
+
+  @CreacionEstructural
+  Scenario:AC_AZDv6-1790:Creacion tipos de directorio - Estructura - 1
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And lleneme el campo NombreACrear con el texto Estructura_CrearTiposDirectorio
+    And Texto de Seleccion Estructural Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Estructura_CrearTiposDirectorio
+
+    And lleneme el campo NombreACrear con el texto EstructuraCrear
+    And Texto de Seleccion Estructural Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And lleneme el campo NombreACrear con el texto EstructuraCrear
+    And Texto de Seleccion Estructural Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento MensajeAlerta
+    And espereme 2 segundos
+    And Assert si elemento MensajeAlerta contiene el siguiente texto Mensaje
+    And Hacer Click en El elemento CerrarVentanaEmergente
+
+    And lleneme el campo NombreACrear con el texto ColeccionCrear
+    And Texto de Seleccion Colección Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And lleneme el campo NombreACrear con el texto ColeccionCrear
+    And Texto de Seleccion Colección Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento MensajeAlerta
+    And espereme 2 segundos
+    And Assert si elemento MensajeAlerta visualiza
+    And Hacer Click en El elemento CerrarVentanaEmergente
+
+    Then Assert si elemento TablaArchivos contiene el siguiente texto EstructuraCrear
+    Then Assert si elemento TablaArchivos contiene el siguiente texto ColeccionCrear
+    And Hacer Click en El elemento DirectorioAnterior
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre Estructura_CrearTiposDirectorio
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+  @CreacionColeccion
+  Scenario:AC_AZDv6-1791 : Creacion tipos de directorio - Coleccion - 1 - Bandeja de Entrada
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+
+    And lleneme el campo NombreACrear con el texto BDE_Coleccion
+    And Texto de Seleccion Bandeja de Entrada Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    Then Assert si elemento TablaArchivos contiene el siguiente texto BDE_Coleccion
+
+    And lleneme el campo NombreACrear con el texto BDE_Coleccion
+    And Texto de Seleccion Bandeja de Entrada Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento MensajeAlerta
+    And espereme 2 segundos
+    And Assert si elemento MensajeAlerta contiene el siguiente texto Mensaje
+    And Hacer Click en El elemento CerrarVentanaEmergente
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre BDE_Coleccion
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+  @CreacionColeccion
+  Scenario:AC_AZDv6-1791 : Creacion tipos de directorio - Coleccion - 1 - Carpeta Privada
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+   # And Hacer Click en El elemento DirectorioAnterior
+   # And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+
+    And lleneme el campo NombreACrear con el texto CarpetaPrivada_Coleccion
+    And Texto de Seleccion Carpeta Privada Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    Then Assert si elemento TablaArchivos contiene el siguiente texto CarpetaPrivada_Coleccion
+
+    And lleneme el campo NombreACrear con el texto CarpetaPrivada_Coleccion
+    And Texto de Seleccion Carpeta Privada Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento MensajeAlerta
+    And espereme 2 segundos
+    And Assert si elemento MensajeAlerta contiene el siguiente texto Mensaje
+    And Hacer Click en El elemento CerrarVentanaEmergente
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre CarpetaPrivada_Coleccion
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+  @CreacionColeccion
+  Scenario:AC_AZDv6-1791 : Creacion tipos de directorio - Coleccion - 1 - Carpeta Publica
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+
+    And lleneme el campo NombreACrear con el texto CarpetaPublica_Coleccion
+    And Texto de Seleccion Carpeta Pública Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    Then Assert si elemento TablaArchivos contiene el siguiente texto CarpetaPublica_Coleccion
+
+    And lleneme el campo NombreACrear con el texto CarpetaPublica_Coleccion
+    And Texto de Seleccion Carpeta Pública Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento MensajeAlerta
+    And espereme 2 segundos
+    And Assert si elemento MensajeAlerta contiene el siguiente texto Mensaje
+    And Hacer Click en El elemento CerrarVentanaEmergente
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre CarpetaPublica_Coleccion
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+  @CreacionColeccion
+  Scenario:AC_AZDv6-1791 : Creacion tipos de directorio - Coleccion - 1 - Coleccion
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+
+    And lleneme el campo NombreACrear con el texto Coleccion_Coleccion
+    And Texto de Seleccion Colección Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    Then Assert si elemento TablaArchivos contiene el siguiente texto Coleccion_Coleccion
+
+    And lleneme el campo NombreACrear con el texto Coleccion_Coleccion
+    And Texto de Seleccion Colección Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento MensajeAlerta
+    And espereme 2 segundos
+    And Assert si elemento MensajeAlerta contiene el siguiente texto Mensaje
+    And Hacer Click en El elemento CerrarVentanaEmergente
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre Coleccion_Coleccion
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+  @CreacionColeccion
+  Scenario:AC_AZDv6-1791 : Creacion tipos de directorio - Coleccion - 1 - Hipervinculo
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+
+    And lleneme el campo NombreACrear con el texto https://www.analitica.co/
+    And Texto de Seleccion Hipervinculo Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    Then Assert si elemento TablaArchivos contiene el siguiente texto https://www.analitica.co/
+
+    And lleneme el campo NombreACrear con el texto https://www.analitica.co/
+    And Texto de Seleccion Hipervinculo Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento MensajeAlerta
+    And espereme 2 segundos
+    And Assert si elemento MensajeAlerta contiene el siguiente texto Mensaje
+    And Hacer Click en El elemento CerrarVentanaEmergente
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre https://www.analitica.co/
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+  @CreacionColeccion
+  Scenario:AC_AZDv6-1791 : Creacion tipos de directorio - Coleccion - 1 - Tabla
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+
+    And lleneme el campo NombreACrear con el texto Tabla
+    And Texto de Seleccion Tabla Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    Then Assert si elemento TablaArchivos contiene el siguiente texto Tabla
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre Tabla
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+  @CreacionColeccion
+  Scenario:AC_AZDv6-1791 : Creacion tipos de directorio - Coleccion - 1 - Contenido HTML
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+
+    And lleneme el campo NombreACrear con el texto ContenidoHTMLACrear
+    And Texto de Seleccion Contenido HTML Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento FrameEditorDeTexto
+    And espereme 2 segundos
+    And Cambiar de Frame: FrameEditorDeTexto
+    And lleneme el campo CampoTextoContenido con el texto Prueba Contenido HTML
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento BtnCrearContenido
+    Then Assert si elemento TablaArchivos contiene el siguiente texto ContenidoHTMLACrear.azhtml
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre ContenidoHTMLACrear.azhtml
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+  @CreacionColeccion
+  Scenario:AC_AZDv6-1791 : Creacion tipos de directorio - Coleccion - 1 Formulario HTML
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+
+    And lleneme el campo NombreACrear con el texto FormularioHTMLACrear
+    And Texto de Seleccion Formulario HTML Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento FrameEditorDeTexto
+    And espereme 2 segundos
+    And Cambiar de Frame: FrameEditorDeTexto
+    And lleneme el campo CampoTextoContenido con el texto Prueba Formulario HTML
+    And Cambiar al Frame principal
+    And Hacer Click en El elemento BtnCrearContenido
+    Then Assert si elemento TablaArchivos contiene el siguiente texto FormularioHTMLACrear.azform
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre FormularioHTMLACrear.azform
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+  @CreacionColeccion
+  Scenario:AC_AZDv6-1791 : Creacion tipos de directorio - Coleccion - 1 - Documento Radicado
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+
+    And lleneme el campo NombreACrear con el texto DocumentoRadicadoACrear
+    And Texto de Seleccion Documento Radicado Selector SelectorTipoACrear
+    And Texto de Seleccion Comunicado Interno Selector SelectTipoDocumental
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento BtnRegresarRad
+    And Hacer Click en El elemento BtnRegresarRad
+    And espereme 3 segundos
+    Then Assert si elemento TablaArchivos contiene el siguiente texto DocumentoRadicadoACrear
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre DocumentoRadicadoACrear
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+ # Bandeja
+  @CreacionBandeja
+  Scenario:AC_AZDv6-1792 : Creacion tipos de directorio - Bandeja de Entrada - 1 - Carpeta Privada
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+   And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre BDE_CrearTiposDirectorio
+
+    And lleneme el campo NombreACrear con el texto CarpetaPrivadaACrear
+    And Texto de Seleccion Carpeta Privada Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    Then Assert si elemento TablaArchivos contiene el siguiente texto CarpetaPrivadaACrear
+
+    And lleneme el campo NombreACrear con el texto CarpetaPrivadaACrear
+    And Texto de Seleccion Carpeta Privada Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento MensajeAlerta
+    And espereme 2 segundos
+    And Assert si elemento MensajeAlerta contiene el siguiente texto Mensaje
+    And Hacer Click en El elemento CerrarVentanaEmergente
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre CarpetaPrivadaACrear
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+  @CreacionBandeja
+  Scenario:AC_AZDv6-1792 : Creacion tipos de directorio - Bandeja de Entrada - 1 - Hipervinculo
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre BDE_CrearTiposDirectorio
+
+    And lleneme el campo NombreACrear con el texto https://www.analitica.co/
+    And Texto de Seleccion Hipervinculo Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    Then Assert si elemento TablaArchivos contiene el siguiente texto https://www.analitica.co/
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre https://www.analitica.co/
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+  @CreacionBandeja
+  Scenario:AC_AZDv6-1792 : Creacion tipos de directorio - Bandeja de Entrada - 1 - Contenido HTML
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre BDE_CrearTiposDirectorio
+
+    And lleneme el campo NombreACrear con el texto ContenidoHTMLACrear
+    And Texto de Seleccion Contenido HTML Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento FrameEditorDeTexto
+    And espereme 2 segundos
+    And Cambiar de Frame: FrameEditorDeTexto
+    And lleneme el campo CampoTextoContenido con el texto Prueba Contenido HTML
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento BtnCrearContenido
+    Then Assert si elemento TablaArchivos contiene el siguiente texto ContenidoHTMLACrear.azhtml
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre ContenidoHTMLACrear.azhtml
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+  @CreacionBandeja
+  Scenario:AC_AZDv6-1792 : Creacion tipos de directorio - Bandeja de Entrada - 1 - Formulario HTML
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre BDE_CrearTiposDirectorio
+
+    And lleneme el campo NombreACrear con el texto FormularioHTMLACrear
+    And Texto de Seleccion Formulario HTML Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento FrameEditorDeTexto
+    And espereme 2 segundos
+    And Cambiar de Frame: FrameEditorDeTexto
+    And lleneme el campo CampoTextoContenido con el texto Prueba Formulario HTML
+    And Cambiar al Frame principal
+    And Hacer Click en El elemento BtnCrearContenido
+    Then Assert si elemento TablaArchivos contiene el siguiente texto FormularioHTMLACrear.azform
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre FormularioHTMLACrear.azform
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+  @CreacionBandeja
+  Scenario:AC_AZDv6-1792 : Creacion tipos de directorio - Bandeja de Entrada - 1 - Documento Radicado
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre BDE_CrearTiposDirectorio
+
+    And lleneme el campo NombreACrear con el texto DocumentoRadicadoACrear
+    And Texto de Seleccion Documento Radicado Selector SelectorTipoACrear
+    And Texto de Seleccion Comunicado Interno Selector SelectTipoDocumental
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento BtnRegresarRad
+    And Hacer Click en El elemento BtnRegresarRad
+    And espereme 3 segundos
+    Then Assert si elemento TablaArchivos contiene el siguiente texto DocumentoRadicadoACrear
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre DocumentoRadicadoACrear
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+  @CreacionCarpeta
+  Scenario Outline:AC_AZDv6-1793 : Creacion tipos de directorio - Carpeta - 1 - Publica-Privada
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre <Nombre>
+
+    And lleneme el campo NombreACrear con el texto <TipoCarpeta>
+    And Texto de Seleccion <TipoCarpeta> Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    Then Assert si elemento TablaArchivos contiene el siguiente texto <TipoCarpeta>
+
+    And lleneme el campo NombreACrear con el texto <TipoCarpeta>
+    And Texto de Seleccion <TipoCarpeta> Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento MensajeAlerta
+    And espereme 2 segundos
+    And Assert si elemento MensajeAlerta contiene el siguiente texto Mensaje
+    And Hacer Click en El elemento CerrarVentanaEmergente
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre <TipoCarpeta>
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+    Examples:
+      |Nombre                               |TipoCarpeta      |
+      |Carpeta_CrearTiposDirectorios_Publica|Carpeta Pública  |
+      |Carpeta_CrearTiposDirectorios_Privada|Carpeta Privada  |
+
+  @CreacionCarpeta
+  Scenario Outline:AC_AZDv6-1793 : Creacion tipos de directorio - Carpeta - 1 - Hipervinculo
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+   And Hacer Click en El elemento DirectorioAnterior
+   And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre <Nombre>
+
+    And lleneme el campo NombreACrear con el texto https://www.analitica.co/
+    And Texto de Seleccion Hipervinculo Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    Then Assert si elemento TablaArchivos contiene el siguiente texto https://www.analitica.co/
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre https://www.analitica.co/
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+    Examples:
+      |Nombre                               |
+      |Carpeta_CrearTiposDirectorios_Publica|
+      |Carpeta_CrearTiposDirectorios_Privada|
+
+  @CreacionCarpeta
+  Scenario Outline:AC_AZDv6-1793 : Creacion tipos de directorio - Carpeta - 1 - Contenido HTML
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre <Nombre>
+
+    And lleneme el campo NombreACrear con el texto ContenidoHTMLACrear
+    And Texto de Seleccion Contenido HTML Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento FrameEditorDeTexto
+    And espereme 2 segundos
+    And Cambiar de Frame: FrameEditorDeTexto
+    And lleneme el campo CampoTextoContenido con el texto Prueba Contenido HTML
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento BtnCrearContenido
+    Then Assert si elemento TablaArchivos contiene el siguiente texto ContenidoHTMLACrear.azhtml
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre ContenidoHTMLACrear.azhtml
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+    Examples:
+      |Nombre                               |
+      |Carpeta_CrearTiposDirectorios_Publica|
+      |Carpeta_CrearTiposDirectorios_Privada|
+
+  @CreacionCarpeta
+  Scenario Outline:AC_AZDv6-1793 : Creacion tipos de directorio - Carpeta - 1 - Formulario HTML
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre <Nombre>
+
+    And lleneme el campo NombreACrear con el texto FormularioHTMLACrear
+    And Texto de Seleccion Formulario HTML Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento FrameEditorDeTexto
+    And espereme 2 segundos
+    And Cambiar de Frame: FrameEditorDeTexto
+    And lleneme el campo CampoTextoContenido con el texto Prueba Formulario HTML
+    And Cambiar al Frame principal
+    And Hacer Click en El elemento BtnCrearContenido
+    Then Assert si elemento TablaArchivos contiene el siguiente texto FormularioHTMLACrear.azform
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre FormularioHTMLACrear.azform
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+    Examples:
+      |Nombre                               |
+      |Carpeta_CrearTiposDirectorios_Publica|
+      |Carpeta_CrearTiposDirectorios_Privada|
+
+  @CreacionCarpeta
+  Scenario Outline:AC_AZDv6-1793 : Creacion tipos de directorio - Carpeta - 1 - Documento Radicado
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre CrearTiposDirectorios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionBDECarpeta
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre ColeccionTD
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre <Nombre>
+
+    And lleneme el campo NombreACrear con el texto DocumentoRadicadoACrear
+    And Texto de Seleccion Documento Radicado Selector SelectorTipoACrear
+    And Texto de Seleccion Comunicado Interno Selector SelectTipoDocumental
+    And Hacer Click en El elemento BtnCrear
+    And espere el elemento BtnRegresarRad
+    And Hacer Click en El elemento BtnRegresarRad
+    And espereme 3 segundos
+    Then Assert si elemento TablaArchivos contiene el siguiente texto DocumentoRadicadoACrear
+
+    And Seleccione la opcion TresPuntos de la fila que contenga el nombre DocumentoRadicadoACrear
+    And Hacer Click en El elemento BorrarTresPuntos
+    And Hacer Click en El elemento BtnActualizar
+
+    Examples:
+      |Nombre                               |
+      |Carpeta_CrearTiposDirectorios_Publica|
+      |Carpeta_CrearTiposDirectorios_Privada|
+

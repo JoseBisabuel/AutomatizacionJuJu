@@ -1,0 +1,7 @@
+#surefire_0
+#Sat Mar 04 22:21:12 CST 2023
+reportVersion=2.7.0
+basedir=F\:\\Calidad_QA\\AZDigital\\AZDigitalV6
+allure.results.directory=F\:\\Calidad_QA\\AZDigital\\AZDigitalV6\\target/allure-results
+user.dir=F\:\\Calidad_QA\\AZDigital\\AZDigitalV6
+localRepository=C\:\\Users\\meyer.ayala\\.m2\\repository

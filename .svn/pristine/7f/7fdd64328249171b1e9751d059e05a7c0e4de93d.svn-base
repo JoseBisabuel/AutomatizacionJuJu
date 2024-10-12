@@ -1,0 +1,89 @@
+Feature: Concatenar
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Concatenar.json
+    And lleneme el campo Usuario con el texto comunicados
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+
+  @ConcatenarBDE
+  Scenario: AC_AZDv6-70 : Concatenar Archivos - BDE
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstVarios
+    And Sikuli element click ColConcatenar
+    #And Hacer Click en El elemento ColConcatenarArchivos
+    And Hacer Click en El elemento BDEConcArchivos
+    And Adjunto una Captura de pantalla al informe Concatena01
+    And Hacer Click en El elemento Check1
+    And Hacer Click en El elemento Check2
+    And Hacer Click en El elemento Check3
+    And Adjunto una Captura de pantalla al informe Concatena02
+    And Hacer Click en El elemento ConcatenarBDE
+    And se accept la alerta
+    And Adjunto una Captura de pantalla al informe Concatena03
+    And Hacer Click en El elemento Adjuntos
+    And Hacer Click en El elemento Adjuntos1
+    And Adjunto una Captura de pantalla al informe Concatena04
+    And Hacer Click en El elemento RegresarPDF
+    And espereme 15 segundos
+
+  @ConcatenarColeccion
+  Scenario: AC_AZDv6-70 : Concatenar Archivos - Coleccion Uno a Uno
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstVarios
+    And Sikuli element click ColConcatenar
+    And Adjunto una Captura de pantalla al informe Concatena05
+    And Hacer Click en El elemento CheckTodos
+    And Adjunto una Captura de pantalla al informe Concatena06
+    And Hacer Click en El elemento ConcatenarBDE
+    And se accept la alerta
+    And Adjunto una Captura de pantalla al informe Concatena07
+    And Hacer Click en El elemento Adjuntos
+    And Hacer Click en El elemento Adjuntos2
+    And Adjunto una Captura de pantalla al informe Concatena08
+    And Hacer Click en El elemento RegresarPDF
+    And espereme 15 segundos
+
+  @ConcatenarColeccion
+  Scenario: AC_AZDv6-70 : Concatenar Archivos - Coleccion Todos
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstVarios
+    And Sikuli element click ColConcatenar
+    And Adjunto una Captura de pantalla al informe Concatena09
+    And Hacer Click en El elemento Check4
+    And Hacer Click en El elemento Check5
+    And Hacer Click en El elemento Check6
+    And Hacer Click en El elemento Check7
+    And Hacer Click en El elemento Check8
+    And Adjunto una Captura de pantalla al informe Concatena10
+    And Hacer Click en El elemento ConcatenarBDE
+    And se accept la alerta
+    And Adjunto una Captura de pantalla al informe Concatena11
+    And Hacer Click en El elemento Adjuntos
+    And espereme 2 segundos
+    And Hacer Click en El elemento Adjuntos2
+    And Adjunto una Captura de pantalla al informe Concatena12
+    And Hacer Click en El elemento RegresarPDF
+    And espereme 15 segundos

@@ -1,0 +1,151 @@
+Feature: Estructura - Coleccion - Bandeja de Entrada
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM EstColBDE.json
+    And lleneme el campo Usuario con el texto Comunicados
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+
+    @ExportarEstructura
+    Scenario: AC_AZDv6-1765: Exportacion Metadata - Estructura
+      And Cambiar de Frame: Opciones
+      And Hacer Click en El elemento GestionContenido
+      And Hacer Click en El elemento Estructura
+      And Cambiar de Frame: EstructuraIframe
+      And Sikuli element click Estructura1
+      And Cambiar al Frame principal
+      And Cambiar al Frame principal
+      And Cambiar de Frame: Contenido
+      And Hacer Click en El elemento MasInfoEst
+      And Hacer Click en El elemento Metadata
+      And Adjunto una Captura de pantalla al informe ECB15
+
+  ## Exportar sin encabezado##
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+
+  @ExportarEstructuraOpc2
+  Scenario Outline: AC_AZDv6-1765: Exportacion - Estructura (Varios - sin encabezados)
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click Estructura1
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SelFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento <campo1>
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento ExportarSin
+    And espereme 2 segundos
+
+    Examples:
+      | campo1 |
+      | Excel |
+      | CSV |
+      | TAB |
+      | XML |
+      | HTML |
+      | WORD |
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+      ## PDF ##
+
+  @ExportarEstructuraOpc2PDF
+  Scenario: AC_AZDv6-1765: Exportacion - Estructura (PDF sin encabezado)
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click Estructura1
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SelFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento SeleccionarTodas
+    And espereme 1 segundos
+    And Hacer Click en El elemento ExportarSinPDF
+    And espereme 5 segundos
+
+      ## PDF ##
+  ## Exportar sin encabezado##
+
+  ##------------------------------------------------------------------------##
+
+  ## Exportar con encabezado##
+     ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+
+  @ExportarEstructuraOpc3
+  Scenario Outline: AC_AZDv6-1765: Exportacion - Estructura (Varios - con encabezados)
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click Estructura1
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SelFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento <campo1>
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    #And espere el elemento AgregarEncabezado
+    And Hacer Click en El elemento AgregarEncabezado
+    And espereme 1 segundos
+    And lleneme el campo TituloEncabezado con el texto Exportar con encabezado desde ESTRUCTURA
+    And lleneme el campo Comentario con el texto Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And espereme 1 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+    Examples:
+      | campo1 |
+      | Excel |
+      | CSV |
+      | TAB |
+      | XML |
+      | HTML |
+      | WORD |
+    ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+    ## PDF ##
+
+  @ExportarEstructuraOpc3PDF
+  Scenario: AC_AZDv6-1765: Exportacion - Estructura (PDF con encabezado)
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click Estructura1
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SelFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento AgregarEncabezado2
+    And espereme 1 segundos
+    And lleneme el campo TituloEncabezadoPDF con el texto Exportar con encabezado desde ESTRUCTURA
+    And lleneme el campo ComentarioPDF con el texto Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios -
+    And Hacer Click en El elemento CheckAgrUsuPDF
+    And Hacer Click en El elemento CheckAgrFecPDF
+    And Selecion Index 1 Selector SelectOrientacion
+    And Selecion Index 1 Selector SelectFuente
+    And Selecion Index 1 Selector SelectTamano
+    And Hacer Click en El elemento SeleccionarTodas
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon2
+    And espereme 5 segundos
+
+    ## PDF ##
+  ## Exportar con encabezado##

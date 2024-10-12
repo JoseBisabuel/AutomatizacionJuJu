@@ -1,0 +1,541 @@
+Feature: Tres Puntos - Prueba de opciones - Directorio
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM TresPuntos.json
+    And lleneme el campo Usuario con el texto trespuntos
+    And lleneme el campo Contrasena con el texto 1q2w3e4r5T*
+    And Hacer Click en El elemento Ingresar
+
+  #####
+  ##### Menu tres puntos Carpetas
+  #####
+
+  @RenombrarCarpeta
+  Scenario: AC_AZDv6-9: Renombrar Directorio
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TPtosDir01
+    And Hacer Click en El elemento RenombrarTP
+    And Hacer Click en El elemento Regresar
+    And Hacer Click en El elemento TPtosDir01
+    And Hacer Click en El elemento RenombrarTP
+    And lleneme el campo NuevoNombre con el texto RenombrarDirectorio
+    And lleneme el campo ObservacionRenombrar con el texto Prueba Selenium en el campo observacion
+    And Hacer Click en El elemento GuardarRenombrar
+    And Adjunto una Captura de pantalla al informe CarpetaPruebasRenombrada
+
+  @BitacoraCarpeta
+  Scenario: AC_AZDv6-51:Bitacora de Acciones Directorio
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TPtosDir01
+    And Hacer Click en El elemento BitacoraTP
+    And Adjunto una Captura de pantalla al informe BitacoraAccionesTP
+    And Hacer Click en El elemento RegresarBitacoraA
+    And Adjunto una Captura de pantalla al informe VisualizacionArchivo
+
+      ## Exportar sin encabezado##
+          ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+    Scenario Outline: AC_AZDv6-51:Bitacora de Acciones Directorio - Exportar (Varios - sin encabezados)
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      And Hacer Click en El elemento TPtosDir01
+      And Hacer Click en El elemento BitacoraTP
+      And espereme 5 segundos
+      And Hacer Click en El elemento SelFormato2
+      And espereme 1 segundos
+      And Hacer Click en El elemento <campo1>
+      And Hacer Click en El elemento EstaPagina2
+      And espereme 1 segundos
+      And Hacer Click en El elemento ExportarSin
+      And espereme 2 segundos
+
+      Examples:
+        | campo1 |
+        | Excel |
+        | CSV |
+        | TAB |
+        | XML |
+        | HTML |
+        | WORD |
+          ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+          ## PDF ##
+    Scenario: AC_AZDv6-51:Bitacora de Acciones Directorio - Exportar (PDF sin encabezado)
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      And Hacer Click en El elemento TPtosDir01
+      And Hacer Click en El elemento BitacoraTP
+      And espereme 5 segundos
+      And Hacer Click en El elemento SelFormato2
+      And espereme 1 segundos
+      And Hacer Click en El elemento PDF
+      And Hacer Click en El elemento EstaPagina2
+      And espereme 1 segundos
+      And Hacer Click en El elemento SeleccionarTodas
+      And espereme 1 segundos
+      And Hacer Click en El elemento ExportarSinPDF
+      And espereme 5 segundos
+          ## PDF ##
+    ## Exportar sin encabezado##
+
+    ## Exportar con encabezado##
+          ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+    Scenario Outline: AC_AZDv6-51:Bitacora de Acciones Directorio - Exportar (Varios - con encabezados)
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      And Hacer Click en El elemento TPtosDir01
+      And Hacer Click en El elemento BitacoraTP
+      And espereme 5 segundos
+      And Hacer Click en El elemento SelFormato2
+      And espereme 1 segundos
+      And Hacer Click en El elemento <campo1>
+      And Hacer Click en El elemento EstaPagina2
+      And espereme 1 segundos
+          #And espere el elemento AgregarEncabezado
+      And Hacer Click en El elemento AgregarEncabezado
+      And espereme 1 segundos
+      And lleneme el campo TituloEncabezado con el texto Exportar con encabezado Bitacora de Acciones
+      And lleneme el campo Comentario con el texto Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios -
+      And Hacer Click en El elemento CheckAgrUsu
+      And Hacer Click en El elemento CheckAgrFec
+      And espereme 1 segundos
+      And Hacer Click en El elemento ExportarCon
+      And espereme 2 segundos
+
+      Examples:
+        | campo1 |
+        | Excel |
+        | CSV |
+        | TAB |
+        | XML |
+        | HTML |
+        | WORD |
+          ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+          ## PDF ##
+    Scenario: AC_AZDv6-51:Bitacora de Acciones Directorio - Exportar (PDF con encabezado)
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      And Hacer Click en El elemento TPtosDir01
+      And Hacer Click en El elemento BitacoraTP
+      And espereme 5 segundos
+      And Hacer Click en El elemento SelFormato2
+      And espereme 1 segundos
+      And Hacer Click en El elemento PDF
+      And Hacer Click en El elemento EstaPagina2
+      And espereme 1 segundos
+      And Hacer Click en El elemento AgregarEncabezado2
+      And espereme 1 segundos
+      And lleneme el campo TituloEncabezadoPDF con el texto Exportar con encabezado desde Bitacora de Acciones
+      And lleneme el campo ComentarioPDF con el texto Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios -
+      And Hacer Click en El elemento CheckAgrUsuPDF
+      And Hacer Click en El elemento CheckAgrFecPDF
+      And Selecion Index 1 Selector SelectOrientacion
+      And Selecion Index 1 Selector SelectFuente
+      And Selecion Index 1 Selector SelectTamano
+      And Hacer Click en El elemento SeleccionarTodas
+      And espereme 2 segundos
+      And Hacer Click en El elemento ExportarCon2
+      And espereme 5 segundos
+          ## PDF ##
+    ## Exportar con encabezado##
+
+  @CategorizarCarpeta
+  Scenario: Categorizar Carpeta
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TPtosDir02
+    And Hacer Click en El elemento CategorizarTP
+    And Hacer Click en El elemento CategoriaRegresar
+    And Hacer Click en El elemento TPtosDir02
+    And Hacer Click en El elemento CategorizarTP
+    And Selecion Index 2 Selector CategoriaArchivo
+    And Hacer Click en El elemento CategoriaActualizar
+    And Adjunto una Captura de pantalla al informe CarpetaCategorizada
+
+    Scenario: CategorizarArchivo
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      And espereme 2 segundos
+      And Hacer Click en El elemento TPtosDir02
+      And Hacer Click en El elemento CategorizarTP
+      And Opcion del select - y el select CategoriaArchivo
+      And Hacer Click en El elemento CategoriaActualizar
+
+  @PublicarCarpeta
+  Scenario: Publicar Carpeta
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TPtosDir03
+    And Hacer Click en El elemento PublicarTP
+    And Hacer Click en El elemento Regresar
+    And Hacer Click en El elemento TPtosDir03
+    And Hacer Click en El elemento PublicarTP
+    And lleneme el campo Observaciones con el texto Automatizacion - Observaciones Publicar - Automatizacion - Observaciones Publicar -
+    And lleneme el campo FechaVencimientoCyP con el texto 2051-10-27 16:12:00
+    And Hacer Click en El elemento Actualizar
+    And Adjunto una Captura de pantalla al informe PublicarCarpeta
+
+  @CompartirCarpeta
+  Scenario: Compartir Carpeta
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TPtosDir04
+    And Hacer Click en El elemento CompartirTP
+    And Hacer Click en El elemento Regresar
+    And Hacer Click en El elemento TPtosDir04
+    And Hacer Click en El elemento CompartirTP
+    And lleneme el campo Observaciones con el texto Observaciones - Automatización Compartir - Observaciones - Automatización Compartir -
+    And lleneme el campo EmailsCompartir con el texto pruebasqa310@yopmail.com
+      #recuerde colocar una fecha y hora o solo la fecha siguiendo el siguiente formato año-mes-dia hora:minutos:segundos
+    And lleneme el campo FechaVencimientoCyP con el texto 2620-10-27 16:12:00
+    And Desplazo el elemento Actualizar
+    And Adjunto una Captura de pantalla al informe CarpetaCompartida
+      ##
+      ##--VALIDACION MAIL--##
+      ##
+    And espereme 5 segundos
+    And ir a la pestaña https://www.google.com.co
+    And Ir a yopmail
+    And espereme 3 segundos
+    And lleneme el campo Mailyop con el texto pruebasqa310
+    And Hacer Click en El elemento Ingresayop
+    And Adjunto una Captura de pantalla al informe DirCompartidoMAIL
+    And espereme 2 segundos
+    And Cambiar de Frame: Frameyop
+    And Hacer Click en El elemento Eliminaryop
+    And espereme 2 segundos
+
+  @ComentarCarpeta
+  Scenario: Comentar Carpeta
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TPtosDir05
+    And Hacer Click en El elemento ComentarTP
+    And espereme 1 segundos
+    Then se accept la alerta
+
+  @BorrarDirectorio
+  Scenario: Borrar Directorio
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TPtosDir15
+    And Hacer Click en El elemento BorrarTP
+    And Hacer Click en El elemento BtRegresarBorrar
+    And espereme 2 segundos
+    And Hacer Click en El elemento TPtosDir15
+    And Hacer Click en El elemento BorrarTP
+    And Hacer Click en El elemento BtActualizarBorrar
+    And espereme 2 segundos
+
+  @MoverCarpeta
+  Scenario: Mover Carpeta
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TPtosDir06
+    And Hacer Click en El elemento MoverTP
+    And Hacer Click en El elemento Regresar
+    And espereme 3 segundos
+    And Hacer Click en El elemento TPtosDir06
+    And Hacer Click en El elemento MoverTP
+    And espereme 2 segundos
+    And lleneme el campo DirectorioDestinoCarpeta con el texto Directorio16
+    And Hacer Click en El elemento BuscarDirectorio
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionarDirectorio
+    And Hacer Click en El elemento Actualizar
+    And Adjunto una Captura de pantalla al informe CarpetaMovidoExiste
+
+  @TransladarCarpeta
+  Scenario: Transladar Carpeta
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TPtosDir07
+    And Hacer Click en El elemento TransladarTP
+    And Hacer Click en El elemento Regresar
+    And Hacer Click en El elemento TPtosDir07
+    And Hacer Click en El elemento TransladarTP
+    And lleneme el campo DirectorioDestinoCarpeta con el texto BDE_tresptsRec
+    And Hacer Click en El elemento BuscarDirectorio
+    And Hacer Click en El elemento SeleccionarBuscadorTransladar
+    And lleneme el campo ObservacionesTransladarCarpeta con el texto SálènïumPruebas Automatizacion - Tres Puntos - Opcion Trasladar -Pruebas Automatizacion - Tres Puntos - Opcion Trasladar -
+    And lleneme el campo FechaTramiteTransladarCarpeta con el texto 2056-10-25 08:33:00
+    And Hacer Click en El elemento Actualizar
+    And Adjunto una Captura de pantalla al informe CarpetaTransladado
+      ##
+      ##--VALIDACION MAIL--##
+      ##
+    And espereme 2 segundos
+    And ir a la pestaña https://www.google.com.co
+    And Ir a yopmail
+    And espereme 3 segundos
+    And lleneme el campo Mailyop con el texto pruebasqa312
+    And Hacer Click en El elemento Ingresayop
+    And Adjunto una Captura de pantalla al informe ArchivoCompartidoMAIL
+    And espereme 2 segundos
+    And Cambiar de Frame: Frameyop
+    And Hacer Click en El elemento Eliminaryop
+    And espereme 2 segundos
+
+  @IniciarFlujoArchivo
+  Scenario: Iniciar Flujo Carpeta
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento IngDir3
+    And Hacer Click en El elemento tresPtosDir1
+    And Hacer Click en El elemento IniciarFlujoTP
+    And Hacer Click en El elemento RegresarIniciarFlujo
+    And Hacer Click en El elemento tresPtosDir1
+    And Hacer Click en El elemento IniciarFlujoTP
+    And Opcion del select PruebasQA y el select SelectorIniciarFlujoCarpeta
+    And Hacer Click en El elemento ActualizarFlujo
+    And Adjunto una Captura de pantalla al informe IniciarFlujoCarpeta
+      ##
+      ##--VALIDACION MAIL--##
+      ##
+    And espereme 5 segundos
+    And ir a la pestaña https://www.google.com.co
+    And Ir a yopmail
+    And espereme 3 segundos
+    And lleneme el campo Mailyop con el texto pruebasqa312
+    And Hacer Click en El elemento Ingresayop
+    And Adjunto una Captura de pantalla al informe IniciarFlujoDirMAIL
+    And espereme 2 segundos
+    And Cambiar de Frame: Frameyop
+    And Hacer Click en El elemento Eliminaryop
+    And espereme 2 segundos
+
+  @CambiarEstadoFlujoCarpeta
+  Scenario: Cambiar Estado Flujo Carpeta
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento IngDir3
+    And Hacer Click en El elemento tresPtosDir1
+    And Hacer Click en El elemento CambiarEstadoFlujoTP
+    And Hacer Click en El elemento RegresarCambiarFlujo
+    And Hacer Click en El elemento tresPtosDir1
+    And Hacer Click en El elemento CambiarEstadoFlujoTP
+    And Selecion Index 1 Selector EstadoCambiarFlujo
+    And lleneme el campo CarpetaDestino con el texto BDE_CamEst
+    And Hacer Click en El elemento BuscarDirectorio
+    And Hacer Click en El elemento DestinoCambiarFlujo
+    And lleneme el campo ObservacionesFlujos con el texto Sélëniùn - Automatizacion - Observaciones FLujo
+    And Hacer Click en El elemento ActualizarCamEstFlujo
+    And Adjunto una Captura de pantalla al informe IniciarFlujoCarpeta
+    And espereme 2 segundos
+      ##
+      ##--VALIDACION MAIL--##
+      ##
+    And ir a la pestaña https://www.google.com.co
+    And Ir a yopmail
+    And espereme 3 segundos
+    And lleneme el campo Mailyop con el texto pruebasqa312
+    And Hacer Click en El elemento Ingresayop
+    And Adjunto una Captura de pantalla al informe CambiarEstadoFlujoDirMAIL
+    And espereme 2 segundos
+    And Cambiar de Frame: Frameyop
+    And Hacer Click en El elemento Eliminaryop
+    And espereme 2 segundos
+
+    Scenario: Cambiar estado flujo trabajo - Abortar Directorio
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      And Hacer Click en El elemento FlechaArriba
+      And espereme 2 segundos
+      And Sikuli element click CambioEstadoFlujo
+      And espereme 2 segundos
+      And Hacer Click en El elemento tresPtosDir1
+      And Hacer Click en El elemento CambiarEstadoFlujoTP
+      And Hacer Click en El elemento AbortarFlujo
+      And Assert si elemento AssAbortar contiene el siguiente texto Observaciones por las que Aborta el Flujo
+      And lleneme el campo ObservacionAbortarFlujo con el texto Abortar - Automatizacion
+      And Hacer Click en El elemento BotonAbortarFlujo
+
+  ##
+  ##--Sin Funcionamiento
+  ##
+  #@FirmarArchivo
+  #Scenario: AC_AZDv6-46: Firmar Digitalmente - Directorio
+    #And Hacer Click en El elemento Home
+    #And Cambiar de Frame: Contenido
+    #And Hacer Click en El elemento TPtosDir07
+    #And Hacer Click en El elemento FirmarTP
+    #And Hacer Click en El elemento RegresarFirmaD
+    #And Hacer Click en El elemento TPtosDir07
+    #And Hacer Click en El elemento FirmarTP
+    #And El select FirmaP12 Texto de Seleccion Selector vs Gruop P12 *
+    #And lleneme el campo FirmaP12Clave con el texto Julianita1
+    #And lleneme el campo FirmaP12Razon con el texto Automatizacion - Firma Digital - Automatizacion - Firma Digital - Automatizacion - Firma Digital -
+    #And Hacer Click en El elemento ActualizarFirmaD
+    #And Adjunto una Captura de pantalla al informe FirmaDeDocumento
+  ##
+  ##--Sin Funcionamiento
+  ##
+  @ExportarDirectorioIng
+  Scenario: AC_AZDv6-1766: Exportar Directorio
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TPtosDir01
+    And Hacer Click en El elemento ExportarTP
+    And Assert si elemento AsExportar contiene el siguiente texto Exportación
+
+    @ExportarTresPuntosPt1
+    Scenario: AC_AZDv6-1766: Exportar Directorio - Opción 1 _ Parte 1
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      And Hacer Click en El elemento TPtosDir01
+      And Hacer Click en El elemento ExportarTP
+      And Hacer Click en El elemento Exportacion
+      And Adjunto una Captura de pantalla al informe Coleccion02
+      And Hacer Click en El elemento CheckBoxExp1
+      And Hacer Click en El elemento BotonExpPt1
+      And espereme 3 segundos
+      And Selecion Index 1 Selector TipoExpSelect
+      And espereme 5 segundos
+      And Hacer Click en El elemento BotonExpPt1
+      And espereme 3 segundos
+
+    @ExportarColeccionPt2
+    Scenario Outline: AC_AZDv6-1766: Exportar Directorio - Opción 1 _ Parte 2
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      And Hacer Click en El elemento TPtosDir01
+      And Hacer Click en El elemento ExportarTP
+      And Hacer Click en El elemento Exportacion
+      And Adjunto una Captura de pantalla al informe Coleccion02
+      And Hacer Click en El elemento CheckBoxExp2
+      And Hacer Click en El elemento CheckBoxExp3
+      And Opcion del select <campo1> y el select TipoFormExport
+      And espereme 2 segundos
+      And Hacer Click en El elemento BotonExpPt1
+      And espereme 3 segundos
+      Examples:
+        | campo1 |
+        | TAB |
+        | CSV |
+        | Pipe |
+        | XML |
+
+    Scenario Outline: AC_AZDv6-1766: Exportar Directorio - Opción 1 _ Parte 3
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      And Hacer Click en El elemento TPtosDir01
+      And Hacer Click en El elemento ExportarTP
+      And Hacer Click en El elemento Exportacion
+      And Adjunto una Captura de pantalla al informe Coleccion02
+      And Hacer Click en El elemento CheckBoxExp2
+      And Hacer Click en El elemento CheckBoxExp3
+      And Hacer Click en El elemento CheckBoxExp4
+      And Opcion del select <campo1> y el select TipoFormExport
+      And espereme 2 segundos
+      And Hacer Click en El elemento BotonExpPt1
+      And espereme 3 segundos
+      Examples:
+        | campo1 |
+        | TAB |
+        | CSV |
+        | Pipe |
+        | XML |
+
+    ## POR LA OPCION DE EXPORTACION ##
+    ## Exportar sin encabezado ##
+        ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+    @ExportarTresPuntosPt2
+    Scenario Outline: AC_AZDv6-1766: Exportar Directorio - Opción 2 - Exportacion Varios - Sin Encabezados
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      And Hacer Click en El elemento TPtosDir01
+      And Hacer Click en El elemento ExportarTP
+      And Hacer Click en El elemento SelFormato2
+      And espereme 1 segundos
+      And Hacer Click en El elemento <campo1>
+      And Hacer Click en El elemento EstaPagina2
+      And espereme 1 segundos
+      And Hacer Click en El elemento ExportarSin
+      And espereme 2 segundos
+
+      Examples:
+        | campo1 |
+        | Excel2 |
+        | CSV2 |
+        | TAB2 |
+        | XML2 |
+        | HTML2 |
+        | WORD2 |
+        ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+        ## PDF ##
+    Scenario: AC_AZDv6-1766: Exportar Directorio - Opción 2 - Exportacion PDF - Sin Encabezados
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      And Hacer Click en El elemento TPtosDir01
+      And Hacer Click en El elemento ExportarTP
+      And Hacer Click en El elemento SelFormato2
+      And espereme 1 segundos
+      And Hacer Click en El elemento PDF2
+      And Hacer Click en El elemento EstaPagina2
+      And espereme 2 segundos
+      And Hacer Click en El elemento SeleccionarTodas
+      And espereme 1 segundos
+      And Hacer Click en El elemento ExportarSinPDF
+      And espereme 2 segundos
+        ## PDF ##
+    ## Exportar sin encabezado ##
+    ## Exportar con encabezado ##
+        ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+    Scenario Outline: AC_AZDv6-1766: Exportar Directorio - Opción 2 - Exportacion Varios - Con Encabezados
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      And Hacer Click en El elemento TPtosDir01
+      And Hacer Click en El elemento ExportarTP
+      And Hacer Click en El elemento SelFormato2
+      And espereme 1 segundos
+      And Hacer Click en El elemento <campo1>
+      And Hacer Click en El elemento EstaPagina2
+      And espereme 1 segundos
+      #And espere el elemento AgregarEncabezado
+      And Hacer Click en El elemento AgregarEncabezado
+      And espereme 1 segundos
+      And lleneme el campo TituloEncabezado con el texto Exportar con encabezado desde COLECCION
+      And lleneme el campo Comentario con el texto Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios -
+      And Hacer Click en El elemento CheckAgrUsu
+      And Hacer Click en El elemento CheckAgrFec
+      And espereme 1 segundos
+      And Hacer Click en El elemento ExportarCon
+      And espereme 2 segundos
+
+      Examples:
+        | campo1 |
+        | Excel2 |
+        | CSV2 |
+        | TAB2 |
+        | XML2 |
+        | HTML2 |
+        | WORD2 |
+        ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+        ## PDF ##
+    Scenario: AC_AZDv6-1766: Exportar Directorio - Opción 2 - Exportacion PDF - Con Encabezados
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      And Hacer Click en El elemento TPtosDir01
+      And Hacer Click en El elemento ExportarTP
+      And Hacer Click en El elemento SelFormato2
+      And espereme 1 segundos
+      And Hacer Click en El elemento PDF2
+      And Hacer Click en El elemento EstaPagina2
+      And espereme 1 segundos
+      And Hacer Click en El elemento AgregarEncabezado2
+      And espereme 1 segundos
+      And lleneme el campo TituloEncabezadoPDF con el texto Exportar con encabezado desde COLECCION
+      And lleneme el campo ComentarioPDF con el texto Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios -
+      And Hacer Click en El elemento CheckAgrUsuPDF
+      And Hacer Click en El elemento CheckAgrFecPDF
+      And Selecion Index 1 Selector SelectOrientacion
+      And Selecion Index 1 Selector SelectFuente
+      And Selecion Index 1 Selector SelectTamano
+      And Hacer Click en El elemento SeleccionarTodas
+      And espereme 2 segundos
+      And Hacer Click en El elemento ExportarCon2
+      And espereme 2 segundos
+        ## PDF ##
+    ## Exportar con encabezado ##
+    ## POR LA OPCION DE EXPORTACION ##

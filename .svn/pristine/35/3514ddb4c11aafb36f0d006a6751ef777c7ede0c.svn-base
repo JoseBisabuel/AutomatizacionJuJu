@@ -1,0 +1,27 @@
+Feature: Tres Puntos
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM TresPuntos.json
+    And lleneme el campo Usuario con el texto trespuntos
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+
+  @BorradodeArchivo
+  Scenario: Borrado de Archivo
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionVarios
+    And Hacer Click en El elemento SeleccioneAccion
+    And Desplazo el elemento BorrarSMasivo
+    And Hacer Click en El elemento BorrarSeleccion
+    And Hacer Click en El elemento AceptarBorrado
+    And espereme 2 segundos
+    And Hacer Click en El elemento FlechaArriba
+    And Sikuli element click BDE_TresPtoRec
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionVarios
+    And Hacer Click en El elemento SeleccioneAccion
+    And Desplazo el elemento BorrarSMasivo
+    And Hacer Click en El elemento BorrarSeleccion
+    And Hacer Click en El elemento AceptarBorrado

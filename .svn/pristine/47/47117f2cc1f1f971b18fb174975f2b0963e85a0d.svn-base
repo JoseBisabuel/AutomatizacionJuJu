@@ -1,0 +1,123 @@
+{
+  "Usuario": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsId"
+  },
+  "Contrasena": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsPassword"
+  },
+  "Ingresar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/div[1]/button[1]"
+  },
+  "BandejasEntradas": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "DivBandejasEntra"
+  },
+  "Contenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Contenido']"
+  },
+  "MasInfoArchivo": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[2]/td[2]/a[1]/img[1]"
+  },
+  "VersionArchivo": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[3]/div[2]/form[2]/div[2]/div[1]/div[1]/div[4]/label[1]/a[1]"
+  },
+  "BitacoraArchivo": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[3]/div[2]/form[2]/div[2]/div[1]/div[1]/div[4]/label[2]/a[1]"
+  },
+  "RegresoMIArchivo": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/div[2]/a[1]"
+  },
+  "PerfilacionArchivo": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[3]/div[2]/form[2]/div[2]/div[1]/div[1]/div[4]/label[3]/a[1]"
+  },
+  "CrearPerfilacion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/div[2]/a[1]"
+  },
+  "SelectColeccionPerfilacion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AecColeccion"
+  },
+  "FechaHoraPerfilacion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AecFechaHora"
+  },
+  "AgregarPerfilacion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionAgregar"
+  },
+  "PerfilacionRegresarArchivo": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/div[2]/a[2]"
+  },
+  "CopiarURLArchivo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "btn-Copy"
+  },
+  "RenombrarMIarchivo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ArNombreEnCliente"
+  },
+  "FechaCreacionArchivo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ArFechaCreacion"
+  },
+  "NumeroFolios": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ArFolio"
+  },
+  "Actualizar": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Actualizar"
+  },
+  "Metadata": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Metadata-tab"
+  },
+  "CategorizarArchivo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ArCategoria"
+  },
+  "DatosAsociados": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[3]/div[2]/form[2]/div[2]/div[1]/div[2]/label[1]/a[1]"
+  },
+  "TIDatosAsociados": {
+    "GetFieldBy": "id",
+    "ValueToFind": "EvTipoIdentificacion"
+  },
+  "EVDatosAsociados": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ApExpedienteVinculacion"
+  },
+  "AgregarDatosAsociados": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionAgregar"
+  },
+  "ReferenciaMetadata": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ArReferencia"
+  },
+  "DescripcionMetadata": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ArDescripcion"
+  },
+  "PalabraClaveMetadata": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ArPalabrasClave"
+  },
+  "ObservacionesMetadata": {
+    "GetFieldBy": "id",
+    "ValueToFind": "ArObservaciones"
+  }
+
+}

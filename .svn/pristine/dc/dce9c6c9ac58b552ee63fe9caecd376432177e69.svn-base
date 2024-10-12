@@ -1,0 +1,74 @@
+Feature: Lotes Mensajeria
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM mensajeria.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Contrasena con el texto 1234
+    And Hacer Click en El elemento Ingresar
+
+  @MensajeriaModificar1
+  Scenario: AC_AZDv6-151 : Crear Lote de Mensajeria - Modificar
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Modificar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Registro1
+    And Texto de Seleccion Mensajeria Selector TipoMsj
+    And El select Sitio Texto de Seleccion Selector vs Gruop Radicación Auto
+    And El select RCourier Texto de Seleccion Selector vs Gruop yenny carreño
+    And lleneme el campo NoGuiaT con el texto 002
+    And lleneme el campo PrecTula con el texto 002
+    And lleneme el campo FechaDespacho con el texto 2020-03-11 16:26:00
+    And Hacer Click en El elemento FechaDespacho
+    And lleneme el campo DesRecorrido con el texto Pruebas QA - Modificacion - Pruebas QA - Modificacion -Pruebas QA - Modificacion -
+    And Hacer Click en El elemento AccionActualizar
+    And Adjunto una Captura de pantalla al informe Pantalla_10
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Modificar
+
+  @MensajeriaModificar2
+  Scenario: AC_AZDv6-156: Cambiar el estado del radicado o solicitudes de Distribucion respecto del lote
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Texto de Seleccion Abierto Selector BuscarEstado
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Modificar1
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EditarRegistro
+    And Texto de Seleccion Cerrado Selector BuscarEstado
+    And Hacer Click en El elemento AccionActualizar
+    #When ir a Cuadro1 ventana
+    And se dismiss la alerta
+    And se accept la alerta
+    And espereme 2 segundos
+    And Hacer Click en El elemento AccionActualizar
+    And se accept la alerta
+    And Hacer Click en El elemento EditarRegistro
+    And espereme 5 segundos
+    #And Adjunto una Captura de pantalla al informe Modificar1_5
+
+  @MensajeriaModificar3
+  Scenario: AC_AZDv6-158: No editar Lotes de Mensajeria Cerrados
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Texto de Seleccion Cerrado Selector BuscarEstado
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Modificar2
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EditarRegistro2
+    And espereme 5 segundos
+    #And Adjunto una Captura de pantalla al informe Modificar2_5

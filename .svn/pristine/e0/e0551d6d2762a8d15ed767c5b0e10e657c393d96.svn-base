@@ -1,0 +1,499 @@
+Feature: Columnas feature
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Columnas.json
+    And lleneme el campo Usuario con el texto Automata1
+    And lleneme el campo Contrasena con el texto 1Q2w3e4r5t*
+    And Hacer Click en El elemento Ingresar
+
+    #Fecha creacion ingreso por menú hamburguesa
+  @ColumnasMenuHamburguesaFechaCreacion
+  Scenario: AC_AZDv6-592: Funcionalidad Columna Fecha de Creacion Ingreso por por Menú Hamburguesa
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento BtnRegresar
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Automatizacion
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Usuarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Usuarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Columnas
+
+    And Hacer Click en El elemento MasInforColeccionArchivos
+    And Texto de Seleccion Fecha Creación Selector SelectCriterioOrden
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    And Hacer Click en El elemento ColeccionArchivos
+
+    And Hacer Click en El elemento BtnColumnas
+    And Validar si el check CheckFechaCreacion está marcado, si es así desmarcar
+    And Hacer Click en El elemento BtnAceptarColumnas
+    And espereme 2 segundos
+    And Mostrar las columnas BtnColumnas seleccionar CheckFechaCreacion elemento y click en aceptar BtnAceptarColumnas
+    And espereme 8 segundos
+      #And espere el elemento FechaCreacion
+      #And espereme 2 segundos
+    Then Assert si elemento FechaCreacion contiene el siguiente texto Fecha de Creación
+     # Then Assert si elemento FechaCreacion visualiza
+
+    And Hacer Click en El elemento MasInformacion1
+    And lleneme el campo CampoFechaCreacion con el texto 2030-01-26
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 2030-01-26
+
+    And Hacer Click en El elemento MasInformacion1
+    And lleneme el campo CampoFechaCreacion con el texto 2030-01-24
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    Then Assert si elemento CampoOrden2 contiene el siguiente texto 2030-01-24
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 2030-01-26
+
+    And Hacer Click en El elemento MasInformacion1
+    And lleneme el campo CampoFechaCreacion con el texto 2030-01-22
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    Then Assert si elemento CampoOrden1 contiene el siguiente texto 2030-01-22
+    Then Assert si elemento CampoOrden2 contiene el siguiente texto 2030-01-24
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 2030-01-26
+      #Cambiamos el orden
+    And Hacer Click en El elemento CambioCampoOrden
+    Then Assert si elemento CampoOrden1 contiene el siguiente texto 2030-01-26
+    Then Assert si elemento CampoOrden2 contiene el siguiente texto 2030-01-24
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 2030-01-22
+    And Hacer Click en El elemento CambioCampoOrden
+
+      #Removemos los cambios
+    And Hacer Click en El elemento MasInformacion3
+    And lleneme el campo CampoFechaCreacion con el texto 2023-01-15
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+
+    And Hacer Click en El elemento MasInformacion3
+    And lleneme el campo CampoFechaCreacion con el texto 2023-01-15
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+
+    And Hacer Click en El elemento MasInformacion3
+    And lleneme el campo CampoFechaCreacion con el texto 2023-01-15
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+
+    And Mostrar las columnas BtnColumnas seleccionar CheckFechaCreacion elemento y click en aceptar BtnAceptarColumnas
+
+    #Fecha Creacion botón regresar
+  @BandejaRegresarFechaCreacion
+  Scenario: AC_AZDv6-592: Funcionalidad Columna Fecha de Creacion Ingreso por botón Regresar
+    And Hacer Click en El elemento BtnBandeja
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento IngresoEstructuraAutom
+    And Hacer Click en El elemento EstructuraUsuarios
+    And Hacer Click en El elemento ColeccionUsuarios
+    And Hacer Click en El elemento ColeccionColumnas
+
+    And Hacer Click en El elemento MasInforColeccionArchivos
+    And Texto de Seleccion Fecha Creación Selector SelectCriterioOrden
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    And Hacer Click en El elemento ColeccionArchivos
+
+    And Hacer Click en El elemento BtnColumnas
+    And Validar si el check CheckFechaCreacion está marcado, si es así desmarcar
+    And Hacer Click en El elemento BtnAceptarColumnas
+    And espereme 2 segundos
+
+    And Mostrar las columnas BtnColumnas seleccionar CheckFechaCreacion elemento y click en aceptar BtnAceptarColumnas
+    And espereme 8 segundos
+     # And espere el elemento FechaCreacion
+     # And espereme 2 segundos
+    And Assert si elemento FechaCreacion contiene el siguiente texto Fecha de Creación
+      #Then Assert si elemento FechaCreacion visualiza
+
+    And Hacer Click en El elemento MasInformacion1
+    And lleneme el campo CampoFechaCreacion con el texto 2030-01-26
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 2030-01-26
+
+    And Hacer Click en El elemento MasInformacion1
+    And lleneme el campo CampoFechaCreacion con el texto 2030-01-24
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    Then Assert si elemento CampoOrden2 contiene el siguiente texto 2030-01-24
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 2030-01-26
+
+    And Hacer Click en El elemento MasInformacion1
+    And lleneme el campo CampoFechaCreacion con el texto 2030-01-22
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    Then Assert si elemento CampoOrden1 contiene el siguiente texto 2030-01-22
+    Then Assert si elemento CampoOrden2 contiene el siguiente texto 2030-01-24
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 2030-01-26
+      #Cambiamos el orden
+    And Hacer Click en El elemento CambioCampoOrden
+    Then Assert si elemento CampoOrden1 contiene el siguiente texto 2030-01-26
+    Then Assert si elemento CampoOrden2 contiene el siguiente texto 2030-01-24
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 2030-01-22
+    And Hacer Click en El elemento CambioCampoOrden
+
+      #Removemos los cambios
+    And Hacer Click en El elemento MasInformacion3
+    And lleneme el campo CampoFechaCreacion con el texto 2023-01-15
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+
+    And Hacer Click en El elemento MasInformacion3
+    And lleneme el campo CampoFechaCreacion con el texto 2023-01-15
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+
+    And Hacer Click en El elemento MasInformacion3
+    And lleneme el campo CampoFechaCreacion con el texto 2023-01-15
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+
+    And Mostrar las columnas BtnColumnas seleccionar CheckFechaCreacion elemento y click en aceptar BtnAceptarColumnas
+
+      #Todas las columas visibles en conjunto ingresando desde el botón regresar
+  @ColumnasRegresarTodosLosElementos
+  Scenario:AC_AZDv6-590: Configuracion Columnas Visibles Ingreso desde el botón Regresar
+    And Hacer Click en El elemento BtnBandeja
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento IngresoEstructuraAutom
+    And Hacer Click en El elemento EstructuraUsuarios
+    And Hacer Click en El elemento ColeccionUsuarios
+    And Hacer Click en El elemento ColeccionColumnas
+    And Hacer Click en El elemento ColeccionArchivos
+    #Validamos que no hayan columnas activas para evitar errores
+    And Hacer Click en El elemento BtnColumnas
+    And Validar si el check CheckOrden está marcado, si es así desmarcar
+    And Validar si el check CheckFechaCreacion está marcado, si es así desmarcar
+    And Validar si el check CheckDestinatario está marcado, si es así desmarcar
+    And Validar si el check CheckFechaDocumento está marcado, si es así desmarcar
+    And Validar si el check CheckInicioTramite está marcado, si es así desmarcar
+    And Validar si el check CheckObservaciones está marcado, si es así desmarcar
+    And Validar si el check CheckRadicado está marcado, si es así desmarcar
+    And Validar si el check CheckRemitente está marcado, si es así desmarcar
+    And Validar si el check CheckVencimientoTramite está marcado, si es así desmarcar
+    And Hacer Click en El elemento BtnAceptarColumnas
+    And espereme 2 segundos
+
+      #Destinatario
+    And Mostrar las columnas BtnColumnas seleccionar CheckDestinatario elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento Destinatario visualiza
+      #FechaCreación
+    And Mostrar las columnas BtnColumnas seleccionar CheckFechaCreacion elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento FechaCreacion visualiza
+      #FechaDocumento
+    And Mostrar las columnas BtnColumnas seleccionar CheckFechaDocumento elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento FechaDocumento visualiza
+      #FechaInicioTramite
+    And Mostrar las columnas BtnColumnas seleccionar CheckInicioTramite elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento InicioTramite visualiza
+      #Observaciones
+    And Mostrar las columnas BtnColumnas seleccionar CheckObservaciones elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento Observaciones visualiza
+      #Orden
+    And Mostrar las columnas BtnColumnas seleccionar CheckOrden elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento Orden visualiza
+      #Radicado
+    And Mostrar las columnas BtnColumnas seleccionar CheckRadicado elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento Radicado visualiza
+        #Remitente
+    And Mostrar las columnas BtnColumnas seleccionar CheckRemitente elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento Remitente visualiza
+      #Vencimiento Tramite
+    And Mostrar las columnas BtnColumnas seleccionar CheckVencimientoTramite elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento VencimientoTramite visualiza
+
+      #Validamos que todas las columnas seas visibles en pantalla
+    Then Assert si elemento Destinatario visualiza
+    Then Assert si elemento FechaCreacion visualiza
+    Then Assert si elemento FechaDocumento visualiza
+    Then Assert si elemento InicioTramite visualiza
+    Then Assert si elemento Observaciones visualiza
+    Then Assert si elemento Orden visualiza
+    Then Assert si elemento Radicado visualiza
+    Then Assert si elemento Remitente visualiza
+    Then Assert si elemento VencimientoTramite visualiza
+
+      #Desactivamos todas las columnas para evitar problemas al volver a ejecutar
+    And Hacer Click en El elemento BtnColumnas
+    And Hacer Click en El elemento CheckDestinatario
+    And Hacer Click en El elemento CheckFechaCreacion
+    And Hacer Click en El elemento CheckFechaDocumento
+    And Hacer Click en El elemento CheckInicioTramite
+    And Hacer Click en El elemento CheckObservaciones
+    And Hacer Click en El elemento CheckOrden
+    And Hacer Click en El elemento CheckRadicado
+    And Hacer Click en El elemento CheckRemitente
+    And Hacer Click en El elemento CheckVencimientoTramite
+    And Hacer Click en El elemento BtnAceptarColumnas
+      #Todas las columas visibles en conjunto ingresando desde el menú hamburguesa (Coleccciones)
+  @ColumnasMenuTodosLosElementos
+  Scenario:AC_AZDv6-590: Configuracion Columnas Visibles Ingreso Por Menu Hamburgesa
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento BtnRegresar
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Automatizacion
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Usuarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Usuarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Columnas
+    And Hacer Click en El elemento MasInforColeccionArchivos
+    And Texto de Seleccion Orden Selector SelectCriterioOrden
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Archivos
+
+
+     #Validamos que no hayan columnas activas para evitar comflictos
+    And Hacer Click en El elemento BtnColumnas
+    And Validar si el check CheckOrden está marcado, si es así desmarcar
+    And Validar si el check CheckFechaCreacion está marcado, si es así desmarcar
+    And Validar si el check CheckDestinatario está marcado, si es así desmarcar
+    And Validar si el check CheckFechaDocumento está marcado, si es así desmarcar
+    And Validar si el check CheckInicioTramite está marcado, si es así desmarcar
+    And Validar si el check CheckObservaciones está marcado, si es así desmarcar
+    And Validar si el check CheckRadicado está marcado, si es así desmarcar
+    And Validar si el check CheckRemitente está marcado, si es así desmarcar
+    And Validar si el check CheckVencimientoTramite está marcado, si es así desmarcar
+    And Hacer Click en El elemento BtnAceptarColumnas
+    And espereme 2 segundos
+
+      #Destinatario
+    And Mostrar las columnas BtnColumnas seleccionar CheckDestinatario elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento Destinatario visualiza
+      #FechaCreación
+    And Mostrar las columnas BtnColumnas seleccionar CheckFechaCreacion elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento FechaCreacion visualiza
+      #FechaDocumento
+    And Mostrar las columnas BtnColumnas seleccionar CheckFechaDocumento elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento FechaDocumento visualiza
+      #FechaInicioTramite
+    And Mostrar las columnas BtnColumnas seleccionar CheckInicioTramite elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento InicioTramite visualiza
+      #Observaciones
+    And Mostrar las columnas BtnColumnas seleccionar CheckObservaciones elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento Observaciones visualiza
+      #Orden
+    And Mostrar las columnas BtnColumnas seleccionar CheckOrden elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento Orden visualiza
+      #Radicado
+    And Mostrar las columnas BtnColumnas seleccionar CheckRadicado elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento Radicado visualiza
+        #Remitente
+    And Mostrar las columnas BtnColumnas seleccionar CheckRemitente elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento Remitente visualiza
+      #Vencimiento Tramite
+    And Mostrar las columnas BtnColumnas seleccionar CheckVencimientoTramite elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento VencimientoTramite visualiza
+
+      #Validamos que todas las columnas seas visibles en pantalla
+    Then Assert si elemento Destinatario visualiza
+    Then Assert si elemento FechaCreacion visualiza
+    Then Assert si elemento FechaDocumento visualiza
+    Then Assert si elemento InicioTramite visualiza
+    Then Assert si elemento Observaciones visualiza
+    Then Assert si elemento Orden visualiza
+    Then Assert si elemento Radicado visualiza
+    Then Assert si elemento Remitente visualiza
+    Then Assert si elemento VencimientoTramite visualiza
+      #Desactivamos todas las columnas para evitar problemas al volver a ejecutar
+    And Hacer Click en El elemento BtnColumnas
+    And Hacer Click en El elemento CheckDestinatario
+    And Hacer Click en El elemento CheckFechaCreacion
+    And Hacer Click en El elemento CheckFechaDocumento
+    And Hacer Click en El elemento CheckInicioTramite
+    And Hacer Click en El elemento CheckObservaciones
+    And Hacer Click en El elemento CheckOrden
+    And Hacer Click en El elemento CheckRadicado
+    And Hacer Click en El elemento CheckRemitente
+    And Hacer Click en El elemento CheckVencimientoTramite
+    And Hacer Click en El elemento BtnAceptarColumnas
+
+        #
+  @CampoFolioOrdenPorMenuHamburguesa
+  Scenario:AC_AZDv6-1746 Cambio campo Folio por orden Ingreso por Menú Hamburguesa
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento BtnRegresar
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Automatizacion
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Usuarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Usuarios
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Columnas
+    And Hacer Click en El elemento MasInforColeccionArchivos
+    And Texto de Seleccion Orden Selector SelectCriterioOrden
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    And Seleccione la opcion Ingresar de la fila que contenga el nombre Archivos
+    And Hacer Click en El elemento BtnColumnas
+    And Validar si el check CheckOrden está marcado, si es así desmarcar
+    And Hacer Click en El elemento BtnAceptarColumnas
+    And espereme 2 segundos
+    And Mostrar las columnas BtnColumnas seleccionar CheckOrden elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento Orden visualiza
+
+    And Hacer Click en El elemento MasInformacion3
+    And espere el elemento CampoFolioPorOrden
+    And lleneme el campo CampoFolioPorOrden con el texto 0
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    And Hacer Click en El elemento MasInformacion3
+    And espere el elemento CampoFolioPorOrden
+    And lleneme el campo CampoFolioPorOrden con el texto 0
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    And Hacer Click en El elemento MasInformacion3
+    And espere el elemento CampoFolioPorOrden
+    And lleneme el campo CampoFolioPorOrden con el texto 0
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+
+    And Hacer Click en El elemento MasInformacion1
+    And espere el elemento CampoFolioPorOrden
+    And lleneme el campo CampoFolioPorOrden con el texto 1
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 1
+
+    And Hacer Click en El elemento MasInformacion1
+    And espere el elemento CampoFolioPorOrden
+    And lleneme el campo CampoFolioPorOrden con el texto 2
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    Then Assert si elemento CampoOrden2 contiene el siguiente texto 1
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 2
+
+    And Hacer Click en El elemento MasInformacion1
+    And espere el elemento CampoFolioPorOrden
+    And lleneme el campo CampoFolioPorOrden con el texto 3
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    Then Assert si elemento CampoOrden1 contiene el siguiente texto 1
+    Then Assert si elemento CampoOrden2 contiene el siguiente texto 2
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 3
+
+      #Cambiamos el orden
+    And Hacer Click en El elemento CambioCampoOrden
+    Then Assert si elemento CampoOrden1 contiene el siguiente texto 3
+    Then Assert si elemento CampoOrden2 contiene el siguiente texto 2
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 1
+    And Hacer Click en El elemento CambioCampoOrden
+
+    And Mostrar las columnas BtnColumnas seleccionar CheckOrden elemento y click en aceptar BtnAceptarColumnas
+
+  @CampoFolioOrdenPorBotonRegresar
+  Scenario:AC_AZDv6-1746 Cambio campo Folio por orden Ingreso por Botón regresar
+    And Hacer Click en El elemento BtnBandeja
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento IngresoEstructuraAutom
+    And Hacer Click en El elemento EstructuraUsuarios
+    And Hacer Click en El elemento ColeccionUsuarios
+    And Hacer Click en El elemento ColeccionColumnas
+    And Hacer Click en El elemento MasInforColeccionArchivos
+    And Texto de Seleccion Orden Selector SelectCriterioOrden
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    And Hacer Click en El elemento ColeccionArchivos
+    And Hacer Click en El elemento BtnColumnas
+    And Validar si el check CheckOrden está marcado, si es así desmarcar
+    And Hacer Click en El elemento BtnAceptarColumnas
+    And espereme 2 segundos
+    And Mostrar las columnas BtnColumnas seleccionar CheckOrden elemento y click en aceptar BtnAceptarColumnas
+    Then Assert si elemento Orden visualiza
+
+    And Hacer Click en El elemento MasInformacion3
+    And espere el elemento CampoFolioPorOrden
+    And lleneme el campo CampoFolioPorOrden con el texto 0
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    And Hacer Click en El elemento MasInformacion3
+    And espere el elemento CampoFolioPorOrden
+    And lleneme el campo CampoFolioPorOrden con el texto 0
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    And Hacer Click en El elemento MasInformacion3
+    And espere el elemento CampoFolioPorOrden
+    And lleneme el campo CampoFolioPorOrden con el texto 0
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+
+    And Hacer Click en El elemento MasInformacion1
+    And espere el elemento CampoFolioPorOrden
+    And lleneme el campo CampoFolioPorOrden con el texto 1
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 1
+
+    And Hacer Click en El elemento MasInformacion1
+    And espere el elemento CampoFolioPorOrden
+    And lleneme el campo CampoFolioPorOrden con el texto 2
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    Then Assert si elemento CampoOrden2 contiene el siguiente texto 1
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 2
+
+    And Hacer Click en El elemento MasInformacion1
+    And espere el elemento CampoFolioPorOrden
+    And lleneme el campo CampoFolioPorOrden con el texto 3
+    And Hacer Click en El elemento ActualizarMasInformacion
+    And Hacer Click en El elemento RegresarMasInformacion
+    Then Assert si elemento CampoOrden1 contiene el siguiente texto 1
+    Then Assert si elemento CampoOrden2 contiene el siguiente texto 2
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 3
+
+      #Cambiamos el orden
+    And Hacer Click en El elemento CambioCampoOrden
+    Then Assert si elemento CampoOrden1 contiene el siguiente texto 3
+    Then Assert si elemento CampoOrden2 contiene el siguiente texto 2
+    Then Assert si elemento CampoOrden3 contiene el siguiente texto 1
+    And Hacer Click en El elemento CambioCampoOrden
+
+    And Mostrar las columnas BtnColumnas seleccionar CheckOrden elemento y click en aceptar BtnAceptarColumnas

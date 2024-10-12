@@ -1,0 +1,71 @@
+Feature: Lotes Mensajeria
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM mensajeria.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Contrasena con el texto 1234
+    And Hacer Click en El elemento Ingresar
+
+    @MensajeriaRegistro
+    Scenario: AC_AZDv6-151 : Crear Lote de Mensajeria - Registrar
+      And Hacer Click en El elemento Menu
+      And Cambiar de Frame: Opciones
+      And Hacer Click en El elemento Mensajeria
+      And Hacer Click en El elemento LoteMensajeria
+      And Hacer Click en El elemento AgregarMensajeria
+      And espereme 5 segundos
+      And Cambiar al Frame principal
+      And Cambiar de Frame: Contenido
+      Then Assert si elemento AsExt1 es igual a Externo
+      And Texto de Seleccion Interno Selector TipoMsj
+      Then Assert si elemento AsExt2 es igual a Interno
+      And Texto de Seleccion Mensajeria Selector TipoMsj
+      Then Assert si elemento AsExt3 es igual a Mensajeria
+      And Texto de Seleccion Externo Selector TipoMsj
+      Then Assert si elemento EstadoMsj es igual a Abierto
+      And El select Sitio Texto de Seleccion Selector vs Gruop Radicación Auto
+      And El select Zona Texto de Seleccion Selector vs Gruop Centro Centro
+      And Texto de Seleccion Deprisa Selector Courier
+      And El select RCourier Texto de Seleccion Selector vs Gruop yenny carreño
+      And lleneme el campo NoGuiaT con el texto 001
+      And lleneme el campo PrecTula con el texto 001
+      And lleneme el campo FechaDespacho con el texto 2020-03-11 16:26:00
+      And Hacer Click en El elemento FechaDespacho
+      And lleneme el campo DesRecorrido con el texto Pruebas QA - Pruebas QA - Pruebas QA - Pruebas QA - Pruebas QA -
+      And El select Creador Texto de Seleccion Selector vs Gruop Meyer Alberto Ayala Cuervo
+      And El select DepOrigen Texto de Seleccion Selector vs Gruop Ventanilla Pruebas
+      And El select DepDestino Texto de Seleccion Selector vs Gruop Dependencia QA
+      And Hacer Click en El elemento AccionAgregar
+      And espereme 5 segundos
+
+  @MensajeriaCancelar
+  Scenario: AC_AZDv6-151 : Crear Lote de Mensajeria - Registrar - Cancelar
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Registro1
+    And Hacer Click en El elemento AccionCancelar
+    And Adjunto una Captura de pantalla al informe Pantalla_11
+    And espereme 5 segundos
+
+  @MensajeriaEliminar
+  Scenario: AC_AZDv6-151 : Crear Lote de Mensajeria - Registrar - Eliminar
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento BuscarMensajeria
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Registro1
+    And Hacer Click en El elemento AccionEliminar
+    And Adjunto una Captura de pantalla al informe Pantalla_12
+    And espereme 5 segundos
+

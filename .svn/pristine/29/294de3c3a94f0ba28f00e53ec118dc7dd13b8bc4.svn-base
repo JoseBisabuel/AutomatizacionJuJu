@@ -1,0 +1,435 @@
+Feature: Comunicados Internos - Botones
+
+  # Comunicados Internos (Botones)
+
+    ##--Guardar--##
+  @opcionGuardar
+  Scenario: AC_AZDv6-1773: Creacion nuevas opciones - Guardar
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto Comunicados
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+    And Hacer Click en El elemento ComunicadoA
+    And espereme 3 segundos
+    And Selecion Index 1 Selector TDocumental
+    And lleneme el campo DesTDocumental con el texto OpcionGuardar
+    And Hacer Click en El elemento BotonAgregarComun
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Agregar_ListaUsuariosPersonas
+          #--Validación ventana Usuarios--#
+    And ir a UsuariosGuardar ventana
+    And Cambiar de Frame: BuscarUsuariosPersonas
+    And lleneme el campo CampoNombre con el texto Usuario
+    And lleneme el campo CampoApellido con el texto Cero
+    And Hacer Click en El elemento BotonAgregarUsuario
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: AgregarUsuariosPersonas
+    And Hacer Click en El elemento AsociarUsuario
+    And espereme 3 segundos
+          #--Validación ventana Usuarios--#
+    And ir a PrincipalGuardar ventana
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 1 Selector CTramite
+    And Selecion Index 1 Selector CSubtramite
+      #And Selecion Index 1 Selector CTipoDocumento
+    And Texto de Seleccion 1 a 1 Selector CModoSalida
+    And lleneme el campo CIdReferencia con el texto Auto01
+    And lleneme el campo CIdReferencia con el texto Auto01
+    And lleneme el campo CNo.Folios con el texto 1
+    And lleneme el campo CNo.DocAnexos con el texto 1
+    And lleneme el campo CAsunto con el texto Opción Guardar - Opción Guardar - Opción Guardar - Opción Guardar - Opción Guardar -
+    And Hacer Click en El elemento BGuardar
+    And Adjunto una Captura de pantalla al informe Comn22
+    ##--Guardar--##
+
+    ##--Regresar--##
+  @opcionRegresar
+  Scenario: AC_AZDv6-1773: Creacion nuevas opciones - Regresar
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto Comunicados
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+    And Hacer Click en El elemento ComunicadoA
+    And espereme 3 segundos
+    And Selecion Index 1 Selector TDocumental
+    And lleneme el campo DesTDocumental con el texto OpcionRegresar
+    And Hacer Click en El elemento BotonAgregarComun
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Agregar_ListaUsuariosPersonas
+          #--Validación ventana Usuarios--#
+    And ir a UsuariosRegresar ventana
+    And Cambiar de Frame: BuscarUsuariosPersonas
+    And lleneme el campo CampoNombre con el texto Usuario
+    And lleneme el campo CampoApellido con el texto Cero Uno
+    And Hacer Click en El elemento BotonAgregarUsuario
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: AgregarUsuariosPersonas
+    And Hacer Click en El elemento AsociarUsuario
+    And espereme 3 segundos
+          #--Validación ventana Usuarios--#
+    And ir a PrincipalRegresar ventana
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 1 Selector CTramite
+    And Selecion Index 1 Selector CSubtramite
+      #And Selecion Index 1 Selector CTipoDocumento
+    And Texto de Seleccion 1 a 1 Selector CModoSalida
+    And lleneme el campo CIdReferencia con el texto OpcionRegresar
+    And lleneme el campo CIdReferencia con el texto OpcionRegresar
+    And lleneme el campo CNo.Folios con el texto 1
+    And lleneme el campo CNo.DocAnexos con el texto 1
+    And lleneme el campo CAsunto con el texto Opción Regresar - Opción Regresar - Opción Regresar - Opción Regresar - Opción Regresar -
+    And Hacer Click en El elemento BGuardar
+    And Hacer Click en El elemento BRegresar
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe Comn23
+    ##--Regresar--##
+
+   ##--Vista Previa--##
+  @OpcionVistaPrevia
+  Scenario: AC_AZDv6-1773: Creacion nuevas opciones - Vista Previa
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto Comunicados
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TresPuntosVista7
+    And Hacer Click en El elemento RadComunicado
+    And espereme 2 segundos
+    And Hacer Click en El elemento BVistaPrevia
+    And espereme 15 segundos
+    And Adjunto una Captura de pantalla al informe Comn23
+    And espereme 10 segundos
+    ##--Vista Previa--##
+
+    ##--Trasladar--##
+  @opcionTrasladar
+  Scenario: AC_AZDv6-1773: Creacion nuevas opciones - Trasladar
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto Comunicados
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+    And Hacer Click en El elemento ComunicadoA
+    And espereme 3 segundos
+    And Selecion Index 1 Selector TDocumental
+    And lleneme el campo DesTDocumental con el texto OpcionTrasladar
+    And Hacer Click en El elemento BotonAgregarComun
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Agregar_ListaUsuariosPersonas
+          #--Validación ventana Usuarios--#
+    And ir a UsuariosTrasladar ventana
+    And Cambiar de Frame: BuscarUsuariosPersonas
+    And lleneme el campo CampoNombre con el texto Usuario
+    And lleneme el campo CampoApellido con el texto Cero Dos
+    And Hacer Click en El elemento BotonAgregarUsuario
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: AgregarUsuariosPersonas
+    And Hacer Click en El elemento AsociarUsuario
+    And espereme 3 segundos
+          #--Validación ventana Usuarios--#
+    And ir a PrincipalTrasladar ventana
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 1 Selector CTramite
+    And Selecion Index 1 Selector CSubtramite
+      #And Selecion Index 1 Selector CTipoDocumento
+    And Texto de Seleccion 1 a 1 Selector CModoSalida
+    And lleneme el campo CIdReferencia con el texto OpcionTrasladar
+    And lleneme el campo CIdReferencia con el texto OpcionTrasladar
+    And lleneme el campo CNo.Folios con el texto 1
+    And lleneme el campo CNo.DocAnexos con el texto 1
+    And lleneme el campo CAsunto con el texto Opción Trasladar - Opción Trasladar - Opción Trasladar - Opción Trasladar - Opción Trasladar -
+    And Hacer Click en El elemento BGuardar
+    And Hacer Click en El elemento BTrasladar
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Comn24
+    And lleneme el campo BusBanTrasladar con el texto usuario03
+    And Hacer Click en El elemento BotonBuscarTrasladar
+    And espereme 5 segundos
+    And lleneme el campo ObsBanTrasladar con el texto Automatizacion - Traslado
+    And Adjunto una Captura de pantalla al informe Comn25
+    And Hacer Click en El elemento BotonTrasladar
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe Comn25_1
+    ##--Trasladar--##
+
+    ##--Devolver--##
+  @opcionDevolver
+  Scenario: AC_AZDv6-1773: Creacion nuevas opciones - Devolver
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto usuario03
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TresPuntosDevolver
+    And Hacer Click en El elemento RadComunicado
+    And Hacer Click en El elemento BDevolver
+    And Adjunto una Captura de pantalla al informe Comn26
+    And Hacer Click en El elemento BotonDevolver
+    And lleneme el campo ObsDevolucion con el texto Observaciones Devolucion Automatización
+    And Adjunto una Captura de pantalla al informe Comn27
+    And Hacer Click en El elemento BotonConfDevolcion
+    ##--Devolver--##
+
+    ##--Devolver Origen--##
+  @opcionDevolverAlOrigen
+  Scenario: AC_AZDv6-1773: Creacion nuevas opciones - Devolver al Origen
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto Comunicados
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+    And Hacer Click en El elemento ComunicadoA
+    And espereme 3 segundos
+    And Selecion Index 1 Selector TDocumental
+    And lleneme el campo DesTDocumental con el texto OpcionDevolverAlOrigen
+    And Hacer Click en El elemento BotonAgregarComun
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Agregar_ListaUsuariosPersonas
+          #--Validación ventana Usuarios--#
+    And ir a UsuariosDO ventana
+    And Cambiar de Frame: BuscarUsuariosPersonas
+    And lleneme el campo CampoNombre con el texto Usuario
+    And lleneme el campo CampoApellido con el texto Cero Uno
+    And Hacer Click en El elemento BotonAgregarUsuario
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: AgregarUsuariosPersonas
+    And Hacer Click en El elemento AsociarUsuario
+    And espereme 3 segundos
+          #--Validación ventana Usuarios--#
+    And ir a PrincipalDO ventana
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 1 Selector CTramite
+    And Selecion Index 1 Selector CSubtramite
+      #And Selecion Index 1 Selector CTipoDocumento
+    And Texto de Seleccion 1 a 1 Selector CModoSalida
+    And lleneme el campo CIdReferencia con el texto OpcionDevolverAlOrigen
+    And lleneme el campo CIdReferencia con el texto OpcionDevolverAlOrigen
+    And lleneme el campo CNo.Folios con el texto 1
+    And lleneme el campo CNo.DocAnexos con el texto 1
+    And lleneme el campo CAsunto con el texto Opción DevolverAlOrigen - Opción DevolverAlOrigen - Opción DevolverAlOrigen - Opción DevolverAlOrigen
+    And Hacer Click en El elemento BGuardar
+    And Hacer Click en El elemento BTrasladar
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Comn28
+    And lleneme el campo BusBanTrasladar con el texto usuario02
+    And Hacer Click en El elemento BotonBuscarTrasladar
+    And espereme 5 segundos
+    And lleneme el campo ObsBanTrasladar con el texto Automatizacion - Traslado BDE No. 1
+    And Adjunto una Captura de pantalla al informe Comn29
+    And Hacer Click en El elemento BotonTrasladar
+
+  @opcionDevolverAlOrigen2
+  Scenario: AC_AZDv6-1773: Creacion nuevas opciones - Devolver al Origen
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto usuario02
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TresPuntosDevolver2
+    And Hacer Click en El elemento RadComunicado
+    And Hacer Click en El elemento BTrasladar
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Comn30
+    And lleneme el campo BusBanTrasladar con el texto usuario03
+    And Hacer Click en El elemento BotonBuscarTrasladar
+    And espereme 5 segundos
+    And lleneme el campo ObsBanTrasladar con el texto Automatizacion - Traslado BDE No. 2
+    And Adjunto una Captura de pantalla al informe Comn31
+    And Hacer Click en El elemento BotonTrasladar
+
+  @opcionDevolverAlOrigen3
+  Scenario: AC_AZDv6-1773: Creacion nuevas opciones - Devolver al Origen
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto usuario03
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TresPuntosDevolver3
+    And Hacer Click en El elemento RadComunicado
+    And Hacer Click en El elemento BTrasladar
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Comn32
+    And lleneme el campo BusBanTrasladar con el texto usuario04
+    And Hacer Click en El elemento BotonBuscarTrasladar
+    And espereme 5 segundos
+    And lleneme el campo ObsBanTrasladar con el texto Automatizacion - Traslado BDE No. 3
+    And Adjunto una Captura de pantalla al informe Comn33
+    And Hacer Click en El elemento BotonTrasladar
+
+  @opcionDevolverAlOrigen4
+  Scenario: AC_AZDv6-1773: Creacion nuevas opciones - Devolver al Origen
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto usuario04
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TresPuntosDevolver4
+    And Hacer Click en El elemento RadComunicado
+    And Hacer Click en El elemento BDevolverOrigen
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Comn34
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe Comn35
+    And espereme 2 segundos
+    And Hacer Click en El elemento BotConfDevolOrigen
+    And lleneme el campo ObsDevolOrigen con el texto Observaciones Devolucion Automatización
+    And Adjunto una Captura de pantalla al informe Comn36
+    And espereme 1 segundos
+    And Hacer Click en El elemento BotDevolOrigen
+    ##--Devolver Origen--##
+
+    ##--Aprobar--##
+      ##Parte 1 - Generar Radicado
+  @opcionAprobar1
+  Scenario: AC_AZDv6-1773: Creacion nuevas opciones - Aprobar
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto Comunicados
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+    And Hacer Click en El elemento ComunicadoA
+    And espereme 3 segundos
+    And Selecion Index 1 Selector TDocumental
+    And lleneme el campo DesTDocumental con el texto OpcionAprobar
+    And Hacer Click en El elemento BotonAgregarComun
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Agregar_ListaUsuariosPersonas
+          #--Validación ventana Usuarios--#
+    And ir a UsuariosAprobar ventana
+    And Cambiar de Frame: BuscarUsuariosPersonas
+    And lleneme el campo CampoNombre con el texto Usuario
+    And lleneme el campo CampoApellido con el texto Cero Dos
+    And Hacer Click en El elemento BotonAgregarUsuario
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: AgregarUsuariosPersonas
+    And Hacer Click en El elemento AsociarUsuario
+    And espereme 3 segundos
+          #--Validación ventana Usuarios--#
+    And ir a PrincipalAprobar ventana
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 1 Selector CTramite
+    And Selecion Index 1 Selector CSubtramite
+      #And Selecion Index 1 Selector CTipoDocumento
+    And Texto de Seleccion 1 a 1 Selector CModoSalida
+    And lleneme el campo CIdReferencia con el texto OpcionAprobar
+    And lleneme el campo CNo.Folios con el texto 1
+    And lleneme el campo CNo.DocAnexos con el texto 1
+    And lleneme el campo CAsunto con el texto Opción Aprobar - Opción Aprobar - Opción Aprobar - Opción Aprobar - Opción Aprobar -
+    And Hacer Click en El elemento BGuardar
+    And Hacer Click en El elemento BTrasladar
+    And espereme 1 segundos
+    And Adjunto una Captura de pantalla al informe Comn37
+    And lleneme el campo BusBanTrasladar con el texto usuario04
+    And Hacer Click en El elemento BotonBuscarTrasladar
+    And espereme 5 segundos
+    And lleneme el campo ObsBanTrasladar con el texto Automatizacion - Traslado para aprobar
+    And Adjunto una Captura de pantalla al informe Comn38
+    And Hacer Click en El elemento BotonTrasladar
+      ##Parte 1 - Generar Radicado
+
+      ##Parte 2 - Aprobar Radicado
+  @opcionAprobar2
+  Scenario: AC_AZDv6-1773: Creacion nuevas opciones - Aprobar
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto usuario04
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento TresPuntosAprobar5
+    And Hacer Click en El elemento RadComunicado
+    And Hacer Click en El elemento BAprobar
+    And Adjunto una Captura de pantalla al informe Comn39
+    And Hacer Click en El elemento BotonConfirAprobar
+    And Adjunto una Captura de pantalla al informe Comn40
+    And lleneme el campo BusBDEAprobar con el texto Comunicados
+    And espereme 1 segundos
+    And Hacer Click en El elemento BotonBusAprobar
+      #And se accept la alerta
+    And lleneme el campo ObservacionesAprobar con el texto Automatizacion - Aprobacion
+    And Adjunto una Captura de pantalla al informe Comn41
+    And Hacer Click en El elemento BotAprobar
+      ##Parte 2 - Aprobar Radicado
+    ##--Aprobar--##
+
+    ##--Radicar--##
+  @opcionRadicar
+  Scenario: AC_AZDv6-1773: Creacion nuevas opciones - Radicar
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto Comunicados
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+    And Hacer Click en El elemento ComunicadoA
+    And espereme 3 segundos
+    And Selecion Index 1 Selector TDocumental
+    And lleneme el campo DesTDocumental con el texto OpcionRadicar
+    And Hacer Click en El elemento BotonAgregarComun
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Agregar_ListaUsuariosPersonas
+          #--Validación ventana Usuarios--#
+    And ir a UsuariosRadicar ventana
+    And Cambiar de Frame: BuscarUsuariosPersonas
+    And lleneme el campo CampoNombre con el texto Usuario
+    And lleneme el campo CampoApellido con el texto Cero Uno
+    And Hacer Click en El elemento BotonAgregarUsuario
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: AgregarUsuariosPersonas
+    And Hacer Click en El elemento AsociarUsuario
+    And espereme 3 segundos
+          #--Validación ventana Usuarios--#
+    And ir a PrincipalRadicar ventana
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 1 Selector CTramite
+    And Selecion Index 1 Selector CSubtramite
+      #And Selecion Index 1 Selector CTipoDocumento
+    And Texto de Seleccion 1 a N Selector CModoSalida
+    And lleneme el campo CIdReferencia con el texto OpcionRadicar
+    And lleneme el campo CIdReferencia con el texto OpcionRadicar
+    And lleneme el campo CNo.Folios con el texto 1
+    And lleneme el campo CNo.DocAnexos con el texto 1
+    And lleneme el campo CAsunto con el texto OpcionRadicar - OpcionRadicar - OpcionRadicar - OpcionRadicar - OpcionRadicar -
+    And Hacer Click en El elemento BGuardar
+    And espereme 2 segundos
+    And Hacer Click en El elemento BRadicar
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe Comn42
+    And Hacer Click en El elemento GenerarRadicado
+    And Esperar visibilidad del boton: AsModoFirma
+    And Adjunto una Captura de pantalla al informe Comn43
+    And Hacer Click en El elemento BCancelarFirma
+    And espereme 1 segundos
+    And se accept la alerta
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe Comn44
+    And Hacer Click en El elemento CerrarProcesamiento
+    And Hacer Click en El elemento BRegresar
+    And Adjunto una Captura de pantalla al informe Comn45
+    ##--Radicar--##
+
+  # Comunicados Internos (Botones)

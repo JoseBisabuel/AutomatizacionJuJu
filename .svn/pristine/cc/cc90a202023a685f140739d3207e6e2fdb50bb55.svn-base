@@ -1,0 +1,127 @@
+Feature: Lotes Mensajeria
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM mensajeria.json
+    And lleneme el campo Usuario con el texto meyer.ayala
+    And lleneme el campo Contrasena con el texto 1234
+    And Hacer Click en El elemento Ingresar
+
+    @RadLotDistribucionAssert1
+    Scenario: AC_AZDv6-162: Busqueda de Radicados Lote Distribuccion  - Frame Opciones
+      And Hacer Click en El elemento Menu
+      And Cambiar de Frame: Opciones
+      And Hacer Click en El elemento Mensajeria
+      And Hacer Click en El elemento RadLoteDistribucion
+      Then Assert si elemento LogoAZ2 visualiza
+      Then Assert si elemento Ass0001 es igual a Búsqueda de Radicados Lote
+      Then Assert si elemento Ass0002 es igual a Código Lote
+      Then Assert si elemento Ass0003 es igual a No. de Radicado
+      Then Assert si elemento Ass0004 es igual a Prioridad
+      Then Assert si elemento Ass0005 es igual a Estado Distribución
+      Then Assert si elemento Ass0006 es igual a Fecha Inicial
+      Then Assert si elemento Ass0007 es igual a Fecha Final
+      Then Assert si elemento Ass0008 es igual a Nombre Remitente
+      Then Assert si elemento Ass0009 es igual a Fecha Cambio Estado Distribución Inicial
+      Then Assert si elemento Ass0010 es igual a Fecha Cambio Estado Distribución Final
+      Then Assert si elemento AssBuscar es igual a Buscar
+      Then Assert si elemento AssAgregar es igual a Agregar
+      Then Assert si elemento AssRegresar es igual a Regresar
+
+
+    @RadLotDistribucionAssert2
+    Scenario: AC_AZDv6-162: Busqueda de Radicados Lote Distribuccion - Frame Contenido
+      And Hacer Click en El elemento Menu
+      And Cambiar de Frame: Opciones
+      And Hacer Click en El elemento Mensajeria
+      And Hacer Click en El elemento RadLoteDistribucion
+      And Hacer Click en El elemento BusRadLotDistrib
+      And espereme 5 segundos
+      And Cambiar al Frame principal
+      And Cambiar de Frame: Contenido
+      Then Assert si elemento Ass0011Ar es igual a Radicados Lote Distribución
+      Then Assert si elemento Ass0012Ar es igual a Registros:
+      Then Assert si elemento Ass0013Ar es igual a Pág:
+      Then Assert si elemento Ass0014Ar es igual a Exportar a
+      Then Assert si elemento Ass0015Ar visualiza
+      Then Assert si elemento Ass0016Ar visualiza
+      Then Assert si elemento Ass0017Ar visualiza
+      Then Assert si elemento Ass0018Ar es igual a Agregar Registro
+      Then Assert si elemento Ass0019Ab es igual a Registros:
+      Then Assert si elemento Ass0020Ab es igual a Pág:
+      Then Assert si elemento Ass0021Ab es igual a Exportar a
+      Then Assert si elemento Ass0022Ab visualiza
+      Then Assert si elemento Ass0023Ab visualiza
+      Then Assert si elemento Ass0024Ab visualiza
+
+
+  @RadLotDistribucionAssert3
+  Scenario: AC_AZDv6-162: Busqueda de Radicados Lote Distribuccion - Frame Contenido - Tabla
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento RadLoteDistribucion
+    And Hacer Click en El elemento BusRadLotDistrib
+    And espereme 5 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    Then Assert si elemento Ass0025 es igual a Remisión
+    Then Assert si elemento Ass0025 es igual a Planilla Interna
+    Then Assert si elemento Ass0026 es igual a Lotes Mensajería
+    Then Assert si elemento Ass0027 es igual a Guia
+    Then Assert si elemento Ass0028 es igual a Mapa
+    Then Assert si elemento Ass0029 es igual a Radicados
+    Then Assert si elemento Ass0030 es igual a Estado Distribución
+    Then Assert si elemento Ass0031 es igual a Fecha Hora Estado Distribución
+    Then Assert si elemento Ass0032 es igual a Sitios Radicación
+
+    Then Assert si elemento Ass0033 es igual a Tipo Lote
+    Then Assert si elemento Ass0034 es igual a Estado Lote
+    Then Assert si elemento Ass0035 es igual a Zona
+    Then Assert si elemento Ass0036 es igual a Zonas
+    Then Assert si elemento Ass0037 es igual a Couriers
+    Then Assert si elemento Ass0038 es igual a Responsable Courier
+    Then Assert si elemento Ass0039 es igual a No de Guía Tula
+    Then Assert si elemento Ass0040 es igual a Precinto Tula
+    Then Assert si elemento Ass0041 es igual a Fecha y Hora Despacho
+    Then Assert si elemento Ass0042 es igual a Fecha y Hora Llegada
+    Then Assert si elemento Ass0043 es igual a Descripción Recorrido
+    Then Assert si elemento Ass0044 es igual a Usuario
+    Then Assert si elemento Ass0045 es igual a Dependencia_Origen
+    Then Assert si elemento Ass0046 es igual a Dependencia_Destino
+    Then Assert si elemento Ass0047 es igual a Destino Lote
+
+  @MensajeriaAssertRegistro
+  Scenario: AC_AZDv6-162: Busqueda de Radicados Lote Distribuccion - AssertForm Registrar
+    And Hacer Click en El elemento Menu
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento Mensajeria
+    And Hacer Click en El elemento LoteMensajeria
+    And Hacer Click en El elemento AgregarMensajeria
+    And espereme 5 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    Then Assert si elemento As55 es igual a Lotes de Mensajería
+    Then Assert si elemento As55i visualiza
+    Then Assert si elemento As56 es igual a Lotes de Mensajería
+    Then Assert si elemento As57 es igual a Tipo*
+    Then Assert si elemento As58 es igual a Código*
+    Then Assert si elemento As59 es igual a Estado*
+    Then Assert si elemento As60 es igual a Sitio Radicación*
+    Then Assert si elemento As61 es igual a Zona*
+    Then Assert si elemento As62 es igual a Courier*
+    Then Assert si elemento As63 es igual a Responsable Courier
+    Then Assert si elemento As64 es igual a No de Guía Tula
+    Then Assert si elemento As65 es igual a Precinto Tula
+    Then Assert si elemento As66 es igual a Fecha y Hora Despacho*
+    Then Assert si elemento As67 es igual a Fecha y Hora Llegada
+    Then Assert si elemento As68 es igual a Descripción Recorrido
+    Then Assert si elemento As69 es igual a Creador
+    Then Assert si elemento As70 es igual a Destino Lote
+    Then Assert si elemento As71 es igual a Dependencia Origen
+    Then Assert si elemento As72 es igual a Dependencia Destino
+    Then Assert si elemento As73 es igual a Cancelar
+    Then Assert si elemento As74 es igual a Agregar
+
+    #And Adjunto una Captura de pantalla al informe Registro
+

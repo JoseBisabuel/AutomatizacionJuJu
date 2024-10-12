@@ -1,0 +1,260 @@
+{
+  "Usuario": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsId"
+  },
+  "Contrasena": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsPassword"
+  },
+  "Ingresar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/div[1]/button[1]"
+  },
+  "BtnHamburguesa": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BtnHamburguerMenu"
+  },
+  "Opciones": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Opciones']"
+  },
+  "GestionDeContenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/div[1]/dl[1]/dt[1]"
+  },
+  "Contenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Contenido']"
+  },
+  "DirectorioAnterior": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[1]/a[1]/img[1]"
+  },
+  "SeleccionEstructura": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='jstree']/ul[1]/li[1]/a[1]"
+  },
+  "iEstructuras": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='IFrameEstructuras']"
+  },
+  "EstructuraAutomatizacion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//pre[contains(text(),'Automatizacion')]"
+  },
+  "Estructuras": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/div[1]/dl[1]/dd[1]/ul[1]/li[1]"
+  },
+  "EstructuraVarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[6]"
+  },
+  "NombreACrear": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='DiNombre']"
+  },
+  "SelectorTipoACrear": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//select[@id='DiTipo']"
+  },
+  "TiposDirectorio": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//pre[contains(text(),'CrearTiposDirectorios')]"
+  },
+  "BtnCrear": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='CrearFolder']"
+  },
+  "Estructura": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//pre[contains(text(),'EstructuraCrear')]"
+  },
+  "TablaArchivos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[2]/form[1]/table[1]"
+  },
+
+  "CampoBusqueda": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//input[@id='CadenaBusqueda']"
+  },
+  "BorrarTresPuntos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/ul[1]/li[4]"
+  },
+  "BtnActualizar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='BtnActualizar']"
+  },
+  "FrameEditorDeTexto": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@title='Editor de texto enriquecido, ContenidoArchivo']"
+  },
+  "CampoTextoContenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body"
+  },
+  "BtnCrearContenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='Accion']"
+  },
+  "BtnMenuPrincipal": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/dl[@id='menu']/dt[5]"
+  },
+  "BtnAdminUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/div[1]/dl[1]/dt[12]"
+  },
+  "BtnUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/div[1]/dl[1]/dd[12]/ul[1]/li[1]/a[1]"
+  },
+  "BtnCrearUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/form[1]/div[7]/div[1]/a[1]"
+  },
+  "CamId": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsId"
+  },
+  "CamContraseña": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsPassword"
+  },
+  "SelectTipoUsuario": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsTipo"
+  },
+  "CamNombre": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsNombres"
+  },
+  "CamApellido": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsApellidos"
+  },
+  "SelectTipoIdentificacion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsTipoIdentificacion"
+  },
+  "CamIdentificacion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsIdentificacion"
+  },
+  "CamNombreBandeja": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsEntrada_texto"
+  },
+  "SelectPrimeraBandeja": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[5]/table[1]/tbody[1]/tr[1]"
+  },
+  "SelectRadicacionComunicados": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsRadicacionComunicado"
+  },
+  "BtnBusquedaBandeja": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Buscar"
+  },
+  "BtnAgregarUsuario": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionAgregar"
+  },
+  "CamCorreo": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UsEmail"
+  },
+  "BtnRegresarUsuarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/form[1]/div[7]/div[1]/a[2]"
+  },
+  "BtnCopiarColecciones": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/dl[1]/dd[12]/ul[1]/li[8]/a[1]"
+  },
+  "SelectUsuarioOrigen": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UcUsuarioOrigen"
+  },
+  "SelectUsuarioDestino": {
+    "GetFieldBy": "id",
+    "ValueToFind": "UcUsuarioDestino"
+  },
+  "BtnEjecutarCopiaColecciones": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionEjecutar"
+  },
+  "BtnRegresarCopiaColecciones": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/form[1]/div[3]/div[1]/a[1]"
+  },
+  "RetencionDocumental": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/div[1]/dl[1]/dt[10]/a[1]"
+  },
+  "TiposDocumColeccion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[contains(text(),'Tipos Documentales Colección')]"
+  },
+  "BotonAgregarDColeccion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[2]/a[1]"
+  },
+  "TdTablaRetencion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TdcTablaRetencion"
+  },
+  "TdTipoRadicado": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TdcTipoRadicado"
+  },
+  "TdTipodocumental": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TdcTipoDocumental"
+  },
+  "TdColeccion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TdcColeccion"
+  },
+  "TdSDocumental": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TdcSoporte"
+  },
+  "TDAgregarTDocumental": {
+    "GetFieldBy": "id",
+    "ValueToFind": "AccionAgregar"
+  },
+  "SelectTipoDocumental": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TipoDocumental"
+  },
+  "BtnRegresarRad": {
+    "GetFieldBy": "id",
+    "ValueToFind": "Regresar"
+  },
+  "CheckTodosLosElemento": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//thead/tr[1]/th[1]/a[1]/input[1]"
+  },
+  "MenuOpcioneDesplegable": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/div[1]/a[1]"
+  },
+  "EliminarTodos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/ul[1]/li[4]/a[1]"
+  },
+
+  "MensajeAlerta": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//div[@id='VentanaAlerta']"
+  },
+  "CerrarVentanaEmergente": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//span[contains(text(),'×')]"
+  }
+}

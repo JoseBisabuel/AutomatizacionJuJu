@@ -1,0 +1,77 @@
+Feature: AZLogin
+  Inicio de Sesion al AZDigital y Cambio de Contraseña
+
+  @LoginNormal
+  Scenario: AC_AZDv6-588 : Ingreso a AZDigital Inicio Login Normal
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And lleneme el campo Usuario con el texto admin
+    And lleneme el campo Contrasena con el texto 1q2w3e4r
+    And Hacer Click en El elemento Ingresar
+    And Adjunto una Captura de pantalla al informe MenuAZDigital
+    #Then Assert si elemento (.*) contiene el siguiente texto (.*)
+    #Then Assert si elemento (.*) es igual a (.*)
+    #Then Check si elemento email error no contiene el siguiente texto Covid
+    #And Adjunto una Captura de pantalla al informe (.*)
+
+  @LoginSinCampos
+  Scenario: AC_AZDv6-1768 : Ingreso a AZDigital con Campos sin Llenar
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And Hacer Click en El elemento Ingresar
+    Then Assert si elemento LoginIncorrecto contiene el siguiente texto Login Incorrecto
+
+  @LoginCancelar
+  Scenario:AC_AZDv6-588 : Ingreso a AZDigital Borrar Campos
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And lleneme el campo Usuario con el texto admin
+    And lleneme el campo Contrasena con el texto admin
+    And Hacer Click en El elemento Cancelar
+    And Guarde el texto Usuario del esenario
+    And Guarde el texto Contrasena del esenario
+    Then Check si elemento Usuario no contiene el siguiente texto admin
+    Then Check si elemento Contrasena no contiene el siguiente texto admin
+    And Adjunto una Captura de pantalla al informe BorrarCampos
+
+  @OlvidoContrasena
+  Scenario: AC_AZDv6-587 : Recuperar clave desde AZDigital  Olvido Su Contraseña
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And Hacer Click en El elemento OlvidoContrasena
+    When ir a RecuperacionClave ventana
+    And Cambiar de Frame: FrameRecu
+    And lleneme el campo RecuId con el texto dalzate
+    And lleneme el campo RecuNombre con el texto daniel
+    And lleneme el campo RecuApellido con el texto alzate
+    And lleneme el campo RecuEmail con el texto daniel.alzate@analitica.com.co
+    And Hacer Click en El elemento RecuBuscar
+    And Adjunto una Captura de pantalla al informe  Recuperacion Exitosa
+    Then Assert si elemento RecuperacionExitosa contiene el siguiente texto daniel.alzate@analitica.com.co
+
+
+  @OlvidoCUsuarioNoExistente
+  Scenario: AC_AZDv6-587 : Recuperar clave desde AZDigital - Olvido contrasena usuario NO existente
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    And Hacer Click en El elemento OlvidoContrasena
+    When ir a RecuperacionClave1 ventana
+    And Cambiar de Frame: FrameRecu
+    And lleneme el campo RecuId con el texto Hola
+    And lleneme el campo RecuNombre con el texto Hola
+    And lleneme el campo RecuApellido con el texto Hola
+    And lleneme el campo RecuEmail con el texto Hola@gmail.com
+    And Hacer Click en El elemento RecuBuscar
+    And Adjunto una Captura de pantalla al informe  Usuario No Existe
+
+  @LoginNormalConCuentaTipoGestorDeFlujosDeTrabajo
+  Scenario: AC_AZDv6-605 : Ingreso como usuario Gestor De Flujos De Trabajo - 1
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM azlogin.json
+    Then Cargar la informacion del DOM azmain.json
+    And lleneme el campo Usuario con el texto eduardo.gutierrez
+    And lleneme el campo Contrasena con el texto 1q2w3e4r
+    And Hacer Click en El elemento Ingresar
+    And Adjunto una Captura de pantalla al informe MenuAZDigital
+    Then Assert si elemento FondoBienvenidoUsuario contiene el siguiente texto Gestor de Flujos de Trabajo
+    And Adjunto una Captura de pantalla al informe Entrada Exitosa

@@ -1,0 +1,38 @@
+{
+  "PantallaInicio": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//header/a[1]/img[1]"
+  },
+  "ModuleAlerts,Frame&Windows": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='app']/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[2]/*[1]"
+  },
+  "ModalDialog": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//span[contains(text(),'Modal Dialogs')]"
+  },
+  "SmallModal": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='showSmallModal']"
+  },
+  "OpenSmallModal": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//div[contains(text(),'This is a small modal. It has very less content')]"
+  },
+  "CerrarSmallModal": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='closeSmallModal']"
+  },
+  "LargeModal": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='showLargeModal']"
+  },
+  "TexLargeModal": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//p[contains(text(),'Lorem Ipsum is simply dummy text of the printing a')]"
+  },
+  "CerrarLargeModal": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//p[contains(text(),'Lorem Ipsum is simply dummy text of the printing a')]"
+  }
+}

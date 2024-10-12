@@ -1,0 +1,363 @@
+Feature: Estructura/Coleccion/BDE - Exp. Datos Coleccion
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM EstColBDE.json
+    And lleneme el campo Usuario con el texto Comunicados
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+
+  @ExportarColeccionPt1
+  Scenario: AC_AZDv6-76: Exportar colecciones en varios formatos - Coleccion Parte 1
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstructuraNueva
+    And Hacer Click en El elemento TresPuntosColeccion
+    And Adjunto una Captura de pantalla al informe Coleccion01
+    And Hacer Click en El elemento ExportarColeccion
+    And Hacer Click en El elemento Exportacion
+    And Adjunto una Captura de pantalla al informe Coleccion02
+    And Hacer Click en El elemento CheckBoxExp1
+    And Hacer Click en El elemento BotonExpPt1
+    And espereme 3 segundos
+    And Selecion Index 1 Selector TipoExpSelect
+    And espereme 5 segundos
+    And Hacer Click en El elemento BotonExpPt1
+    And espereme 3 segundos
+
+  @ExportarColeccionPt2
+  Scenario Outline: AC_AZDv6-76: Exportar colecciones en varios formatos - Coleccion Parte 2
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstructuraNueva
+    And Hacer Click en El elemento TresPuntosColeccion
+    And Adjunto una Captura de pantalla al informe Coleccion01
+    And Hacer Click en El elemento ExportarColeccion
+    And Hacer Click en El elemento Exportacion
+    And Adjunto una Captura de pantalla al informe Coleccion02
+    And Hacer Click en El elemento CheckBoxExp2
+    And Hacer Click en El elemento CheckBoxExp3
+    And Opcion del select <campo1> y el select TipoFormExport
+    And espereme 2 segundos
+    And Hacer Click en El elemento BotonExpPt1
+    And espereme 3 segundos
+    Examples:
+      | campo1 |
+      | TAB |
+      | CSV |
+      | Pipe |
+      | XML |
+
+  @ExportarColeccionPt3
+  Scenario Outline: AC_AZDv6-76: Exportar colecciones en varios formatos - Coleccion Parte 3
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstructuraNueva
+    And Hacer Click en El elemento TresPuntosColeccion
+    And Adjunto una Captura de pantalla al informe Coleccion01
+    And Hacer Click en El elemento ExportarColeccion
+    And Hacer Click en El elemento Exportacion
+    And Adjunto una Captura de pantalla al informe Coleccion02
+    And Hacer Click en El elemento CheckBoxExp2
+    And Hacer Click en El elemento CheckBoxExp3
+    And Hacer Click en El elemento CheckBoxExp4
+    And Opcion del select <campo1> y el select TipoFormExport
+    And espereme 2 segundos
+    And Hacer Click en El elemento BotonExpPt1
+    And espereme 3 segundos
+    Examples:
+      | campo1 |
+      | TAB |
+      | CSV |
+      | Pipe |
+      | XML |
+
+  ## POR LA OPCION DE EXPORTACION ##
+  ## Exportar sin encabezado ##
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+  @ExportacionColeccion
+  Scenario Outline: AC_AZDv6-76: Exportar colecciones en varios formatos - Exportacion Varios - Sin Encabezados
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstructuraNueva
+    And Hacer Click en El elemento ColeccionNueva
+    And Hacer Click en El elemento TresPuntosColeccion
+    And Adjunto una Captura de pantalla al informe Coleccion01
+    And Hacer Click en El elemento ExportarColeccion
+    And Hacer Click en El elemento SelFormato2
+    And espereme 1 segundos
+    And Hacer Click en El elemento <campo1>
+    And Hacer Click en El elemento EstaPagina2
+    And espereme 1 segundos
+    And Hacer Click en El elemento ExportarSin
+    And espereme 2 segundos
+
+    Examples:
+      | campo1 |
+      | Excel2 |
+      | CSV2 |
+      | TAB2 |
+      | XML2 |
+      | HTML2 |
+      | WORD2 |
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+      ## PDF ##
+  @ExportacionColeccion1
+  Scenario: AC_AZDv6-76: Exportar colecciones en varios formatos - Exportacion PDF - Sin Encabezados
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstructuraNueva
+    And Hacer Click en El elemento ColeccionNueva
+    And Hacer Click en El elemento TresPuntosColeccion
+    And Adjunto una Captura de pantalla al informe Coleccion01
+    And Hacer Click en El elemento ExportarColeccion
+    And Hacer Click en El elemento SelFormato2
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF2
+    And Hacer Click en El elemento EstaPagina2
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionarTodas
+    And espereme 1 segundos
+    And Hacer Click en El elemento ExportarSinPDF
+    And espereme 2 segundos
+      ## PDF ##
+  ## Exportar sin encabezado ##
+  ## Exportar con encabezado ##
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+  @ExportacionColeccion
+  Scenario Outline: AC_AZDv6-76: Exportar colecciones en varios formatos - Exportacion Varios - Con Encabezados
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstructuraNueva
+    And Hacer Click en El elemento ColeccionNueva
+    And Hacer Click en El elemento TresPuntosColeccion
+    And Adjunto una Captura de pantalla al informe Coleccion01
+    And Hacer Click en El elemento ExportarColeccion
+    And Hacer Click en El elemento SelFormato2
+    And espereme 1 segundos
+    And Hacer Click en El elemento <campo1>
+    And Hacer Click en El elemento EstaPagina2
+    And espereme 1 segundos
+    #And espere el elemento AgregarEncabezado
+    And Hacer Click en El elemento AgregarEncabezado
+    And espereme 1 segundos
+    And lleneme el campo TituloEncabezado con el texto Exportar con encabezado desde COLECCION
+    And lleneme el campo Comentario con el texto Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And espereme 1 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+    Examples:
+      | campo1 |
+      | Excel2 |
+      | CSV2 |
+      | TAB2 |
+      | XML2 |
+      | HTML2 |
+      | WORD2 |
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+      ## PDF ##
+  @ExportacionColeccion1
+  Scenario: AC_AZDv6-76: Exportar colecciones en varios formatos - Exportacion PDF - Con Encabezados
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstructuraNueva
+    And Hacer Click en El elemento ColeccionNueva
+    And Hacer Click en El elemento TresPuntosColeccion
+    And Adjunto una Captura de pantalla al informe Coleccion01
+    And Hacer Click en El elemento ExportarColeccion
+    And Hacer Click en El elemento SelFormato2
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF2
+    And Hacer Click en El elemento EstaPagina2
+    And espereme 1 segundos
+    And Hacer Click en El elemento AgregarEncabezado2
+    And espereme 1 segundos
+    And lleneme el campo TituloEncabezadoPDF con el texto Exportar con encabezado desde COLECCION
+    And lleneme el campo ComentarioPDF con el texto Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios -
+    And Hacer Click en El elemento CheckAgrUsuPDF
+    And Hacer Click en El elemento CheckAgrFecPDF
+    And Selecion Index 1 Selector SelectOrientacion
+    And Selecion Index 1 Selector SelectFuente
+    And Selecion Index 1 Selector SelectTamano
+    And Hacer Click en El elemento SeleccionarTodas
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon2
+    And espereme 2 segundos
+      ## PDF ##
+  ## Exportar con encabezado ##
+  ## POR LA OPCION DE EXPORTACION ##
+
+  ## Exportar sin encabezado##
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+  @ExportarColeccionOpc2
+  Scenario Outline: AC_AZDv6-76: Exportar colecciones en varios formatos - Coleccion Varios - Sin Encabezados
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstructuraNueva
+    And Hacer Click en El elemento ColeccionNueva
+    And Hacer Click en El elemento SelFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento <campo1>
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento ExportarSin
+    And espereme 2 segundos
+
+    Examples:
+      | campo1 |
+      | Excel |
+      | CSV |
+      | TAB |
+      | XML |
+      | HTML |
+      | WORD |
+      ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+      ## PDF ##
+  @ExportarColeccionOpc2PDF
+  Scenario: AC_AZDv6-76: Exportar colecciones en varios formatos - Coleccion PDF - Sin Encabezados
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstructuraNueva
+    And Hacer Click en El elemento ColeccionNueva
+    And Hacer Click en El elemento SelFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento SeleccionarTodas
+    And espereme 1 segundos
+    And Hacer Click en El elemento ExportarSinPDF
+    And espereme 2 segundos
+      ## PDF ##
+  ## Exportar sin encabezado##
+  ##------------------------------------------------------------------------##
+  ## Exportar con encabezado##
+     ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+  @ExportarEstructuraOpc3
+  Scenario Outline: AC_AZDv6-76: Exportar colecciones en varios formatos - Coleccion Varios - Con Encabezados
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstructuraNueva
+    And Hacer Click en El elemento ColeccionNueva
+    And Hacer Click en El elemento SelFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento <campo1>
+    And espereme 1 segundos
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento AgregarEncabezado
+    And espereme 1 segundos
+    And lleneme el campo TituloEncabezado con el texto Exportar con encabezado desde COLECCION
+    And lleneme el campo Comentario con el texto Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios -
+    And Hacer Click en El elemento CheckAgrUsu
+    And Hacer Click en El elemento CheckAgrFec
+    And espereme 1 segundos
+    And Hacer Click en El elemento ExportarCon
+    And espereme 2 segundos
+
+    Examples:
+      | campo1 |
+      | Excel |
+      | CSV |
+      | TAB |
+      | XML |
+      | HTML |
+      | WORD |
+    ## EXCEL - CSV - TAB - XML - HTML - WORD ##
+    ## PDF ##
+  @ExportarEstructuraOpc3PDF
+  Scenario: AC_AZDv6-76: Exportar colecciones en varios formatos - Coleccion PDF - Con Encabezados
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionContenido
+    And Hacer Click en El elemento Estructura
+    And Cambiar de Frame: EstructuraIframe
+    And Sikuli element click EstAutomatizacion
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento EstructuraNueva
+    And Hacer Click en El elemento ColeccionNueva
+    And Hacer Click en El elemento SelFormato
+    And espereme 1 segundos
+    And Hacer Click en El elemento PDF
+    And Hacer Click en El elemento EstaPagina
+    And espereme 1 segundos
+    And Hacer Click en El elemento AgregarEncabezado2
+    And espereme 1 segundos
+    And lleneme el campo TituloEncabezadoPDF con el texto Exportar con encabezado desde COLECCION
+    And lleneme el campo ComentarioPDF con el texto Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios - Pruebas QA - Campo Comentarios -
+    And Hacer Click en El elemento CheckAgrUsuPDF
+    And Hacer Click en El elemento CheckAgrFecPDF
+    And Selecion Index 1 Selector SelectOrientacion
+    And Selecion Index 1 Selector SelectFuente
+    And Selecion Index 1 Selector SelectTamano
+    And Hacer Click en El elemento SeleccionarTodas
+    And espereme 2 segundos
+    And Hacer Click en El elemento ExportarCon2
+    And espereme 2 segundos
+    ## PDF ##
+  ## Exportar con encabezado##

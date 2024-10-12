@@ -1,0 +1,49 @@
+Feature: Tres Puntos - Borrado - Archivos
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM TresPuntos.json
+    And lleneme el campo Usuario con el texto trespuntos
+    And lleneme el campo Contrasena con el texto 1q2w3e4r5T*
+    And Hacer Click en El elemento Ingresar
+
+  @BorradodeArchivo
+  Scenario: Borrado de Archivo - Parte 1
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento SeleccionVarios
+    And Hacer Click en El elemento SeleccioneAccion
+    And Desplazo el elemento BorrarSMasivo
+    And Hacer Click en El elemento BorrarSeleccion
+    And Hacer Click en El elemento AceptarBorrado
+    And espereme 2 segundos
+
+  Scenario: Borrado de Archivo - Parte 2
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento FlechaArriba
+    And espereme 2 segundos
+    And Sikuli element click BDE_TresPtoRec
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionVarios
+    And Hacer Click en El elemento SeleccioneAccion
+    And Desplazo el elemento BorrarSMasivo
+    And Hacer Click en El elemento BorrarSeleccion
+    And espereme 1 segundos
+    And Hacer Click en El elemento AceptarBorrado
+
+  Scenario: Borrado de Archivo - Parte 3
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento FlechaArriba
+    And espereme 2 segundos
+    And Sikuli element click CambioEstadoFlujo
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionVarios
+    And Hacer Click en El elemento SeleccioneAccion
+    And espereme 5 segundos
+    And Desplazo el elemento BorrarSMasivo
+    And Hacer Click en El elemento BorrarSeleccion
+    And espereme 1 segundos
+    And Hacer Click en El elemento AceptarBorrado
+    And espereme 2 segundos

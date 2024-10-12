@@ -1,0 +1,185 @@
+Feature: Comunicados Salida - Generación
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto Comunicadossa
+    And lleneme el campo Contrasena con el texto 1Q2w3e4r5t*
+    And Hacer Click en El elemento Ingresar
+
+  @IngresoComunicadoSalida
+  Scenario: AC_AZDv6-1782: Creacion Comunicado Salida - Icono Hoja
+    And Hacer Click en El elemento ComunicadoA
+    And espereme 3 segundos
+    And Selecion Index 2 Selector TDocumental
+    And lleneme el campo DesTDocumental con el texto ComunicadoSalida - pruebas QA - Automatización
+    And Hacer Click en El elemento BotonAgregarComun
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe ComnSal01
+
+  @IngresoComunicadoSalida2
+  Scenario: AC_AZDv6-1782: Creacion Comunicado Salida - Opcion Crear
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And lleneme el campo Crear con el texto ComunicadoSalida01
+    And Texto de Seleccion Documento Radicado Selector SelectTipo
+    And Texto de Seleccion Acta Selector TDocumental2
+    And Hacer Click en El elemento BotonCrear
+    And espereme 3 segundos
+    And Adjunto una Captura de pantalla al informe ComnSal02
+
+  ##-- PERSONAS --##
+    ##Crear Personas
+  @CrearPersonasComunicados
+  Scenario: AC_AZDv6-1836 : Agregar Registro
+    And Hacer Click en El elemento ComunicadoA
+    And espereme 3 segundos
+    And Selecion Index 2 Selector TDocumental
+    And lleneme el campo DesTDocumental con el texto AutoSalida_AgregarPersonas
+    And Hacer Click en El elemento BotonAgregarComun
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Agregar_ListaPersonas
+        #--Validación ventana Personas--#
+    And ir a PersonasEntrar ventana maximizada
+    And Cambiar de Frame: BuscarUsuariosPersonas
+    And lleneme el campo PersNombre con el texto Automatizacion Persona Cero Tres
+    And Selecion Index 1 Selector PersGenero
+    And Selecion Index 2 Selector PersTIdentificacion
+    And lleneme el campo PersIdentificacion con el texto 030303
+    And lleneme el campo PersTel1 con el texto 1234567
+    And lleneme el campo PersTel2 con el texto 7654321
+    And lleneme el campo PersFax con el texto 9876543
+    And lleneme el campo PersEmail con el texto AutomatizacionCero03@gmail.com
+    And lleneme el campo PersDireccion con el texto Carrera 98 No. 76 54
+    And lleneme el campo PersDependencia con el texto 1234567
+    And lleneme el campo PersCodDependencia con el texto 7654321
+    And lleneme el campo PersCargo con el texto 9876543
+    And Adjunto una Captura de pantalla al informe AgrPers01
+    And Hacer Click en El elemento BotonCrearPersona
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: AgregarUsuariosPersonas
+    And Adjunto una Captura de pantalla al informe AgrPers02
+    And Hacer Click en El elemento AsociarPersona
+    And espereme 3 segundos
+        #--Validación ventana Personas--#
+    And ir a PersonasSalir ventana maximizada
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Adjunto una Captura de pantalla al informe AgrPers03
+    ##Crear Personas
+    ##Buscar Personas
+  @BuscarPersonasComunicados
+  Scenario: AC_AZDv6-1837 : Buscar Personas
+    And Hacer Click en El elemento ComunicadoA
+    And espereme 3 segundos
+    And Selecion Index 2 Selector TDocumental
+    And lleneme el campo DesTDocumental con el texto AutoSalida_BuscarPersonas
+    And Hacer Click en El elemento BotonAgregarComun
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Agregar_ListaPersonas
+        #--Validación ventana Personas--#
+    And ir a PersonasEntrar2 ventana maximizada
+    And Cambiar de Frame: BuscarUsuariosPersonas
+    And lleneme el campo PersNombre con el texto Automatizacion Persona Cero Tres
+    And Selecion Index 1 Selector PersGenero
+    And Selecion Index 2 Selector PersTIdentificacion
+    And lleneme el campo PersIdentificacion con el texto 030303
+    And lleneme el campo PersTel1 con el texto 1234567
+    And lleneme el campo PersTel2 con el texto 7654321
+    And lleneme el campo PersFax con el texto 9876543
+    And lleneme el campo PersEmail con el texto AutomatizacionCero03@gmail.com
+    And lleneme el campo PersDireccion con el texto Carrera 98 No. 76 54
+    And lleneme el campo PersDependencia con el texto 1234567
+    And lleneme el campo PersCodDependencia con el texto 7654321
+    And lleneme el campo PersCargo con el texto 9876543
+    And Adjunto una Captura de pantalla al informe AgrPers04
+    And Hacer Click en El elemento BotonAgregarPersona
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: AgregarUsuariosPersonas
+    And Adjunto una Captura de pantalla al informe AgrPers05
+    And Hacer Click en El elemento AsociarPersona
+    And espereme 3 segundos
+        #--Validación ventana Personas--#
+    And ir a PersonasSalir2 ventana maximizada
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Adjunto una Captura de pantalla al informe AgrPers06
+    ##Buscar Personas
+  ##-- PERSONAS --##
+
+  @IngresoComunicadoSalidaCrear
+  Scenario Outline: AC_AZDv6-1782: Creacion Comunicado Salida - Comunicados 1 a N y 1 a 1
+    And Hacer Click en El elemento ComunicadoA
+    And espereme 3 segundos
+    And Selecion Index 2 Selector TDocumental
+    And lleneme el campo DesTDocumental con el texto <Campo1>
+    And Hacer Click en El elemento BotonAgregarComun
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Agregar_ListaPersonas
+        #--Validación ventana Personas--#
+    And ir a <Campo2> ventana
+    And espereme 2 segundos
+    And Cambiar de Frame: BuscarUsuariosPersonas
+    And lleneme el campo PersNombre con el texto Automatizacion Persona Cero Uno
+    And Hacer Click en El elemento BotonAgregarPersona
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: AgregarUsuariosPersonas
+    And Adjunto una Captura de pantalla al informe <Campo10>
+    And Hacer Click en El elemento AsociarPersona
+    And espereme 3 segundos
+        #--Validación ventana Personas--#
+    And ir a <Campo3> ventana
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 1 Selector CTramite
+    And Selecion Index 1 Selector CSubtramite
+    And Selecion Index 1 Selector Courier
+    And Selecion Index 2 Selector ModalidaEnvio
+    And lleneme el campo Peso con el texto 123
+    And lleneme el campo Costo con el texto 50000
+    And Texto de Seleccion <Campo4> Selector CModoSalida
+    And lleneme el campo CIdReferencia con el texto Auto01
+    And lleneme el campo CNo.Folios con el texto 1
+    And lleneme el campo CNo.DocAnexos con el texto 1
+    And lleneme el campo CAsunto con el texto <Campo5>
+    And Hacer Click en El elemento BGuardar
+    And espereme 2 segundos
+    And Hacer Click en El elemento BRadicar
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe <Campo6>
+    And Hacer Click en El elemento GenerarRadicado
+    And Esperar visibilidad del boton: AsModoFirma
+    And Adjunto una Captura de pantalla al informe <Campo7>
+    And Hacer Click en El elemento BCancelarFirma
+    And espereme 1 segundos
+    And se accept la alerta
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe <Campo8>
+    #And Sikuli element click CerrarProcesamiento
+    And Hacer Click en El elemento CerrarProcesamiento
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe <Campo9>
+      ##
+      ##--VALIDACION MAIL--##
+      ##
+    And espereme 1 segundos
+    And ir a la pestaña https://www.google.com.co
+    And Ir a 3
+    And espereme 3 segundos
+    And lleneme el campo Mailyop con el texto AutomatizacionCero01
+    And Hacer Click en El elemento Ingresayop
+    And Adjunto una Captura de pantalla al informe ArchivoCompartidoMAIL
+    And espereme 2 segundos
+    And Cambiar de Frame: Frameyop
+    And Hacer Click en El elemento Eliminaryop
+    And espereme 2 segundos
+
+    Examples:
+      | Campo1 | Campo2 | Campo3 | Campo4 | Campo5 | Campo6 | Campo7 | Campo8 | Campo9 | Campo10 |
+      | Comunicado01 | UsuariosCombinado | UsuariosCombinado1 |1 a N | AutomatizacionSalida 1aN - AutomatizacionSalida 1aN - AutomatizacionSalida 1aN | ComnSal03 | ComnSal04 | ComnSal05 | ComnSal06 | ComnSal07 |
+      | Comunicado02 | UsuariosCombinado2 | UsuariosCombinado3 |1 a 1 | AutomatizacionSalida 1a1 - AutomatizacionSalida 1a1 - AutomatizacionSalida 1a1 | ComnSal08 | ComnSal09 | ComnSal10 | ComnSal11 | ComnSal12 |
+
+

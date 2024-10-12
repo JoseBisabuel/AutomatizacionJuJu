@@ -1,0 +1,85 @@
+Feature: NuevoRadicado
+
+  @NuevoRadicadoEntradaCreacion
+  Scenario: NuevoRadicadoEntradaCrecion
+    #Se crear un radicado de entrada sin ningun tipo de asociacion (Remitente, Destinatarios, Anexos)
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Radicacion/NuevoRadicacion.json
+    And lleneme el campo Usuario con el texto admin
+    And lleneme el campo Clave con el texto admin
+    And Hacer Click en El elemento Ingreso
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento NuevoRadicado
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Cambiar de Frame: IframeRadicado
+    And Texto de Seleccion Entrada Selector SeleccionTipoRadicado
+    And Cambiar al Frame principal
+    And Hacer Click en El elemento GuardarRadicado
+    And espereme 2 segundos
+    Then Assert si elemento AlertaRadicadoCreado contiene el siguiente texto Nuevo Radicado Generado:
+    And espereme 3 segundos
+
+  @NuevoRadicadoSalidaCreacion
+  Scenario: NuevoRadicadoSalidaCrecion
+    #Se crear un radicado de Salida sin ningun tipo de asociacion (Remitente, Destinatarios, Anexos)
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Radicacion/NuevoRadicacion.json
+    And lleneme el campo Usuario con el texto admin
+    And lleneme el campo Clave con el texto admin
+    And Hacer Click en El elemento Ingreso
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento NuevoRadicado
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Cambiar de Frame: IframeRadicado
+    And Texto de Seleccion Salida Selector SeleccionTipoRadicado
+    And Cambiar al Frame principal
+    And Hacer Click en El elemento GuardarRadicado
+    And espereme 2 segundos
+    Then Assert si elemento AlertaRadicadoCreado contiene el siguiente texto Nuevo Radicado Generado:
+    And espereme 3 segundos
+
+  @NuevoRadicadoInternoCreacion
+  Scenario: NuevoRadicadoInternoCrecion
+    #Se crear un radicado de Interno sin ningun tipo de asociacion (Remitente, Destinatarios, Anexos)
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Radicacion/NuevoRadicacion.json
+    And lleneme el campo Usuario con el texto admin
+    And lleneme el campo Clave con el texto admin
+    And Hacer Click en El elemento Ingreso
+    And Hacer Click en El elemento MenuHamburguesa
+    And Cambiar de Frame: Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento Radicado
+    And Hacer Click en El elemento NuevoRadicado
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Cambiar de Frame: IframeRadicado
+    And Texto de Seleccion Interno Selector SeleccionTipoRadicado
+    And Cambiar al Frame principal
+    And Hacer Click en El elemento GuardarRadicado
+    And espereme 2 segundos
+    Then Assert si elemento AlertaRadicadoCreado contiene el siguiente texto Nuevo Radicado Generado:
+    And espereme 3 segundos
+
+
+
+
+
+
+
+
+
+
+
+

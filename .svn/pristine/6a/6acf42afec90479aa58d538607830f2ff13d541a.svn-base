@@ -1,0 +1,304 @@
+Feature: MasInformacionPDF
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM MasInformacion.json
+    And lleneme el campo Usuario con el texto UserAutomatizacion
+    And lleneme el campo Clave con el texto Automatizacion1*
+    And Hacer Click en El elemento Ingreso
+    And Hacer Click en El elemento BDE
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+
+  @CrearCarpetaMover
+  Scenario: Crear Carpeta Mover
+    And Hacer Click en El elemento Atras
+    And Hacer Click en El elemento BDE_Traslado
+    And lleneme el campo Crear con el texto MoverAuto
+    And Selecion Index 0 Selector Nombre
+    And Hacer Click en El elemento BtnCrear
+    And espereme 2 segundos
+
+  @CargarArchivos
+  Scenario: Cargar Archivos
+    And espereme 2 segundos
+    And Subir varios Archivos SubirArchivos
+    And espereme 20 segundos
+
+  @PestañaGeneral-SeleccioneUnaAccion-Mover-PDF
+  Scenario: AC_AZDv6-22 Mover PDF
+    And Hacer Click en El elemento MasInfoMoverPDF
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento ListaMover
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Mover
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo NuevaLocalizacionPDF con el texto MoverAuto
+    And Hacer Click en El elemento Buscar
+    And Hacer Click en El elemento SelecBDEMoverpdf
+    And Hacer Click en El elemento BtnActualizarMover
+    And Hacer Click en El elemento Atras
+    And Hacer Click en El elemento BDE_Traslado
+    And Hacer Click en El elemento MoverAuto
+    #And tomar Captura de pantalla: Mover
+
+  @PestañaGeneral-SeleccioneUnaAccion-Borrar-PDF
+  Scenario: AC_AZDv6-22 Borrar PDF
+    And Hacer Click en El elemento MasInfoBorrarPDF
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento ListaBorrar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento BorrarMasInfo
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento BtnBorrar
+    #And tomar Captura de pantalla: Borrrar
+
+  @PestañaGeneral-SeleccioneUnaAccion-Compartir-PDF
+  Scenario: AC_AZDv6-22 Compartir PDF
+    And Hacer Click en El elemento MasInfoCompartirPDF
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento ListaComp
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Compartir
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo ObservacionCompartir con el texto Sin comentarios
+    And lleneme el campo SelecEmail con el texto notificacionesauto@yopmail.com
+    And lleneme el campo Fecha con el texto 2023-12-30
+    And Hacer Click en El elemento BtnCompartir
+    #And Adjunto una Captura de pantalla al informe Compartir
+    And ir a la pestaña https://www.google.com
+    And Ir a yopmail
+    And lleneme el campo CorreoYop con el texto notificacionesauto
+    And Hacer Click en El elemento AbrirCorreo
+    And espereme 2 segundos
+    #And tomar Captura de pantalla: VerCorreo
+
+  @PestañaGeneral-SeleccioneUnaAccion-Trasladar-PDF
+  Scenario: AC_AZDv6-22 Trasladar PDF
+    And Hacer Click en El elemento MasInfoTrasladarPDF
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento ListaTrasladar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento Trasladar
+    And Hacer Click en El elemento Trasladar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo NvaLocaltras con el texto TrasladoAuto
+    And Hacer Click en El elemento Buscar
+    And Hacer Click en El elemento SelectBDETraslado
+    And lleneme el campo ObservacionesTras con el texto Sin novedad
+    And lleneme el campo FechaTras con el texto 2023-12-30
+    And Hacer Click en El elemento BtnActualizarTraslado
+    #And tomar Captura de pantalla: Trasladar
+    And Hacer Click en El elemento Atras
+    And Hacer Click en El elemento BDE_Traslado
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe Traslado
+
+
+  @PestañaGeneral-SeleccioneUnaAccion-FirmarDigitalmenteP12*-PDF
+  Scenario: AC_AZDv6-22 Firmar Digitalmente P12* PDF
+    And Hacer Click en El elemento MasInfoFirmaDigitalPDF
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento ListaFirmaDigital
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento FirmaDigital
+    And espereme 2 segundos
+    And Hacer Click en El elemento FirmaDigital
+    And espereme 2 segundos
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Selecion Index 1 Selector Certificado
+    And Texto de Seleccion P12 * Selector Certificado
+    And lleneme el campo ClaveP12 con el texto Julianita1
+    And lleneme el campo RazonFirma con el texto Esto es una prueba
+    And Hacer Click en El elemento BtnFirmaDigital
+    And espereme 15 segundos
+    And Hacer Click en El elemento CerrarCuadro
+    And espereme 3 segundos
+    #And tomar Captura de pantalla: FirmaDigital
+
+  @PestañaGeneral-SeleccioneUnaAccion-Publicar-PDF
+  Scenario: AC_AZDv6-22 Publicar PDF
+    And Hacer Click en El elemento MasInfoPublicarPDF
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento ListaPublicar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Desplazo el elemento Publicar
+    And espereme 2 segundos
+    And Hacer Click en El elemento Publicar
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And lleneme el campo ObservacionPubli con el texto Sin observaciones
+    And lleneme el campo FechaPubli con el texto 2023-12-30
+    And Hacer Click en El elemento BtnPublicarPDF
+    And espereme 2 segundos
+    #And tomar Captura de pantalla: Publicar
+
+  @Versiones-Descargar-PDF
+  Scenario: AC_AZDv6-22 Versiones - Descargar PDF
+    And Hacer Click en El elemento MasInfoVersionesPDF
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Versiones
+    And espereme 2 segundos
+    #And Hacer Click en El elemento Bajar
+    #And Hacer Click en El elemento DescargarPDF
+    #And Hacer Click en El elemento Atras
+    #And espereme 2 segundos
+
+  @BitacoraDeAcciones
+  Scenario: Bitacora de acciones
+    And Hacer Click en El elemento MasInfoBitacoraPDF
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Bitacora
+    #And tomar Captura de pantalla: Bitacora
+
+  @General-Perfilacion
+  Scenario: Generar Perfilacion
+    And Hacer Click en El elemento MasInfoPerfilacionPDF
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento PerfilacionPDF
+    And espereme 3 segundos
+    And Hacer Click en El elemento Agregar
+    And Texto de Seleccion UserAutomatizacion Selector Coleccion
+    And Selecion Index 0 Selector TipoElemento
+    And lleneme el campo FechaPerfilacion con el texto 2023-12-30
+    And Hacer Click en El elemento BtnAgregarPerfilacion
+    And espereme 2 segundos
+    And Adjunto una Captura de pantalla al informe Perfilcacion
+
+  @General-Metadata
+  Scenario: Metadata
+    And Hacer Click en El elemento MasInfoMetadPDF
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Metadata
+    And espereme 2 segundos
+    And lleneme el campo RefPDF con el texto Automatizacion
+    And Texto de Seleccion Expedientes Vinculacionarios Selector CategoriaPDF
+    #And Selecion Index 3 Selector CategoriaPDF
+    And espereme 3 segundos
+    And Hacer Click en El elemento CerrarCuadro
+    And espereme 2 segundos
+    And lleneme el campo DescrpPDF con el texto PruebaAuto
+    And lleneme el campo PalClaPDF con el texto Auto
+    And lleneme el campo ObsPDF con el texto Automatizacion
+    And Hacer Click en El elemento BtnMetadata
+    #And tomar Captura de pantalla: Bitacora
+
+  @General-DatosAsociados
+  Scenario: Datos asociados
+    And Hacer Click en El elemento MasInfoMetadPDF
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Metadata
+    And espereme 2 segundos
+    And Hacer Click en El elemento DatosAsociadosPDF
+    #And tomar Captura de pantalla: Bitacora
+    And lleneme el campo NombreCliente con el texto Automatizacion300
+    And Selecion Index 2 Selector TipoIdentificacion
+    And lleneme el campo Identificacion con el texto 30000
+    And lleneme el campo FechaVinculacionDatos con el texto 2023-12-24
+    #And lleneme el campo NumeroFact con el texto 1020304050
+    #And lleneme el campo NombreEmpresa con el texto Automatizacion
+    #And lleneme el campo FechaVinculacion con el texto 2023-02-28
+    #And lleneme el campo ValorFactura con el texto 1000000
+    And Hacer Click en El elemento BtnAsociarDatos
+    #And Adjunto una Captura de pantalla al informe DatosAsociados
+    And Marco la casilla de verificación que tiene SelectDatos
+    And Hacer Click en El elemento VerLibro
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe VerLibro
+
+  @General-Opciones
+  Scenario: Opciones
+    And Hacer Click en El elemento MasInfoMetadPDF
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Opciones
+    And espereme 2 segundos
+    And Selecion Index 1 Selector OpcionesDespliegue
+    And lleneme el campo PasswordOpciones con el texto 1q2w3e4r5T*
+    And Marco la casilla de verificación que tiene BloquearPDF
+    And Marco la casilla de verificación que tiene ArchivoControl
+    And Hacer Click en El elemento BtnOpciones
+    And espereme 3 segundos
+    #And Adjunto una Captura de pantalla al informe Opciones
+
+  @General-AbrirContraseña
+  Scenario: Abrir Contraseña
+    And Hacer Click en El elemento MasInfoMetadPDF
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Opciones
+    And espereme 2 segundos
+    And Cambiar de Frame: FrameArchivo
+    And lleneme el campo EscribirContra con el texto 1q2w3e4r5T*
+    And Hacer Click en El elemento ValidarContra
+    And espereme 3 segundos
+    #And Adjunto una Captura de pantalla al informe ValidarContraseña
+
+  @General-ReporteCumplimiento
+  Scenario: ReporteCumplimiento
+    And Hacer Click en El elemento MasInfoMetadPDF
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento Opciones
+    And espereme 2 segundos
+    And Hacer Click en El elemento ReporteCumplimiento
+    And espereme 2 segundos
+    #And Adjunto una Captura de pantalla al informe ReporteCumplimiento
+
+  @General
+  Scenario: General
+    And Hacer Click en El elemento MasInfoMetadPDF
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And lleneme el campo Orden con el texto 4
+    And Selecion Index 2 Selector Origen
+    And espereme 2 segundos
+    And Hacer Click en El elemento BtnActualizarGeneral
+    #And Adjunto una Captura de pantalla al informe ReporteCumplimiento
+
+  @Borrar
+  Scenario: Borrar
+    And Marco la casilla de verificación que tiene SelectDepurar
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Borrardepurar
+    And Hacer Click en El elemento Actualizar
+    And Hacer Click en El elemento Atras
+    And Hacer Click en El elemento BDE_Traslado
+    And Marco la casilla de verificación que tiene SelectDepurar
+    And Hacer Click en El elemento Lista
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espereme 2 segundos
+    And Hacer Click en El elemento Borrardepurar
+    And Hacer Click en El elemento Actualizar

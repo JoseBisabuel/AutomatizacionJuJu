@@ -1,0 +1,80 @@
+Feature: Comunicados Internos - terminar, cerrar y borrar comunicados
+
+  @RadicarXBorrar
+   Scenario Outline: Radicar y borrar comunicado Aprobación
+     Given Sitio AZDigital
+     Then Cargar la informacion del DOM Comunicados.json
+     And lleneme el campo Usuario con el texto Comunicados
+     And lleneme el campo Contrasena con el texto 1234567890
+     And Hacer Click en El elemento Ingresar
+     And Hacer Click en El elemento Home
+     And Cambiar de Frame: Contenido
+     And Hacer Click en El elemento <Campo1>
+     And Hacer Click en El elemento RadComunicado
+     And espereme 3 segundos
+     And Hacer Click en El elemento BRadicar
+     And espereme 2 segundos
+     And Hacer Click en El elemento GenerarRadicado
+     And Esperar visibilidad del boton: AsModoFirma
+     And Hacer Click en El elemento BCancelarFirma
+     And espereme 1 segundos
+     And se accept la alerta
+     And espereme 2 segundos
+     And Hacer Click en El elemento CerrarProcesamiento
+     And Hacer Click en El elemento BRegresar
+      Examples:
+        | Campo1 |
+        | TPAprobarInt |
+        | TPDevOriInt |
+        | TPTrasladarInt |
+
+   Scenario: Borrar comunicados internos
+     Given Sitio AZDigital
+     Then Cargar la informacion del DOM Comunicados.json
+     And lleneme el campo Usuario con el texto Comunicados
+     And lleneme el campo Contrasena con el texto 1234567890
+     And Hacer Click en El elemento Ingresar
+     And Hacer Click en El elemento Home
+     And Cambiar de Frame: Contenido
+     And Hacer Click en El elemento CheckTodos
+     And espereme 2 segundos
+     #And Hacer Click en El elemento CheckUno
+     And Hacer Click en El elemento SeleccioneAccion
+     And Desplazo el elemento BorrarSMasivo
+     And Hacer Click en El elemento BorrarSeleccion
+     And Hacer Click en El elemento AceptarBorrado
+     And espereme 2 segundos
+
+  Scenario: Borrar comunicados internos usuario01
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto usuario01
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento CheckTodos
+    And espereme 2 segundos
+        #And Hacer Click en El elemento CheckUno
+    And Hacer Click en El elemento SeleccioneAccion
+    And Desplazo el elemento BorrarSMasivo
+    And Hacer Click en El elemento BorrarSeleccion
+    And Hacer Click en El elemento AceptarBorrado
+    And espereme 2 segundos
+
+  Scenario: Borrar comunicados internos usuario02
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto usuario02
+    And lleneme el campo Contrasena con el texto 1234567890
+    And Hacer Click en El elemento Ingresar
+    And Hacer Click en El elemento Home
+    And Cambiar de Frame: Contenido
+    And Hacer Click en El elemento CheckTodos
+    And espereme 2 segundos
+        #And Hacer Click en El elemento CheckUno
+    And Hacer Click en El elemento SeleccioneAccion
+    And Desplazo el elemento BorrarSMasivo
+    And Hacer Click en El elemento BorrarSeleccion
+    And Hacer Click en El elemento AceptarBorrado
+    And espereme 2 segundos

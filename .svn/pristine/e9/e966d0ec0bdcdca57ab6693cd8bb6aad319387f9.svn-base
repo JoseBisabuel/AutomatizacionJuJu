@@ -1,0 +1,126 @@
+Feature:Prerequisitos Busqueda Archivos
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM BusquedaArchivos.json
+    And lleneme el campo Usuario con el texto Automata1
+    And lleneme el campo Contrasena con el texto 1Q2w3e4r5t*
+    And Hacer Click en El elemento Ingresar
+
+  @Directorios
+  Scenario: Creacion de directorios principales
+    And espere el elemento BtnHamburguesa
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And espereme 2 segundos
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espere el elemento DirectorioAnterior
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And lleneme el campo NombreACrear con el texto BusquedaArchivos
+    And Texto de Seleccion Estructural Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And Hacer Click en El elemento EstructuraBusquedaArchivos
+    And lleneme el campo NombreACrear con el texto BusquedaArchivos
+    And Texto de Seleccion Colección Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+    And Hacer Click en El elemento +Archivo1
+    And Texto de Seleccion Nombre Elemento Selector SelectOrden
+    And Hacer Click en El elemento BtnActualizar
+    And Hacer Click en El elemento BtnRegresar
+    And Hacer Click en El elemento ColeccionBusquedaArchivos
+    And Hacer Click en El elemento BtnConfigColumnas
+    And Hacer Click en El elemento CheckFechaCreacion
+    And Hacer Click en El elemento BtnAceptarColumnas
+    And espereme 2 segundos
+    And lleneme el campo NombreACrear con el texto ABandejaDeEntrada
+    And Texto de Seleccion Bandeja de Entrada Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+
+    And lleneme el campo NombreACrear con el texto BCarpetaPrivada
+    And Texto de Seleccion Carpeta Privada Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+
+    And lleneme el campo NombreACrear con el texto CCarpetaPublica
+    And Texto de Seleccion Carpeta Pública Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+
+    And lleneme el campo NombreACrear con el texto DColeccion
+    And Texto de Seleccion Colección Selector SelectorTipoACrear
+    And Hacer Click en El elemento BtnCrear
+
+    And Hacer Click en El elemento +Archivo4
+    And Texto de Seleccion Nombre Elemento Selector SelectOrden
+    And Hacer Click en El elemento BtnActualizar
+    And Hacer Click en El elemento BtnRegresar
+    And Hacer Click en El elemento Coleccion
+    And Hacer Click en El elemento BtnConfigColumnas
+    And Hacer Click en El elemento CheckFechaCreacion
+    And Hacer Click en El elemento BtnAceptarColumnas
+
+      #Subimos y renombramos los archivos en cada tipo de directorio
+  @Archivos
+  Scenario Outline: Carga y renombre de archivos
+    And espere el elemento BtnHamburguesa
+    And Hacer Click en El elemento BtnHamburguesa
+    And Cambiar de Frame: Opciones
+    And Hacer Click en El elemento GestionDeContenido
+    And Hacer Click en El elemento Estructuras
+    And Cambiar de Frame: iEstructuras
+    And espere el elemento SeleccionEstructura
+    And Hacer Click en El elemento SeleccionEstructura
+    And Cambiar al Frame principal
+    And Cambiar al Frame principal
+    And Cambiar de Frame: Contenido
+    And espere el elemento DirectorioAnterior
+    And espereme 2 segundos
+    And Hacer Click en El elemento DirectorioAnterior
+    And Hacer Click en El elemento EstructuraAutomatizacion
+    And Hacer Click en El elemento EstructuraVarios
+    And Hacer Click en El elemento EstructuraBusquedaArchivos
+    And Hacer Click en El elemento ColeccionBusquedaArchivos
+
+    And Hacer Click en El elemento <contenedor>
+    And Subir varios Archivos SubirArchivo
+    And espere el elemento CargaCompleta8Archivos
+    And Hacer Click en El elemento CheckTodosLosElemento
+    And Hacer Click en El elemento MenuOpcioneDesplegable
+    And espere el elemento RenombrarTodos
+    And Hacer Click en El elemento RenombrarTodos
+    And espere el elemento RenombrarDOCX
+    And espereme 2 segundos
+    And lleneme el campo RenombrarDOCX con el texto <campo1>
+    And lleneme el campo RenombrarHTML con el texto <campo2>
+    And lleneme el campo RenombrarJPG con el texto <campo3>
+    And lleneme el campo RenombrarPDF con el texto <campo4>
+    And lleneme el campo RenombrarPNG con el texto <campo5>
+    And lleneme el campo RenombrarPPTX con el texto <campo6>
+    And lleneme el campo RenombrarTXT con el texto <campo7>
+    And lleneme el campo RenombrarXLSX con el texto <campo8>
+    And Hacer Click en El elemento BtnConfirmarRenombrar
+    And Hacer Click en El elemento +Archivo1
+    And lleneme el campo CampoCreacion con el texto <FechaCreacion>
+    And Hacer Click en El elemento BtnActualizar
+    And Hacer Click en El elemento MetadataTap
+    And espere el elemento IngresarReferencia
+    And espereme 2 segundos
+    And lleneme el campo IngresarReferencia con el texto ReferenciaAutoQA
+    And lleneme el campo IngresarDescripcion con el texto Ejemplo de una descripción:D
+    And lleneme el campo IngresarPalabrasClave con el texto Automata QA27 QWERTY EXE
+    And lleneme el campo IngresarObservaciones con el texto ObservacionQA
+    And Hacer Click en El elemento BtnActualizar
+
+    Examples:
+      | contenedor       |  campo1       | campo2        | campo3        | campo4         | campo5        | campo6        | campo7        | campo8        |FechaCreacion |
+      | BandejaDeEntrada |BdeTest1       |BdeTest2       |BdeTest3       |BdeTest4        |BdeTest5       |BdeTest6       |BdeTest7       |BdeTest8       |2010-02-08    |
+      | CarpetaPrivada   |PrivadaTest9   |PrivadaTest10  |PrivadaTest11  |PrivadaTest12   |PrivadaTest13  |PrivadaTest14  |PrivadaTest15  |PrivadaTest16  |2011-02-08    |
+      | CarpetaPublica   |PublicaTest17  |PublicaTest18  |PublicaTest19  |PublicaTest20   |PublicaTest21  |PublicaTest22  |PublicaTest23  |PublicaTest24  |2012-02-08    |
+      | Coleccion        |ColeccionTest25|ColeccionTest26|ColeccionTest27|ColeccionTest28 |ColeccionTest29|ColeccionTest30|ColeccionTest31|ColeccionTest32|2013-02-08    |

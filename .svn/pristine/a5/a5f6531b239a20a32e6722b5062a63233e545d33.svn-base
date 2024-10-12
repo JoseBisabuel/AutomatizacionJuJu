@@ -1,0 +1,214 @@
+{
+  "Usuario": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsId"
+  },
+  "Contrasena": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsPassword"
+  },
+  "Ingresar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/div[1]/button[1]"
+  },
+  "Opciones": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Opciones']"
+  },
+  "Contenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Contenido']"
+  },
+  "GestionContenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[1]/div[1]/div[1]/dl[1]/dt[1]/a[1]"
+  },
+  "TableroControl": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/dl[1]/dd[1]/ul[1]/li[4]"
+  },
+  "Menu": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[2]/div[1]/div[1]/div[1]/nav[1]/button[1]/span[1]"
+  },
+  "BandejasEntradas": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "DivBandejasEntra"
+  },
+  "BDE": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[4]/a[1]"
+  },
+  "Comunicados": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[5]/i[1]"
+  },
+  "CancelarComunicado": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "BotonCancelarCrearDocumentoRadicado"
+  },
+  "Ayuda": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[2]/div[3]/div[1]/div[3]/div[1]/div[2]/div[1]/i[2]"
+  },
+  "Salir": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/div[2]/div[3]/div[1]/div[3]/div[1]/div[2]/div[1]/a[2]/i[1]"
+  },
+  "UltimaSemana": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='ContenedorTablero']/div[@id='ContetenorTableroControl']/div[@id='ContenedorBotonesFiltroTiempo']/div[1]/label[1]"
+  },
+  "Mes": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/div[7]/div[1]/div[1]/label[2]"
+  },
+  "Trimestre": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/div[7]/div[1]/div[1]/label[3]"
+  },
+  "Historico": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/div[7]/div[1]/div[1]/label[4]"
+  },
+  "RadicadosPendientes": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/div[7]/div[2]/label[1]/div[1]"
+  },
+  "RadicadosRespondidos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/div[7]/div[2]/label[2]/div[1]"
+  },
+  "RadicadosRecibidos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/div[7]/div[2]/label[3]/div[1]"
+  },
+  "RaRecibidosDia": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[3]/div[7]/div[2]/label[4]/div[1]"
+  },
+  "ActPendientes": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr/td[2]"
+  },
+  "ActVencidas": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr/td[3]"
+  },
+  "ActTerminadas": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr/td[4]"
+  },
+  "ActTotales": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr/td[5]"
+  },
+  "SeleccionFormato": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]"
+  },
+  "Excel": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/a[1]"
+  },
+  "CSV": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[2]/a[1]"
+  },
+  "TAB": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[3]/a[1]"
+  },
+  "XML": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[4]/a[1]"
+  },
+  "HTML": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[5]/a[1]"
+  },
+  "PDF": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[6]/a[1]"
+  },
+  "WORD": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[7]/a[1]"
+  },
+  "EstaPagina": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/a[1]"
+  },
+  "ExportarSin": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonExportarEncabezado"
+  },
+  "ExportarSinPDF": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonExportarMostrarTablaPDF"
+  },
+  "ExportarCon": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonExportarConEncabezado"
+  },
+  "ExportarCon2": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonExportarMostrarTablaPDF"
+  },
+  "AgregarEncabezado": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonAgregarEncabezado"
+  },
+  "AgregarEncabezado2": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonAgregarEncabezadoPDF"
+  },
+  "Comentario": {
+    "GetFieldBy": "id",
+    "ValueToFind": "comentarioExportacion"
+  },
+  "TituloEncabezado": {
+    "GetFieldBy": "id",
+    "ValueToFind": "tituloEncabezado"
+  },
+  "TituloEncabezadoPDF": {
+    "GetFieldBy": "id",
+    "ValueToFind": "tituloEncabezadoPDF"
+  },
+  "ComentarioPDF": {
+    "GetFieldBy": "id",
+    "ValueToFind": "comentarioExportacionPDF"
+  },
+  "CheckAgrUsu": {
+    "GetFieldBy": "id",
+    "ValueToFind": "agregarUsuario"
+  },
+  "CheckAgrUsuPDF": {
+    "GetFieldBy": "id",
+    "ValueToFind": "agregarUsuarioPDF"
+  },
+  "CheckAgrFec": {
+    "GetFieldBy": "id",
+    "ValueToFind": "agregarFecha"
+  },
+  "CheckAgrFecPDF": {
+    "GetFieldBy": "id",
+    "ValueToFind": "agregarFechaPDF"
+  },
+  "SelectOrientacion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "OrientacionMostrarTablaPDF"
+  },
+  "SelectFuente": {
+    "GetFieldBy": "id",
+    "ValueToFind": "FuenteMostrarTablaPDF"
+  },
+  "SelectTamano": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TamanioMostrarTablaPDF"
+  },
+  "SeleccionarTodas": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonMarcarTodasMostrarTablaPDF"
+  }
+}

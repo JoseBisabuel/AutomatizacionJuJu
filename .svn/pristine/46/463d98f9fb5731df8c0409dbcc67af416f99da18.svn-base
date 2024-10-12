@@ -1,0 +1,44 @@
+Feature: Comunicados Salida - terminar, cerrar y borrar comunicados
+
+  Background:
+    Given Sitio AZDigital
+    Then Cargar la informacion del DOM Comunicados.json
+    And lleneme el campo Usuario con el texto Comunicadossa
+    And lleneme el campo Contrasena con el texto 1Q2w3e4r5t*
+    And Hacer Click en El elemento Ingresar
+
+    @RadicarXBorrar
+    Scenario Outline: Radicar y borrar comunicado Aprobación
+      And Hacer Click en El elemento Home
+      And Cambiar de Frame: Contenido
+      And Hacer Click en El elemento <Campo1>
+      And Hacer Click en El elemento RadComunicado
+      And espereme 3 segundos
+      And Hacer Click en El elemento BRadicar
+      And espereme 2 segundos
+      And Hacer Click en El elemento GenerarRadicado
+      And Esperar visibilidad del boton: AsModoFirma
+      And Hacer Click en El elemento BCancelarFirma
+      And espereme 1 segundos
+      And se accept la alerta
+      And espereme 2 segundos
+      And Hacer Click en El elemento CerrarProcesamiento
+      And Hacer Click en El elemento BRegresar
+
+      Examples:
+        | Campo1 |
+        | TPAprobarSal |
+        | TPDevOriSal |
+        | TPTrasladarSal |
+
+      Scenario: Borrar Comunicados Salida
+        And Hacer Click en El elemento Home
+        And Cambiar de Frame: Contenido
+        And Hacer Click en El elemento CheckTodos
+        And espereme 2 segundos
+        #And Hacer Click en El elemento CheckUno
+        And Hacer Click en El elemento SeleccioneAccion
+        And Desplazo el elemento BorrarSMasivo
+        And Hacer Click en El elemento BorrarSeleccion
+        And Hacer Click en El elemento AceptarBorrado
+        And espereme 2 segundos

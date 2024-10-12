@@ -1,0 +1,325 @@
+{
+  "Usuario": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsId"
+  },
+  "Contrasena": {
+    "GetFieldBy": "name",
+    "ValueToFind": "UsPassword"
+  },
+  "Ingresar": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[3]/div[1]/button[1]"
+  },
+  "Opciones": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Opciones']"
+  },
+  "Contenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//iframe[@id='Contenido']"
+  },
+  "EstructuraIframe": {
+    "GetFieldBy": "id",
+    "ValueToFind": "IFrameEstructuras"
+  },
+  "GestionContenido": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/dl[1]/dt[1]/a[1]"
+  },
+  "Estructura": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/dl[1]/dd[1]/ul[1]/li[1]/a[1]"
+  },
+  "EstructuraPadre": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "/html[1]/body[1]/div[1]/ul[1]/li[1]/div[1]"
+  },
+  "NombreDirectorios": {
+    "GetFieldBy": "id",
+    "ValueToFind": "DiNombre"
+  },
+  "EstVarios": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[6]"
+  },
+  "ColConcatenarArchivos": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[6]"
+  },
+  "BDE": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[4]/a[1]"
+  },
+  "TipoCreacion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "DiTipo"
+  },
+  "Crear": {
+    "GetFieldBy": "id",
+    "ValueToFind": "CrearFolder"
+  },
+  "SubirPDF": {
+    "GetFieldBy": "name",
+    "ValueToFind": "files[]"
+  },
+  "EstructuraNueva": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[3]/td[6]"
+  },
+  "NombreEstructura": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//td[contains(text(),'ZC_AZDv6-80: Estructura')]"
+  },
+  "ColeccionNueva": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[6]"
+  },
+  "BDENueva": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[6]"
+  },
+  "RegistroEstructura": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='jstree']/ul[1]/li[1]/i[1]"
+  },
+  "RegistroColeccion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[@id='jstree']/ul[1]/li[1]/ul[1]/li[1]/i[1]"
+  },
+  "Bandejas": {
+    "GetFieldBy": "id",
+    "ValueToFind": "DivBandejasEntra"
+  },
+  "Home": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[4]/a[1]"
+  },
+  "TresPuntosBDE": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[3]"
+  },
+  "IniciaFlujo": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[3]"
+  },
+  "ExportarBDE": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/ul[1]/li[18]"
+  },
+  "IrAEstPadre": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[2]/td[1]/a[1]"
+  },
+  "MasInfoEst": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[3]/td[2]"
+  },
+  "TresPuntosColeccion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[1]/td[3]"
+  },
+  "TresPuntosEstructura": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//tbody/tr[3]/td[3]"
+  },
+  "Metadata": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//a[@id='Metadata-tab']"
+  },
+  "ExportarColeccion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/ul[1]/li[18]"
+  },
+  "Exportacion": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[2]/a[1]"
+  },
+  "CheckBoxExp1": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "ExportarArchivos"
+  },
+  "BotonExpPt1": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "Accion"
+  },
+  "TipoExpSelect": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "ModalidadExportacion"
+  },
+  "CheckBoxExp2": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "ExportarMetadata"
+  },
+  "CheckBoxExp3": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MetadataGeneral"
+  },
+  "CheckBoxExp4": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "MetadataIndices"
+  },
+  "TipoFormExport": {
+    "GetFieldBy": "Id",
+    "ValueToFind": "FormatoExportacionMetadata"
+  },
+
+
+
+
+
+  "SelFormato": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+  },
+  "SelFormato2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+  },
+  "Excel": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]"
+  },
+  "CSV": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[2]"
+  },
+  "TAB": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[3]"
+  },
+  "XML": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[4]"
+  },
+  "HTML": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[5]"
+  },
+  "PDF": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[6]"
+  },
+  "WORD": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[7]"
+  },
+  "Excel2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]"
+  },
+  "CSV2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[2]"
+  },
+  "TAB2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[3]"
+  },
+  "XML2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[4]"
+  },
+  "HTML2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[5]"
+  },
+  "PDF2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[6]"
+  },
+  "WORD2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[7]"
+  },
+
+
+  "EstaPagina": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]"
+  },
+  "EstaPagina2": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/a[1]/i[1]"
+  },
+  "ExportarSin": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonExportarEncabezado"
+  },
+  "ExportarSinPDF": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonExportarMostrarTablaPDF"
+  },
+  "ExportarCon": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonExportarConEncabezado"
+  },
+  "ExportarCon2": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonExportarMostrarTablaPDF"
+  },
+  "AgregarEncabezado": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonAgregarEncabezado"
+  },
+  "AgregarEncabezado2": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonAgregarEncabezadoPDF"
+  },
+  "Comentario": {
+    "GetFieldBy": "id",
+    "ValueToFind": "comentarioExportacion"
+  },
+  "TituloEncabezado": {
+    "GetFieldBy": "id",
+    "ValueToFind": "tituloEncabezado"
+  },
+  "TituloEncabezadoPDF": {
+    "GetFieldBy": "id",
+    "ValueToFind": "tituloEncabezadoPDF"
+  },
+  "ComentarioPDF": {
+    "GetFieldBy": "id",
+    "ValueToFind": "comentarioExportacionPDF"
+  },
+  "CheckAgrUsu": {
+    "GetFieldBy": "id",
+    "ValueToFind": "agregarUsuario"
+  },
+  "CheckAgrUsuPDF": {
+    "GetFieldBy": "id",
+    "ValueToFind": "agregarUsuarioPDF"
+  },
+  "CheckAgrFec": {
+    "GetFieldBy": "id",
+    "ValueToFind": "agregarFecha"
+  },
+  "CheckAgrFecPDF": {
+    "GetFieldBy": "id",
+    "ValueToFind": "agregarFechaPDF"
+  },
+  "SelectOrientacion": {
+    "GetFieldBy": "id",
+    "ValueToFind": "OrientacionMostrarTablaPDF"
+  },
+  "SelectFuente": {
+    "GetFieldBy": "id",
+    "ValueToFind": "FuenteMostrarTablaPDF"
+  },
+  "SelectTamano": {
+    "GetFieldBy": "id",
+    "ValueToFind": "TamanioMostrarTablaPDF"
+  },
+  "SeleccionarTodas": {
+    "GetFieldBy": "id",
+    "ValueToFind": "BotonMarcarTodasMostrarTablaPDF"
+  },
+  "BorrarEst": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//body/ul[1]/li[4]"
+  },
+  "AceptarBorrado": {
+    "GetFieldBy": "XPath",
+    "ValueToFind": "//button[@id='BtnActualizar']"
+  }
+}
